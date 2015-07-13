@@ -14,6 +14,7 @@
 		06D367B61B542615009E9D47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B51B542615009E9D47 /* Images.xcassets */; };
 		06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B71B542615009E9D47 /* LaunchScreen.xib */; };
 		06D367C51B542615009E9D47 /* AireNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367C41B542615009E9D47 /* AireNLTests.m */; };
+		06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367D41B54564D009E9D47 /* UIColor+ILColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		06D367BE1B542615009E9D47 /* AireNLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AireNLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D367C31B542615009E9D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D367C41B542615009E9D47 /* AireNLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AireNLTests.m; sourceTree = "<group>"; };
+		06D367D31B54564D009E9D47 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ILColor.h"; sourceTree = "<group>"; };
+		06D367D41B54564D009E9D47 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ILColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +84,13 @@
 		06D367A71B542615009E9D47 /* AireNL */ = {
 			isa = PBXGroup;
 			children = (
+				06D367CE1B542631009E9D47 /* Models */,
+				06D367CF1B542638009E9D47 /* Views */,
+				06D367D01B542642009E9D47 /* Controllers */,
+				06D367D11B54264A009E9D47 /* Helpers+Categories */,
+				06D367D21B542653009E9D47 /* Assets */,
 				06D367AC1B542615009E9D47 /* AppDelegate.h */,
 				06D367AD1B542615009E9D47 /* AppDelegate.m */,
-				06D367AF1B542615009E9D47 /* ViewController.h */,
-				06D367B01B542615009E9D47 /* ViewController.m */,
-				06D367B21B542615009E9D47 /* Main.storyboard */,
-				06D367B51B542615009E9D47 /* Images.xcassets */,
-				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
 				06D367A81B542615009E9D47 /* Supporting Files */,
 			);
 			path = AireNL;
@@ -117,6 +120,48 @@
 				06D367C31B542615009E9D47 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06D367CE1B542631009E9D47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		06D367CF1B542638009E9D47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06D367B21B542615009E9D47 /* Main.storyboard */,
+				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		06D367D01B542642009E9D47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06D367AF1B542615009E9D47 /* ViewController.h */,
+				06D367B01B542615009E9D47 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		06D367D11B54264A009E9D47 /* Helpers+Categories */ = {
+			isa = PBXGroup;
+			children = (
+				06D367D31B54564D009E9D47 /* UIColor+ILColor.h */,
+				06D367D41B54564D009E9D47 /* UIColor+ILColor.m */,
+			);
+			name = "Helpers+Categories";
+			sourceTree = "<group>";
+		};
+		06D367D21B542653009E9D47 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				06D367B51B542615009E9D47 /* Images.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
 				06D367B11B542615009E9D47 /* ViewController.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,

@@ -8,20 +8,39 @@
 
 #import "ViewController.h"
 
+#import "UIColor+ILColor.h"
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [self drawBackground];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Appearance
+
+- (void)drawBackground
+{
+    UIColor *color1 = [UIColor il_blueColor];
+    UIColor *color2 = [UIColor il_beigeColor];
+    
+    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+    gradientLayer.frame = self.view.bounds;
+    gradientLayer.colors = @[(id)color1.CGColor, (id)color2.CGColor];
+
+    [self.view.layer insertSublayer: gradientLayer atIndex: 0];
 }
 
 @end
