@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */; };
+		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
+		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
+		065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530F1B5EBB7100FF226C /* MainPageViewController.m */; };
+		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
+		0657531A1B5EECAB00FF226C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753151B5EECAB00FF226C /* Lato-Black.ttf */; };
+		0657531B1B5EECAB00FF226C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753161B5EECAB00FF226C /* Lato-Bold.ttf */; };
+		0657531C1B5EECAB00FF226C /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753171B5EECAB00FF226C /* Lato-Hairline.ttf */; };
+		0657531D1B5EECAB00FF226C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753181B5EECAB00FF226C /* Lato-Light.ttf */; };
+		0657531E1B5EECAB00FF226C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753191B5EECAB00FF226C /* Lato-Regular.ttf */; };
 		06D367AB1B542615009E9D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AA1B542615009E9D47 /* main.m */; };
 		06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AD1B542615009E9D47 /* AppDelegate.m */; };
-		06D367B11B542615009E9D47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367B01B542615009E9D47 /* ViewController.m */; };
 		06D367B41B542615009E9D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B21B542615009E9D47 /* Main.storyboard */; };
 		06D367B61B542615009E9D47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B51B542615009E9D47 /* Images.xcassets */; };
 		06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B71B542615009E9D47 /* LaunchScreen.xib */; };
@@ -28,13 +37,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06257C9C1B5F0CAC002E34AE /* ILGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILGradientLayer.h; sourceTree = "<group>"; };
+		06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILGradientLayer.m; sourceTree = "<group>"; };
+		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		065753091B5EBB2C00FF226C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0657530C1B5EBB3600FF226C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0657530E1B5EBB7100FF226C /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
+		0657530F1B5EBB7100FF226C /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
+		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		065753151B5EECAB00FF226C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		065753161B5EECAB00FF226C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		065753171B5EECAB00FF226C /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		065753181B5EECAB00FF226C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		065753191B5EECAB00FF226C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		06D367A51B542615009E9D47 /* AireNL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AireNL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D367A91B542615009E9D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D367AA1B542615009E9D47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06D367AC1B542615009E9D47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06D367AD1B542615009E9D47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		06D367AF1B542615009E9D47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		06D367B01B542615009E9D47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		06D367B31B542615009E9D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D367B51B542615009E9D47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06D367B81B542615009E9D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065753071B5EBA3B00FF226C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		065753111B5EBB7600FF226C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0657530B1B5EBB3600FF226C /* MainViewController.h */,
+				0657530C1B5EBB3600FF226C /* MainViewController.m */,
+				065753081B5EBB2C00FF226C /* MapViewController.h */,
+				065753091B5EBB2C00FF226C /* MapViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		065753141B5EE7DB00FF226C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				065753121B5EE7B300FF226C /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		06D3679C1B542615009E9D47 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +132,7 @@
 		06D367A71B542615009E9D47 /* AireNL */ = {
 			isa = PBXGroup;
 			children = (
+				065753071B5EBA3B00FF226C /* Network */,
 				06D367CE1B542631009E9D47 /* Models */,
 				06D367CF1B542638009E9D47 /* Views */,
 				06D367D01B542642009E9D47 /* Controllers */,
@@ -92,6 +141,7 @@
 				06D367AC1B542615009E9D47 /* AppDelegate.h */,
 				06D367AD1B542615009E9D47 /* AppDelegate.m */,
 				06D367A81B542615009E9D47 /* Supporting Files */,
+				065753141B5EE7DB00FF226C /* Frameworks */,
 			);
 			path = AireNL;
 			sourceTree = "<group>";
@@ -134,6 +184,8 @@
 			children = (
 				06D367B21B542615009E9D47 /* Main.storyboard */,
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
+				06257C9C1B5F0CAC002E34AE /* ILGradientLayer.h */,
+				06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -141,8 +193,9 @@
 		06D367D01B542642009E9D47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				06D367AF1B542615009E9D47 /* ViewController.h */,
-				06D367B01B542615009E9D47 /* ViewController.m */,
+				0657530E1B5EBB7100FF226C /* MainPageViewController.h */,
+				0657530F1B5EBB7100FF226C /* MainPageViewController.m */,
+				065753111B5EBB7600FF226C /* Main */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +213,11 @@
 			isa = PBXGroup;
 			children = (
 				06D367B51B542615009E9D47 /* Images.xcassets */,
+				065753151B5EECAB00FF226C /* Lato-Black.ttf */,
+				065753161B5EECAB00FF226C /* Lato-Bold.ttf */,
+				065753171B5EECAB00FF226C /* Lato-Hairline.ttf */,
+				065753181B5EECAB00FF226C /* Lato-Light.ttf */,
+				065753191B5EECAB00FF226C /* Lato-Regular.ttf */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -244,9 +302,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0657531A1B5EECAB00FF226C /* Lato-Black.ttf in Resources */,
+				0657531B1B5EECAB00FF226C /* Lato-Bold.ttf in Resources */,
+				0657531C1B5EECAB00FF226C /* Lato-Hairline.ttf in Resources */,
+				0657531E1B5EECAB00FF226C /* Lato-Regular.ttf in Resources */,
 				06D367B41B542615009E9D47 /* Main.storyboard in Resources */,
 				06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */,
 				06D367B61B542615009E9D47 /* Images.xcassets in Resources */,
+				0657531D1B5EECAB00FF226C /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
-				06D367B11B542615009E9D47 /* ViewController.m in Sources */,
+				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
+				065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */,
+				06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */,
+				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
 			);
@@ -464,6 +530,7 @@
 				06D367CA1B542615009E9D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06D367CB1B542615009E9D47 /* Build configuration list for PBXNativeTarget "AireNLTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +539,7 @@
 				06D367CD1B542615009E9D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
