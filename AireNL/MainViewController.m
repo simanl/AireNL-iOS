@@ -35,6 +35,14 @@
     self.index = 0;
     
     [self customizeAppearance];
+    [self addGestureRecognizers];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+    
+    self.gradientView.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +50,14 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Appearance
+#pragma mark - Appearance / Initial Setup
+
+- (void)addGestureRecognizers
+{
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] init];
+    [tapRecognizer addTarget: self action: @selector(userDidSelectMap)];
+    [self.topView addGestureRecognizer: tapRecognizer];
+}
 
 - (void)customizeAppearance
 {
@@ -106,6 +121,7 @@
         
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
          // AFTER ROTATION
+         self.cellWidths = nil;
          [self.collectionView reloadData];
 
      }];
@@ -138,12 +154,7 @@
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = [((NSNumber *)self.cellHeights[indexPath.row]) floatValue];
-    CGFloat width;
-    if (indexPath.row == 3 || indexPath.row == 4) {
-        width = CGRectGetWidth(self.collectionView.bounds) / 2;
-    }else{
-        width = CGRectGetWidth(self.collectionView.bounds);
-    }
+    CGFloat width = [((NSNumber *)self.cellWidths[indexPath.row]) floatValue];
     
     return CGSizeMake(width, height);
 }
@@ -152,6 +163,8 @@
 
 - (void)userDidSelectMap
 {
+    self.gradientView.hidden = YES;
+    
     MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
     mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
@@ -171,7 +184,8 @@
 - (NSArray *)cellWidths
 {
     if (!_cellWidths) {
-        _cellWidths = @[@(160), @(80), @(80), @(80), @(80)];
+        CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
+        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f)];
     }
     return _cellWidths;
 }

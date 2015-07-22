@@ -11,6 +11,7 @@
 		0633667B1B60068900C32FF6 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633667A1B60068900C32FF6 /* HeaderCollectionReusableView.m */; };
 		0633667E1B600A8600C32FF6 /* StickyHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633667D1B600A8600C32FF6 /* StickyHeaderFlowLayout.m */; };
 		063366801B600CBA00C32FF6 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0633667F1B600CBA00C32FF6 /* CollectionViewHeader.xib */; };
+		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530F1B5EBB7100FF226C /* MainPageViewController.m */; };
@@ -47,6 +48,8 @@
 		0633667C1B600A8600C32FF6 /* StickyHeaderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickyHeaderFlowLayout.h; sourceTree = "<group>"; };
 		0633667D1B600A8600C32FF6 /* StickyHeaderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickyHeaderFlowLayout.m; sourceTree = "<group>"; };
 		0633667F1B600CBA00C32FF6 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
+		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
+		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		065753091B5EBB2C00FF226C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
 				06257C9C1B5F0CAC002E34AE /* ILGradientLayer.h */,
 				06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */,
+				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
+				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
 				063366781B60064C00C32FF6 /* Table & Collection Cells */,
 			);
 			name = Views;
@@ -350,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
+				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */,
 				06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */,

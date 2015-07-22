@@ -65,7 +65,7 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOF-Ci-x8O" userLabel="SeparatorView">
                                                     <rect key="frame" x="20" y="158" width="289" height="1"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="BAh-BB-Cx3"/>
                                                     </constraints>
@@ -117,7 +117,7 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-uf-yax" userLabel="SeparatorView">
                                                     <rect key="frame" x="20" y="78" width="289" height="1"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="pvL-as-w1H"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="xe8-ck-9cx"/>
@@ -237,20 +237,6 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8B-Sa-nco">
                                                     <rect key="frame" x="189" y="0.0" width="44.5" height="80"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-MM-HsC" userLabel="SeparatorView">
-                                                    <rect key="frame" x="20" y="77" width="288" height="1"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="2YX-82-mX9"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="KIn-ad-7in"/>
-                                                        <constraint firstAttribute="height" constant="1" id="sK0-gt-v4z"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="KIn-ad-7in"/>
-                                                        </mask>
-                                                    </variation>
-                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H86-2S-tQw">
                                                     <rect key="frame" x="45" y="37" width="50" height="36"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="26"/>
@@ -271,6 +257,20 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ew-zm-XKe">
                                                     <rect key="frame" x="284" y="0.0" width="44.5" height="80"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-MM-HsC" userLabel="SeparatorView">
+                                                    <rect key="frame" x="19.5" y="77" width="289" height="1"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="2YX-82-mX9"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="KIn-ad-7in"/>
+                                                        <constraint firstAttribute="height" constant="1" id="sK0-gt-v4z"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="KIn-ad-7in"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -375,15 +375,22 @@
                                                                         <constraint firstAttribute="width" constant="13" id="8YH-mH-Wsg"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPERATURA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Y-Af-67u">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Y-Af-67u" customClass="ILSpacedLabel">
                                                                     <rect key="frame" x="3" y="53" width="94" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="BcY-GH-Ww6"/>
                                                                         <constraint firstAttribute="width" constant="94" id="yFc-0o-mpG"/>
                                                                         <constraint firstAttribute="width" constant="94" id="yZ9-Le-i86"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="TEMPERATURA">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" size="12" name="Avenir-Light"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="default">
                                                                         <mask key="constraints">
@@ -580,7 +587,6 @@
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-Z1-yEp" userLabel="GradientView">
                                 <rect key="frame" x="0.0" y="70" width="600" height="20"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Wty-3A-LkT"/>
                                 </constraints>
