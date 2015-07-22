@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "UIColor+ILColor.h"
+
 @interface AppDelegate ()
 
 @end
@@ -48,9 +50,36 @@
 
 #pragma mark - Appearance
 
+#pragma mark - App Appearance
+
 - (void)customizeAppearance
 {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
+    [[UINavigationBar appearance] setBackgroundImage: [self imageWithColor: [UIColor il_blueMorningColor]] forBarMetrics: UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage: [UIImage new]];
+    //    [[UINavigationBar appearance] setTranslucent: YES];
+    
+    [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                            NSFontAttributeName : [UIFont fontWithName: @"Avenir-Book" size: 16.0f]}];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end

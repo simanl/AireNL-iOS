@@ -10,11 +10,15 @@
 
 #import "UIColor+ILColor.h"
 #import "ILGradientLayer.h"
+#import "MapViewController.h"
+#import "HeaderCollectionReusableView.h"
 
-@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HeaderCollectionReusableViewDelegate>
 
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellIdentifiers;
+
+@property (nonatomic) BOOL hasDrawnGradient;
 
 @end
 
@@ -28,8 +32,9 @@
     [super viewDidLoad];
 
     self.index = 0;
+    self.view.backgroundColor = [UIColor il_blueMorningColor];
     
-    [self drawBackground];
+    [self drawBackgroundWithSize: self.view.bounds.size];
     [self customizeAppearance];
 }
 
@@ -45,15 +50,38 @@
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 50.0, 0);
 }
 
-- (void)drawBackground
+- (void)drawBackgroundWithSize:(CGSize)size
 {
-    UIImage *backgroundImage = [UIImage imageNamed: @"BackgroundIMG"];
-    CALayer *aLayer = [CALayer layer];
+    ILGradientLayer *gradientLayer = [[ILGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColor]];
+    gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
     
-    aLayer.contents = (id)backgroundImage.CGImage;
-    aLayer.frame = self.view.bounds;
+    if (self.hasDrawnGradient) {
+        [self.view.layer replaceSublayer: [self.view.layer sublayers][0] with: gradientLayer];
+        
+    }else{
+        [self.view.layer insertSublayer: gradientLayer atIndex: 0];
+        self.hasDrawnGradient = YES;
+    }
+}
+
+#pragma mark - Rotation
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+
+    // BEFORE ROTATION
+    [self drawBackgroundWithSize: size];
     
-    [self.view.layer insertSublayer: aLayer atIndex: 0];
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
+        // WHILE ROTATING
+        
+     }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
+         // AFTER ROTATION
+         [self.collectionView reloadData];
+         
+     }];
+
 }
 
 #pragma mark - UICollectionView Data Source
@@ -79,9 +107,10 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind
                                  atIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionHeader
-                                                                             withReuseIdentifier: @"headerView"
-                                                                                    forIndexPath: indexPath];
+    HeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionHeader
+                                                                                  withReuseIdentifier: @"headerView"
+                                                                                         forIndexPath: indexPath];
+    headerView.delegate = self;
     return headerView;
 }
 
@@ -105,6 +134,16 @@
     }
     
     return CGSizeMake(width, height);
+}
+
+#pragma mark - HeaderReusableView Delegate
+
+- (void)userDidSelectMap
+{
+    MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
+    mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
+    [self presentViewController: navVC animated: YES completion: nil];
 }
 
 #pragma mark - Getters

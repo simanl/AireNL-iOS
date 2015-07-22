@@ -10,6 +10,10 @@
 
 #import "MainPageViewController.h"
 
+@class MKMapView;
+
 @interface MapViewController : UIViewController <MainContainerChild>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

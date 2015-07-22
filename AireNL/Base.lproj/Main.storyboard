@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9uO-T3-XjL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Main Page View Controller-->
-        <scene sceneID="TdN-1d-7Et">
-            <objects>
-                <pageViewController storyboardIdentifier="MainPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9uO-T3-XjL" customClass="MainPageViewController" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TX8-NI-fzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="-302"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -470,7 +462,7 @@
                                         </variation>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="f5L-J3-ahz">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="f5L-J3-ahz" customClass="HeaderCollectionReusableView">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -481,24 +473,41 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESTACIÓN CENTRO OBISPADO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-Qh-whB">
-                                            <rect key="frame" x="212.5" y="62" width="175.5" height="16.5"/>
+                                            <rect key="frame" x="212" y="62" width="175.5" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-tg-Ce4">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="userDidSelectMap:" destination="f5L-J3-ahz" eventType="touchUpInside" id="ohg-oa-1n1"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cA4-tg-Ce4" secondAttribute="bottom" id="58h-aR-slu"/>
                                         <constraint firstAttribute="centerX" secondItem="USb-Zt-d2y" secondAttribute="centerX" id="9f3-Sr-h9e"/>
                                         <constraint firstAttribute="centerY" secondItem="USb-Zt-d2y" secondAttribute="centerY" constant="0.5" id="CfZ-kq-ZgL"/>
+                                        <constraint firstItem="cA4-tg-Ce4" firstAttribute="leading" secondItem="f5L-J3-ahz" secondAttribute="leading" id="E2v-Qj-04l"/>
                                         <constraint firstAttribute="centerX" secondItem="9Ti-Qh-whB" secondAttribute="centerX" id="IFV-q2-3y3"/>
                                         <constraint firstItem="9Ti-Qh-whB" firstAttribute="top" secondItem="USb-Zt-d2y" secondAttribute="bottom" constant="-1" id="MdV-7f-gNS"/>
                                         <constraint firstItem="USb-Zt-d2y" firstAttribute="top" secondItem="f5L-J3-ahz" secondAttribute="topMargin" constant="30" id="POr-aK-KtC"/>
+                                        <constraint firstItem="cA4-tg-Ce4" firstAttribute="top" secondItem="f5L-J3-ahz" secondAttribute="top" id="TRJ-hI-d1V"/>
+                                        <constraint firstAttribute="trailing" secondItem="cA4-tg-Ce4" secondAttribute="trailing" id="dWK-fL-fXH"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="CfZ-kq-ZgL"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <outlet property="cityNameLabel" destination="USb-Zt-d2y" id="yLl-Hm-QKQ"/>
+                                        <outlet property="stationNameLabel" destination="9Ti-Qh-whB" id="5bo-7Y-TKt"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="u6t-Rm-XUp"/>
@@ -538,11 +547,14 @@
                         <viewControllerLayoutGuide type="bottom" id="uoR-x4-PAu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Sis-4e-TZq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bu7-dn-kYf">
-                                <rect key="frame" x="0.0" y="44" width="600" height="360"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rPi-GB-eoj" id="60v-Vp-bNV"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -550,16 +562,18 @@
                             <constraint firstItem="Bu7-dn-kYf" firstAttribute="height" secondItem="Sis-4e-TZq" secondAttribute="height" multiplier="0.6" id="1d5-dI-qF0"/>
                             <constraint firstItem="Bu7-dn-kYf" firstAttribute="leading" secondItem="Sis-4e-TZq" secondAttribute="leading" id="46a-aa-LzB"/>
                             <constraint firstItem="Bu7-dn-kYf" firstAttribute="top" secondItem="Sis-4e-TZq" secondAttribute="top" id="5N6-il-dpZ"/>
-                            <constraint firstItem="Bu7-dn-kYf" firstAttribute="top" secondItem="Sis-4e-TZq" secondAttribute="top" constant="44" id="Gck-Zb-nxw"/>
+                            <constraint firstItem="Bu7-dn-kYf" firstAttribute="top" secondItem="Sis-4e-TZq" secondAttribute="top" id="Gck-Zb-nxw"/>
                             <constraint firstItem="Bu7-dn-kYf" firstAttribute="leading" secondItem="Sis-4e-TZq" secondAttribute="leading" id="KD1-SU-FmC"/>
                             <constraint firstAttribute="trailing" secondItem="Bu7-dn-kYf" secondAttribute="trailing" id="Llk-Zy-d0v"/>
                             <constraint firstAttribute="trailing" secondItem="Bu7-dn-kYf" secondAttribute="trailing" id="Tjt-ux-rHf"/>
                             <constraint firstAttribute="centerY" secondItem="Bu7-dn-kYf" secondAttribute="centerY" id="VBi-sO-mDD"/>
                             <constraint firstItem="uoR-x4-PAu" firstAttribute="top" secondItem="Bu7-dn-kYf" secondAttribute="bottom" id="bSJ-ws-VDB"/>
+                            <constraint firstItem="uoR-x4-PAu" firstAttribute="top" secondItem="Bu7-dn-kYf" secondAttribute="bottom" id="nyp-jS-hWT"/>
                             <constraint firstItem="Bu7-dn-kYf" firstAttribute="top" secondItem="OM4-oL-Cx1" secondAttribute="bottom" id="ppk-7I-JwO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="1d5-dI-qF0"/>
                                 <exclude reference="5N6-il-dpZ"/>
                                 <exclude reference="KD1-SU-FmC"/>
                                 <exclude reference="Llk-Zy-d0v"/>
@@ -569,6 +583,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="mapView" destination="Bu7-dn-kYf" id="BHh-3z-LWS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NE-nV-eBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

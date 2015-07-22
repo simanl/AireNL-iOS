@@ -8,6 +8,10 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+@class UIColor;
+
 @interface ILGradientLayer : CALayer
+
+- (instancetype)initWithColor:(UIColor *)color;
 
 @end

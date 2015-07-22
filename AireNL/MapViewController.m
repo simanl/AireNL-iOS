@@ -6,11 +6,15 @@
 //  Copyright (c) 2015 Icalia Labs. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
+
 #import "MapViewController.h"
 
 #import "UIColor+ILColor.h"
 
-@interface MapViewController ()
+@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+
+@property (nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -24,11 +28,73 @@
     [super viewDidLoad];
 
     self.index = 1;
+    self.title = @"Puntos de Medicion";
+    
+    [self setUpLocationManager];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone
+                                                                                          target: self
+                                                                                          action: @selector(didSelectDone)];
+    
+//    self.mapView.showsUserLocation = YES;
+    self.mapView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)didSelectDone
+{
+    [self dismissViewControllerAnimated: YES completion: nil];
+}
+
+- (void)setUpLocationManager
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        [self askLocationPermision];
+    }else if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self startTrackingUser];
+    }else if (status == kCLAuthorizationStatusDenied){
+        NSLog(@"WARNING: LOCATION TRACKING DENIED");
+    }
+    
+}
+
+- (void)askLocationPermision
+{
+    NSLog(@"ASKING LOCATION PERMISSION");
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+}
+
+- (void)startTrackingUser
+{
+//    self.mapView.showsUserLocation = YES;
+    [self.mapView setUserTrackingMode: MKUserTrackingModeFollow];
+}
+
+#pragma mark - CLLocationManager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+            [self askLocationPermision];
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            [self startTrackingUser];
+            break;
+        default:
+            break;
+    }
 }
 
 /*
