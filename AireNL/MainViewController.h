@@ -12,6 +12,12 @@
 
 @interface MainViewController : UIViewController <MainContainerChild>
 
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stationLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *gradientView;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

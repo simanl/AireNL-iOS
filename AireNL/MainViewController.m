@@ -33,9 +33,7 @@
     [super viewDidLoad];
 
     self.index = 0;
-    self.view.backgroundColor = [UIColor il_blueMorningColor];
     
-    [self drawBackgroundWithSize: self.view.bounds.size];
     [self customizeAppearance];
 }
 
@@ -48,12 +46,41 @@
 
 - (void)customizeAppearance
 {
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 50.0, 0);
+    self.view.backgroundColor = [UIColor il_blueMorningColorWithAlpha: 1];
+    
+    [self setupCollectionViewInsets];
+    [self drawNavigationBarGradient];
+    [self drawBackgroundGradientWithSize: self.view.bounds.size];
 }
 
-- (void)drawBackgroundWithSize:(CGSize)size
+- (void)setupCollectionViewInsets
 {
-    ILGradientLayer *gradientLayer = [[ILGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColor]];
+    CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
+    CGFloat totalCellsHeight = [self getTotalHeightForCells];
+    CGFloat topInset = 20.0 + (viewHeight - totalCellsHeight) - 10.0f;
+    
+    self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 1000, 0);
+    self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
+}
+
+- (void)drawNavigationBarGradient
+{
+    UIColor *blueColor = [UIColor il_blueMorningColorWithAlpha: 1.0];
+    UIColor *clearColor = [UIColor il_blueMorningColorWithAlpha: 0];
+    
+    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+    gradientLayer.frame = self.gradientView.bounds;
+    gradientLayer.colors = @[(id)blueColor.CGColor, (id)clearColor.CGColor];
+    
+    gradientLayer.startPoint = CGPointMake(0.5f, 0.0f);
+    gradientLayer.endPoint = CGPointMake(0.5f, 1.0f);
+    
+    [self.gradientView.layer insertSublayer: gradientLayer atIndex: 0];
+}
+
+- (void)drawBackgroundGradientWithSize:(CGSize)size
+{
+    ILGradientLayer *gradientLayer = [[ILGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
     gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
     
     if (self.hasDrawnGradient) {
@@ -72,7 +99,7 @@
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 
     // BEFORE ROTATION
-    [self drawBackgroundWithSize: size];
+    [self drawBackgroundGradientWithSize: size];
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
         // WHILE ROTATING
@@ -105,23 +132,7 @@
     return cell;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind
-                                 atIndexPath:(NSIndexPath *)indexPath
-{
-    HeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionHeader
-                                                                                  withReuseIdentifier: @"headerView"
-                                                                                         forIndexPath: indexPath];
-    headerView.delegate = self;
-    return headerView;
-}
-
 #pragma mark - UICollectionView DelegateFlowLayout
-
-- (CGSize) collectionView:(UICollectionView *)collectionView
-                   layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
-{
-    return CGSizeMake(0, [self getCenterPoint]);
-}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -175,12 +186,21 @@
 
 #pragma mark - Helper's
 
-- (CGFloat)getCenterPoint
+- (CGFloat)getTotalHeightForCells
 {
-    [self.view setNeedsLayout];
-    [self.view layoutIfNeeded];
-    
-    return CGRectGetMidY(self.collectionView.bounds);
+    CGFloat acum = 0;
+    for (NSNumber *height in self.cellHeights) {
+        acum += [height floatValue];
+    }
+    return acum;
 }
+
+//- (CGFloat)getCenterPoint
+//{
+//    [self.view setNeedsLayout];
+//    [self.view layoutIfNeeded];
+//    
+//    return CGRectGetMidY(self.collectionView.bounds);
+//}
 
 @end

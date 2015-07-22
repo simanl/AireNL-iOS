@@ -10,10 +10,7 @@
 
 @interface UIColor (ILColor)
 
-+ (UIColor *)il_blueColor;
-+ (UIColor *)il_beigeColor;
-
-+ (UIColor *)il_blueMorningColor;
-+ (UIColor *)il_beigeMorningColor;
++ (UIColor *)il_blueMorningColorWithAlpha:(CGFloat)alpha;
++ (UIColor *)il_beigeMorningColorWithAlpha:(CGFloat)alpha;
 
 @end

@@ -10,24 +10,14 @@
 
 @implementation UIColor (ILColor)
 
-+ (UIColor *)il_blueColor
++ (UIColor *)il_blueMorningColorWithAlpha:(CGFloat)alpha
 {
-    return [UIColor colorWithRed: 48.0/255.0 green: 36.0/255.0 blue: 83.0/255.0 alpha: 1];
+    return [UIColor colorWithRed: 85.0/255.0 green: 123.0/255.0 blue: 164.0/255.0 alpha: alpha];
 }
 
-+ (UIColor *)il_beigeColor
++ (UIColor *)il_beigeMorningColorWithAlpha:(CGFloat)alpha
 {
-    return [UIColor colorWithRed: 158.0/255.0 green: 93.0/255.0 blue: 90.0/255.0 alpha: 1];
-}
-
-+ (UIColor *)il_blueMorningColor
-{
-    return [UIColor colorWithRed: 85.0/255.0 green: 123.0/255.0 blue: 164.0/255.0 alpha: 1];
-}
-
-+ (UIColor *)il_beigeMorningColor
-{
-    return [UIColor colorWithRed: 250.0/255.0 green: 197.0/255.0 blue: 163.0/255.0 alpha: 1];
+    return [UIColor colorWithRed: 250.0/255.0 green: 197.0/255.0 blue: 163.0/255.0 alpha: alpha];
 }
 
 @end
