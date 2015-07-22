@@ -16,6 +16,7 @@
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HeaderCollectionReusableViewDelegate>
 
 @property (nonatomic) NSArray *cellHeights;
+@property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
 
 @property (nonatomic) BOOL hasDrawnGradient;
@@ -79,7 +80,7 @@
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
          // AFTER ROTATION
          [self.collectionView reloadData];
-         
+
      }];
 
 }
@@ -154,6 +155,14 @@
         _cellHeights = @[@(160), @(80), @(80), @(80), @(80)];
     }
     return _cellHeights;
+}
+
+- (NSArray *)cellWidths
+{
+    if (!_cellWidths) {
+        _cellWidths = @[@(160), @(80), @(80), @(80), @(80)];
+    }
+    return _cellWidths;
 }
 
 - (NSArray *)cellIdentifiers
