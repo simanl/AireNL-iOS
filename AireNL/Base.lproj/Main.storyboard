@@ -506,8 +506,8 @@
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="default">
                                                                         <mask key="constraints">
-                                                                            <exclude reference="8TT-5c-lVq"/>
                                                                             <exclude reference="7GF-ak-hxC"/>
+                                                                            <exclude reference="8TT-5c-lVq"/>
                                                                             <exclude reference="R5g-JW-Awj"/>
                                                                             <exclude reference="cFl-9w-jTa"/>
                                                                         </mask>
@@ -569,15 +569,26 @@
                                         <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnT-fm-Ccj">
+                                        <rect key="frame" x="563" y="16" width="22" height="22"/>
+                                        <state key="normal" image="MapIcon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userDidSelectMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArV-Nc-aJS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.33333333329999998" green="0.4823529412" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="1KS-1F-pO3" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="top" constant="8" id="5Oh-yg-kG7"/>
+                                    <constraint firstAttribute="trailing" secondItem="LnT-fm-Ccj" secondAttribute="trailing" constant="15" id="MNh-4l-KgZ"/>
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="2.5" id="OQw-NX-1jo"/>
                                     <constraint firstAttribute="height" constant="54" id="asR-Rz-5B8"/>
                                     <constraint firstAttribute="centerX" secondItem="8Gg-SX-8k8" secondAttribute="centerX" id="cVM-EE-dKt"/>
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="-1" id="hhw-GS-qc4"/>
                                     <constraint firstAttribute="centerX" secondItem="1KS-1F-pO3" secondAttribute="centerX" id="isW-TU-Elz"/>
+                                    <constraint firstAttribute="centerY" secondItem="LnT-fm-Ccj" secondAttribute="centerY" id="nM0-kF-6Bp"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -699,6 +710,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MapIcon" width="22" height="22"/>
         <image name="TempIcon" width="13" height="31"/>
         <image name="VientoIcon" width="29" height="19"/>
     </resources>

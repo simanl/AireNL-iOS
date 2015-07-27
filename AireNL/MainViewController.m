@@ -35,7 +35,6 @@
     self.index = 0;
     
     [self customizeAppearance];
-    [self addGestureRecognizers];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -50,14 +49,19 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Appearance / Initial Setup
+#pragma mark - Navigation
 
-- (void)addGestureRecognizers
+- (IBAction)userDidSelectMap:(id)sender
 {
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] init];
-    [tapRecognizer addTarget: self action: @selector(userDidSelectMap)];
-    [self.topView addGestureRecognizer: tapRecognizer];
+    self.gradientView.hidden = YES;
+    
+    MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
+    mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
+    [self presentViewController: navVC animated: YES completion: nil];
 }
+
+#pragma mark - Appearance / Initial Setup
 
 - (void)customizeAppearance
 {
@@ -74,7 +78,7 @@
     CGFloat totalCellsHeight = [self getTotalHeightForCells];
     CGFloat topInset = 20.0 + (viewHeight - totalCellsHeight) - 10.0f;
     
-    self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 1000, 0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
     self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
 }
 
@@ -122,6 +126,7 @@
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
          // AFTER ROTATION
          self.cellWidths = nil;
+         [self setupCollectionViewInsets];
          [self.collectionView reloadData];
 
      }];
@@ -157,18 +162,6 @@
     CGFloat width = [((NSNumber *)self.cellWidths[indexPath.row]) floatValue];
     
     return CGSizeMake(width, height);
-}
-
-#pragma mark - HeaderReusableView Delegate
-
-- (void)userDidSelectMap
-{
-    self.gradientView.hidden = YES;
-    
-    MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
-    mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
-    [self presentViewController: navVC animated: YES completion: nil];
 }
 
 #pragma mark - Getters

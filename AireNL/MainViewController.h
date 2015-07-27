@@ -20,4 +20,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+- (IBAction)userDidSelectMap:(id)sender;
+
 @end
