@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MainPageViewController.h"
-
 @interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *topView;

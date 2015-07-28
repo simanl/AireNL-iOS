@@ -11,7 +11,6 @@
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
-		065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530F1B5EBB7100FF226C /* MainPageViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
 		0657531A1B5EECAB00FF226C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753151B5EECAB00FF226C /* Lato-Black.ttf */; };
 		0657531B1B5EECAB00FF226C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753161B5EECAB00FF226C /* Lato-Bold.ttf */; };
@@ -52,8 +51,6 @@
 		065753091B5EBB2C00FF226C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0657530C1B5EBB3600FF226C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		0657530E1B5EBB7100FF226C /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
-		0657530F1B5EBB7100FF226C /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
 		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		065753151B5EECAB00FF226C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		065753161B5EECAB00FF226C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -116,17 +113,6 @@
 			children = (
 			);
 			name = Network;
-			sourceTree = "<group>";
-		};
-		065753111B5EBB7600FF226C /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				0657530B1B5EBB3600FF226C /* MainViewController.h */,
-				0657530C1B5EBB3600FF226C /* MainViewController.m */,
-				065753081B5EBB2C00FF226C /* MapViewController.h */,
-				065753091B5EBB2C00FF226C /* MapViewController.m */,
-			);
-			name = Main;
 			sourceTree = "<group>";
 		};
 		065753141B5EE7DB00FF226C /* Frameworks */ = {
@@ -238,9 +224,10 @@
 		06D367D01B542642009E9D47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0657530E1B5EBB7100FF226C /* MainPageViewController.h */,
-				0657530F1B5EBB7100FF226C /* MainPageViewController.m */,
-				065753111B5EBB7600FF226C /* Main */,
+				0657530B1B5EBB3600FF226C /* MainViewController.h */,
+				0657530C1B5EBB3600FF226C /* MainViewController.m */,
+				065753081B5EBB2C00FF226C /* MapViewController.h */,
+				065753091B5EBB2C00FF226C /* MapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -380,7 +367,6 @@
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
-				065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */,
 				06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,

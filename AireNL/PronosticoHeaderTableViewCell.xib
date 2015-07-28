@@ -23,8 +23,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="JUL-6h-jlD"/>
                                 <exclude reference="25b-bC-bfz"/>
+                                <exclude reference="JUL-6h-jlD"/>
                             </mask>
                         </variation>
                     </view>

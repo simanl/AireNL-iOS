@@ -62,7 +62,7 @@
 {
     self.view.backgroundColor = [UIColor il_blueMorningColorWithAlpha: 1];
     
-    [self setupCollectionViewInsets];
+    [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
     [self drawNavigationBarGradient];
     [self drawBackgroundGradientWithSize: self.view.bounds.size];
 }
@@ -73,10 +73,10 @@
     [self.collectionView registerNib: pronosticosNib forCellWithReuseIdentifier: @"pronosticosCollectionViewCell"];
 }
 
-- (void)setupCollectionViewInsets
+- (void)setupCollectionViewInsetsWithCellsHeight:(CGFloat)height
 {
     CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
-    CGFloat totalCellsHeight = [self getTotalHeightForCells];
+    CGFloat totalCellsHeight = height;
     CGFloat topInset = 20.0 + (viewHeight - totalCellsHeight) - 10.0f;
     
     self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
@@ -126,8 +126,17 @@
         
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
          // AFTER ROTATION
+         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+         
+         if (orientation == UIInterfaceOrientationPortrait) {
+             [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
+             [self scrollCollectionViewToTop];
+         }else{
+             [self setupCollectionViewInsetsWithCellsHeight: [self getFirstTwoCellHeights]];
+             [self scrollCollectionViewToTop];
+         }
+         
          self.cellWidths = nil;
-         [self setupCollectionViewInsets];
          [self.collectionView reloadData];
 
      }];
@@ -194,7 +203,21 @@
 
 #pragma mark - Helper's
 
-- (CGFloat)getTotalHeightForCells
+- (void)scrollCollectionViewToTop
+{
+    [self.collectionView setContentOffset: CGPointMake(0, -self.collectionView.contentInset.top)];
+}
+
+- (CGFloat)getFirstTwoCellHeights
+{
+    CGFloat acum = 0;
+    for (int i = 0; i < 2; i++) {
+        acum += [self.cellHeights[i] floatValue];
+    }
+    return acum;
+}
+
+- (CGFloat)getTotalHeightForCellsExceptLastOne
 {
     __block CGFloat acum = 0;
     [self.cellHeights enumerateObjectsUsingBlock:^(NSNumber *height, NSUInteger idx, BOOL *stop) {

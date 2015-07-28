@@ -20,14 +20,10 @@
 
 @implementation MapViewController
 
-@synthesize index;
-@synthesize parentVC;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.index = 1;
     self.title = @"Puntos de Medicion";
     
     [self setUpLocationManager];
