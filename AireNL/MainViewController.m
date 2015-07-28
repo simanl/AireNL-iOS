@@ -11,9 +11,8 @@
 #import "UIColor+ILColor.h"
 #import "ILGradientLayer.h"
 #import "MapViewController.h"
-#import "HeaderCollectionReusableView.h"
 
-@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HeaderCollectionReusableViewDelegate>
+@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
@@ -35,6 +34,7 @@
     self.index = 0;
     
     [self customizeAppearance];
+    [self registerNibs];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -70,6 +70,12 @@
     [self setupCollectionViewInsets];
     [self drawNavigationBarGradient];
     [self drawBackgroundGradientWithSize: self.view.bounds.size];
+}
+
+- (void)registerNibs
+{
+    UINib *pronosticosNib = [UINib nibWithNibName: @"PronosticosCollectionViewCell" bundle: [NSBundle mainBundle]];
+    [self.collectionView registerNib: pronosticosNib forCellWithReuseIdentifier: @"pronosticosCollectionViewCell"];
 }
 
 - (void)setupCollectionViewInsets
@@ -164,12 +170,12 @@
     return CGSizeMake(width, height);
 }
 
-#pragma mark - Getters
+#pragma mark - Set/Get
 
 - (NSArray *)cellHeights
 {
     if (!_cellHeights) {
-        _cellHeights = @[@(160), @(80), @(80), @(80), @(80)];
+        _cellHeights = @[@(160), @(80), @(80), @(80), @(80), @(190)];
     }
     return _cellHeights;
 }
@@ -178,7 +184,7 @@
 {
     if (!_cellWidths) {
         CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
-        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f)];
+        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f), @(collectionWidth)];
     }
     return _cellWidths;
 }
@@ -186,7 +192,7 @@
 - (NSArray *)cellIdentifiers
 {
     if (!_cellIdentifiers) {
-        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"contaminantesCell", @"vientoCell", @"temperaturaCell"];
+        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"contaminantesCell", @"vientoCell", @"temperaturaCell", @"pronosticosCollectionViewCell"];
     }
     return _cellIdentifiers;
 }
@@ -195,19 +201,16 @@
 
 - (CGFloat)getTotalHeightForCells
 {
-    CGFloat acum = 0;
-    for (NSNumber *height in self.cellHeights) {
+    __block CGFloat acum = 0;
+    [self.cellHeights enumerateObjectsUsingBlock:^(NSNumber *height, NSUInteger idx, BOOL *stop) {
+        // SKIP LAST CELL
+        if (idx == [self.cellHeights count] - 1) {
+            *stop = YES;
+            return;
+        }
         acum += [height floatValue];
-    }
+    }];
     return acum;
 }
-
-//- (CGFloat)getCenterPoint
-//{
-//    [self.view setNeedsLayout];
-//    [self.view layoutIfNeeded];
-//    
-//    return CGRectGetMidY(self.collectionView.bounds);
-//}
 
 @end

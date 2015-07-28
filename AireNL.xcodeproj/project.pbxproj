@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */; };
-		0633667B1B60068900C32FF6 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633667A1B60068900C32FF6 /* HeaderCollectionReusableView.m */; };
-		0633667E1B600A8600C32FF6 /* StickyHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0633667D1B600A8600C32FF6 /* StickyHeaderFlowLayout.m */; };
-		063366801B600CBA00C32FF6 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0633667F1B600CBA00C32FF6 /* CollectionViewHeader.xib */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
@@ -28,6 +25,12 @@
 		06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B71B542615009E9D47 /* LaunchScreen.xib */; };
 		06D367C51B542615009E9D47 /* AireNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367C41B542615009E9D47 /* AireNLTests.m */; };
 		06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367D41B54564D009E9D47 /* UIColor+ILColor.m */; };
+		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
+		06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */; };
+		06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */; };
+		06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */; };
+		06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */; };
+		06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +46,6 @@
 /* Begin PBXFileReference section */
 		06257C9C1B5F0CAC002E34AE /* ILGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILGradientLayer.h; sourceTree = "<group>"; };
 		06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILGradientLayer.m; sourceTree = "<group>"; };
-		063366791B60068900C32FF6 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
-		0633667A1B60068900C32FF6 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
-		0633667C1B600A8600C32FF6 /* StickyHeaderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickyHeaderFlowLayout.h; sourceTree = "<group>"; };
-		0633667D1B600A8600C32FF6 /* StickyHeaderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickyHeaderFlowLayout.m; sourceTree = "<group>"; };
-		0633667F1B600CBA00C32FF6 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -75,6 +73,15 @@
 		06D367C41B542615009E9D47 /* AireNLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AireNLTests.m; sourceTree = "<group>"; };
 		06D367D31B54564D009E9D47 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ILColor.h"; sourceTree = "<group>"; };
 		06D367D41B54564D009E9D47 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ILColor.m"; sourceTree = "<group>"; };
+		06F2C4401B680D4100BDF043 /* PronosticosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticosCollectionViewCell.h; sourceTree = "<group>"; };
+		06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticosCollectionViewCell.m; sourceTree = "<group>"; };
+		06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticosCollectionViewCell.xib; sourceTree = "<group>"; };
+		06F2C44A1B680E7000BDF043 /* PronosticoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoTableViewCell.h; sourceTree = "<group>"; };
+		06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoTableViewCell.m; sourceTree = "<group>"; };
+		06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoTableViewCell.xib; sourceTree = "<group>"; };
+		06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoHeaderTableViewCell.h; sourceTree = "<group>"; };
+		06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoHeaderTableViewCell.m; sourceTree = "<group>"; };
+		06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoHeaderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +106,7 @@
 		063366781B60064C00C32FF6 /* Table & Collection Cells */ = {
 			isa = PBXGroup;
 			children = (
-				063366791B60068900C32FF6 /* HeaderCollectionReusableView.h */,
-				0633667A1B60068900C32FF6 /* HeaderCollectionReusableView.m */,
-				0633667F1B600CBA00C32FF6 /* CollectionViewHeader.xib */,
-				0633667C1B600A8600C32FF6 /* StickyHeaderFlowLayout.h */,
-				0633667D1B600A8600C32FF6 /* StickyHeaderFlowLayout.m */,
+				069B252D1B67F7890032CED2 /* Pronostico */,
 			);
 			name = "Table & Collection Cells";
 			sourceTree = "<group>";
@@ -132,6 +135,22 @@
 				065753121B5EE7B300FF226C /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		069B252D1B67F7890032CED2 /* Pronostico */ = {
+			isa = PBXGroup;
+			children = (
+				06F2C4401B680D4100BDF043 /* PronosticosCollectionViewCell.h */,
+				06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */,
+				06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */,
+				06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */,
+				06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */,
+				06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */,
+				06F2C44A1B680E7000BDF043 /* PronosticoTableViewCell.h */,
+				06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */,
+				06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */,
+			);
+			name = Pronostico;
 			sourceTree = "<group>";
 		};
 		06D3679C1B542615009E9D47 = {
@@ -329,14 +348,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0657531A1B5EECAB00FF226C /* Lato-Black.ttf in Resources */,
-				063366801B600CBA00C32FF6 /* CollectionViewHeader.xib in Resources */,
 				0657531B1B5EECAB00FF226C /* Lato-Bold.ttf in Resources */,
 				0657531C1B5EECAB00FF226C /* Lato-Hairline.ttf in Resources */,
+				06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */,
 				0657531E1B5EECAB00FF226C /* Lato-Regular.ttf in Resources */,
 				06D367B41B542615009E9D47 /* Main.storyboard in Resources */,
 				06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */,
 				06D367B61B542615009E9D47 /* Images.xcassets in Resources */,
 				0657531D1B5EECAB00FF226C /* Lato-Light.ttf in Resources */,
+				06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */,
+				06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,15 +376,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
+				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
+				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				065753101B5EBB7100FF226C /* MainPageViewController.m in Sources */,
 				06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */,
-				0633667B1B60068900C32FF6 /* HeaderCollectionReusableView.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
-				0633667E1B600A8600C32FF6 /* StickyHeaderFlowLayout.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
+				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
