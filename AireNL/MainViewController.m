@@ -24,14 +24,9 @@
 
 @implementation MainViewController
 
-@synthesize index;
-@synthesize parentVC;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.index = 0;
     
     [self customizeAppearance];
     [self registerNibs];
@@ -121,7 +116,7 @@
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
 
     // BEFORE ROTATION
     [self drawBackgroundGradientWithSize: size];

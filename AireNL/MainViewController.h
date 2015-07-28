@@ -10,7 +10,7 @@
 
 #import "MainPageViewController.h"
 
-@interface MainViewController : UIViewController <MainContainerChild>
+@interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
