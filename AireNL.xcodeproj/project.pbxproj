@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
-		0657531A1B5EECAB00FF226C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753151B5EECAB00FF226C /* Lato-Black.ttf */; };
-		0657531B1B5EECAB00FF226C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753161B5EECAB00FF226C /* Lato-Bold.ttf */; };
-		0657531C1B5EECAB00FF226C /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753171B5EECAB00FF226C /* Lato-Hairline.ttf */; };
-		0657531D1B5EECAB00FF226C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753181B5EECAB00FF226C /* Lato-Light.ttf */; };
-		0657531E1B5EECAB00FF226C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 065753191B5EECAB00FF226C /* Lato-Regular.ttf */; };
+		06A8C6601B6FCDE600E42EE1 /* ILRadialGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradient.m */; };
+		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
 		06D367AB1B542615009E9D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AA1B542615009E9D47 /* main.m */; };
 		06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AD1B542615009E9D47 /* AppDelegate.m */; };
 		06D367B41B542615009E9D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B21B542615009E9D47 /* Main.storyboard */; };
@@ -43,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06257C9C1B5F0CAC002E34AE /* ILGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILGradientLayer.h; sourceTree = "<group>"; };
-		06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILGradientLayer.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -52,11 +46,10 @@
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0657530C1B5EBB3600FF226C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		065753151B5EECAB00FF226C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
-		065753161B5EECAB00FF226C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		065753171B5EECAB00FF226C /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
-		065753181B5EECAB00FF226C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
-		065753191B5EECAB00FF226C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		06A8C65E1B6FCDE600E42EE1 /* ILRadialGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRadialGradient.h; sourceTree = "<group>"; };
+		06A8C65F1B6FCDE600E42EE1 /* ILRadialGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRadialGradient.m; sourceTree = "<group>"; };
+		06A8C6611B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantesCollectionViewCell.h; sourceTree = "<group>"; };
+		06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantesCollectionViewCell.m; sourceTree = "<group>"; };
 		06D367A51B542615009E9D47 /* AireNL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AireNL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D367A91B542615009E9D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D367AA1B542615009E9D47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +96,8 @@
 		063366781B60064C00C32FF6 /* Table & Collection Cells */ = {
 			isa = PBXGroup;
 			children = (
+				06A8C6611B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.h */,
+				06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */,
 				069B252D1B67F7890032CED2 /* Pronostico UICollectionViewCell */,
 			);
 			name = "Table & Collection Cells";
@@ -212,8 +207,8 @@
 			children = (
 				06D367B21B542615009E9D47 /* Main.storyboard */,
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
-				06257C9C1B5F0CAC002E34AE /* ILGradientLayer.h */,
-				06257C9D1B5F0CAC002E34AE /* ILGradientLayer.m */,
+				06A8C65E1B6FCDE600E42EE1 /* ILRadialGradient.h */,
+				06A8C65F1B6FCDE600E42EE1 /* ILRadialGradient.m */,
 				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
 				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
 				063366781B60064C00C32FF6 /* Table & Collection Cells */,
@@ -245,11 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				06D367B51B542615009E9D47 /* Images.xcassets */,
-				065753151B5EECAB00FF226C /* Lato-Black.ttf */,
-				065753161B5EECAB00FF226C /* Lato-Bold.ttf */,
-				065753171B5EECAB00FF226C /* Lato-Hairline.ttf */,
-				065753181B5EECAB00FF226C /* Lato-Light.ttf */,
-				065753191B5EECAB00FF226C /* Lato-Regular.ttf */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -334,15 +324,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0657531A1B5EECAB00FF226C /* Lato-Black.ttf in Resources */,
-				0657531B1B5EECAB00FF226C /* Lato-Bold.ttf in Resources */,
-				0657531C1B5EECAB00FF226C /* Lato-Hairline.ttf in Resources */,
 				06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */,
-				0657531E1B5EECAB00FF226C /* Lato-Regular.ttf in Resources */,
 				06D367B41B542615009E9D47 /* Main.storyboard in Resources */,
 				06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */,
 				06D367B61B542615009E9D47 /* Images.xcassets in Resources */,
-				0657531D1B5EECAB00FF226C /* Lato-Light.ttf in Resources */,
 				06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */,
 				06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */,
 			);
@@ -367,11 +352,12 @@
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
-				06257C9E1B5F0CAC002E34AE /* ILGradientLayer.m in Sources */,
+				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
+				06A8C6601B6FCDE600E42EE1 /* ILRadialGradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -487,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

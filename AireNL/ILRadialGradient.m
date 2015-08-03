@@ -1,22 +1,22 @@
 //
-//  ILGradientLayer.m
+//  ILRadialGradient.m
 //  AireNL
 //
-//  Created by Daniel Lozano on 7/21/15.
+//  Created by Daniel Lozano on 8/3/15.
 //  Copyright (c) 2015 Icalia Labs. All rights reserved.
 //
 
-#import "ILGradientLayer.h"
+#import "ILRadialGradient.h"
 
 #import <UIKit/UIKit.h>
 
-@interface ILGradientLayer ()
+@interface ILRadialGradient ()
 
 @property (nonatomic) UIColor *color;
 
 @end
 
-@implementation ILGradientLayer
+@implementation ILRadialGradient
 
 - (instancetype)initWithColor:(UIColor *)color
 {
@@ -36,17 +36,17 @@
     size_t gradLocationsNum = 2;
     CGFloat gradLocations[2] = {0.0f, 1.0f};
     CGFloat gradColors[8] = {colorComponents[0],colorComponents[1],colorComponents[2],colorComponents[3],
-                                colorComponents[0],colorComponents[1],colorComponents[2], 0.0f};
+        colorComponents[0],colorComponents[1],colorComponents[2], 0.0f};
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, gradColors, gradLocations, gradLocationsNum);
     CGColorSpaceRelease(colorSpace);
-
+    
     CGPoint gradCenter = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height);
     float gradRadius = MIN(self.bounds.size.width, self.bounds.size.height);
     
-//    CGPoint gradCenter = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
-//    float gradRadius = MIN(self.bounds.size.width, self.bounds.size.height);
+    //    CGPoint gradCenter = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    //    float gradRadius = MIN(self.bounds.size.width, self.bounds.size.height);
     
     CGContextDrawRadialGradient (ctx, gradient, gradCenter, 0, gradCenter, gradRadius, kCGGradientDrawsAfterEndLocation);
     

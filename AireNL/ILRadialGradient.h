@@ -1,8 +1,8 @@
 //
-//  ILGradientLayer.h
+//  ILRadialGradient.h
 //  AireNL
 //
-//  Created by Daniel Lozano on 7/21/15.
+//  Created by Daniel Lozano on 8/3/15.
 //  Copyright (c) 2015 Icalia Labs. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class UIColor;
 
-@interface ILGradientLayer : CALayer
+@interface ILRadialGradient : CALayer
 
 - (instancetype)initWithColor:(UIColor *)color;
 

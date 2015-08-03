@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 
 #import "UIColor+ILColor.h"
-#import "ILGradientLayer.h"
+#import "ILRadialGradient.h"
 #import "MapViewController.h"
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -100,7 +100,7 @@
 
 - (void)drawBackgroundGradientWithSize:(CGSize)size
 {
-    ILGradientLayer *gradientLayer = [[ILGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
+    ILRadialGradient *gradientLayer = [[ILRadialGradient alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
     gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
     
     if (self.hasDrawnGradient) {
