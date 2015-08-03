@@ -117,8 +117,12 @@
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
     [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
-
+    
     // BEFORE ROTATION
+    
+    self.cellWidths = nil;
+    [self.collectionView.collectionViewLayout invalidateLayout];
+    
     [self drawBackgroundGradientWithSize: size];
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
@@ -126,8 +130,8 @@
         
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
          // AFTER ROTATION
-         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
          
+         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
          if (orientation == UIInterfaceOrientationPortrait) {
              [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
              [self scrollCollectionViewToTop];
@@ -136,9 +140,6 @@
              [self scrollCollectionViewToTop];
          }
          
-         self.cellWidths = nil;
-         [self.collectionView reloadData];
-
      }];
 
 }
