@@ -231,7 +231,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m78-Z8-9zh">
                                                     <rect key="frame" x="0.0" y="0.0" width="37" height="80"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B31-NF-bQy">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B31-NF-bQy">
                                                     <rect key="frame" x="97" y="0.0" width="38" height="80"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8B-Sa-nco">

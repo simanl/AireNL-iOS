@@ -103,7 +103,7 @@
 		063366781B60064C00C32FF6 /* Table & Collection Cells */ = {
 			isa = PBXGroup;
 			children = (
-				069B252D1B67F7890032CED2 /* Pronostico */,
+				069B252D1B67F7890032CED2 /* Pronostico UICollectionViewCell */,
 			);
 			name = "Table & Collection Cells";
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		069B252D1B67F7890032CED2 /* Pronostico */ = {
+		069B252D1B67F7890032CED2 /* Pronostico UICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				06F2C4401B680D4100BDF043 /* PronosticosCollectionViewCell.h */,
@@ -136,7 +136,7 @@
 				06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */,
 				06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */,
 			);
-			name = Pronostico;
+			name = "Pronostico UICollectionViewCell";
 			sourceTree = "<group>";
 		};
 		06D3679C1B542615009E9D47 = {

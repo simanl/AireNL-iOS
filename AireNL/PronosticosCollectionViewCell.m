@@ -23,12 +23,12 @@
 {
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+
+    UINib *headerCellNib = [UINib nibWithNibName: @"PronosticoHeaderTableViewCell" bundle: [NSBundle mainBundle]];
+    [self.tableView registerNib: headerCellNib forCellReuseIdentifier: @"pronosticoHeaderTableViewCell"];
     
     UINib *cellNib = [UINib nibWithNibName: @"PronosticoTableViewCell" bundle: [NSBundle mainBundle]];
     [self.tableView registerNib: cellNib forCellReuseIdentifier: @"pronosticoTableViewCell"];
-    
-    UINib *headerCellNib = [UINib nibWithNibName: @"PronosticoHeaderTableViewCell" bundle: [NSBundle mainBundle]];
-    [self.tableView registerNib: headerCellNib forCellReuseIdentifier: @"pronosticoHeaderTableViewCell"];
 }
 
 #pragma mark - UITableView Data Source
@@ -63,6 +63,11 @@
         return 40.0f;
     }
     return 50.0f;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor: [UIColor clearColor]];
 }
 
 #pragma mark - Set/Get

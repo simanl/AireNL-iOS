@@ -205,7 +205,7 @@
 
 - (void)scrollCollectionViewToTop
 {
-    [self.collectionView setContentOffset: CGPointMake(0, -self.collectionView.contentInset.top)];
+    [self.collectionView setContentOffset: CGPointMake(0, -self.collectionView.contentInset.top) animated: YES];
 }
 
 - (CGFloat)getFirstTwoCellHeights
