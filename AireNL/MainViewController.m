@@ -19,6 +19,7 @@
 @property (nonatomic) NSArray *cellIdentifiers;
 
 @property (nonatomic) BOOL hasDrawnGradient;
+@property (nonatomic) BOOL hasDrawnBlur;
 
 @end
 
@@ -63,8 +64,22 @@
     self.view.backgroundColor = [UIColor il_blueMorningColorWithAlpha: 1];
     
     [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
-    [self drawNavigationBarGradient];
-    [self drawBackgroundGradientWithSize: self.view.bounds.size];
+//    [self drawNavigationBarGradient];
+//    [self drawBackgroundGradientWithSize: self.view.bounds.size];
+    
+    // BLUR EFFECT
+    
+    [self.collectionView layoutIfNeeded];
+    [self.collectionView.collectionViewLayout invalidateLayout];
+    
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
+    
+    CGSize contentSize = self.collectionView.contentSize;
+    CGFloat firstCellHeight = [(NSNumber *)self.cellHeights[0] floatValue];
+    visualEffectView.frame = CGRectMake(0, firstCellHeight - 2, contentSize.width, contentSize.height);
+    
+    [self.collectionView insertSubview: visualEffectView atIndex: 0];
 }
 
 - (void)registerNibs

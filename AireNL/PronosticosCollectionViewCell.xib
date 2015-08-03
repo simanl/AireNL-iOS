@@ -29,7 +29,7 @@
             <connections>
                 <outlet property="tableView" destination="jiz-zx-deZ" id="95D-UO-a9M"/>
             </connections>
-            <point key="canvasLocation" x="291.5" y="372"/>
+            <point key="canvasLocation" x="106" y="183"/>
         </collectionViewCell>
     </objects>
 </document>

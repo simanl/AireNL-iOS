@@ -23,12 +23,13 @@
 {
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-
+    
     UINib *headerCellNib = [UINib nibWithNibName: @"PronosticoHeaderTableViewCell" bundle: [NSBundle mainBundle]];
     [self.tableView registerNib: headerCellNib forCellReuseIdentifier: @"pronosticoHeaderTableViewCell"];
     
     UINib *cellNib = [UINib nibWithNibName: @"PronosticoTableViewCell" bundle: [NSBundle mainBundle]];
     [self.tableView registerNib: cellNib forCellReuseIdentifier: @"pronosticoTableViewCell"];
+    
 }
 
 #pragma mark - UITableView Data Source
