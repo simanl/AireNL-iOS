@@ -66,20 +66,6 @@
     [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
 //    [self drawNavigationBarGradient];
 //    [self drawBackgroundGradientWithSize: self.view.bounds.size];
-    
-    // BLUR EFFECT
-    
-    [self.collectionView layoutIfNeeded];
-    [self.collectionView.collectionViewLayout invalidateLayout];
-    
-    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
-    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
-    
-    CGSize contentSize = self.collectionView.contentSize;
-    CGFloat firstCellHeight = [(NSNumber *)self.cellHeights[0] floatValue];
-    visualEffectView.frame = CGRectMake(0, firstCellHeight - 2, contentSize.width, contentSize.height);
-    
-    [self.collectionView insertSubview: visualEffectView atIndex: 0];
 }
 
 - (void)registerNibs
@@ -135,13 +121,17 @@
     
     // BEFORE ROTATION
     
+    
     self.cellWidths = nil;
     [self.collectionView.collectionViewLayout invalidateLayout];
+//    self.collectionView.hasDrawnBlur = NO;
     
-    [self drawBackgroundGradientWithSize: size];
+//    [self drawBackgroundGradientWithSize: size];
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
         // WHILE ROTATING
+        
+        self.collectionView.hasDrawnBlur = NO;
         
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
          // AFTER ROTATION

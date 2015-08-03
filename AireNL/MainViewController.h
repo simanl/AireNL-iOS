@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ILCollectionView.h"
+
 @interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -18,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *gradientView;
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet ILCollectionView *collectionView;
 
 - (IBAction)userDidSelectMap:(id)sender;
 
