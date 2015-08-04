@@ -19,9 +19,6 @@
 @property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
 
-//@property (nonatomic) BOOL hasDrawnGradient;
-//@property (nonatomic) BOOL hasDrawnBlur;
-
 @end
 
 @implementation MainViewController
@@ -34,13 +31,6 @@
     [self registerNibs];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear: animated];
-    
-    self.gradientView.hidden = NO;
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,8 +40,6 @@
 
 - (IBAction)userDidSelectMap:(id)sender
 {
-    self.gradientView.hidden = YES;
-    
     MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
     mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
@@ -119,31 +107,37 @@
     [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
     
     // BEFORE ROTATION
-    UIInterfaceOrientation beforeOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (beforeOrientation == UIInterfaceOrientationPortrait) {
-//        self.collectionView.needsRedraw = YES;
-        [self.collectionView setNeedsRedraw: YES withNewSize: size];
-        [self.collectionView drawBlur];
-    }
     
+    // Reload collection view layout
     self.cellWidths = nil;
     [self.collectionView.collectionViewLayout invalidateLayout];
+    
+    // Redraw blur with NEW size BEFORE rotation, since it's going to be bigger
+    UIInterfaceOrientation beforeOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (beforeOrientation == UIInterfaceOrientationPortrait) {
+        [self.collectionView setBlurNeedsRedraw: YES withNewSize: size];
+        [self.collectionView drawBlur];
+    }
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
         // WHILE ROTATING
         
+        // Reset scrollView offset and scroll to top WHILE animating to prevent jerkiness
+        UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+        if (afterOrientation == UIInterfaceOrientationPortrait) {
+            [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
+        }else{
+            [self setupCollectionViewInsetsWithCellsHeight: [self getFirstTwoCellHeights]];
+        }
+        [self scrollCollectionViewToTop];
+        
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
         // AFTER ROTATION
          
+         // Set blur needs redraw with current size bc it's now smaller, let layoutsubview handle drawing
          UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
          if (afterOrientation == UIInterfaceOrientationPortrait) {
-             [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
-             [self scrollCollectionViewToTop];
-         }else{
-             self.collectionView.needsRedraw = YES;
-             
-             [self setupCollectionViewInsetsWithCellsHeight: [self getFirstTwoCellHeights]];
-             [self scrollCollectionViewToTop];
+             self.collectionView.blurNeedsRedraw = YES;
          }
          
      }];
@@ -212,7 +206,13 @@
 
 - (void)scrollCollectionViewToTop
 {
-    [self.collectionView setContentOffset: CGPointMake(0, -self.collectionView.contentInset.top) animated: YES];
+    CGPoint topPoint = CGPointMake(0, -self.collectionView.contentInset.top);
+    
+    [UIView animateWithDuration: 0.2 animations:^{
+        self.collectionView.contentOffset = topPoint;
+    }];
+    
+//    [self.collectionView setContentOffset: topPoint animated: YES];
 }
 
 - (CGFloat)getFirstTwoCellHeights

@@ -17,7 +17,6 @@
 
 @property (nonatomic) UIVisualEffectView *blurView;
 @property (nonatomic) ILLinearGradientView *fadeView;
-@property (nonatomic) UIView *blackView;
 
 @property (nonatomic) CGSize newSize;
 
@@ -25,7 +24,17 @@
 
 @implementation ILBlurCollectionView
 
-@synthesize needsRedraw = _needsRedraw;
+//@synthesize needsRedraw = _needsRedraw;
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder: aDecoder];
+    if (!self) return nil;
+    
+    self.blurNeedsRedraw = YES;
+    
+    return self;
+}
 
 - (void)layoutSubviews
 {
@@ -36,43 +45,33 @@
 
 - (void)drawBlur
 {
-    if (!self.needsRedraw) {
+    if (!self.blurNeedsRedraw) {
         return;
     }
+    
+    NSLog(@"REDRAWING BLUR");
     
     // REMOVE PREVIOUS VIEWS
     [self.blurView removeFromSuperview];
     [self.fadeView removeFromSuperview];
-//    [self.blackView removeFromSuperview];
     
-//    CGSize collectionViewSize = self.bounds.size;
     CGFloat width = [self width];
     CGSize collectionViewContentSize = self.contentSize;
-
-//    NSLog(@"VIEW SIZE : %@", NSStringFromCGSize(collectionViewSize));
-//    NSLog(@"CONTENT SIZE : %@", NSStringFromCGSize(collectionViewContentSize));
+    CGRect effectRect = CGRectMake(0, TOP_OFFSET, width, collectionViewContentSize.height + BOTTOM_OFFSET);
     
     // BLUR EFFECT
     UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
     self.blurView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
-    self.blurView.frame = CGRectMake(0, TOP_OFFSET, width, collectionViewContentSize.height + BOTTOM_OFFSET);
+    self.blurView.frame = effectRect;
     
     // BLACK FADE EFFECT
     self.fadeView = [[ILLinearGradientView alloc] initWithColors: @[[UIColor clearColor], [UIColor blackColor]]];
-    self.fadeView.frame = CGRectMake(0, TOP_OFFSET, width, collectionViewContentSize.height + BOTTOM_OFFSET);
-    //    self.fadeView.frame = CGRectMake(0, TOP_OFFSET, collectionViewSize.width, collectionViewSize.height - TOP_OFFSET);
-    
-    // BLACK BOTTOM VIEW
-//    self.blackView = [[UIView alloc] init];
-//    self.blackView.backgroundColor = [UIColor redColor];
-//    self.blackView.frame = CGRectMake(0, collectionViewSize.height,
-//                                      collectionViewSize.width, collectionViewContentSize.height - collectionViewSize.height + BOTTOM_OFFSET);
+    self.fadeView.frame = effectRect;
     
     [self insertSubview: self.blurView atIndex: 0];
     [self insertSubview: self.fadeView aboveSubview: self.blurView];
-//    [self insertSubview: self.blackView atIndex: 1];
     
-    self.needsRedraw = NO;
+    self.blurNeedsRedraw = NO;
 }
 
 #pragma mark - Helper's
@@ -88,23 +87,15 @@
 
 #pragma mark - Set/Get
 
-- (BOOL)needsRedraw
+- (void)setBlurNeedsRedraw:(BOOL)blurNeedsRedraw
 {
-    if (!_needsRedraw) {
-        _needsRedraw = YES;
-    }
-    return _needsRedraw;
-}
-
-- (void)setNeedsRedraw:(BOOL)needsRedraw
-{
-    _needsRedraw = needsRedraw;
+    _blurNeedsRedraw = blurNeedsRedraw;
     _newSize = CGSizeZero;
 }
 
-- (void)setNeedsRedraw:(BOOL)needsRedraw withNewSize:(CGSize)size
+- (void)setBlurNeedsRedraw:(BOOL)needsRedraw withNewSize:(CGSize)size;
 {
-    _needsRedraw = needsRedraw;
+    _blurNeedsRedraw = needsRedraw;
     _newSize = size;
 }
 
