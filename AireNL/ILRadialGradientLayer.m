@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Icalia Labs. All rights reserved.
 //
 
-#import "ILRadialGradient.h"
+#import "ILRadialGradientLayer.h"
 
 #import <UIKit/UIKit.h>
 
-@interface ILRadialGradient ()
+@interface ILRadialGradientLayer ()
 
 @property (nonatomic) UIColor *color;
 
 @end
 
-@implementation ILRadialGradient
+@implementation ILRadialGradientLayer
 
 - (instancetype)initWithColor:(UIColor *)color
 {

@@ -9,7 +9,8 @@
 #import "MainViewController.h"
 
 #import "UIColor+ILColor.h"
-#import "ILRadialGradient.h"
+#import "ILBlurCollectionView.h"
+#import "ILRadialGradientLayer.h"
 #import "MapViewController.h"
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -101,7 +102,7 @@
 
 - (void)drawBackgroundGradientWithSize:(CGSize)size
 {
-    ILRadialGradient *gradientLayer = [[ILRadialGradient alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
+    ILRadialGradientLayer *gradientLayer = [[ILRadialGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
     gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
     
     if (self.hasDrawnGradient) {
@@ -121,10 +122,8 @@
     
     // BEFORE ROTATION
     
-    
     self.cellWidths = nil;
     [self.collectionView.collectionViewLayout invalidateLayout];
-//    self.collectionView.hasDrawnBlur = NO;
     
 //    [self drawBackgroundGradientWithSize: size];
     

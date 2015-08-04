@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ILCollectionView : UICollectionView
+@interface ILBlurCollectionView : UICollectionView
 
 @property (nonatomic) BOOL hasDrawnBlur;
 

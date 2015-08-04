@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ILCollectionView.h"
+@class ILBlurCollectionView;
 
 @interface MainViewController : UIViewController
 
@@ -20,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *gradientView;
 
-@property (weak, nonatomic) IBOutlet ILCollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet ILBlurCollectionView *collectionView;
 
 - (IBAction)userDidSelectMap:(id)sender;
 

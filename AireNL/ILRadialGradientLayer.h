@@ -10,7 +10,7 @@
 
 @class UIColor;
 
-@interface ILRadialGradient : CALayer
+@interface ILRadialGradientLayer : CALayer
 
 - (instancetype)initWithColor:(UIColor *)color;
 

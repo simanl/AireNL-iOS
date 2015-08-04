@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundIMG" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-ao-SVZ" userLabel="BackgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILCollectionView">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILBlurCollectionView">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="x6F-Hc-A3q">
@@ -607,13 +607,17 @@
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YUf-tY-kQh"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" constant="16" id="a9I-Zw-jKN"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="abx-Ca-nLq"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="b2a-gj-21R"/>
                             <constraint firstAttribute="trailing" secondItem="KH6-Z1-yEp" secondAttribute="trailing" id="dJ5-J0-1Zz"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dTk-o2-2r7"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="KH6-Z1-yEp" secondAttribute="bottom" id="g2o-kV-H3k"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="hSY-vg-uRR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUK-ao-SVZ" secondAttribute="bottom" id="i5d-vP-E6C"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jnN-AH-u8R"/>
+                            <constraint firstAttribute="bottom" secondItem="aGk-6S-54d" secondAttribute="bottom" id="lFy-E2-r6g"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="n6i-H6-IMR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="oRC-Xv-ghS"/>
+                            <constraint firstAttribute="trailing" secondItem="aGk-6S-54d" secondAttribute="trailing" id="qJA-lr-ACc"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qSa-qa-obW"/>
                             <constraint firstItem="KH6-Z1-yEp" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="r7R-OS-LuQ"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sNA-OT-naW"/>
@@ -627,12 +631,16 @@
                                 <exclude reference="sNA-OT-naW"/>
                                 <exclude reference="3JQ-eg-EiV"/>
                                 <exclude reference="Og2-GY-uKd"/>
+                                <exclude reference="Rx8-Yh-uCX"/>
+                                <exclude reference="T1J-Nq-v4S"/>
                                 <exclude reference="a9I-Zw-jKN"/>
                                 <exclude reference="abx-Ca-nLq"/>
                                 <exclude reference="dTk-o2-2r7"/>
                                 <exclude reference="g2o-kV-H3k"/>
                                 <exclude reference="hSY-vg-uRR"/>
+                                <exclude reference="n6i-H6-IMR"/>
                                 <exclude reference="tm8-f0-f28"/>
+                                <exclude reference="3Xo-GB-NKt"/>
                                 <exclude reference="oRC-Xv-ghS"/>
                             </mask>
                         </variation>

@@ -11,7 +11,8 @@
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
-		06A8C6601B6FCDE600E42EE1 /* ILRadialGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradient.m */; };
+		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
+		06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */; };
 		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
 		06D367AB1B542615009E9D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AA1B542615009E9D47 /* main.m */; };
 		06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AD1B542615009E9D47 /* AppDelegate.m */; };
@@ -20,7 +21,7 @@
 		06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B71B542615009E9D47 /* LaunchScreen.xib */; };
 		06D367C51B542615009E9D47 /* AireNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367C41B542615009E9D47 /* AireNLTests.m */; };
 		06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367D41B54564D009E9D47 /* UIColor+ILColor.m */; };
-		06E672DA1B70256F0046DD35 /* ILCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILCollectionView.m */; };
+		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
 		06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */; };
 		06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */; };
@@ -48,8 +49,10 @@
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0657530C1B5EBB3600FF226C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		06A8C65E1B6FCDE600E42EE1 /* ILRadialGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRadialGradient.h; sourceTree = "<group>"; };
-		06A8C65F1B6FCDE600E42EE1 /* ILRadialGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRadialGradient.m; sourceTree = "<group>"; };
+		06A89EBD1B71161700FB67A4 /* ILLinearGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILLinearGradientView.h; sourceTree = "<group>"; };
+		06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILLinearGradientView.m; sourceTree = "<group>"; };
+		06A8C65E1B6FCDE600E42EE1 /* ILRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRadialGradientLayer.h; sourceTree = "<group>"; };
+		06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRadialGradientLayer.m; sourceTree = "<group>"; };
 		06A8C6611B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantesCollectionViewCell.h; sourceTree = "<group>"; };
 		06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantesCollectionViewCell.m; sourceTree = "<group>"; };
 		06D367A51B542615009E9D47 /* AireNL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AireNL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +68,8 @@
 		06D367C41B542615009E9D47 /* AireNLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AireNLTests.m; sourceTree = "<group>"; };
 		06D367D31B54564D009E9D47 /* UIColor+ILColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ILColor.h"; sourceTree = "<group>"; };
 		06D367D41B54564D009E9D47 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ILColor.m"; sourceTree = "<group>"; };
-		06E672D81B70256F0046DD35 /* ILCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILCollectionView.h; sourceTree = "<group>"; };
-		06E672D91B70256F0046DD35 /* ILCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILCollectionView.m; sourceTree = "<group>"; };
+		06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILBlurCollectionView.h; sourceTree = "<group>"; };
+		06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILBlurCollectionView.m; sourceTree = "<group>"; };
 		06F2C4401B680D4100BDF043 /* PronosticosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticosCollectionViewCell.h; sourceTree = "<group>"; };
 		06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticosCollectionViewCell.m; sourceTree = "<group>"; };
 		06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -217,12 +220,14 @@
 			children = (
 				06D367B21B542615009E9D47 /* Main.storyboard */,
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
-				06A8C65E1B6FCDE600E42EE1 /* ILRadialGradient.h */,
-				06A8C65F1B6FCDE600E42EE1 /* ILRadialGradient.m */,
+				06A8C65E1B6FCDE600E42EE1 /* ILRadialGradientLayer.h */,
+				06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */,
+				06A89EBD1B71161700FB67A4 /* ILLinearGradientView.h */,
+				06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */,
+				06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */,
+				06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */,
 				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
 				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
-				06E672D81B70256F0046DD35 /* ILCollectionView.h */,
-				06E672D91B70256F0046DD35 /* ILCollectionView.m */,
 				063366781B60064C00C32FF6 /* Table & Collection Cells */,
 			);
 			name = Views;
@@ -412,7 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
-				06E672DA1B70256F0046DD35 /* ILCollectionView.m in Sources */,
+				06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */,
 				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
@@ -422,7 +427,8 @@
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
-				06A8C6601B6FCDE600E42EE1 /* ILRadialGradient.m in Sources */,
+				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
+				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
