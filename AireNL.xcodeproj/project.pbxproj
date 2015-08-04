@@ -28,6 +28,14 @@
 		06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */; };
 		06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */; };
 		06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */; };
+		06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */; };
+		06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054C1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m */; };
+		06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */; };
+		06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */; };
+		06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05551B715BA000BCFCA3 /* ContaminantResults.m */; };
+		06FE05591B715BB800BCFCA3 /* ImecaResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05581B715BB800BCFCA3 /* ImecaResults.m */; };
+		06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */; };
+		06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
 		D2F0869EC7379D94E67B90E4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE7FB868C685FB3C0F45E35 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +87,23 @@
 		06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoHeaderTableViewCell.h; sourceTree = "<group>"; };
 		06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoHeaderTableViewCell.m; sourceTree = "<group>"; };
 		06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		06FE05481B715A2700BCFCA3 /* ImecaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImecaCollectionViewCell.h; sourceTree = "<group>"; };
+		06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImecaCollectionViewCell.m; sourceTree = "<group>"; };
+		06FE054B1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActividadesCollectionViewCell.h; sourceTree = "<group>"; };
+		06FE054C1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActividadesCollectionViewCell.m; sourceTree = "<group>"; };
+		06FE054E1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperaturaCollectionViewCell.h; sourceTree = "<group>"; };
+		06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperaturaCollectionViewCell.m; sourceTree = "<group>"; };
+		06FE05511B715A5800BCFCA3 /* VientoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VientoCollectionViewCell.h; sourceTree = "<group>"; };
+		06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VientoCollectionViewCell.m; sourceTree = "<group>"; };
+		06FE05541B715BA000BCFCA3 /* ContaminantResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantResults.h; sourceTree = "<group>"; };
+		06FE05551B715BA000BCFCA3 /* ContaminantResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantResults.m; sourceTree = "<group>"; };
+		06FE05571B715BB800BCFCA3 /* ImecaResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImecaResults.h; sourceTree = "<group>"; };
+		06FE05581B715BB800BCFCA3 /* ImecaResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImecaResults.m; sourceTree = "<group>"; };
+		06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentResults.h; sourceTree = "<group>"; };
+		06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentResults.m; sourceTree = "<group>"; };
+		06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictionResults.h; sourceTree = "<group>"; };
+		06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredictionResults.m; sourceTree = "<group>"; };
+		06FE05621B715E4200BCFCA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		0AE7FB868C685FB3C0F45E35 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C303C0E9D12CEB5FD316AF3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E561D436F3FA75A06758C659 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +132,16 @@
 		063366781B60064C00C32FF6 /* Table & Collection Cells */ = {
 			isa = PBXGroup;
 			children = (
+				06FE05481B715A2700BCFCA3 /* ImecaCollectionViewCell.h */,
+				06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */,
+				06FE054B1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.h */,
+				06FE054C1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m */,
 				06A8C6611B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.h */,
 				06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */,
+				06FE054E1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.h */,
+				06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */,
+				06FE05511B715A5800BCFCA3 /* VientoCollectionViewCell.h */,
+				06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */,
 				069B252D1B67F7890032CED2 /* Pronostico UICollectionViewCell */,
 			);
 			name = "Table & Collection Cells";
@@ -174,6 +207,7 @@
 				06D367D01B542642009E9D47 /* Controllers */,
 				06D367D11B54264A009E9D47 /* Helpers+Categories */,
 				06D367D21B542653009E9D47 /* Assets */,
+				06FE05621B715E4200BCFCA3 /* Constants.h */,
 				06D367AC1B542615009E9D47 /* AppDelegate.h */,
 				06D367AD1B542615009E9D47 /* AppDelegate.m */,
 				06D367A81B542615009E9D47 /* Supporting Files */,
@@ -211,6 +245,8 @@
 		06D367CE1B542631009E9D47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				06FE05601B715D3600BCFCA3 /* Current Results */,
+				06FE05611B715D4900BCFCA3 /* Prediction Results */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,14 +256,9 @@
 			children = (
 				06D367B21B542615009E9D47 /* Main.storyboard */,
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
-				06A8C65E1B6FCDE600E42EE1 /* ILRadialGradientLayer.h */,
-				06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */,
-				06A89EBD1B71161700FB67A4 /* ILLinearGradientView.h */,
-				06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */,
-				06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */,
-				06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */,
 				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
 				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
+				06FE05471B7159AA00BCFCA3 /* Blurs, Gradients */,
 				063366781B60064C00C32FF6 /* Table & Collection Cells */,
 			);
 			name = Views;
@@ -259,6 +290,41 @@
 				06D367B51B542615009E9D47 /* Images.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		06FE05471B7159AA00BCFCA3 /* Blurs, Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */,
+				06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */,
+				06A89EBD1B71161700FB67A4 /* ILLinearGradientView.h */,
+				06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */,
+				06A8C65E1B6FCDE600E42EE1 /* ILRadialGradientLayer.h */,
+				06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */,
+			);
+			name = "Blurs, Gradients";
+			sourceTree = "<group>";
+		};
+		06FE05601B715D3600BCFCA3 /* Current Results */ = {
+			isa = PBXGroup;
+			children = (
+				06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */,
+				06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */,
+				06FE05541B715BA000BCFCA3 /* ContaminantResults.h */,
+				06FE05551B715BA000BCFCA3 /* ContaminantResults.m */,
+				06FE05571B715BB800BCFCA3 /* ImecaResults.h */,
+				06FE05581B715BB800BCFCA3 /* ImecaResults.m */,
+			);
+			name = "Current Results";
+			sourceTree = "<group>";
+		};
+		06FE05611B715D4900BCFCA3 /* Prediction Results */ = {
+			isa = PBXGroup;
+			children = (
+				06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */,
+				06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */,
+			);
+			name = "Prediction Results";
 			sourceTree = "<group>";
 		};
 		7DDB6118893D8D39D7CD7C12 /* Pods */ = {
@@ -421,14 +487,22 @@
 				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
+				06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
+				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
+				06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
+				06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */,
+				06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */,
+				06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
+				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
 				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,
+				06FE05591B715BB800BCFCA3 /* ImecaResults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

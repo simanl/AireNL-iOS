@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-FXBlurView.xcscheme</key>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1EB3EB34FC402C07B49D40A9</key>
+		<key>1EC94A6360A05A0A5B3C33E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>224E95A4F2B796C55EE28150</key>
+		<key>93DB863BEA3AA3FD0F0914C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B586AB832523DBE151180132</key>
 		<dict>
 			<key>primary</key>
 			<true/>
