@@ -10,4 +10,14 @@
 
 @implementation VientoCollectionViewCell
 
+@synthesize delegate;
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    CurrentResults *currentResults = [self.delegate getCurrentResults];
+    self.windLabel.text = [currentResults.wind stringValue];
+}
+
 @end

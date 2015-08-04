@@ -13,11 +13,18 @@
 #import "ILRadialGradientLayer.h"
 #import "MapViewController.h"
 
-@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+#import "CurrentResults.h"
+#import "PredictionResults.h"
+#import "ResultsCellDelegate.h"
+
+@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ResultsCellDelegate>
 
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
+
+@property (nonatomic) CurrentResults *currentResults;
+@property (nonatomic) PredictionResults *predictionResults;
 
 @end
 
@@ -29,6 +36,8 @@
     
     [self customizeAppearance];
     [self registerNibs];
+    
+    [self loadAssets];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +109,51 @@
 //    }
 //}
 
+#pragma mark - Network
+
+- (void)loadAssets
+{
+    CurrentResults *currentResults = [[CurrentResults alloc] init];
+    currentResults.date = [NSDate date];
+    currentResults.temperature = @(40);
+    currentResults.wind = @(140);
+    
+    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+    imecaResults.amount = @(40);
+    imecaResults.quality = @"Mala";
+    currentResults.imeca = imecaResults;
+    
+    ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
+    contamintResults.pm10 = @(4);
+    contamintResults.pm25 = @(14);
+    contamintResults.O3 = @(40);
+    currentResults.contaminants = contamintResults;
+    
+    self.currentResults = currentResults;
+    
+    ContaminantResults *periodOneContamintResults = [[ContaminantResults alloc] init];
+    periodOneContamintResults.pm10 = @(4);
+    periodOneContamintResults.pm25 = @(14);
+    periodOneContamintResults.O3 = @(40);
+    
+    ContaminantResults *periodTwoContamintResults = [[ContaminantResults alloc] init];
+    periodTwoContamintResults.pm10 = @(5);
+    periodTwoContamintResults.pm25 = @(15);
+    periodTwoContamintResults.O3 = @(50);
+    
+    ContaminantResults *periodThreeContamintResults = [[ContaminantResults alloc] init];
+    periodThreeContamintResults.pm10 = @(6);
+    periodThreeContamintResults.pm25 = @(16);
+    periodThreeContamintResults.O3 = @(60);
+    
+    PredictionResults *predictionResults = [[PredictionResults alloc] init];
+    predictionResults.periodOne = periodOneContamintResults;
+    predictionResults.periodTwo = periodTwoContamintResults;
+    predictionResults.periodThree = periodThreeContamintResults;
+    
+    self.predictionResults = predictionResults;
+}
+
 #pragma mark - Rotation
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -161,6 +215,8 @@
     NSString *cellIdentifier = self.cellIdentifiers[indexPath.row];
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath];
 
+    ((id<ResultsDelegateSettable>)cell).delegate = self;
+    
     return cell;
 }
 
@@ -173,6 +229,18 @@
     CGFloat width = [((NSNumber *)self.cellWidths[indexPath.row]) floatValue];
     
     return CGSizeMake(width, height);
+}
+
+#pragma mark - ResultsCellDelegate
+
+- (CurrentResults *)getCurrentResults
+{
+    return self.currentResults;
+}
+
+- (PredictionResults *)getPredictionResults
+{
+    return self.predictionResults;
 }
 
 #pragma mark - Set/Get

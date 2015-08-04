@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImecaCollectionViewCell : UICollectionViewCell
+#import "ResultsCellDelegate.h"
+
+@interface ImecaCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
 @property (weak, nonatomic) IBOutlet UILabel *imecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *imecaQualityLabel;

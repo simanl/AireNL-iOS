@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class ImecaResults;
-@class ContaminantResults;
+#import "ImecaResults.h"
+#import "ContaminantResults.h"
 
 @interface CurrentResults : NSObject
 

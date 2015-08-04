@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class ContaminantResults;
+#import "ContaminantResults.h"
 
 @interface PredictionResults : NSObject
 

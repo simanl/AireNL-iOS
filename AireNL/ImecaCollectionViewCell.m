@@ -10,4 +10,15 @@
 
 @implementation ImecaCollectionViewCell
 
+@synthesize delegate;
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    CurrentResults *currentResults = [self.delegate getCurrentResults];
+    self.imecaLabel.text = [currentResults.imeca.amount stringValue];
+    self.imecaQualityLabel.text = currentResults.imeca.quality;
+}
+
 @end

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContaminantesCollectionViewCell : UICollectionViewCell
+#import "ResultsCellDelegate.h"
+
+@interface ContaminantesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
 @property (weak, nonatomic) IBOutlet UILabel *contaminante10TitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contaminante25TitleLabel;
@@ -17,6 +19,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *contaminante10Label;
 @property (weak, nonatomic) IBOutlet UILabel *contaminante25Label;
 @property (weak, nonatomic) IBOutlet UILabel *contaminante03Label;
-
 
 @end

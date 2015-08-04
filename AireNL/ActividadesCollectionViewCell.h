@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActividadesCollectionViewCell : UICollectionViewCell
+#import "ResultsCellDelegate.h"
+
+@interface ActividadesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
 @end

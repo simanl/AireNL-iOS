@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TemperaturaCollectionViewCell : UICollectionViewCell
+#import "ResultsCellDelegate.h"
+
+@interface TemperaturaCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
-
 
 @end

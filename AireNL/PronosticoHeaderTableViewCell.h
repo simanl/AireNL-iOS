@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ResultsCellDelegate.h"
+
 @interface PronosticoHeaderTableViewCell : UITableViewCell
 
 @end

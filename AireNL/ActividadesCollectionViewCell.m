@@ -10,4 +10,6 @@
 
 @implementation ActividadesCollectionViewCell
 
+@synthesize delegate;
+
 @end

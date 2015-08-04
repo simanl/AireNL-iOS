@@ -11,13 +11,15 @@
 #import "PronosticoTableViewCell.h"
 #import "PronosticoHeaderTableViewCell.h"
 
-@interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource>
+@interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource, PronosticoCellDelegate>
 
 @property (nonatomic) NSArray *contaminantNames;
 
 @end
 
 @implementation PronosticosCollectionViewCell
+
+@synthesize delegate;
 
 - (void)awakeFromNib
 {
@@ -53,6 +55,8 @@
     }
     PronosticoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"pronosticoTableViewCell" forIndexPath: indexPath];
     cell.typeLabel.text = self.contaminantNames[indexPath.row - 1];
+    cell.row = @(indexPath.row - 1);
+    cell.delegate = self;
     return cell;
 }
 
@@ -69,6 +73,13 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [cell setBackgroundColor: [UIColor clearColor]];
+}
+
+#pragma mark - PronosticoCell Delegate
+
+- (PredictionResults *)getPredictionResults
+{
+    return [self.delegate getPredictionResults];
 }
 
 #pragma mark - Set/Get

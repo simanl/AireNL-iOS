@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PronosticosCollectionViewCell : UICollectionViewCell
+#import "ResultsCellDelegate.h"
+
+@interface PronosticosCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

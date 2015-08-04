@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VientoCollectionViewCell : UICollectionViewCell
+#import "ResultsCellDelegate.h"
+
+@interface VientoCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
 @property (weak, nonatomic) IBOutlet UILabel *windLabel;
 
