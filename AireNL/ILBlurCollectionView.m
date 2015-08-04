@@ -10,6 +10,9 @@
 
 #import "ILLinearGradientView.h"
 
+#define TOP_OFFSET 158
+#define BOTTOM_OFFSET 300
+
 @interface ILBlurCollectionView ()
 
 @property (nonatomic) UIVisualEffectView *blurView;
@@ -33,30 +36,31 @@
         return;
     }
     
-    // REMOVE EFFECTS
+    // REMOVE PREVIOUS VIEWS
     [self.blurView removeFromSuperview];
     [self.fadeView removeFromSuperview];
     [self.blackView removeFromSuperview];
     
-    
+    CGSize collectionViewSize = self.bounds.size;
+    CGSize collectionViewContentSize = self.contentSize;
+
     // BLUR EFFECT
     UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
     self.blurView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
+    self.blurView.frame = CGRectMake(0, TOP_OFFSET, collectionViewContentSize.width, collectionViewContentSize.height + BOTTOM_OFFSET);
     
-    CGSize contentSize = self.contentSize;
-    self.blurView.frame = CGRectMake(0, 160-2, contentSize.width, contentSize.height + 300);
-    
-    [self insertSubview: self.blurView atIndex: 0];
-
-    // FADE EFFECT
+    // BLACK FADE EFFECT
     self.fadeView = [[ILLinearGradientView alloc] initWithColors: @[[UIColor clearColor], [UIColor blackColor]]];
-    CGSize collectionViewSize = self.bounds.size;
-    self.fadeView.frame = CGRectMake(0, 160-2, collectionViewSize.width, collectionViewSize.height);
-    [self insertSubview: self.fadeView aboveSubview: self.blurView];
+    self.fadeView.frame = CGRectMake(0, TOP_OFFSET, collectionViewSize.width, collectionViewSize.height);
     
+    // BLACK BOTTOM VIEW
     self.blackView = [[UIView alloc] init];
     self.blackView.backgroundColor = [UIColor blackColor];
-    self.blackView.frame = CGRectMake(0, (160-2)+collectionViewSize.height, collectionViewSize.width, contentSize.height - collectionViewSize.height + 300);
+    self.blackView.frame = CGRectMake(0, TOP_OFFSET + collectionViewSize.height,
+                                      collectionViewSize.width, collectionViewContentSize.height - collectionViewSize.height + BOTTOM_OFFSET);
+    
+    [self insertSubview: self.blurView atIndex: 0];
+    [self insertSubview: self.fadeView aboveSubview: self.blurView];
     [self insertSubview: self.blackView atIndex: 1];
     
     self.hasDrawnBlur = YES;

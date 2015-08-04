@@ -30,20 +30,15 @@
 {
     [super layoutSubviews];
     
-    if (self.hasDrawnGradient) {
-        return;
-    }
-    
     [self drawBackgroundGradient];
-    self.hasDrawnGradient = YES;
 }
 
 - (void)drawBackgroundGradient
 {
-    if ([self.colors count] < 2) {
+    if (self.hasDrawnGradient || [self.colors count] < 2) {
         return;
     }
-        
+    
     UIColor *color1 = self.colors[0];
     UIColor *color2 = self.colors[1];
     
@@ -54,6 +49,8 @@
     gradientLayer.endPoint = CGPointMake(0.5, 1);
     
     [self.layer insertSublayer: gradientLayer atIndex: 0];
+    
+    self.hasDrawnGradient = YES;
 }
 
 @end

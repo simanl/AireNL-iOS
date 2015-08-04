@@ -19,7 +19,7 @@
 @property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
 
-@property (nonatomic) BOOL hasDrawnGradient;
+//@property (nonatomic) BOOL hasDrawnGradient;
 @property (nonatomic) BOOL hasDrawnBlur;
 
 @end
@@ -62,7 +62,7 @@
 
 - (void)customizeAppearance
 {
-    self.view.backgroundColor = [UIColor il_blueMorningColorWithAlpha: 1];
+//    self.view.backgroundColor = [UIColor il_blueMorningColorWithAlpha: 1];
     
     [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
 //    [self drawNavigationBarGradient];
@@ -85,34 +85,34 @@
     self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
 }
 
-- (void)drawNavigationBarGradient
-{
-    UIColor *blueColor = [UIColor il_blueMorningColorWithAlpha: 1.0];
-    UIColor *clearColor = [UIColor il_blueMorningColorWithAlpha: 0];
-    
-    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
-    gradientLayer.frame = self.gradientView.bounds;
-    gradientLayer.colors = @[(id)blueColor.CGColor, (id)clearColor.CGColor];
-    
-    gradientLayer.startPoint = CGPointMake(0.5f, 0.0f);
-    gradientLayer.endPoint = CGPointMake(0.5f, 1.0f);
-    
-    [self.gradientView.layer insertSublayer: gradientLayer atIndex: 0];
-}
+//- (void)drawNavigationBarGradient
+//{
+//    UIColor *blueColor = [UIColor il_blueMorningColorWithAlpha: 1.0];
+//    UIColor *clearColor = [UIColor il_blueMorningColorWithAlpha: 0];
+//    
+//    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+//    gradientLayer.frame = self.gradientView.bounds;
+//    gradientLayer.colors = @[(id)blueColor.CGColor, (id)clearColor.CGColor];
+//    
+//    gradientLayer.startPoint = CGPointMake(0.5f, 0.0f);
+//    gradientLayer.endPoint = CGPointMake(0.5f, 1.0f);
+//    
+//    [self.gradientView.layer insertSublayer: gradientLayer atIndex: 0];
+//}
 
-- (void)drawBackgroundGradientWithSize:(CGSize)size
-{
-    ILRadialGradientLayer *gradientLayer = [[ILRadialGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
-    gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
-    
-    if (self.hasDrawnGradient) {
-        [self.view.layer replaceSublayer: [self.view.layer sublayers][0] with: gradientLayer];
-        
-    }else{
-        [self.view.layer insertSublayer: gradientLayer atIndex: 0];
-        self.hasDrawnGradient = YES;
-    }
-}
+//- (void)drawBackgroundGradientWithSize:(CGSize)size
+//{
+//    ILRadialGradientLayer *gradientLayer = [[ILRadialGradientLayer alloc] initWithColor: [UIColor il_beigeMorningColorWithAlpha: 1]];
+//    gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
+//    
+//    if (self.hasDrawnGradient) {
+//        [self.view.layer replaceSublayer: [self.view.layer sublayers][0] with: gradientLayer];
+//        
+//    }else{
+//        [self.view.layer insertSublayer: gradientLayer atIndex: 0];
+//        self.hasDrawnGradient = YES;
+//    }
+//}
 
 #pragma mark - Rotation
 
