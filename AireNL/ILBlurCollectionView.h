@@ -10,6 +10,9 @@
 
 @interface ILBlurCollectionView : UICollectionView
 
-@property (nonatomic) BOOL hasDrawnBlur;
+@property (nonatomic) BOOL needsRedraw;
+
+- (void)drawBlur;
+- (void)setNeedsRedraw:(BOOL)needsRedraw withNewSize:(CGSize)size;
 
 @end

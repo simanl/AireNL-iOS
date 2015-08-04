@@ -20,7 +20,7 @@
 @property (nonatomic) NSArray *cellIdentifiers;
 
 //@property (nonatomic) BOOL hasDrawnGradient;
-@property (nonatomic) BOOL hasDrawnBlur;
+//@property (nonatomic) BOOL hasDrawnBlur;
 
 @end
 
@@ -62,8 +62,6 @@
 
 - (void)customizeAppearance
 {
-//    self.view.backgroundColor = [UIColor il_blueMorningColorWithAlpha: 1];
-    
     [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
 //    [self drawNavigationBarGradient];
 //    [self drawBackgroundGradientWithSize: self.view.bounds.size];
@@ -121,25 +119,29 @@
     [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
     
     // BEFORE ROTATION
+    UIInterfaceOrientation beforeOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (beforeOrientation == UIInterfaceOrientationPortrait) {
+//        self.collectionView.needsRedraw = YES;
+        [self.collectionView setNeedsRedraw: YES withNewSize: size];
+        [self.collectionView drawBlur];
+    }
     
     self.cellWidths = nil;
     [self.collectionView.collectionViewLayout invalidateLayout];
     
-//    [self drawBackgroundGradientWithSize: size];
-    
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
         // WHILE ROTATING
         
-        self.collectionView.hasDrawnBlur = NO;
-        
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
-         // AFTER ROTATION
+        // AFTER ROTATION
          
-         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-         if (orientation == UIInterfaceOrientationPortrait) {
+         UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+         if (afterOrientation == UIInterfaceOrientationPortrait) {
              [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
              [self scrollCollectionViewToTop];
          }else{
+             self.collectionView.needsRedraw = YES;
+             
              [self setupCollectionViewInsetsWithCellsHeight: [self getFirstTwoCellHeights]];
              [self scrollCollectionViewToTop];
          }
