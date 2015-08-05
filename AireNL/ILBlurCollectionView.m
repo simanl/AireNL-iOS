@@ -48,9 +48,7 @@
     if (!self.blurNeedsRedraw) {
         return;
     }
-    
-    NSLog(@"REDRAWING BLUR");
-    
+        
     // REMOVE PREVIOUS VIEWS
     [self.blurView removeFromSuperview];
     [self.fadeView removeFromSuperview];
