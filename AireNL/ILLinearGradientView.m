@@ -21,6 +21,7 @@
     self = [super init];
     if (!self) return nil;
     
+    self.needsRedraw = YES;
     self.colors = colors;
     
     return self;
@@ -35,7 +36,7 @@
 
 - (void)drawBackgroundGradient
 {
-    if (self.hasDrawnGradient || [self.colors count] < 2) {
+    if (!self.needsRedraw || [self.colors count] < 2) {
         return;
     }
     
@@ -50,7 +51,7 @@
     
     [self.layer insertSublayer: gradientLayer atIndex: 0];
     
-    self.hasDrawnGradient = YES;
+    self.needsRedraw = NO;
 }
 
 @end

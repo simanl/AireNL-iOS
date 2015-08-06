@@ -10,7 +10,7 @@
 
 @interface ILLinearGradientView : UIView
 
-@property (nonatomic) BOOL hasDrawnGradient;
+@property (nonatomic) BOOL needsRedraw;
 
 - (id)initWithColors:(NSArray *)colors;
 
