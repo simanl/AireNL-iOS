@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="Monterrey" id="yGs-8R-kiq"/>
+                        <label alignment="left" text="Estacion Centro Obispado" id="Ho5-dW-UzP">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label alignment="left" text="49" id="Onf-ne-ANI">
+                            <fontDescription key="font" type="system" pointSize="70"/>
+                        </label>
+                        <label alignment="left" text="IMECA" id="RJ6-6M-iDO">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label alignment="left" text="Buena" id="h7i-Ar-j1I"/>
+                    </items>
+                    <connections>
+                        <segue destination="Nvz-B6-St0" kind="relationship" relationship="nextPage" id="tOn-F2-27h"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Secondary Interface Controller-->
+        <scene sceneID="lYA-Hc-ObQ">
+            <objects>
+                <controller id="Nvz-B6-St0" customClass="SecondaryInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="10" id="QA4-O5-CbQ">
+                            <items>
+                                <group width="1" alignment="left" spacing="10" id="HHq-zb-1R4">
+                                    <items>
+                                        <imageView alignment="left" verticalAlignment="center" image="VientoIcon" id="GTC-H4-E91"/>
+                                        <label alignment="left" verticalAlignment="center" text="20 km/h" id="zVz-vH-Lpv"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" spacing="10" id="B0X-Qq-Ik8">
+                                    <items>
+                                        <imageView alignment="left" verticalAlignment="center" image="TempIcon" id="Szw-CU-Iys"/>
+                                        <label alignment="left" verticalAlignment="center" text="30 C" id="ZKq-Hw-dhC"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="3" right="0.0" top="0.0" bottom="0.0"/>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="10" right="10" top="10" bottom="10"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="477" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
@@ -44,7 +89,7 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>

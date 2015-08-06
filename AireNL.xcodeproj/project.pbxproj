@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061583A61B7416FB00CB00C9 /* Avenir-Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */; };
+		061583A71B7416FB00CB00C9 /* Avenir-Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
@@ -29,6 +31,7 @@
 		06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA7E1B74106B007462A4 /* Interface.storyboard */; };
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
 		06D8BA851B74106B007462A4 /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06D8BA8E1B7414A8007462A4 /* SecondaryInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA8D1B7414A8007462A4 /* SecondaryInterfaceController.m */; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
 		06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */; };
@@ -99,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Next.ttc"; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		06D8BA7D1B74106B007462A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D8BA7F1B74106B007462A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		06D8BA811B74106B007462A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		06D8BA8C1B7414A8007462A4 /* SecondaryInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondaryInterfaceController.h; sourceTree = "<group>"; };
+		06D8BA8D1B7414A8007462A4 /* SecondaryInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondaryInterfaceController.m; sourceTree = "<group>"; };
 		06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILBlurCollectionView.h; sourceTree = "<group>"; };
 		06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILBlurCollectionView.m; sourceTree = "<group>"; };
 		06F2C4401B680D4100BDF043 /* PronosticosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticosCollectionViewCell.h; sourceTree = "<group>"; };
@@ -390,6 +396,8 @@
 			children = (
 				06D8BA6A1B74106B007462A4 /* InterfaceController.h */,
 				06D8BA6B1B74106B007462A4 /* InterfaceController.m */,
+				06D8BA8C1B7414A8007462A4 /* SecondaryInterfaceController.h */,
+				06D8BA8D1B7414A8007462A4 /* SecondaryInterfaceController.m */,
 				06D8BA6D1B74106B007462A4 /* NotificationController.h */,
 				06D8BA6E1B74106B007462A4 /* NotificationController.m */,
 				06D8BA701B74106B007462A4 /* GlanceController.h */,
@@ -413,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				06D8BA7E1B74106B007462A4 /* Interface.storyboard */,
+				061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */,
 				06D8BA811B74106B007462A4 /* Images.xcassets */,
 				06D8BA7C1B74106B007462A4 /* Supporting Files */,
 			);
@@ -614,6 +623,7 @@
 					};
 					06D8BA761B74106B007462A4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = TAGM86AK24;
 					};
 					06FAE3801B72B9C200B19700 = {
 						CreatedOnToolsVersion = 6.4;
@@ -667,6 +677,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061583A61B7416FB00CB00C9 /* Avenir-Next.ttc in Resources */,
 				06D8BA741B74106B007462A4 /* Images.xcassets in Resources */,
 				06D8BA781B74106B007462A4 /* AireNL WatchKit App.app in Resources */,
 			);
@@ -676,6 +687,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061583A71B7416FB00CB00C9 /* Avenir-Next.ttc in Resources */,
 				06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */,
 				06D8BA821B74106B007462A4 /* Images.xcassets in Resources */,
 			);
@@ -768,6 +780,7 @@
 			files = (
 				06D8BA6F1B74106B007462A4 /* NotificationController.m in Sources */,
 				06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */,
+				06D8BA8E1B7414A8007462A4 /* SecondaryInterfaceController.m in Sources */,
 				06D8BA721B74106B007462A4 /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,6 +863,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -869,7 +883,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -907,7 +921,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -920,6 +934,7 @@
 			baseConfigurationReference = E561D436F3FA75A06758C659 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -974,12 +989,13 @@
 		06D8BA861B74106B007462A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
@@ -990,7 +1006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
@@ -1001,14 +1017,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				IBSC_MODULE = AireNL_WatchKit_Extension;
 				INFOPLIST_FILE = "AireNL WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1019,10 +1038,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = AireNL_WatchKit_Extension;
 				INFOPLIST_FILE = "AireNL WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1032,12 +1054,13 @@
 		06FAE3901B72B9C200B19700 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1048,7 +1071,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1092,6 +1115,7 @@
 				06D8BA891B74106B007462A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06D8BA8B1B74106B007462A4 /* Build configuration list for PBXNativeTarget "AireNL WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1100,6 +1124,7 @@
 				06D8BA871B74106B007462A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06FAE38F1B72B9C200B19700 /* Build configuration list for PBXNativeTarget "AireNL Widget" */ = {
 			isa = XCConfigurationList;
