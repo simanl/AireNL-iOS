@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AireNL Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>AireNL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>06D367BD1B542615009E9D47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06FAE3801B72B9C200B19700</key>
 		<dict>
 			<key>primary</key>
 			<true/>

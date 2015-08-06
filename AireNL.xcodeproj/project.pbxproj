@@ -28,6 +28,11 @@
 		06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */; };
 		06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */; };
 		06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */; };
+		06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FAE3821B72B9C200B19700 /* NotificationCenter.framework */; };
+		06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FAE3881B72B9C200B19700 /* TodayViewController.m */; };
+		06FAE38B1B72B9C200B19700 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */; };
+		06FAE38E1B72B9C200B19700 /* AireNL Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06FAE3811B72B9C200B19700 /* AireNL Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06FAE3941B72BFB400B19700 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FAE3931B72BFB400B19700 /* Media.xcassets */; };
 		06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */; };
 		06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054C1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m */; };
 		06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */; };
@@ -47,7 +52,28 @@
 			remoteGlobalIDString = 06D367A41B542615009E9D47;
 			remoteInfo = AireNL;
 		};
+		06FAE38C1B72B9C200B19700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06D3679D1B542615009E9D47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06FAE3801B72B9C200B19700;
+			remoteInfo = "AireNL Widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		06FAE3921B72B9C200B19700 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				06FAE38E1B72B9C200B19700 /* AireNL Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
@@ -87,6 +113,13 @@
 		06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoHeaderTableViewCell.h; sourceTree = "<group>"; };
 		06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoHeaderTableViewCell.m; sourceTree = "<group>"; };
 		06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		06FAE3811B72B9C200B19700 /* AireNL Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AireNL Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06FAE3821B72B9C200B19700 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		06FAE3861B72B9C200B19700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06FAE3871B72B9C200B19700 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		06FAE3881B72B9C200B19700 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		06FAE3931B72BFB400B19700 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		06FE05481B715A2700BCFCA3 /* ImecaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImecaCollectionViewCell.h; sourceTree = "<group>"; };
 		06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImecaCollectionViewCell.m; sourceTree = "<group>"; };
 		06FE054B1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActividadesCollectionViewCell.h; sourceTree = "<group>"; };
@@ -124,6 +157,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06FAE37E1B72B9C200B19700 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +225,7 @@
 			children = (
 				06D367A71B542615009E9D47 /* AireNL */,
 				06D367C11B542615009E9D47 /* AireNLTests */,
+				06FAE3841B72B9C200B19700 /* AireNL Widget */,
 				06D367A61B542615009E9D47 /* Products */,
 				7DDB6118893D8D39D7CD7C12 /* Pods */,
 				B8522DD162297A694322873C /* Frameworks */,
@@ -195,6 +237,7 @@
 			children = (
 				06D367A51B542615009E9D47 /* AireNL.app */,
 				06D367BE1B542615009E9D47 /* AireNLTests.xctest */,
+				06FAE3811B72B9C200B19700 /* AireNL Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +337,26 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		06FAE3841B72B9C200B19700 /* AireNL Widget */ = {
+			isa = PBXGroup;
+			children = (
+				06FAE3871B72B9C200B19700 /* TodayViewController.h */,
+				06FAE3881B72B9C200B19700 /* TodayViewController.m */,
+				06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */,
+				06FAE3931B72BFB400B19700 /* Media.xcassets */,
+				06FAE3851B72B9C200B19700 /* Supporting Files */,
+			);
+			path = "AireNL Widget";
+			sourceTree = "<group>";
+		};
+		06FAE3851B72B9C200B19700 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06FAE3861B72B9C200B19700 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		06FE05471B7159AA00BCFCA3 /* Blurs, Gradients */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				0AE7FB868C685FB3C0F45E35 /* libPods.a */,
+				06FAE3821B72B9C200B19700 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,10 +422,12 @@
 				06D367A21B542615009E9D47 /* Frameworks */,
 				06D367A31B542615009E9D47 /* Resources */,
 				1661E4839A3A757B79DA8EC6 /* Copy Pods Resources */,
+				06FAE3921B72B9C200B19700 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				06FAE38D1B72B9C200B19700 /* PBXTargetDependency */,
 			);
 			name = AireNL;
 			productName = AireNL;
@@ -386,6 +452,23 @@
 			productReference = 06D367BE1B542615009E9D47 /* AireNLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		06FAE3801B72B9C200B19700 /* AireNL Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06FAE38F1B72B9C200B19700 /* Build configuration list for PBXNativeTarget "AireNL Widget" */;
+			buildPhases = (
+				06FAE37D1B72B9C200B19700 /* Sources */,
+				06FAE37E1B72B9C200B19700 /* Frameworks */,
+				06FAE37F1B72B9C200B19700 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AireNL Widget";
+			productName = "AireNL Widget";
+			productReference = 06FAE3811B72B9C200B19700 /* AireNL Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -401,6 +484,9 @@
 					06D367BD1B542615009E9D47 = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 06D367A41B542615009E9D47;
+					};
+					06FAE3801B72B9C200B19700 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -419,6 +505,7 @@
 			targets = (
 				06D367A41B542615009E9D47 /* AireNL */,
 				06D367BD1B542615009E9D47 /* AireNLTests */,
+				06FAE3801B72B9C200B19700 /* AireNL Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -441,6 +528,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06FAE37F1B72B9C200B19700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06FAE3941B72BFB400B19700 /* Media.xcassets in Resources */,
+				06FAE38B1B72B9C200B19700 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +612,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06FAE37D1B72B9C200B19700 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -523,6 +627,11 @@
 			isa = PBXTargetDependency;
 			target = 06D367A41B542615009E9D47 /* AireNL */;
 			targetProxy = 06D367BF1B542615009E9D47 /* PBXContainerItemProxy */;
+		};
+		06FAE38D1B72B9C200B19700 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06FAE3801B72B9C200B19700 /* AireNL Widget */;
+			targetProxy = 06FAE38C1B72B9C200B19700 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -684,6 +793,32 @@
 			};
 			name = Release;
 		};
+		06FAE3901B72B9C200B19700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AireNL Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		06FAE3911B72B9C200B19700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "AireNL Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -713,6 +848,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		06FAE38F1B72B9C200B19700 /* Build configuration list for PBXNativeTarget "AireNL Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06FAE3901B72B9C200B19700 /* Debug */,
+				06FAE3911B72B9C200B19700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
