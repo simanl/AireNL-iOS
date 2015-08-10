@@ -5,70 +5,85 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Monterrey-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller title="Monterrey" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <group width="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" radius="4" id="TL0-cX-I8d">
                             <items>
-                                <label width="1" alignment="left" text="Monterrey" id="yGs-8R-kiq"/>
-                                <label width="1" alignment="left" text="Estacion Centro Obispado" numberOfLines="0" id="Ho5-dW-UzP">
-                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                <label width="1" alignment="left" text="IMECA" textAlignment="center" id="RJ6-6M-iDO">
+                                    <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
-                                <label width="1" alignment="left" text="49" id="Onf-ne-ANI">
-                                    <fontDescription key="font" type="system" pointSize="70"/>
+                                <label width="1" alignment="left" text="68" textAlignment="center" id="Onf-ne-ANI">
+                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="90"/>
                                 </label>
-                                <label alignment="left" text="IMECA" id="RJ6-6M-iDO">
-                                    <fontDescription key="font" type="system" pointSize="10"/>
-                                </label>
-                                <label width="1" alignment="left" text="Buena" numberOfLines="0" id="h7i-Ar-j1I"/>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="5" bottom="0.0"/>
                         </group>
                     </items>
                     <connections>
                         <outlet property="imecaAmountLabel" destination="Onf-ne-ANI" id="Ufg-9I-Kcb"/>
-                        <outlet property="imecaQualityLabel" destination="h7i-Ar-j1I" id="dyZ-nv-3SN"/>
-                        <outlet property="locationSubtitleLabel" destination="Ho5-dW-UzP" id="fIB-mx-kpQ"/>
-                        <outlet property="locationTitleLabel" destination="yGs-8R-kiq" id="J3g-UA-hye"/>
                         <outlet property="mainGroup" destination="TL0-cX-I8d" id="DEL-QV-mbY"/>
-                        <segue destination="Nvz-B6-St0" kind="relationship" relationship="nextPage" id="tOn-F2-27h"/>
+                        <segue destination="SE9-aE-9DK" kind="relationship" relationship="nextPage" id="hjf-ZB-2oa"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
-        <!--Secondary Interface Controller-->
-        <scene sceneID="lYA-Hc-ObQ">
+        <!--Monterrey-->
+        <scene sceneID="p1s-L4-lua">
             <objects>
-                <controller id="Nvz-B6-St0" customClass="SecondaryInterfaceController">
+                <controller title="Monterrey" id="SE9-aE-9DK" customClass="AirQualityInterfaceController">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" spacing="10" id="QA4-O5-CbQ">
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="25" id="3Ik-jk-bH1">
                             <items>
-                                <group width="1" alignment="left" spacing="10" id="HHq-zb-1R4">
-                                    <items>
-                                        <imageView alignment="left" verticalAlignment="center" image="VientoIcon" id="GTC-H4-E91"/>
-                                        <label alignment="left" verticalAlignment="center" text="20 km/h" id="zVz-vH-Lpv"/>
-                                    </items>
-                                </group>
-                                <group width="1" alignment="left" spacing="10" id="B0X-Qq-Ik8">
-                                    <items>
-                                        <imageView alignment="left" verticalAlignment="center" image="TempIcon" id="Szw-CU-Iys"/>
-                                        <label alignment="left" verticalAlignment="center" text="30 C" id="ZKq-Hw-dhC"/>
-                                    </items>
-                                    <edgeInsets key="margins" left="3" right="0.0" top="0.0" bottom="0.0"/>
-                                </group>
+                                <label width="1" alignment="left" text="CALIDAD DEL AIRE" textAlignment="center" id="qmx-E2-KUI">
+                                    <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <imageView alignment="center" image="AirIcon" id="yYz-qq-YYl"/>
+                                <label alignment="center" text="Buena" id="oz1-g0-JWN">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="16"/>
+                                </label>
                             </items>
-                            <edgeInsets key="margins" left="10" right="10" top="10" bottom="10"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="5" bottom="0.0"/>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="temperatureLabel" destination="ZKq-Hw-dhC" id="Dqv-F3-HW4"/>
-                        <outlet property="windLabel" destination="zVz-vH-Lpv" id="Eqx-pf-Kck"/>
+                        <segue destination="Nvz-B6-St0" kind="relationship" relationship="nextPage" id="FTY-Ue-MgP"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="477" y="347"/>
+            <point key="canvasLocation" x="445" y="347"/>
+        </scene>
+        <!--Monterrey-->
+        <scene sceneID="lYA-Hc-ObQ">
+            <objects>
+                <controller title="Monterrey" id="Nvz-B6-St0" customClass="TempWindInterfaceController">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="5" id="QA4-O5-CbQ">
+                            <items>
+                                <label width="1" alignment="left" text="EL TIEMPO" textAlignment="center" id="2mF-DS-U9I">
+                                    <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                                <imageView alignment="center" image="WindIcon" id="3IN-bH-5Ua"/>
+                                <label alignment="center" text="11 k/h" id="2Gs-uP-ouT">
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="18"/>
+                                </label>
+                                <imageView alignment="center" image="TempIcon" id="chl-kT-mrP"/>
+                                <label alignment="center" text="28 C" id="xhk-ti-KCU">
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="18"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="10" right="10" top="5" bottom="5"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="658" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

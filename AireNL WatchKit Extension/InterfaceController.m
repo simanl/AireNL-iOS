@@ -52,8 +52,8 @@
     currentResults.wind = @(500);
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(1500);
-    imecaResults.quality = @"Aceptable";
+    imecaResults.amount = @(68);
+    imecaResults.quality = @"Muy Mala";
     currentResults.imeca = imecaResults;
     
     ResultLocation *location = [[ResultLocation alloc] init];
@@ -68,11 +68,10 @@
 
 - (void)updateScreen
 {
-    [self.locationTitleLabel setText: self.currentResults.location.cityName];
-    [self.locationSubtitleLabel setText: self.currentResults.location.areaName];
+    [self setTitle: self.currentResults.location.cityName];
     
-    self.imecaAmountLabel.text = [self.currentResults.imeca.amount stringValue];
-    self.imecaQualityLabel.text = [NSString stringWithFormat: @"Calidad del aire:  %@", self.currentResults.imeca.quality];
+    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
+    [self.imecaQualityLabel setText: [NSString stringWithFormat: @"Calidad del aire:  %@", self.currentResults.imeca.quality]];
 }
 
 @end

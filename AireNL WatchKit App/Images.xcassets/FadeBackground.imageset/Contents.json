@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "watch",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Fade.png"
     },
     {
       "idiom" : "watch",
@@ -12,7 +13,6 @@
     {
       "idiom" : "watch",
       "screenWidth" : "{146,165}",
-      "filename" : "watch-background.png",
       "scale" : "2x"
     }
   ],

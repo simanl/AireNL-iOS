@@ -1,18 +1,18 @@
 //
-//  SecondaryInterfaceController.m
+//  TempWindInterfaceController.m
 //  AireNL
 //
-//  Created by Daniel Lozano on 8/6/15.
+//  Created by Daniel Lozano on 8/10/15.
 //  Copyright (c) 2015 Icalia Labs. All rights reserved.
 //
 
-#import "SecondaryInterfaceController.h"
+#import "TempWindInterfaceController.h"
 
-@interface SecondaryInterfaceController ()
+@interface TempWindInterfaceController ()
 
 @end
 
-@implementation SecondaryInterfaceController
+@implementation TempWindInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
