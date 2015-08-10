@@ -11,4 +11,7 @@
 
 @interface SecondaryInterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *windLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *temperatureLabel;
+
 @end

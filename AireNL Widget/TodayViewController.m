@@ -60,7 +60,7 @@
     currentResults.wind = @(500);
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(65);
+    imecaResults.amount = @(184);
     imecaResults.quality = @"Aceptable";
     currentResults.imeca = imecaResults;
     
