@@ -10,10 +10,12 @@
 
 #import "ImecaResults.h"
 #import "ContaminantResults.h"
+#import "ResultLocation.h"
 
 @interface CurrentResults : NSObject
 
 @property (nonatomic) NSDate *date;
+@property (nonatomic) ResultLocation *location;
 
 @property (nonatomic) ImecaResults *imeca;
 @property (nonatomic) ContaminantResults *contaminants;

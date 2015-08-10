@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060A9E9F1B79087000C5AAD6 /* CurrentResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */; };
+		060A9EA01B79087000C5AAD6 /* CurrentResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */; };
+		060A9EA11B79087000C5AAD6 /* ContaminantResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05541B715BA000BCFCA3 /* ContaminantResults.h */; };
+		060A9EA21B79087000C5AAD6 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05551B715BA000BCFCA3 /* ContaminantResults.m */; };
+		060A9EA31B79087000C5AAD6 /* ImecaResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05571B715BB800BCFCA3 /* ImecaResults.h */; };
+		060A9EA41B79087000C5AAD6 /* ImecaResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05581B715BB800BCFCA3 /* ImecaResults.m */; };
+		060A9EA51B79087000C5AAD6 /* PredictionResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */; };
+		060A9EA61B79087000C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
+		060A9EA71B79088600C5AAD6 /* CurrentResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */; };
+		060A9EA81B79088600C5AAD6 /* CurrentResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */; };
+		060A9EA91B79088600C5AAD6 /* ContaminantResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05541B715BA000BCFCA3 /* ContaminantResults.h */; };
+		060A9EAA1B79088600C5AAD6 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05551B715BA000BCFCA3 /* ContaminantResults.m */; };
+		060A9EAB1B79088600C5AAD6 /* ImecaResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05571B715BB800BCFCA3 /* ImecaResults.h */; };
+		060A9EAC1B79088600C5AAD6 /* ImecaResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05581B715BB800BCFCA3 /* ImecaResults.m */; };
+		060A9EAD1B79088600C5AAD6 /* PredictionResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */; };
+		060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
+		060A9EB61B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
+		060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
+		060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		061583A61B7416FB00CB00C9 /* Avenir-Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */; };
 		061583A71B7416FB00CB00C9 /* Avenir-Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
@@ -102,6 +121,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		060A9EB41B790A7900C5AAD6 /* ResultLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultLocation.h; sourceTree = "<group>"; };
+		060A9EB51B790A7900C5AAD6 /* ResultLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultLocation.m; sourceTree = "<group>"; };
 		061583A51B7416FB00CB00C9 /* Avenir-Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Next.ttc"; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
@@ -221,6 +242,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060A9E9E1B79081C00C5AAD6 /* AireNL API */ = {
+			isa = PBXGroup;
+			children = (
+				065753071B5EBA3B00FF226C /* Network */,
+				06D367CE1B542631009E9D47 /* Models */,
+			);
+			name = "AireNL API";
+			sourceTree = "<group>";
+		};
 		063366781B60064C00C32FF6 /* Table & Collection Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +329,7 @@
 		06D367A71B542615009E9D47 /* AireNL */ = {
 			isa = PBXGroup;
 			children = (
-				065753071B5EBA3B00FF226C /* Network */,
-				06D367CE1B542631009E9D47 /* Models */,
+				060A9E9E1B79081C00C5AAD6 /* AireNL API */,
 				06D367CF1B542638009E9D47 /* Views */,
 				06D367D01B542642009E9D47 /* Controllers */,
 				06D367D11B54264A009E9D47 /* Helpers+Categories */,
@@ -474,10 +503,12 @@
 			children = (
 				06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */,
 				06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */,
-				06FE05541B715BA000BCFCA3 /* ContaminantResults.h */,
-				06FE05551B715BA000BCFCA3 /* ContaminantResults.m */,
+				060A9EB41B790A7900C5AAD6 /* ResultLocation.h */,
+				060A9EB51B790A7900C5AAD6 /* ResultLocation.m */,
 				06FE05571B715BB800BCFCA3 /* ImecaResults.h */,
 				06FE05581B715BB800BCFCA3 /* ImecaResults.m */,
+				06FE05541B715BA000BCFCA3 /* ContaminantResults.h */,
+				06FE05551B715BA000BCFCA3 /* ContaminantResults.m */,
 			);
 			name = "Current Results";
 			sourceTree = "<group>";
@@ -751,6 +782,7 @@
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
+				060A9EB61B790A7900C5AAD6 /* ResultLocation.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
@@ -778,6 +810,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */,
+				060A9EA71B79088600C5AAD6 /* CurrentResults.h in Sources */,
+				060A9EA81B79088600C5AAD6 /* CurrentResults.m in Sources */,
+				060A9EA91B79088600C5AAD6 /* ContaminantResults.h in Sources */,
+				060A9EAA1B79088600C5AAD6 /* ContaminantResults.m in Sources */,
+				060A9EAB1B79088600C5AAD6 /* ImecaResults.h in Sources */,
+				060A9EAC1B79088600C5AAD6 /* ImecaResults.m in Sources */,
+				060A9EAD1B79088600C5AAD6 /* PredictionResults.h in Sources */,
+				060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */,
 				06D8BA6F1B74106B007462A4 /* NotificationController.m in Sources */,
 				06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */,
 				06D8BA8E1B7414A8007462A4 /* SecondaryInterfaceController.m in Sources */,
@@ -789,6 +830,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060A9E9F1B79087000C5AAD6 /* CurrentResults.h in Sources */,
+				060A9EA01B79087000C5AAD6 /* CurrentResults.m in Sources */,
+				060A9EA11B79087000C5AAD6 /* ContaminantResults.h in Sources */,
+				060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */,
+				060A9EA21B79087000C5AAD6 /* ContaminantResults.m in Sources */,
+				060A9EA31B79087000C5AAD6 /* ImecaResults.h in Sources */,
+				060A9EA41B79087000C5AAD6 /* ImecaResults.m in Sources */,
+				060A9EA51B79087000C5AAD6 /* PredictionResults.h in Sources */,
+				060A9EA61B79087000C5AAD6 /* PredictionResults.m in Sources */,
 				06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
