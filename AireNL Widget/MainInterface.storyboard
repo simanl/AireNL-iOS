@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TempIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-hP-EvV">
-                                <rect key="frame" x="251" y="81" width="13" height="31"/>
+                                <rect key="frame" x="249" y="80" width="15" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMECA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lc-de-OUy">
                                 <rect key="frame" x="7" y="114" width="31.5" height="14"/>
@@ -131,7 +131,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TempIcon" width="13" height="31"/>
+        <image name="TempIcon" width="15" height="32"/>
         <image name="VientoIcon" width="29" height="19"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

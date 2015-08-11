@@ -71,7 +71,6 @@
     [self setTitle: self.currentResults.location.cityName];
     
     [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
-    [self.imecaQualityLabel setText: [NSString stringWithFormat: @"Calidad del aire:  %@", self.currentResults.imeca.quality]];
 }
 
 @end

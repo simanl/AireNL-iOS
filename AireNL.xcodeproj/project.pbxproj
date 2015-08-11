@@ -26,8 +26,6 @@
 		060A9EB61B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
-		060A9EBD1B79153900C5AAD6 /* AvenirNext.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 060A9EBC1B79153900C5AAD6 /* AvenirNext.ttc */; };
-		060A9EBE1B79153900C5AAD6 /* AvenirNext.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 060A9EBC1B79153900C5AAD6 /* AvenirNext.ttc */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
@@ -45,7 +43,6 @@
 		06D367C51B542615009E9D47 /* AireNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367C41B542615009E9D47 /* AireNLTests.m */; };
 		06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367D41B54564D009E9D47 /* UIColor+ILColor.m */; };
 		06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA6B1B74106B007462A4 /* InterfaceController.m */; };
-		06D8BA6F1B74106B007462A4 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA6E1B74106B007462A4 /* NotificationController.m */; };
 		06D8BA721B74106B007462A4 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA711B74106B007462A4 /* GlanceController.m */; };
 		06D8BA741B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA731B74106B007462A4 /* Images.xcassets */; };
 		06D8BA781B74106B007462A4 /* AireNL WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
@@ -124,7 +121,6 @@
 /* Begin PBXFileReference section */
 		060A9EB41B790A7900C5AAD6 /* ResultLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultLocation.h; sourceTree = "<group>"; };
 		060A9EB51B790A7900C5AAD6 /* ResultLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultLocation.m; sourceTree = "<group>"; };
-		060A9EBC1B79153900C5AAD6 /* AvenirNext.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirNext.ttc; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -160,8 +156,6 @@
 		06D8BA691B74106B007462A4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		06D8BA6A1B74106B007462A4 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
 		06D8BA6B1B74106B007462A4 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		06D8BA6D1B74106B007462A4 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
-		06D8BA6E1B74106B007462A4 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		06D8BA701B74106B007462A4 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
 		06D8BA711B74106B007462A4 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
 		06D8BA731B74106B007462A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -432,8 +426,6 @@
 				06B01CB61B7947A10094861C /* AirQualityInterfaceController.m */,
 				06B01CB81B7947C30094861C /* TempWindInterfaceController.h */,
 				06B01CB91B7947C30094861C /* TempWindInterfaceController.m */,
-				06D8BA6D1B74106B007462A4 /* NotificationController.h */,
-				06D8BA6E1B74106B007462A4 /* NotificationController.m */,
 				06D8BA701B74106B007462A4 /* GlanceController.h */,
 				06D8BA711B74106B007462A4 /* GlanceController.m */,
 				06D8BA731B74106B007462A4 /* Images.xcassets */,
@@ -464,7 +456,6 @@
 		06D8BA7C1B74106B007462A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				060A9EBC1B79153900C5AAD6 /* AvenirNext.ttc */,
 				06D8BA7D1B74106B007462A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -713,7 +704,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060A9EBD1B79153900C5AAD6 /* AvenirNext.ttc in Resources */,
 				06D8BA741B74106B007462A4 /* Images.xcassets in Resources */,
 				06D8BA781B74106B007462A4 /* AireNL WatchKit App.app in Resources */,
 			);
@@ -723,7 +713,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060A9EBE1B79153900C5AAD6 /* AvenirNext.ttc in Resources */,
 				06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */,
 				06D8BA821B74106B007462A4 /* Images.xcassets in Resources */,
 			);
@@ -826,7 +815,6 @@
 				060A9EAC1B79088600C5AAD6 /* ImecaResults.m in Sources */,
 				060A9EAD1B79088600C5AAD6 /* PredictionResults.h in Sources */,
 				060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */,
-				06D8BA6F1B74106B007462A4 /* NotificationController.m in Sources */,
 				06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */,
 				06D8BA721B74106B007462A4 /* GlanceController.m in Sources */,
 			);

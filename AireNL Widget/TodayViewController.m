@@ -82,8 +82,20 @@
     self.imecaLabel.text = [self.currentResults.imeca.amount stringValue];
     self.imecaQualityLabel.text = [NSString stringWithFormat: @"Calidad del aire:  %@", self.currentResults.imeca.quality];
     
-    self.windLabel.text = [NSString stringWithFormat: @"%@ km/h", self.currentResults.wind];
-    self.tempLabel.text = [NSString stringWithFormat: @"%@ \u00B0 C", self.currentResults.temperature];
+    self.windLabel.text = [self stringForWindValue: self.currentResults.wind];
+    self.tempLabel.text = [self stringForTempValue: self.currentResults.temperature];
+}
+
+#pragma mark - Helper's
+
+- (NSString *)stringForWindValue:(NSNumber *)value
+{
+    return [NSString stringWithFormat: @"%@ k/h", value];
+}
+
+- (NSString *)stringForTempValue:(NSNumber *)value
+{
+    return [NSString stringWithFormat: @"%@ \u00B0 C", value];
 }
 
 @end

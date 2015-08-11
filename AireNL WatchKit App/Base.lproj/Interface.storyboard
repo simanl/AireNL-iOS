@@ -25,7 +25,6 @@
                     </items>
                     <connections>
                         <outlet property="imecaAmountLabel" destination="Onf-ne-ANI" id="Ufg-9I-Kcb"/>
-                        <outlet property="mainGroup" destination="TL0-cX-I8d" id="DEL-QV-mbY"/>
                         <segue destination="SE9-aE-9DK" kind="relationship" relationship="nextPage" id="hjf-ZB-2oa"/>
                     </connections>
                 </controller>
@@ -52,6 +51,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="airQualityLabel" destination="oz1-g0-JWN" id="U3b-CL-hBw"/>
                         <segue destination="Nvz-B6-St0" kind="relationship" relationship="nextPage" id="FTY-Ue-MgP"/>
                     </connections>
                 </controller>
@@ -81,6 +81,10 @@
                             <edgeInsets key="margins" left="10" right="10" top="5" bottom="5"/>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="tempLabel" destination="xhk-ti-KCU" id="uY8-c1-drL"/>
+                        <outlet property="windLabel" destination="2Gs-uP-ouT" id="pVP-PS-KBb"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="658" y="347"/>
@@ -97,29 +101,6 @@
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
-                    <items>
-                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
-                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="KIl-fV-djm">
-            <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
-            </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
         </scene>
     </scenes>
 </document>

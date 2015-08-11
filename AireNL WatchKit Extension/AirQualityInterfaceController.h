@@ -11,4 +11,6 @@
 
 @interface AirQualityInterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *airQualityLabel;
+
 @end
