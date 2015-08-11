@@ -92,10 +92,23 @@
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                <glanceController spacing="0.0" topTemplateType="mediumBody1" bottomTemplateType="groupBody1Footer" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <label alignment="left" text="Monterrey" id="80c-iJ-NFz"/>
+                        <label alignment="left" text="Centro Obispado" id="Za2-n3-fsA"/>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="187" id="vNH-So-5BS">
+                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="61"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="bottom" text="IMECA" id="72v-OX-WCp">
+                                    <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Calidad del Aire" id="bPr-4c-WFD"/>
+                        <label alignment="left" text="Muy Mala" id="aJM-Id-88N"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
