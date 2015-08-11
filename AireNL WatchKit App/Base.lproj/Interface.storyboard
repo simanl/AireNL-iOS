@@ -99,7 +99,7 @@
                         <group alignment="left" id="uCw-4Q-Ouw">
                             <items>
                                 <label alignment="left" verticalAlignment="center" text="187" id="vNH-So-5BS">
-                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="61"/>
+                                    <fontDescription key="font" type="system" weight="ultraLight" pointSize="70"/>
                                 </label>
                                 <label alignment="left" verticalAlignment="bottom" text="IMECA" id="72v-OX-WCp">
                                     <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,6 +111,12 @@
                         <label alignment="left" text="Muy Mala" id="aJM-Id-88N"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="imecaAmountLabel" destination="vNH-So-5BS" id="9fV-9g-ebY"/>
+                        <outlet property="imecaQualityLabel" destination="aJM-Id-88N" id="Lu2-TL-Lw3"/>
+                        <outlet property="locationSubtitleLabel" destination="Za2-n3-fsA" id="k1o-Pc-4rG"/>
+                        <outlet property="locationTitleLabel" destination="80c-iJ-NFz" id="5fR-kP-SCw"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>

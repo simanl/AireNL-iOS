@@ -11,4 +11,10 @@
 
 @interface GlanceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *locationTitleLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *locationSubtitleLabel;
+
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *imecaAmountLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *imecaQualityLabel;
+
 @end

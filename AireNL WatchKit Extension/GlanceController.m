@@ -23,6 +23,7 @@
     // Configure interface objects here.
     [super awakeWithContext:context];
 
+    [self loadAssets];
 }
 
 - (void)willActivate {
@@ -51,7 +52,7 @@
     
     ResultLocation *location = [[ResultLocation alloc] init];
     location.cityName = @"Monterrey";
-    location.areaName = @"Estacion Centro Obispado de Nuevo Leon";
+    location.areaName = @"Centro Obispado";
     currentResults.location = location;
     
     self.currentResults = currentResults;
@@ -61,7 +62,11 @@
 
 - (void)updateScreen
 {
-    [self setTitle: self.currentResults.location.cityName];
+    [self.locationTitleLabel setText: self.currentResults.location.cityName];
+    [self.locationSubtitleLabel setText: self.currentResults.location.areaName];
+    
+    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
+    [self.imecaQualityLabel setText: self.currentResults.imeca.quality];
 }
 
 @end
