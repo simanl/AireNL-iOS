@@ -85,8 +85,6 @@
         return;
     }
     
-    NSLog(@"SETTING BLUR : %@", blur? @"YES" : @"NO");
-    
     self.backgroundImageView.image = (blur)? self.blurredBackground : self.normalBackground;
     self.backgroundHasBlur = blur;
 }
