@@ -20,16 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FXBlurView (1.6.3)
   - Mantle (2.0.3):
     - Mantle/extobjc (= 2.0.3)
   - Mantle/extobjc (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - FXBlurView
   - Mantle
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  FXBlurView: c6d23f3d35af2c6282296a2930f61c6e2c788d01
   Mantle: 8d6b14979a082a9ed4994463eb7a4ff576c94632
 
 COCOAPODS: 0.37.1

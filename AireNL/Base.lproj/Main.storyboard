@@ -725,7 +725,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackgroundIMG" width="924" height="701"/>
+        <image name="BackgroundIMG" width="1632" height="1088"/>
         <image name="MapIcon" width="22" height="22"/>
         <image name="TempIcon" width="15" height="32"/>
         <image name="VientoIcon" width="29" height="19"/>

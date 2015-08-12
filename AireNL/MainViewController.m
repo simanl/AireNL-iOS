@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 
+#import <FXBlurView/FXBlurView.h>
+
 #import "UIColor+ILColor.h"
 #import "ILBlurCollectionView.h"
 #import "ILRadialGradientLayer.h"
@@ -17,7 +19,7 @@
 #import "PredictionResults.h"
 #import "ResultsCellDelegate.h"
 
-@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ResultsCellDelegate>
+@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ResultsCellDelegate>
 
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
@@ -25,6 +27,9 @@
 
 @property (nonatomic) CurrentResults *currentResults;
 @property (nonatomic) PredictionResults *predictionResults;
+
+@property (nonatomic) FXBlurView *blurView;
+@property (nonatomic) BOOL blurHasBeenSetup;
 
 @end
 
@@ -45,6 +50,25 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidLayoutSubviews
+{
+    if (self.blurHasBeenSetup) {
+        return;
+    }
+    
+    self.blurView = [[FXBlurView alloc] initWithFrame: self.backgroundImageView.frame];
+    
+    self.blurView.blurEnabled = NO;
+    self.blurView.blurRadius = 0;
+    
+    self.blurView.tintColor = nil;
+    self.blurView.dynamic = YES;
+    
+    [self.view insertSubview: self.blurView aboveSubview: self.backgroundImageView];
+    
+    self.blurHasBeenSetup = YES;
+}
+
 #pragma mark - Navigation
 
 - (IBAction)userDidSelectMap:(id)sender
@@ -60,6 +84,7 @@
 - (void)customizeAppearance
 {
     [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
+
 //    [self drawNavigationBarGradient];
 //    [self drawBackgroundGradientWithSize: self.view.bounds.size];
 }
@@ -78,6 +103,31 @@
     
     self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
     self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
+}
+
+#pragma mark - UIScrollView Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offset =  scrollView.contentInset.top + scrollView.contentOffset.y;
+    CGFloat totalSize = scrollView.contentInset.top + scrollView.contentSize.height - scrollView.bounds.size.height;
+    
+    CGFloat percentage = offset / totalSize;
+    CGFloat blurRadius = 20 * percentage;
+    
+    if (blurRadius <= 0){
+        blurRadius = 0;
+        self.blurView.blurEnabled = NO;
+    }else{
+        self.blurView.blurEnabled = YES;
+    }
+    
+    self.blurView.blurRadius = blurRadius;
+    
+//    NSLog(@"OFFSET : %f", offset);
+//    NSLog(@"TOTAL SIZE : %f", totalSize);
+//    NSLog(@"PERCENTAGE : %f", percentage);
+//    NSLog(@"BLUR RADIUS : %f", blurRadius);
 }
 
 #pragma mark - Network

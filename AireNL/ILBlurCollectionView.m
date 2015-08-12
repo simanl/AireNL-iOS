@@ -40,7 +40,7 @@
 {
     [super layoutSubviews];
     
-    [self drawBlur];
+    //[self drawBlur];
 }
 
 - (void)drawBlur
