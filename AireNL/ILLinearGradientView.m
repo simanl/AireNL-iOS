@@ -46,6 +46,9 @@
     CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
     gradientLayer.frame = self.bounds;
     gradientLayer.colors = @[(id)color1.CGColor, (id)color2.CGColor];
+    
+    gradientLayer.locations = @[@(0.0), @(0.4)];
+    
     gradientLayer.startPoint = CGPointMake(0.5, 0);
     gradientLayer.endPoint = CGPointMake(0.5, 1);
     

@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *windLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *innerContentView;
+
 @end

@@ -1,0 +1,40 @@
+//
+//  ILRoundedView.m
+//  AireNL
+//
+//  Created by Daniel Lozano on 8/12/15.
+//  Copyright (c) 2015 Icalia Labs. All rights reserved.
+//
+
+#import "ILRoundedView.h"
+
+@implementation ILRoundedView
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    UIRectCorner corners;
+    if (self.type == ILRoundedViewTypeLeft) {
+        corners = UIRectCornerTopLeft|UIRectCornerBottomLeft;
+    }else{
+        corners = UIRectCornerTopRight|UIRectCornerBottomRight;
+    }
+    
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect: self.bounds
+                                                   byRoundingCorners: corners
+                                                         cornerRadii: CGSizeMake(self.radius, self.radius)];
+    
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = maskPath.CGPath;
+    self.layer.mask = maskLayer;
+}
+
+- (void)setIntegerType:(NSInteger)integerType
+{
+    _integerType = integerType;
+    _type = integerType;
+}
+
+@end

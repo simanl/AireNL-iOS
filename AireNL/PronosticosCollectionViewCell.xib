@@ -13,17 +13,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
                 <subviews>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jiz-zx-deZ">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="15" y="5" width="270" height="135"/>
+                        <color key="backgroundColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tableView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="jiz-zx-deZ" secondAttribute="bottom" id="Xfs-mn-dgr"/>
-                <constraint firstItem="jiz-zx-deZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bZW-cI-bAg"/>
-                <constraint firstAttribute="trailing" secondItem="jiz-zx-deZ" secondAttribute="trailing" id="mWo-VE-dfG"/>
-                <constraint firstItem="jiz-zx-deZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="o35-1q-75M"/>
+                <constraint firstAttribute="bottom" secondItem="jiz-zx-deZ" secondAttribute="bottom" constant="10" id="Xfs-mn-dgr"/>
+                <constraint firstItem="jiz-zx-deZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="bZW-cI-bAg"/>
+                <constraint firstAttribute="trailing" secondItem="jiz-zx-deZ" secondAttribute="trailing" constant="15" id="mWo-VE-dfG"/>
+                <constraint firstItem="jiz-zx-deZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="o35-1q-75M"/>
             </constraints>
             <size key="customSize" width="299" height="100"/>
             <connections>

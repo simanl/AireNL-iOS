@@ -67,7 +67,7 @@
     if (indexPath.row == 0) {
         return 40.0f;
     }
-    return 50.0f;
+    return 45.0f;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

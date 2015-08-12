@@ -15,7 +15,7 @@
 
 @interface ILBlurCollectionView ()
 
-@property (nonatomic) UIVisualEffectView *blurView;
+//@property (nonatomic) UIVisualEffectView *blurView;
 @property (nonatomic) ILLinearGradientView *fadeView;
 
 @property (nonatomic) CGSize newSize;
@@ -40,7 +40,7 @@
 {
     [super layoutSubviews];
     
-    //[self drawBlur];
+    [self drawBlur];
 }
 
 - (void)drawBlur
@@ -50,7 +50,7 @@
     }
         
     // REMOVE PREVIOUS VIEWS
-    [self.blurView removeFromSuperview];
+//    [self.blurView removeFromSuperview];
     [self.fadeView removeFromSuperview];
     
     CGFloat width = [self width];
@@ -58,16 +58,18 @@
     CGRect effectRect = CGRectMake(0, TOP_OFFSET, width, collectionViewContentSize.height + BOTTOM_OFFSET);
     
     // BLUR EFFECT
-    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
-    self.blurView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
-    self.blurView.frame = effectRect;
+//    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleLight];
+//    self.blurView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
+//    self.blurView.frame = effectRect;
     
     // BLACK FADE EFFECT
     self.fadeView = [[ILLinearGradientView alloc] initWithColors: @[[UIColor clearColor], [UIColor blackColor]]];
     self.fadeView.frame = effectRect;
     
-    [self insertSubview: self.blurView atIndex: 0];
-    [self insertSubview: self.fadeView aboveSubview: self.blurView];
+//    [self insertSubview: self.blurView atIndex: 0];
+//    [self insertSubview: self.fadeView aboveSubview: self.blurView];
+    
+    [self insertSubview: self.fadeView atIndex: 0];
     
     self.blurNeedsRedraw = NO;
 }

@@ -15,7 +15,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+        
     CurrentResults *currentResults = [self.delegate getCurrentResults];
     self.temperatureLabel.text = [currentResults.temperature stringValue];
 }

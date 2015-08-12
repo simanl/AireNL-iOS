@@ -56,6 +56,7 @@
 		06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */; };
 		06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */; };
 		06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */; };
+		06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C9581B7BFD1000876961 /* ILRoundedView.m */; };
 		06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FAE3821B72B9C200B19700 /* NotificationCenter.framework */; };
 		06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FAE3881B72B9C200B19700 /* TodayViewController.m */; };
 		06FAE38B1B72B9C200B19700 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */; };
@@ -174,6 +175,8 @@
 		06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoHeaderTableViewCell.h; sourceTree = "<group>"; };
 		06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoHeaderTableViewCell.m; sourceTree = "<group>"; };
 		06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		06F4C9571B7BFD1000876961 /* ILRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRoundedView.h; sourceTree = "<group>"; };
+		06F4C9581B7BFD1000876961 /* ILRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRoundedView.m; sourceTree = "<group>"; };
 		06FAE3811B72B9C200B19700 /* AireNL Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AireNL Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FAE3821B72B9C200B19700 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		06FAE3861B72B9C200B19700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -380,6 +383,8 @@
 			children = (
 				06D367B21B542615009E9D47 /* Main.storyboard */,
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
+				06F4C9571B7BFD1000876961 /* ILRoundedView.h */,
+				06F4C9581B7BFD1000876961 /* ILRoundedView.m */,
 				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
 				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
 				06FE05471B7159AA00BCFCA3 /* Blurs, Gradients */,
@@ -782,6 +787,7 @@
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
 				06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */,
+				06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */,
 				06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */,
 				06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
