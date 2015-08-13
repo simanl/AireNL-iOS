@@ -34,6 +34,7 @@
 @property (nonatomic) UIImage *blurredBackground;
 
 @property (nonatomic) BOOL dayMode;
+@property (nonatomic) CGFloat previousScrollViewYOffset;
 
 @end
 
@@ -130,37 +131,14 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat correctedOffset = scrollView.contentInset.top + scrollView.contentOffset.y;
-    
     if (correctedOffset <= 10) {
         [self setBackgroundImageWithBlur: NO];
     }else{
         [self setBackgroundImageWithBlur: YES];
     }
+    
+    [self animateTopViewWithScrollView: scrollView];
 }
-
-//#pragma mark - UIScrollView Delegate
-//
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    CGFloat offset =  scrollView.contentInset.top + scrollView.contentOffset.y;
-//    CGFloat totalSize = scrollView.contentInset.top + scrollView.contentSize.height - scrollView.bounds.size.height;
-//    
-//    CGFloat percentage = offset / totalSize;
-//    CGFloat blurRadius = 20 * percentage;
-//    
-//    if (blurRadius <= 0){
-//        blurRadius = 0;
-//    }else if(blurRadius >= 20){
-//        blurRadius = 20;
-//    }
-//    
-//    self.blurView.blurRadius = blurRadius;
-//    
-////    NSLog(@"OFFSET : %f", offset);
-////    NSLog(@"TOTAL SIZE : %f", totalSize);
-////    NSLog(@"PERCENTAGE : %f", percentage);
-////    NSLog(@"BLUR RADIUS : %f", blurRadius);
-//}
 
 #pragma mark - Network
 
@@ -357,6 +335,28 @@
         acum += [height floatValue];
     }];
     return acum;
+}
+
+- (void)animateTopViewWithScrollView:(UIScrollView *)scrollView
+{
+    CGRect frame = self.topView.frame;
+    CGFloat size = frame.size.height - 21;
+    CGFloat framePercentageHidden = ((20 - frame.origin.y) / (frame.size.height - 1));
+    CGFloat scrollOffset = scrollView.contentOffset.y;
+    CGFloat scrollDiff = scrollOffset - self.previousScrollViewYOffset;
+    CGFloat scrollHeight = scrollView.frame.size.height;
+    CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
+    
+    if (scrollOffset <= -scrollView.contentInset.top) {
+        self.topViewConstraint.constant = 20;
+    } else if ((scrollOffset + scrollHeight) >= scrollContentSizeHeight) {
+        self.topViewConstraint.constant = -size;
+    } else {
+        self.topViewConstraint.constant = MIN(20, MAX(-size, frame.origin.y - scrollDiff));
+    }
+    
+    self.topView.alpha = (1 - framePercentageHidden);
+    self.previousScrollViewYOffset = scrollOffset;
 }
 
 @end
