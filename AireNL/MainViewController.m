@@ -36,6 +36,8 @@
 @property (nonatomic) BOOL dayMode;
 @property (nonatomic) CGFloat previousScrollViewYOffset;
 
+@property (nonatomic) BOOL hasDrawnGradient;
+
 @end
 
 @implementation MainViewController

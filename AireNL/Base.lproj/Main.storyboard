@@ -63,9 +63,9 @@
                                 </variation>
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-Z1-yEp" userLabel="GradientView">
-                                <rect key="frame" x="0.0" y="70" width="600" height="20"/>
+                                <rect key="frame" x="0.0" y="16" width="600" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Wty-3A-LkT"/>
+                                    <constraint firstAttribute="height" constant="54" id="Wty-3A-LkT"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILBlurCollectionView">
@@ -631,10 +631,12 @@
                         <color key="backgroundColor" red="0.33333333333333331" green="0.4823529411764706" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="3JQ-eg-EiV"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="3Mr-gF-bs8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="3Xo-GB-NKt"/>
                             <constraint firstAttribute="trailing" secondItem="PgK-9j-pDS" secondAttribute="trailing" id="CHn-5b-Qbl"/>
                             <constraint firstItem="KH6-Z1-yEp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DAg-ga-hoD"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="54" id="Og2-GY-uKd"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="PeA-3M-8vm"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="16" id="QYm-Wa-j3j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aGk-6S-54d" secondAttribute="trailing" constant="-16" id="Rx8-Yh-uCX"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="top" secondItem="KH6-Z1-yEp" secondAttribute="bottom" id="Si3-Qx-m6t"/>
@@ -656,6 +658,7 @@
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qSa-qa-obW"/>
                             <constraint firstItem="KH6-Z1-yEp" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="r7R-OS-LuQ"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sNA-OT-naW"/>
+                            <constraint firstItem="KH6-Z1-yEp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="saN-7z-ciu"/>
                             <constraint firstAttribute="trailing" secondItem="gUK-ao-SVZ" secondAttribute="trailing" id="tNc-dv-J4A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aGk-6S-54d" secondAttribute="trailing" constant="-16" id="tm8-f0-f28"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zji-0d-19T"/>
@@ -663,13 +666,16 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Si3-Qx-m6t"/>
+                                <exclude reference="r7R-OS-LuQ"/>
                                 <exclude reference="sNA-OT-naW"/>
                                 <exclude reference="3JQ-eg-EiV"/>
+                                <exclude reference="3Mr-gF-bs8"/>
                                 <exclude reference="Og2-GY-uKd"/>
                                 <exclude reference="Rx8-Yh-uCX"/>
                                 <exclude reference="T1J-Nq-v4S"/>
                                 <exclude reference="a9I-Zw-jKN"/>
                                 <exclude reference="abx-Ca-nLq"/>
+                                <exclude reference="b2a-gj-21R"/>
                                 <exclude reference="dTk-o2-2r7"/>
                                 <exclude reference="g2o-kV-H3k"/>
                                 <exclude reference="hSY-vg-uRR"/>
