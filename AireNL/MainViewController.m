@@ -10,6 +10,7 @@
 
 #import <FXBlurView/FXBlurView.h>
 
+#import "Constants.h"
 #import "UIColor+ILColor.h"
 #import "ILBlurCollectionView.h"
 #import "ILRadialGradientLayer.h"
@@ -95,7 +96,12 @@
 - (void)customizeAppearance
 {
     [self setBackgroundImageWithBlur: NO];
-    [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
+    
+    if (IS_IPAD || IS_IPHONE_5 || IS_STANDARD_IPHONE_6 || IS_STANDARD_IPHONE_6_PLUS || IS_ZOOMED_IPHONE_6 || IS_ZOOMED_IPHONE_6_PLUS) {
+        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 5]];
+    }else{
+        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+    }
 }
 
 - (void)setBackgroundImageWithBlur:(BOOL)blur
@@ -122,7 +128,7 @@
 {
     CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
     CGFloat totalCellsHeight = height;
-    CGFloat topInset = 25.0 + (viewHeight - totalCellsHeight);
+    CGFloat topInset = 25.0 + 54 + (viewHeight - totalCellsHeight);
     
     self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
     self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
@@ -212,9 +218,13 @@
         // Reset scrollView offset and scroll to top WHILE animating to prevent jerkiness
         UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
         if (afterOrientation == UIInterfaceOrientationPortrait) {
-            [self setupCollectionViewInsetsWithCellsHeight: [self getTotalHeightForCellsExceptLastOne]];
+            if (IS_IPAD || IS_IPHONE_5 || IS_STANDARD_IPHONE_6 || IS_STANDARD_IPHONE_6_PLUS || IS_ZOOMED_IPHONE_6 || IS_ZOOMED_IPHONE_6_PLUS) {
+                [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 5]];
+            }else{
+                [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+            }
         }else{
-            [self setupCollectionViewInsetsWithCellsHeight: [self getFirstTwoCellHeights]];
+            [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 2]];
         }
         [self scrollCollectionViewToTop];
         
@@ -314,6 +324,19 @@
     }];
     
 //    [self.collectionView setContentOffset: topPoint animated: YES];
+}
+
+- (CGFloat)getCellHeightsTotalWithLimit:(NSInteger)limit
+{
+    if (limit > [self.cellHeights count]) {
+        limit = [self.cellHeights count];
+    }
+    
+    CGFloat acum = 0;
+    for (NSInteger i = 0; i < limit; i++) {
+        acum += [self.cellHeights[i] floatValue];
+    }
+    return acum;
 }
 
 - (CGFloat)getFirstTwoCellHeights

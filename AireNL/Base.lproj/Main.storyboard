@@ -21,55 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundIMG" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-ao-SVZ" userLabel="BackgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgK-9j-pDS" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="16" width="600" height="54"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONTERREY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KS-1F-pO3">
-                                        <rect key="frame" x="246" y="8" width="108.5" height="25"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESTACIÓN CENTRO OBISPADO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-SX-8k8">
-                                        <rect key="frame" x="212" y="35" width="175.5" height="16.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnT-fm-Ccj">
-                                        <rect key="frame" x="563" y="16" width="22" height="22"/>
-                                        <state key="normal" image="MapIcon">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="userDidSelectMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArV-Nc-aJS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="1KS-1F-pO3" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="top" constant="8" id="5Oh-yg-kG7"/>
-                                    <constraint firstAttribute="trailing" secondItem="LnT-fm-Ccj" secondAttribute="trailing" constant="15" id="MNh-4l-KgZ"/>
-                                    <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="2.5" id="OQw-NX-1jo"/>
-                                    <constraint firstAttribute="height" constant="54" id="asR-Rz-5B8"/>
-                                    <constraint firstAttribute="centerX" secondItem="8Gg-SX-8k8" secondAttribute="centerX" id="cVM-EE-dKt"/>
-                                    <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="-1" id="hhw-GS-qc4"/>
-                                    <constraint firstAttribute="centerX" secondItem="1KS-1F-pO3" secondAttribute="centerX" id="isW-TU-Elz"/>
-                                    <constraint firstAttribute="centerY" secondItem="LnT-fm-Ccj" secondAttribute="centerY" id="nM0-kF-6Bp"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="hhw-GS-qc4"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-Z1-yEp" userLabel="GradientView">
-                                <rect key="frame" x="0.0" y="16" width="600" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="Wty-3A-LkT"/>
-                                </constraints>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILBlurCollectionView">
-                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <rect key="frame" x="0.0" y="16" width="600" height="584"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="x6F-Hc-A3q">
                                     <size key="itemSize" width="329" height="161"/>
@@ -627,6 +580,47 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XAJ-xX-sxR"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgK-9j-pDS" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="16" width="600" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONTERREY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KS-1F-pO3">
+                                        <rect key="frame" x="246" y="8" width="108.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESTACIÓN CENTRO OBISPADO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-SX-8k8">
+                                        <rect key="frame" x="212" y="35" width="175.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnT-fm-Ccj">
+                                        <rect key="frame" x="563" y="16" width="22" height="22"/>
+                                        <state key="normal" image="MapIcon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userDidSelectMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArV-Nc-aJS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1KS-1F-pO3" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="top" constant="8" id="5Oh-yg-kG7"/>
+                                    <constraint firstAttribute="trailing" secondItem="LnT-fm-Ccj" secondAttribute="trailing" constant="15" id="MNh-4l-KgZ"/>
+                                    <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="2.5" id="OQw-NX-1jo"/>
+                                    <constraint firstAttribute="height" constant="54" id="asR-Rz-5B8"/>
+                                    <constraint firstAttribute="centerX" secondItem="8Gg-SX-8k8" secondAttribute="centerX" id="cVM-EE-dKt"/>
+                                    <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="-1" id="hhw-GS-qc4"/>
+                                    <constraint firstAttribute="centerX" secondItem="1KS-1F-pO3" secondAttribute="centerX" id="isW-TU-Elz"/>
+                                    <constraint firstAttribute="centerY" secondItem="LnT-fm-Ccj" secondAttribute="centerY" id="nM0-kF-6Bp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hhw-GS-qc4"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.33333333333333331" green="0.4823529411764706" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -634,50 +628,43 @@
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="3Mr-gF-bs8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="3Xo-GB-NKt"/>
                             <constraint firstAttribute="trailing" secondItem="PgK-9j-pDS" secondAttribute="trailing" id="CHn-5b-Qbl"/>
-                            <constraint firstItem="KH6-Z1-yEp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DAg-ga-hoD"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="54" id="Og2-GY-uKd"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="PeA-3M-8vm"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="16" id="QYm-Wa-j3j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aGk-6S-54d" secondAttribute="trailing" constant="-16" id="Rx8-Yh-uCX"/>
-                            <constraint firstItem="gUK-ao-SVZ" firstAttribute="top" secondItem="KH6-Z1-yEp" secondAttribute="bottom" id="Si3-Qx-m6t"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="T1J-Nq-v4S"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YUf-tY-kQh"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" constant="16" id="a9I-Zw-jKN"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="abx-Ca-nLq"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="b2a-gj-21R"/>
-                            <constraint firstAttribute="trailing" secondItem="KH6-Z1-yEp" secondAttribute="trailing" id="dJ5-J0-1Zz"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dTk-o2-2r7"/>
-                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="KH6-Z1-yEp" secondAttribute="bottom" id="g2o-kV-H3k"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="hSY-vg-uRR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUK-ao-SVZ" secondAttribute="bottom" id="i5d-vP-E6C"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jnN-AH-u8R"/>
                             <constraint firstAttribute="bottom" secondItem="aGk-6S-54d" secondAttribute="bottom" id="lFy-E2-r6g"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="n6i-H6-IMR"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="nCz-6V-SK4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="oRC-Xv-ghS"/>
                             <constraint firstAttribute="trailing" secondItem="aGk-6S-54d" secondAttribute="trailing" id="qJA-lr-ACc"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qSa-qa-obW"/>
-                            <constraint firstItem="KH6-Z1-yEp" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="bottom" id="r7R-OS-LuQ"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sNA-OT-naW"/>
-                            <constraint firstItem="KH6-Z1-yEp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="saN-7z-ciu"/>
                             <constraint firstAttribute="trailing" secondItem="gUK-ao-SVZ" secondAttribute="trailing" id="tNc-dv-J4A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aGk-6S-54d" secondAttribute="trailing" constant="-16" id="tm8-f0-f28"/>
                             <constraint firstItem="PgK-9j-pDS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zji-0d-19T"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Si3-Qx-m6t"/>
-                                <exclude reference="r7R-OS-LuQ"/>
                                 <exclude reference="sNA-OT-naW"/>
                                 <exclude reference="3JQ-eg-EiV"/>
                                 <exclude reference="3Mr-gF-bs8"/>
                                 <exclude reference="Og2-GY-uKd"/>
+                                <exclude reference="PeA-3M-8vm"/>
                                 <exclude reference="Rx8-Yh-uCX"/>
                                 <exclude reference="T1J-Nq-v4S"/>
                                 <exclude reference="a9I-Zw-jKN"/>
                                 <exclude reference="abx-Ca-nLq"/>
                                 <exclude reference="b2a-gj-21R"/>
                                 <exclude reference="dTk-o2-2r7"/>
-                                <exclude reference="g2o-kV-H3k"/>
                                 <exclude reference="hSY-vg-uRR"/>
                                 <exclude reference="n6i-H6-IMR"/>
                                 <exclude reference="tm8-f0-f28"/>
@@ -690,7 +677,6 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="gUK-ao-SVZ" id="GUI-Yv-vpt"/>
                         <outlet property="collectionView" destination="aGk-6S-54d" id="jvI-bW-zlj"/>
-                        <outlet property="gradientView" destination="KH6-Z1-yEp" id="j8V-EK-2BO"/>
                         <outlet property="stationLabel" destination="8Gg-SX-8k8" id="O4J-7e-uSY"/>
                         <outlet property="titleLabel" destination="1KS-1F-pO3" id="fiP-Dn-1Vs"/>
                         <outlet property="topView" destination="PgK-9j-pDS" id="RBG-uh-AlK"/>

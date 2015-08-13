@@ -20,8 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stationLabel;
 
-@property (weak, nonatomic) IBOutlet UIView *gradientView;
-
 @property (weak, nonatomic) IBOutlet ILBlurCollectionView *collectionView;
 
 - (IBAction)userDidSelectMap:(id)sender;
