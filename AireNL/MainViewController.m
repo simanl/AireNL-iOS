@@ -33,6 +33,8 @@
 @property (nonatomic) UIImage *normalBackground;
 @property (nonatomic) UIImage *blurredBackground;
 
+@property (nonatomic) BOOL dayMode;
+
 @end
 
 @implementation MainViewController
@@ -41,10 +43,13 @@
 {
     [super viewDidLoad];
     
+    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                       action: @selector(userDidSelectSwitchBackground)];
+    doubleTapRecognizer.numberOfTapsRequired = 2;
+    [self.topView addGestureRecognizer: doubleTapRecognizer];
+    
     self.normalBackground = [UIImage imageNamed: @"BackgroundIMG"];
-    self.blurredBackground = [[UIImage imageNamed: @"BackgroundIMG"] blurredImageWithRadius: 10.0f
-                                                                                 iterations: 2
-                                                                                  tintColor: nil];
+    self.blurredBackground = [[UIImage imageNamed: @"BackgroundIMG"] blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
     
     [self customizeAppearance];
     [self registerNibs];
@@ -57,7 +62,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Navigation
+#pragma mark - IBActions
 
 - (IBAction)userDidSelectMap:(id)sender
 {
@@ -65,6 +70,21 @@
     mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
     [self presentViewController: navVC animated: YES completion: nil];
+}
+
+- (void)userDidSelectSwitchBackground
+{
+    if (!self.dayMode) {
+        self.normalBackground = [UIImage imageNamed: @"BackgroundDia"];
+        self.blurredBackground = [[UIImage imageNamed: @"BackgroundDia"] blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
+        self.dayMode = YES;
+    }else{
+        self.normalBackground = [UIImage imageNamed: @"BackgroundIMG"];
+        self.blurredBackground = [[UIImage imageNamed: @"BackgroundIMG"] blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
+        self.dayMode = NO;
+    }
+    
+    self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
 }
 
 #pragma mark - Appearance / Initial Setup
