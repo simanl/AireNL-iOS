@@ -153,6 +153,9 @@
 {
     MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
     mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    mapVC.type = self.selectedBackgroundIndex;
+    
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
     [self presentViewController: navVC animated: YES completion: nil];
 }
@@ -222,10 +225,10 @@
     CGFloat correctedOffset = scrollView.contentInset.top + scrollView.contentOffset.y;
     if (correctedOffset <= 10) {
         [self setBackgroundImageWithBlur: NO];
-        [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationFade];
+        [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
     }else{
         [self setBackgroundImageWithBlur: YES];
-        [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationFade];
+        [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationSlide];
     }
     
     [self animateTopViewWithScrollView: scrollView];
@@ -324,41 +327,6 @@
     return self.predictionResults;
 }
 
-#pragma mark - Set/Get
-
-- (NSArray *)cellHeights
-{
-    if (!_cellHeights) {
-        _cellHeights = @[@(160), @(100), @(100), @(100), @(100), @(190)];
-    }
-    return _cellHeights;
-}
-
-- (NSArray *)cellWidths
-{
-    if (!_cellWidths) {
-        CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
-        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f), @(collectionWidth)];
-    }
-    return _cellWidths;
-}
-
-- (NSArray *)cellIdentifiers
-{
-    if (!_cellIdentifiers) {
-        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"contaminantesCell", @"vientoCell", @"temperaturaCell", @"pronosticosCollectionViewCell"];
-    }
-    return _cellIdentifiers;
-}
-
-- (NSArray *)backgroundImageNames
-{
-    if (!_backgroundImageNames) {
-        _backgroundImageNames = @[@"BackgroundNight", @"BackgroundDay", @"BackgroundSunset"];
-    }
-    return _backgroundImageNames;
-}
-
 #pragma mark - Helper's
 
 - (void)scrollCollectionViewToTop
@@ -369,7 +337,7 @@
         self.collectionView.contentOffset = topPoint;
     }];
     
-//    [self.collectionView setContentOffset: topPoint animated: YES];
+    //    [self.collectionView setContentOffset: topPoint animated: YES];
 }
 
 - (CGFloat)getCellHeightsTotalWithLimit:(NSInteger)limit
@@ -405,6 +373,41 @@
     
     self.topView.alpha = (1 - framePercentageHidden);
     self.previousScrollViewYOffset = scrollOffset;
+}
+
+#pragma mark - Set/Get
+
+- (NSArray *)cellHeights
+{
+    if (!_cellHeights) {
+        _cellHeights = @[@(160), @(100), @(100), @(100), @(100), @(190)];
+    }
+    return _cellHeights;
+}
+
+- (NSArray *)cellWidths
+{
+    if (!_cellWidths) {
+        CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
+        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f), @(collectionWidth)];
+    }
+    return _cellWidths;
+}
+
+- (NSArray *)cellIdentifiers
+{
+    if (!_cellIdentifiers) {
+        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"contaminantesCell", @"vientoCell", @"temperaturaCell", @"pronosticosCollectionViewCell"];
+    }
+    return _cellIdentifiers;
+}
+
+- (NSArray *)backgroundImageNames
+{
+    if (!_backgroundImageNames) {
+        _backgroundImageNames = @[@"BackgroundNight", @"BackgroundDay", @"BackgroundSunset"];
+    }
+    return _backgroundImageNames;
 }
 
 @end

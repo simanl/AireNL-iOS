@@ -27,6 +27,7 @@
     self.title = @"Puntos de Medicion";
     
     [self setUpLocationManager];
+    [self setNavBarImageWithType: self.type];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone
                                                                                           target: self
@@ -36,7 +37,8 @@
     self.mapView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -44,6 +46,28 @@
 - (void)didSelectDone
 {
     [self dismissViewControllerAnimated: YES completion: nil];
+}
+
+- (void)setNavBarImageWithType:(MapViewControllerNavBarType)type
+{    
+    NSString *imageName;
+    switch (type) {
+        case MapViewControllerNavBarTypeDay:
+            imageName = @"NavBarDay";
+            break;
+        case MapViewControllerNavBarTypeSunset:
+            imageName = @"NavBarSunset";
+            break;
+        case MapViewControllerNavBarTypeNight:
+            imageName = @"NavBarNight";
+            break;
+        default:
+            return;
+            break;
+    }
+    
+    UIImage *navBarImage = [UIImage imageNamed: imageName];
+    [self.navigationController.navigationBar setBackgroundImage: navBarImage forBarMetrics: UIBarMetricsDefault];
 }
 
 - (void)setUpLocationManager
