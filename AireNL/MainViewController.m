@@ -51,6 +51,7 @@
     [super viewDidLoad];
     
     [self setBackgroundImages];
+    [self addMotionEffectToBackground];
     
     [self customizeAppearance];
     [self addGestureRecognizers];
@@ -113,6 +114,27 @@
     doubleTapRecognizer.numberOfTapsRequired = 2;
     [self.topView addGestureRecognizer: doubleTapRecognizer];
 
+}
+
+- (void)addMotionEffectToBackground
+{
+    UIInterpolatingMotionEffect *verticalMotionEffect = [[UIInterpolatingMotionEffect alloc]
+                                                         initWithKeyPath: @"center.y"
+                                                         type: UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    verticalMotionEffect.minimumRelativeValue = @(-20);
+    verticalMotionEffect.maximumRelativeValue = @(20);
+    
+    UIInterpolatingMotionEffect *horizontalMotionEffect = [[UIInterpolatingMotionEffect alloc]
+                                                           initWithKeyPath: @"center.x"
+                                                           type: UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    
+    horizontalMotionEffect.minimumRelativeValue = @(-20);
+    horizontalMotionEffect.maximumRelativeValue = @(20);
+    
+    UIMotionEffectGroup *group = [UIMotionEffectGroup new];
+    group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
+    
+    [self.backgroundImageView addMotionEffect: group];
 }
 
 - (void)setupCollectionViewInsetsWithCellsHeight:(CGFloat)height

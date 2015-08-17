@@ -11,7 +11,7 @@
 #import "ILLinearGradientView.h"
 
 #define TOP_OFFSET 158
-#define BOTTOM_OFFSET 300
+#define BOTTOM_OFFSET 600
 
 @interface ILBlurCollectionView ()
 
