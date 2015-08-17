@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundIMG" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-ao-SVZ" userLabel="BackgroundImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundNight" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-ao-SVZ" userLabel="BackgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILBlurCollectionView">
-                                <rect key="frame" x="0.0" y="16" width="600" height="584"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="x6F-Hc-A3q">
                                     <size key="itemSize" width="329" height="161"/>
@@ -643,7 +643,7 @@
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jnN-AH-u8R"/>
                             <constraint firstAttribute="bottom" secondItem="aGk-6S-54d" secondAttribute="bottom" id="lFy-E2-r6g"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="n6i-H6-IMR"/>
-                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="nCz-6V-SK4"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nCz-6V-SK4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="oRC-Xv-ghS"/>
                             <constraint firstAttribute="trailing" secondItem="aGk-6S-54d" secondAttribute="trailing" id="qJA-lr-ACc"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qSa-qa-obW"/>
@@ -654,7 +654,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="sNA-OT-naW"/>
                                 <exclude reference="3JQ-eg-EiV"/>
                                 <exclude reference="3Mr-gF-bs8"/>
                                 <exclude reference="Og2-GY-uKd"/>
@@ -668,6 +667,7 @@
                                 <exclude reference="hSY-vg-uRR"/>
                                 <exclude reference="n6i-H6-IMR"/>
                                 <exclude reference="tm8-f0-f28"/>
+                                <exclude reference="sNA-OT-naW"/>
                                 <exclude reference="3Xo-GB-NKt"/>
                                 <exclude reference="oRC-Xv-ghS"/>
                             </mask>
@@ -744,7 +744,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackgroundIMG" width="1088" height="816"/>
+        <image name="BackgroundNight" width="426" height="640"/>
         <image name="MapIcon" width="22" height="22"/>
         <image name="TempIcon" width="15" height="32"/>
         <image name="VientoIcon" width="29" height="19"/>

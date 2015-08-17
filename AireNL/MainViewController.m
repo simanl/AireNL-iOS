@@ -21,6 +21,9 @@
 #import "PredictionResults.h"
 #import "ResultsCellDelegate.h"
 
+#define STATUS_BAR_HEIGHT 16
+#define NAV_BAR_HEIGHT 54
+
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ResultsCellDelegate>
 
 @property (nonatomic) NSArray *cellHeights;
@@ -34,10 +37,10 @@
 @property (nonatomic) UIImage *normalBackground;
 @property (nonatomic) UIImage *blurredBackground;
 
-@property (nonatomic) BOOL dayMode;
-@property (nonatomic) CGFloat previousScrollViewYOffset;
+@property (nonatomic) NSUInteger selectedBackgroundIndex;
+@property (nonatomic) NSArray *backgroundImageNames;
 
-@property (nonatomic) BOOL hasDrawnGradient;
+@property (nonatomic) CGFloat previousScrollViewYOffset;
 
 @end
 
@@ -47,15 +50,10 @@
 {
     [super viewDidLoad];
     
-    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
-                                                                                       action: @selector(userDidSelectSwitchBackground)];
-    doubleTapRecognizer.numberOfTapsRequired = 2;
-    [self.topView addGestureRecognizer: doubleTapRecognizer];
-    
-    self.normalBackground = [UIImage imageNamed: @"BackgroundIMG"];
-    self.blurredBackground = [[UIImage imageNamed: @"BackgroundIMG"] blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
+    [self setBackgroundImages];
     
     [self customizeAppearance];
+    [self addGestureRecognizers];
     [self registerNibs];
     
     [self loadAssets];
@@ -64,31 +62,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - IBActions
-
-- (IBAction)userDidSelectMap:(id)sender
-{
-    MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
-    mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
-    [self presentViewController: navVC animated: YES completion: nil];
-}
-
-- (void)userDidSelectSwitchBackground
-{
-    if (!self.dayMode) {
-        self.normalBackground = [UIImage imageNamed: @"BackgroundDia"];
-        self.blurredBackground = [[UIImage imageNamed: @"BackgroundDia"] blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
-        self.dayMode = YES;
-    }else{
-        self.normalBackground = [UIImage imageNamed: @"BackgroundIMG"];
-        self.blurredBackground = [[UIImage imageNamed: @"BackgroundIMG"] blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
-        self.dayMode = NO;
-    }
-    
-    self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
 }
 
 #pragma mark - Appearance / Initial Setup
@@ -102,6 +75,15 @@
     }else{
         [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
     }
+}
+
+- (void)setBackgroundImages
+{
+    NSString *backgroundImageName = self.backgroundImageNames[self.selectedBackgroundIndex];
+    UIImage *backgroundImage = [UIImage imageNamed: backgroundImageName];
+    
+    self.normalBackground = backgroundImage;
+    self.blurredBackground = [backgroundImage blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
 }
 
 - (void)setBackgroundImageWithBlur:(BOOL)blur
@@ -124,28 +106,46 @@
     [self.collectionView registerNib: pronosticosNib forCellWithReuseIdentifier: @"pronosticosCollectionViewCell"];
 }
 
+- (void)addGestureRecognizers
+{
+    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                          action: @selector(userDidSelectSwitchBackground)];
+    doubleTapRecognizer.numberOfTapsRequired = 2;
+    [self.topView addGestureRecognizer: doubleTapRecognizer];
+
+}
+
 - (void)setupCollectionViewInsetsWithCellsHeight:(CGFloat)height
 {
     CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
     CGFloat totalCellsHeight = height;
-    CGFloat topInset = 25.0 + 54 + (viewHeight - totalCellsHeight);
+    CGFloat topInset = STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT + 25.0 + (viewHeight - totalCellsHeight);
     
     self.collectionView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
     self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
 }
 
-#pragma mark - UIScrollView Delegate
+#pragma mark - IBActions
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (IBAction)userDidSelectMap:(id)sender
 {
-    CGFloat correctedOffset = scrollView.contentInset.top + scrollView.contentOffset.y;
-    if (correctedOffset <= 10) {
-        [self setBackgroundImageWithBlur: NO];
+    MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
+    mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
+    [self presentViewController: navVC animated: YES completion: nil];
+}
+
+- (void)userDidSelectSwitchBackground
+{
+    if (self.selectedBackgroundIndex == [self.backgroundImageNames count] - 1) {
+        self.selectedBackgroundIndex = 0;
     }else{
-        [self setBackgroundImageWithBlur: YES];
+        self.selectedBackgroundIndex ++;
     }
     
-    [self animateTopViewWithScrollView: scrollView];
+    [self setBackgroundImages];
+    
+    self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
 }
 
 #pragma mark - Network
@@ -191,6 +191,22 @@
     predictionResults.periodThree = periodThreeContamintResults;
     
     self.predictionResults = predictionResults;
+}
+
+#pragma mark - UIScrollView Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat correctedOffset = scrollView.contentInset.top + scrollView.contentOffset.y;
+    if (correctedOffset <= 10) {
+        [self setBackgroundImageWithBlur: NO];
+        [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationFade];
+    }else{
+        [self setBackgroundImageWithBlur: YES];
+        [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationFade];
+    }
+    
+    [self animateTopViewWithScrollView: scrollView];
 }
 
 #pragma mark - Rotation
@@ -313,6 +329,14 @@
     return _cellIdentifiers;
 }
 
+- (NSArray *)backgroundImageNames
+{
+    if (!_backgroundImageNames) {
+        _backgroundImageNames = @[@"BackgroundNight", @"BackgroundDay", @"BackgroundSunset"];
+    }
+    return _backgroundImageNames;
+}
+
 #pragma mark - Helper's
 
 - (void)scrollCollectionViewToTop
@@ -336,29 +360,6 @@
     for (NSInteger i = 0; i < limit; i++) {
         acum += [self.cellHeights[i] floatValue];
     }
-    return acum;
-}
-
-- (CGFloat)getFirstTwoCellHeights
-{
-    CGFloat acum = 0;
-    for (int i = 0; i < 2; i++) {
-        acum += [self.cellHeights[i] floatValue];
-    }
-    return acum;
-}
-
-- (CGFloat)getTotalHeightForCellsExceptLastOne
-{
-    __block CGFloat acum = 0;
-    [self.cellHeights enumerateObjectsUsingBlock:^(NSNumber *height, NSUInteger idx, BOOL *stop) {
-        // SKIP LAST CELL
-        if (idx == [self.cellHeights count] - 1) {
-            *stop = YES;
-            return;
-        }
-        acum += [height floatValue];
-    }];
     return acum;
 }
 
