@@ -24,7 +24,7 @@
 #define STATUS_BAR_HEIGHT 16
 #define NAV_BAR_HEIGHT 54
 
-@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ResultsCellDelegate>
+@interface MainViewController () <ResultsCellDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
@@ -71,10 +71,10 @@
 {
     [self setBackgroundImageWithBlur: NO];
     
-    if (IS_IPAD || IS_IPHONE_5 || IS_STANDARD_IPHONE_6 || IS_STANDARD_IPHONE_6_PLUS || IS_ZOOMED_IPHONE_6 || IS_ZOOMED_IPHONE_6_PLUS) {
-        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 5]];
-    }else{
+    if (IS_IPHONE_4) {
         [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+    }else{
+        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 5]];
     }
 }
 
