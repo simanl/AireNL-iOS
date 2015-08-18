@@ -35,6 +35,9 @@
 		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
 		06B01CB71B7947A10094861C /* AirQualityInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B01CB61B7947A10094861C /* AirQualityInterfaceController.m */; };
 		06B01CBA1B7947C30094861C /* TempWindInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B01CB91B7947C30094861C /* TempWindInterfaceController.m */; };
+		06C5E2901B83A8540017B15A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C5E2921B83A8540017B15A /* MainInterface.storyboard */; };
+		06C5E2971B83A9700017B15A /* PronosticoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06C5E2991B83A9700017B15A /* PronosticoHeaderTableViewCell.xib */; };
+		06C5E29C1B83A97C0017B15A /* PronosticoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06C5E29E1B83A97C0017B15A /* PronosticoTableViewCell.xib */; };
 		06D367AB1B542615009E9D47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AA1B542615009E9D47 /* main.m */; };
 		06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367AD1B542615009E9D47 /* AppDelegate.m */; };
 		06D367B41B542615009E9D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B21B542615009E9D47 /* Main.storyboard */; };
@@ -53,13 +56,10 @@
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
 		06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */; };
 		06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */; };
-		06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */; };
 		06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */; };
-		06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */; };
 		06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C9581B7BFD1000876961 /* ILRoundedView.m */; };
 		06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FAE3821B72B9C200B19700 /* NotificationCenter.framework */; };
 		06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FAE3881B72B9C200B19700 /* TodayViewController.m */; };
-		06FAE38B1B72B9C200B19700 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */; };
 		06FAE38E1B72B9C200B19700 /* AireNL Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06FAE3811B72B9C200B19700 /* AireNL Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06FAE3941B72BFB400B19700 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FAE3931B72BFB400B19700 /* Media.xcassets */; };
 		06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */; };
@@ -124,6 +124,18 @@
 		060A9EB51B790A7900C5AAD6 /* ResultLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultLocation.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
+		0637ECA91B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		0637ECAA1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0637ECAB1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoHeaderTableViewCell.strings; sourceTree = "<group>"; };
+		0637ECAC1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoTableViewCell.strings; sourceTree = "<group>"; };
+		0637ECAD1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		0637ECAE1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
+		0637ECAF1B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
+		0637ECB01B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0637ECB11B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/PronosticoHeaderTableViewCell.strings"; sourceTree = "<group>"; };
+		0637ECB21B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/PronosticoTableViewCell.strings"; sourceTree = "<group>"; };
+		0637ECB31B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		0637ECB41B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Interface.strings"; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		065753091B5EBB2C00FF226C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -139,6 +151,9 @@
 		06B01CB61B7947A10094861C /* AirQualityInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirQualityInterfaceController.m; sourceTree = "<group>"; };
 		06B01CB81B7947C30094861C /* TempWindInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempWindInterfaceController.h; sourceTree = "<group>"; };
 		06B01CB91B7947C30094861C /* TempWindInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempWindInterfaceController.m; sourceTree = "<group>"; };
+		06C5E2911B83A8540017B15A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		06C5E2981B83A9700017B15A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PronosticoHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		06C5E29D1B83A97C0017B15A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PronosticoTableViewCell.xib; sourceTree = "<group>"; };
 		06D367A51B542615009E9D47 /* AireNL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AireNL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D367A91B542615009E9D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D367AA1B542615009E9D47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,10 +186,8 @@
 		06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticosCollectionViewCell.xib; sourceTree = "<group>"; };
 		06F2C44A1B680E7000BDF043 /* PronosticoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoTableViewCell.h; sourceTree = "<group>"; };
 		06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoTableViewCell.m; sourceTree = "<group>"; };
-		06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoTableViewCell.xib; sourceTree = "<group>"; };
 		06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticoHeaderTableViewCell.h; sourceTree = "<group>"; };
 		06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoHeaderTableViewCell.m; sourceTree = "<group>"; };
-		06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticoHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		06F4C9571B7BFD1000876961 /* ILRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRoundedView.h; sourceTree = "<group>"; };
 		06F4C9581B7BFD1000876961 /* ILRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRoundedView.m; sourceTree = "<group>"; };
 		06FAE3811B72B9C200B19700 /* AireNL Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AireNL Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +195,6 @@
 		06FAE3861B72B9C200B19700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06FAE3871B72B9C200B19700 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		06FAE3881B72B9C200B19700 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		06FAE3931B72BFB400B19700 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		06FE05481B715A2700BCFCA3 /* ImecaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImecaCollectionViewCell.h; sourceTree = "<group>"; };
 		06FE05491B715A2700BCFCA3 /* ImecaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImecaCollectionViewCell.m; sourceTree = "<group>"; };
@@ -292,10 +304,10 @@
 				06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */,
 				06F2C44F1B6811D100BDF043 /* PronosticoHeaderTableViewCell.h */,
 				06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */,
-				06F2C4511B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib */,
+				06C5E2991B83A9700017B15A /* PronosticoHeaderTableViewCell.xib */,
 				06F2C44A1B680E7000BDF043 /* PronosticoTableViewCell.h */,
 				06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */,
-				06F2C44C1B680E7000BDF043 /* PronosticoTableViewCell.xib */,
+				06C5E29E1B83A97C0017B15A /* PronosticoTableViewCell.xib */,
 			);
 			name = "Pronostico UICollectionViewCell";
 			sourceTree = "<group>";
@@ -471,7 +483,7 @@
 			children = (
 				06FAE3871B72B9C200B19700 /* TodayViewController.h */,
 				06FAE3881B72B9C200B19700 /* TodayViewController.m */,
-				06FAE38A1B72B9C200B19700 /* MainInterface.storyboard */,
+				06C5E2921B83A8540017B15A /* MainInterface.storyboard */,
 				06FAE3931B72BFB400B19700 /* Media.xcassets */,
 				06FAE3851B72B9C200B19700 /* Supporting Files */,
 			);
@@ -693,8 +705,8 @@
 				06D367B41B542615009E9D47 /* Main.storyboard in Resources */,
 				06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */,
 				06D367B61B542615009E9D47 /* Images.xcassets in Resources */,
-				06F2C4531B6811D100BDF043 /* PronosticoHeaderTableViewCell.xib in Resources */,
-				06F2C44E1B680E7000BDF043 /* PronosticoTableViewCell.xib in Resources */,
+				06C5E2971B83A9700017B15A /* PronosticoHeaderTableViewCell.xib in Resources */,
+				06C5E29C1B83A97C0017B15A /* PronosticoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,7 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FAE3941B72BFB400B19700 /* Media.xcassets in Resources */,
-				06FAE38B1B72B9C200B19700 /* MainInterface.storyboard in Resources */,
+				06C5E2901B83A8540017B15A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,10 +881,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		06C5E2921B83A8540017B15A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06C5E2911B83A8540017B15A /* Base */,
+				0637ECAD1B83AB050091032B /* es */,
+				0637ECB31B83AB0A0091032B /* es-MX */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		06C5E2991B83A9700017B15A /* PronosticoHeaderTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06C5E2981B83A9700017B15A /* Base */,
+				0637ECAB1B83AB050091032B /* es */,
+				0637ECB11B83AB0A0091032B /* es-MX */,
+			);
+			name = PronosticoHeaderTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		06C5E29E1B83A97C0017B15A /* PronosticoTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06C5E29D1B83A97C0017B15A /* Base */,
+				0637ECAC1B83AB050091032B /* es */,
+				0637ECB21B83AB0A0091032B /* es-MX */,
+			);
+			name = PronosticoTableViewCell.xib;
+			sourceTree = "<group>";
+		};
 		06D367B21B542615009E9D47 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				06D367B31B542615009E9D47 /* Base */,
+				0637ECA91B83AB050091032B /* es */,
+				0637ECAF1B83AB0A0091032B /* es-MX */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -881,6 +925,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				06D367B81B542615009E9D47 /* Base */,
+				0637ECAA1B83AB050091032B /* es */,
+				0637ECB01B83AB0A0091032B /* es-MX */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -889,6 +935,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				06D8BA7F1B74106B007462A4 /* Base */,
+				0637ECAE1B83AB050091032B /* es */,
+				0637ECB41B83AB0A0091032B /* es-MX */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";

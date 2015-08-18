@@ -38,12 +38,12 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="25" id="3Ik-jk-bH1">
                             <items>
-                                <label width="1" alignment="left" text="CALIDAD DEL AIRE" textAlignment="center" id="qmx-E2-KUI">
+                                <label width="1" alignment="left" text="AIR QUALITY" textAlignment="center" id="qmx-E2-KUI">
                                     <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
                                 <imageView alignment="center" image="AirIcon" id="yYz-qq-YYl"/>
-                                <label alignment="center" text="Buena" id="oz1-g0-JWN">
+                                <label alignment="center" text="Good" id="oz1-g0-JWN">
                                     <fontDescription key="font" type="system" weight="light" pointSize="16"/>
                                 </label>
                             </items>
@@ -65,7 +65,7 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" spacing="5" id="QA4-O5-CbQ">
                             <items>
-                                <label width="1" alignment="left" text="EL TIEMPO" textAlignment="center" id="2mF-DS-U9I">
+                                <label width="1" alignment="left" text="WEATHER" textAlignment="center" id="2mF-DS-U9I">
                                     <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
@@ -95,7 +95,7 @@
                 <glanceController spacing="0.0" topTemplateType="mediumBody1" bottomTemplateType="groupBody1Footer" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <label alignment="left" text="Monterrey" id="80c-iJ-NFz"/>
-                        <label alignment="left" text="Centro Obispado" id="Za2-n3-fsA"/>
+                        <label alignment="left" text="Obispado Downtown" minimumScaleFactor="0.80000000000000004" id="Za2-n3-fsA"/>
                         <group alignment="left" id="uCw-4Q-Ouw">
                             <items>
                                 <label alignment="left" verticalAlignment="center" text="187" id="vNH-So-5BS">
@@ -107,8 +107,8 @@
                                 </label>
                             </items>
                         </group>
-                        <label alignment="left" text="Calidad del Aire" id="bPr-4c-WFD"/>
-                        <label alignment="left" text="Muy Mala" id="aJM-Id-88N"/>
+                        <label alignment="left" text="Air Quality" id="bPr-4c-WFD"/>
+                        <label alignment="left" text="Very Bad" id="aJM-Id-88N"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>

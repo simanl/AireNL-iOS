@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "MONTERREY"; ObjectID = "1KS-1F-pO3"; */
+"1KS-1F-pO3.text" = "MONTERREY";
+
+/* Class = "UILabel"; text = "GOOD"; ObjectID = "4FS-Vu-gVY"; */
+"4FS-Vu-gVY.text" = "BUENA";
+
+/* Class = "UILabel"; text = "DOWNTOWN OBISPADO STATION"; ObjectID = "8Gg-SX-8k8"; */
+"8Gg-SX-8k8.text" = "ESTACIÓN CENTRO OBISPADO";
+
+/* Class = "UILabel"; text = "WIND KM/H"; ObjectID = "8tE-TH-mHA"; */
+"8tE-TH-mHA.text" = "VIENTO KM/H";
+
+/* Class = "UILabel"; text = "120"; ObjectID = "H86-2S-tQw"; */
+"H86-2S-tQw.text" = "120";
+
+/* Class = "UILabel"; text = "TEMPERATURE"; ObjectID = "R8Y-Af-67u"; */
+"R8Y-Af-67u.text" = "TEMPERATURA";
+
+/* Class = "UILabel"; text = "28"; ObjectID = "U2p-Wc-kx3"; */
+"U2p-Wc-kx3.text" = "28";
+
+/* Class = "UILabel"; text = "120"; ObjectID = "cIj-xb-muK"; */
+"cIj-xb-muK.text" = "120";
+
+/* Class = "UILabel"; text = "PM 10"; ObjectID = "f75-Xh-iOI"; */
+"f75-Xh-iOI.text" = "PM 10";
+
+/* Class = "UILabel"; text = "63"; ObjectID = "gDs-L4-amw"; */
+"gDs-L4-amw.text" = "63";
+
+/* Class = "UILabel"; text = "49"; ObjectID = "h09-8l-Jvm"; */
+"h09-8l-Jvm.text" = "49";
+
+/* Class = "UILabel"; text = "O3"; ObjectID = "ij7-oY-aRX"; */
+"ij7-oY-aRX.text" = "O3";
+
+/* Class = "UILabel"; text = "RECOMENDED ACTIVITIES"; ObjectID = "ktJ-B3-cu6"; */
+"ktJ-B3-cu6.text" = "ACTIVIDADES RECOMENDADAS";
+
+/* Class = "UILabel"; text = "87"; ObjectID = "lcv-Md-V74"; */
+"lcv-Md-V74.text" = "87";
+
+/* Class = "UILabel"; text = "IMECA"; ObjectID = "zML-3N-I8u"; */
+"zML-3N-I8u.text" = "IMECA";
+
+/* Class = "UILabel"; text = "PM 2.5"; ObjectID = "zTw-3e-IPu"; */
+"zTw-3e-IPu.text" = "PM 2.5";
