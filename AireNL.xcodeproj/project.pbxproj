@@ -27,6 +27,7 @@
 		060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
+		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
@@ -136,6 +137,8 @@
 		0637ECB21B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/PronosticoTableViewCell.strings"; sourceTree = "<group>"; };
 		0637ECB31B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/MainInterface.strings"; sourceTree = "<group>"; };
 		0637ECB41B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Interface.strings"; sourceTree = "<group>"; };
+		0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		065753091B5EBB2C00FF226C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 				06D367D31B54564D009E9D47 /* UIColor+ILColor.h */,
 				06D367D41B54564D009E9D47 /* UIColor+ILColor.m */,
 				06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */,
+				0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */,
+				0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */,
 			);
 			name = "Helpers+Categories";
 			sourceTree = "<group>";
@@ -785,6 +790,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
+				0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */,
 				06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */,
 				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
