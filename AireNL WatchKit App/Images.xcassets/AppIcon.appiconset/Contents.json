@@ -4,7 +4,7 @@
       "size" : "24x24",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@2x-5.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-4.png",
       "role" : "notificationCenter",
       "subtype" : "38mm"
     },
@@ -12,21 +12,21 @@
       "size" : "27.5x27.5",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@1x.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@1x.png",
       "role" : "notificationCenter",
       "subtype" : "42mm"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@2x-6.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-3.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@3x.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@3x.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
@@ -34,7 +34,7 @@
       "size" : "40x40",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@2x-3.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-2.png",
       "role" : "appLauncher",
       "subtype" : "38mm"
     },
@@ -42,7 +42,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@2x-2.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-1.png",
       "role" : "longLook",
       "subtype" : "42mm"
     },
@@ -50,7 +50,7 @@
       "size" : "86x86",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@2x.png",
+      "filename" : "86.png",
       "role" : "quickLook",
       "subtype" : "38mm"
     },
@@ -58,7 +58,7 @@
       "size" : "98x98",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers Copy@2x-1.png",
+      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x.png",
       "role" : "quickLook",
       "subtype" : "42mm"
     }
