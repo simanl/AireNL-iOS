@@ -71,11 +71,7 @@
 {
     [self setBackgroundImageWithBlur: NO];
     
-    if (IS_IPHONE_4) {
-        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
-    }else{
-        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 5]];
-    }
+    [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
 }
 
 - (void)setBackgroundImages
@@ -259,13 +255,9 @@
         // Reset scrollView offset and scroll to top WHILE animating to prevent jerkiness
         UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
         if (afterOrientation == UIInterfaceOrientationPortrait) {
-            if (IS_IPAD || IS_IPHONE_5 || IS_STANDARD_IPHONE_6 || IS_STANDARD_IPHONE_6_PLUS || IS_ZOOMED_IPHONE_6 || IS_ZOOMED_IPHONE_6_PLUS) {
-                [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 5]];
-            }else{
-                [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
-            }
+            [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
         }else{
-            [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 2]];
+            [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 2] - 25.0];
         }
         [self scrollCollectionViewToTop];
         

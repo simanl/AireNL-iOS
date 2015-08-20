@@ -22,7 +22,7 @@
                                 <rect key="frame" x="-20" y="-20" width="640" height="640"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILBlurCollectionView">
-                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="x6F-Hc-A3q">
                                     <size key="itemSize" width="329" height="161"/>
@@ -63,13 +63,13 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMECA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zML-3N-I8u">
                                                             <rect key="frame" x="149" y="80" width="31.5" height="14"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LA CALIDAD DEL AIRE ES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-Fr-HU9">
                                                             <rect key="frame" x="66.5" y="113" width="197.5" height="14"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h39-Li-eSM">
@@ -92,7 +92,7 @@
                                                                     </state>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.70588235294117641" green="0.81176470588235294" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="0.70588235294117641" green="0.81176470588235294" blue="0.32549019607843138" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="4FS-Vu-gVY" secondAttribute="trailing" constant="30" id="5mi-YE-LSN"/>
                                                                 <constraint firstAttribute="height" constant="40" id="Gta-dp-vx2"/>
@@ -706,7 +706,7 @@
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jnN-AH-u8R"/>
                             <constraint firstAttribute="bottom" secondItem="aGk-6S-54d" secondAttribute="bottom" id="lFy-E2-r6g"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="n6i-H6-IMR"/>
-                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="nCz-6V-SK4"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nCz-6V-SK4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="oRC-Xv-ghS"/>
                             <constraint firstAttribute="trailing" secondItem="aGk-6S-54d" secondAttribute="trailing" id="qJA-lr-ACc"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="qSa-qa-obW"/>
