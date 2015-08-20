@@ -380,7 +380,7 @@
 - (NSArray *)cellHeights
 {
     if (!_cellHeights) {
-        _cellHeights = @[@(160), @(100), @(100), @(100), @(100), @(190)];
+        _cellHeights = @[@(180), @(120), @(100), @(100), @(100), @(190)];
     }
     return _cellHeights;
 }
@@ -389,7 +389,7 @@
 {
     if (!_cellWidths) {
         CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
-        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f), @(collectionWidth)];
+        _cellWidths = @[@(collectionWidth), @(collectionWidth), @(collectionWidth/2.0f), @(collectionWidth/2.0f), @(collectionWidth), @(collectionWidth)];
     }
     return _cellWidths;
 }
@@ -397,7 +397,7 @@
 - (NSArray *)cellIdentifiers
 {
     if (!_cellIdentifiers) {
-        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"contaminantesCell", @"vientoCell", @"temperaturaCell", @"pronosticosCollectionViewCell"];
+        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"vientoCell", @"temperaturaCell", @"contaminantesCell",  @"pronosticosCollectionViewCell"];
     }
     return _cellIdentifiers;
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -71,6 +71,16 @@
                             <constraint firstAttribute="width" constant="60" id="FUW-Dd-3oi"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-Zb-js4">
+                        <rect key="frame" x="34" y="5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="hH7-Gf-3lW"/>
+                            <constraint firstAttribute="width" constant="30" id="xyI-r1-40a"/>
+                        </constraints>
+                        <state key="normal" image="InfoIcon">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
@@ -79,6 +89,7 @@
                     <constraint firstItem="b7v-x2-0ey" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="67V-Sx-p1I"/>
                     <constraint firstAttribute="centerY" secondItem="mK6-f7-GwR" secondAttribute="centerY" id="6Mn-K9-yzn"/>
                     <constraint firstItem="UFL-cX-qvP" firstAttribute="width" secondItem="68L-mv-NaN" secondAttribute="width" id="6zN-y2-Ddd"/>
+                    <constraint firstAttribute="centerY" secondItem="qe0-Zb-js4" secondAttribute="centerY" id="9AR-lm-GFj"/>
                     <constraint firstItem="1TX-cP-1pe" firstAttribute="leading" secondItem="68L-mv-NaN" secondAttribute="trailing" id="DrW-al-uH1"/>
                     <constraint firstItem="UFL-cX-qvP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Frc-h5-Il3"/>
                     <constraint firstItem="b7v-x2-0ey" firstAttribute="width" secondItem="mK6-f7-GwR" secondAttribute="width" id="GKS-t5-6vr"/>
@@ -90,12 +101,14 @@
                     <constraint firstItem="I3h-dY-A24" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MYG-z8-VLN"/>
                     <constraint firstAttribute="centerY" secondItem="b7v-x2-0ey" secondAttribute="centerY" id="Nr5-5l-Pxb"/>
                     <constraint firstItem="XaQ-t4-d9F" firstAttribute="leading" secondItem="I3h-dY-A24" secondAttribute="trailing" id="PKA-aI-cK4"/>
+                    <constraint firstItem="mK6-f7-GwR" firstAttribute="leading" secondItem="qe0-Zb-js4" secondAttribute="trailing" constant="15" id="Saf-Ik-8mF"/>
                     <constraint firstAttribute="bottom" secondItem="b7v-x2-0ey" secondAttribute="bottom" id="TJf-EG-CSZ"/>
                     <constraint firstAttribute="centerY" secondItem="b7v-x2-0ey" secondAttribute="centerY" id="TRK-O7-2w8"/>
                     <constraint firstAttribute="centerY" secondItem="22B-dx-buK" secondAttribute="centerY" id="UiG-jf-3Xo"/>
                     <constraint firstItem="b7v-x2-0ey" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="X5q-Tc-Qj5"/>
                     <constraint firstItem="UFL-cX-qvP" firstAttribute="width" secondItem="mK6-f7-GwR" secondAttribute="width" id="Y3c-IG-8kw"/>
                     <constraint firstItem="mK6-f7-GwR" firstAttribute="leading" secondItem="E7G-oM-FG9" secondAttribute="trailing" id="ZF8-lu-2fg"/>
+                    <constraint firstItem="qe0-Zb-js4" firstAttribute="leading" secondItem="b7v-x2-0ey" secondAttribute="trailing" constant="15" id="a8y-h3-bjP"/>
                     <constraint firstItem="68L-mv-NaN" firstAttribute="leading" secondItem="22B-dx-buK" secondAttribute="trailing" id="axK-Sp-gJY"/>
                     <constraint firstItem="mK6-f7-GwR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bvL-XA-mem"/>
                     <constraint firstAttribute="bottom" secondItem="68L-mv-NaN" secondAttribute="bottom" id="dfW-VV-DxY"/>
@@ -112,6 +125,7 @@
                     <constraint firstAttribute="centerY" secondItem="1TX-cP-1pe" secondAttribute="centerY" id="xDH-Aq-FCk"/>
                     <constraint firstItem="22B-dx-buK" firstAttribute="leading" secondItem="mK6-f7-GwR" secondAttribute="trailing" id="xqO-YQ-cYy"/>
                     <constraint firstAttribute="bottom" secondItem="mK6-f7-GwR" secondAttribute="bottom" id="yH4-hi-PLg"/>
+                    <constraint firstItem="qe0-Zb-js4" firstAttribute="leading" secondItem="b7v-x2-0ey" secondAttribute="trailing" id="ynW-zc-tmf"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
@@ -120,6 +134,7 @@
                         <exclude reference="KSn-eO-EwV"/>
                         <exclude reference="Nr5-5l-Pxb"/>
                         <exclude reference="pcT-y1-OKU"/>
+                        <exclude reference="ynW-zc-tmf"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -127,4 +142,7 @@
             <point key="canvasLocation" x="189" y="375"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="InfoIcon" width="14" height="14"/>
+    </resources>
 </document>
