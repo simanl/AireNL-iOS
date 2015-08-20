@@ -180,7 +180,7 @@
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
     imecaResults.amount = @(40);
-    imecaResults.quality = @"Mala";
+    imecaResults.quality = @"Buena";
     currentResults.imeca = imecaResults;
     
     ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
@@ -292,7 +292,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath];
 
     ((id<ResultsDelegateSettable>)cell).delegate = self;
-    
+
     return cell;
 }
 

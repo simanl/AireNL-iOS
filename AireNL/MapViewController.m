@@ -176,6 +176,26 @@
     
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    static NSString *SFAnnotationIdentifier = @"AnnotationIdentifier";
+    MKPinAnnotationView *pinView =
+    (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier: SFAnnotationIdentifier];
+    
+    if (!pinView){
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: SFAnnotationIdentifier];
+        
+        UIImage *image = [UIImage imageNamed: @"WaypointIcon"];
+        annotationView.image = image;
+        return annotationView;
+        
+    }else{
+        pinView.annotation = annotation;
+    }
+    
+    return pinView;
+}
+
 #pragma mark - Map Helper's
 
 - (MKMapRect)MKMapRectForCoordinateRegion:(MKCoordinateRegion)region
