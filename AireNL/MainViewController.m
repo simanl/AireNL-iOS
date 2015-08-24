@@ -396,6 +396,7 @@
     popup.destinationBounds = CGRectMake(0, 0, 300, height);
     popup.presentedController = viewController;
     popup.presentingController = self;
+    popup.dismissableByTouchingBackground = YES;
     
     [self presentViewController: viewController animated: YES completion: nil];
 }

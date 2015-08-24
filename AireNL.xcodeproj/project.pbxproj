@@ -27,6 +27,7 @@
 		060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		061D50211B8BB82A00EF36EC /* AirQualityInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50201B8BB82A00EF36EC /* AirQualityInfoTableViewController.m */; };
+		061D50241B8BC3E000EF36EC /* MeasurementLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50231B8BC3E000EF36EC /* MeasurementLocation.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
@@ -126,6 +127,8 @@
 		060A9EB51B790A7900C5AAD6 /* ResultLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultLocation.m; sourceTree = "<group>"; };
 		061D501F1B8BB82A00EF36EC /* AirQualityInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirQualityInfoTableViewController.h; sourceTree = "<group>"; };
 		061D50201B8BB82A00EF36EC /* AirQualityInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirQualityInfoTableViewController.m; sourceTree = "<group>"; };
+		061D50221B8BC3E000EF36EC /* MeasurementLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementLocation.h; sourceTree = "<group>"; };
+		061D50231B8BC3E000EF36EC /* MeasurementLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementLocation.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		0637ECA91B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -392,6 +395,8 @@
 			children = (
 				06FE05601B715D3600BCFCA3 /* Current Results */,
 				06FE05611B715D4900BCFCA3 /* Prediction Results */,
+				061D50221B8BC3E000EF36EC /* MeasurementLocation.h */,
+				061D50231B8BC3E000EF36EC /* MeasurementLocation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -815,6 +820,7 @@
 				06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */,
 				06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
+				061D50241B8BC3E000EF36EC /* MeasurementLocation.m in Sources */,
 				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
 				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,

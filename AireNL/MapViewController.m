@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 #import "MKMapView+ZoomLevel.h"
 
+#import "MeasurementLocation.h"
 #import "UIColor+ILColor.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
@@ -183,11 +184,14 @@
     (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier: SFAnnotationIdentifier];
     
     if (!pinView){
-        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: SFAnnotationIdentifier];
-        
-        UIImage *image = [UIImage imageNamed: @"WaypointIcon"];
-        annotationView.image = image;
-        return annotationView;
+        if ([annotation isKindOfClass: [MeasurementLocation class]]) {
+            MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: SFAnnotationIdentifier];
+            MeasurementLocation *measurementLocationAnnotation = (MeasurementLocation *)annotation;
+            
+            annotationView.image = [measurementLocationAnnotation annotationImage];
+            annotationView.canShowCallout = YES;
+            return annotationView;
+        }
         
     }else{
         pinView.annotation = annotation;
@@ -211,33 +215,27 @@
 
 - (void)addAnnotations
 {
-    MKPointAnnotation *point1 = [[MKPointAnnotation alloc] init];
-    point1.coordinate = CLLocationCoordinate2DMake(25.684299, -100.316563);
-    point1.title = @"Medidor";
-    point1.subtitle = @"Estacion Centro";
+    MeasurementLocation *location1 = [[MeasurementLocation alloc] initWithName: @"Estacion Centro Obispado"
+                                                                    airQuality: MeasurementLocationAirQualityTypeGood
+                                                                    coordinate: CLLocationCoordinate2DMake(25.684299, -100.316563)];
     
-    MKPointAnnotation *point2 = [[MKPointAnnotation alloc] init];
-    point2.coordinate = CLLocationCoordinate2DMake(25.743689, -100.286994);
-    point2.title = @"Medidor";
-    point2.subtitle = @"Estacion San Nicolas";
+    MeasurementLocation *location2 = [[MeasurementLocation alloc] initWithName: @"Estacion San Nicolas"
+                                                                    airQuality: MeasurementLocationAirQualityTypeRegular
+                                                                    coordinate: CLLocationCoordinate2DMake(25.743689, -100.286994)];
     
-    MKPointAnnotation *point3 = [[MKPointAnnotation alloc] init];
-    point3.coordinate = CLLocationCoordinate2DMake(25.776156, -100.316177);
-    point3.title = @"Medidor";
-    point3.subtitle = @"Estacion Escobedo";
+    MeasurementLocation *location3 = [[MeasurementLocation alloc] initWithName: @"Estacion Escobedo"
+                                                                    airQuality: MeasurementLocationAirQualityTypeBad
+                                                                    coordinate: CLLocationCoordinate2DMake(25.776156, -100.316177)];
 
-    MKPointAnnotation *point4 = [[MKPointAnnotation alloc] init];
-    point4.coordinate = CLLocationCoordinate2DMake(25.673315, -100.457025);
-    point4.title = @"Medidor";
-    point4.subtitle = @"Estacion Santa Catarina";
+    MeasurementLocation *location4 = [[MeasurementLocation alloc] initWithName: @"Estacion Santa Catarina"
+                                                                    airQuality: MeasurementLocationAirQualityTypeVeryBad
+                                                                    coordinate: CLLocationCoordinate2DMake(25.673315, -100.457025)];
     
-    MKPointAnnotation *point5 = [[MKPointAnnotation alloc] init];
-    point5.coordinate = CLLocationCoordinate2DMake(25.660008, -100.191293);
-    point5.title = @"Medidor";
-    point5.subtitle = @"Estacion Guadalupe";
-    
-    [self.mapView addAnnotations: @[point1, point2, point3, point4, point5]];
+    MeasurementLocation *location5 = [[MeasurementLocation alloc] initWithName: @"Estacion Guadalupe"
+                                                                    airQuality: MeasurementLocationAirQualityTypeExtremelyBad
+                                                                    coordinate: CLLocationCoordinate2DMake(25.660008, -100.191293)];
 
+    [self.mapView addAnnotations: @[location1, location2, location3, location4, location5]];
 }
 
 @end

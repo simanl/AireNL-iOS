@@ -20,11 +20,17 @@
             </subviews>
             <constraints>
                 <constraint firstItem="MS5-n0-lWG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EKC-rJ-auU"/>
+                <constraint firstAttribute="centerY" secondItem="MS5-n0-lWG" secondAttribute="centerY" id="NpQ-eR-sku"/>
                 <constraint firstAttribute="centerY" secondItem="MS5-n0-lWG" secondAttribute="centerY" id="dHt-e2-KGh"/>
                 <constraint firstAttribute="trailing" secondItem="MS5-n0-lWG" secondAttribute="trailing" id="uzK-TE-7VK"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="dHt-e2-KGh"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
