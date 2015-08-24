@@ -80,6 +80,9 @@
                         <state key="normal" image="InfoIcon">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="didSelectInfo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gkp-3U-h0a"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

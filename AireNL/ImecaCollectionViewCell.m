@@ -21,4 +21,11 @@
     self.imecaQualityLabel.text = currentResults.imeca.quality;
 }
 
+- (IBAction)didSelectInfo:(id)sender
+{
+    if ([self.delegate respondsToSelector: @selector(didSelectInfoAtCell:)]) {
+        [self.delegate didSelectInfoAtCell: self];
+    }
+}
+
 @end

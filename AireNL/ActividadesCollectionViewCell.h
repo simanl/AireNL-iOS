@@ -12,4 +12,6 @@
 
 @interface ActividadesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
 
+- (IBAction)didSelectInfo:(id)sender;
+
 @end

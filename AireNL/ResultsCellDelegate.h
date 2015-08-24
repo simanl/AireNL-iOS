@@ -16,6 +16,8 @@
 - (CurrentResults *)getCurrentResults;
 - (PredictionResults *)getPredictionResults;
 
+- (void)didSelectInfoAtCell:(UICollectionViewCell *)cell;
+
 @end
 
 @protocol ResultsDelegateSettable <NSObject>

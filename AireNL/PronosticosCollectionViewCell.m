@@ -11,7 +11,7 @@
 #import "PronosticoTableViewCell.h"
 #import "PronosticoHeaderTableViewCell.h"
 
-@interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource, PronosticoCellDelegate>
+@interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource, PronosticoCellDelegate, PronosticoHeaderDelegate>
 
 @property (nonatomic) NSArray *contaminantNames;
 
@@ -51,6 +51,7 @@
     if (indexPath.row == 0) {
         PronosticoHeaderTableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier: @"pronosticoHeaderTableViewCell"
                                                                                     forIndexPath: indexPath];
+        headerCell.delegate = self;
         return headerCell;
     }
     PronosticoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"pronosticoTableViewCell" forIndexPath: indexPath];
@@ -80,6 +81,15 @@
 - (PredictionResults *)getPredictionResults
 {
     return [self.delegate getPredictionResults];
+}
+
+#pragma mark - PronosticoHeaderCell Delegate
+
+- (void)didSelectInfo
+{
+    if ([self.delegate respondsToSelector: @selector(didSelectInfoAtCell:)]) {
+        [self.delegate didSelectInfoAtCell: self];
+    }
 }
 
 #pragma mark - Set/Get

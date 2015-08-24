@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *imecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *imecaQualityLabel;
 
+- (IBAction)didSelectInfo:(id)sender;
+
 @end

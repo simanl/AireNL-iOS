@@ -8,7 +8,9 @@
 
 #import "MainViewController.h"
 
-#import <FXBlurView/FXBlurView.h>
+//#import <FXBlurView/FXBlurView.h>
+#import <CCMPopup/FXBlurView.h>
+#import <CCMPopup/CCMPopupTransitioning.h>
 
 #import "Constants.h"
 #import "UIColor+ILColor.h"
@@ -319,6 +321,24 @@
     return self.predictionResults;
 }
 
+- (void)didSelectInfoAtCell:(UICollectionViewCell *)cell
+{
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell: cell];
+    
+    if (indexPath.row == 0){
+        // Header Cell
+        [self showInfoScreenForAirQuality];
+        
+    }else if (indexPath.row == 1) {
+        // Actividades Cell
+        [self showInfoScreenForActivities];
+        
+    }else if(indexPath.row == 5){
+        // Predictions Cell
+        [self showInfoScreenForContaminants];
+    }
+}
+
 #pragma mark - Helper's
 
 - (void)scrollCollectionViewToTop
@@ -365,6 +385,34 @@
     
     self.topView.alpha = (1 - framePercentageHidden);
     self.previousScrollViewYOffset = scrollOffset;
+}
+
+- (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height
+{
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier: name];
+    viewController.view.layer.cornerRadius = 4.0f;
+    
+    CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
+    popup.destinationBounds = CGRectMake(0, 0, 300, height);
+    popup.presentedController = viewController;
+    popup.presentingController = self;
+    
+    [self presentViewController: viewController animated: YES completion: nil];
+}
+
+- (void)showInfoScreenForAirQuality
+{
+    [self showInfoScreenForControllerWithName: @"airQualityInfoViewController" height: 450.0f];
+}
+
+- (void)showInfoScreenForActivities
+{
+    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 200.0f];
+}
+
+- (void)showInfoScreenForContaminants
+{
+    [self showInfoScreenForControllerWithName: @"contaminantesViewController" height: 380.0f];
 }
 
 #pragma mark - Set/Get

@@ -20,4 +20,11 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)didSelectInfo:(id)sender
+{
+    if ([self.delegate respondsToSelector: @selector(didSelectInfo)]) {
+        [self.delegate didSelectInfo];
+    }
+}
+
 @end

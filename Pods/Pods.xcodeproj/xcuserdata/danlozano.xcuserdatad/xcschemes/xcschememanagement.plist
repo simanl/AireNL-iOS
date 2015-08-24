@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FXBlurView.xcscheme</key>
+		<key>Pods-CCMPopup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>397028E9FFC3EE665337BC09</key>
+		<key>76DEE48AC7AC4BFA5439C140</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5A43ABAE85484E0647CB551</key>
+		<key>82E4B636D78297522CA50320</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1F0111AE0D0B38988694CF9</key>
+		<key>85B014462D7D2F08534CC943</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FA85AECC0E3A7AAE813DCEB8</key>
+		<key>D658EE81F10E9D83C7F335A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

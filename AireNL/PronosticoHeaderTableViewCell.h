@@ -10,6 +10,16 @@
 
 #import "ResultsCellDelegate.h"
 
+@protocol PronosticoHeaderDelegate <NSObject>
+
+- (void)didSelectInfo;
+
+@end
+
 @interface PronosticoHeaderTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) id<PronosticoHeaderDelegate> delegate;
+
+- (IBAction)didSelectInfo:(id)sender;
 
 @end
