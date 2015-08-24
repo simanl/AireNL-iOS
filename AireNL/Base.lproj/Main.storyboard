@@ -171,10 +171,10 @@
                                                             </variation>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEe-0i-Jog">
-                                                            <rect key="frame" x="1" y="2" width="30" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="BYJ-xW-tW1"/>
-                                                                <constraint firstAttribute="height" constant="30" id="sAP-Wa-ywJ"/>
+                                                                <constraint firstAttribute="width" constant="40" id="BYJ-xW-tW1"/>
+                                                                <constraint firstAttribute="height" constant="40" id="sAP-Wa-ywJ"/>
                                                             </constraints>
                                                             <state key="normal" image="InfoIcon">
                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,11 +183,11 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="VEe-0i-Jog" firstAttribute="top" secondItem="C0S-uv-dma" secondAttribute="top" constant="2" id="Oay-gU-nQg"/>
+                                                        <constraint firstItem="VEe-0i-Jog" firstAttribute="top" secondItem="C0S-uv-dma" secondAttribute="top" id="Oay-gU-nQg"/>
                                                         <constraint firstItem="ktJ-B3-cu6" firstAttribute="top" secondItem="C0S-uv-dma" secondAttribute="top" constant="8" id="Wcy-xL-Pyz"/>
                                                         <constraint firstAttribute="trailing" secondItem="ktJ-B3-cu6" secondAttribute="trailing" priority="999" constant="30" id="Yv8-Ot-AmL"/>
                                                         <constraint firstItem="ktJ-B3-cu6" firstAttribute="leading" secondItem="C0S-uv-dma" secondAttribute="leading" constant="30" id="eYl-yq-uam"/>
-                                                        <constraint firstItem="VEe-0i-Jog" firstAttribute="leading" secondItem="C0S-uv-dma" secondAttribute="leading" constant="1" id="hvn-Ec-pYZ"/>
+                                                        <constraint firstItem="VEe-0i-Jog" firstAttribute="leading" secondItem="C0S-uv-dma" secondAttribute="leading" id="hvn-Ec-pYZ"/>
                                                         <constraint firstAttribute="centerX" secondItem="ktJ-B3-cu6" secondAttribute="centerX" id="sC3-2V-FaX"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>

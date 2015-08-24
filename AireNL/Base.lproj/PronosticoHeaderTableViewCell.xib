@@ -72,11 +72,10 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-Zb-js4">
-                        <rect key="frame" x="34" y="5" width="30" height="30"/>
-                        <color key="backgroundColor" red="0.98039215690000003" green="0.33725490200000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="hH7-Gf-3lW"/>
-                            <constraint firstAttribute="width" constant="30" id="xyI-r1-40a"/>
+                            <constraint firstAttribute="height" constant="40" id="hH7-Gf-3lW"/>
+                            <constraint firstAttribute="width" constant="40" id="xyI-r1-40a"/>
                         </constraints>
                         <state key="normal" image="InfoIcon">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,6 +94,7 @@
                     <constraint firstItem="UFL-cX-qvP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Frc-h5-Il3"/>
                     <constraint firstItem="b7v-x2-0ey" firstAttribute="width" secondItem="mK6-f7-GwR" secondAttribute="width" id="GKS-t5-6vr"/>
                     <constraint firstAttribute="centerY" secondItem="XaQ-t4-d9F" secondAttribute="centerY" id="H2r-TZ-Qfc"/>
+                    <constraint firstItem="qe0-Zb-js4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IP2-D8-ubq"/>
                     <constraint firstItem="UFL-cX-qvP" firstAttribute="leading" secondItem="XaQ-t4-d9F" secondAttribute="trailing" id="JAx-R0-hoR"/>
                     <constraint firstAttribute="centerY" secondItem="E7G-oM-FG9" secondAttribute="centerY" id="JYf-De-gQN"/>
                     <constraint firstItem="b7v-x2-0ey" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KSn-eO-EwV"/>
@@ -117,6 +117,7 @@
                     <constraint firstAttribute="centerY" secondItem="UFL-cX-qvP" secondAttribute="centerY" id="gfK-J8-I8t"/>
                     <constraint firstAttribute="centerY" secondItem="I3h-dY-A24" secondAttribute="centerY" id="ixU-qf-exD"/>
                     <constraint firstAttribute="trailing" secondItem="UFL-cX-qvP" secondAttribute="trailing" id="jms-4f-eAy"/>
+                    <constraint firstItem="qe0-Zb-js4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lbX-bc-gx6"/>
                     <constraint firstItem="I3h-dY-A24" firstAttribute="leading" secondItem="1TX-cP-1pe" secondAttribute="trailing" id="nl5-Fx-1m2"/>
                     <constraint firstAttribute="bottom" secondItem="b7v-x2-0ey" secondAttribute="bottom" id="pcT-y1-OKU"/>
                     <constraint firstItem="UFL-cX-qvP" firstAttribute="width" secondItem="b7v-x2-0ey" secondAttribute="width" id="tK1-Vs-sxm"/>
@@ -135,7 +136,10 @@
                         <exclude reference="KSn-eO-EwV"/>
                         <exclude reference="Nr5-5l-Pxb"/>
                         <exclude reference="pcT-y1-OKU"/>
+                        <exclude reference="9AR-lm-GFj"/>
+                        <exclude reference="a8y-h3-bjP"/>
                         <exclude reference="ynW-zc-tmf"/>
+                        <exclude reference="Saf-Ik-8mF"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
