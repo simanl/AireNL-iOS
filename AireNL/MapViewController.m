@@ -22,6 +22,9 @@
 @property (nonatomic) MKMapRect lastGoodMapRect;
 @property (nonatomic) BOOL manuallyChangingMapRect;
 
+@property (nonatomic) UIBarButtonItem *doneButton;
+@property (nonatomic) UIBarButtonItem *switchButton;
+
 @end
 
 @implementation MapViewController
@@ -31,9 +34,7 @@
     [super viewDidLoad];
 
     self.title = @"Puntos de Medicion";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone
-                                                                                           target: self
-                                                                                           action: @selector(didSelectDone)];
+    self.navigationItem.leftBarButtonItem = self.doneButton;
 
     [self setUpLocationManager];
     [self setNavBarImageWithType: self.type];
@@ -200,6 +201,16 @@
     return pinView;
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    self.navigationItem.rightBarButtonItem = self.switchButton;
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
 #pragma mark - Map Helper's
 
 - (MKMapRect)MKMapRectForCoordinateRegion:(MKCoordinateRegion)region
@@ -236,6 +247,24 @@
                                                                     coordinate: CLLocationCoordinate2DMake(25.660008, -100.191293)];
 
     [self.mapView addAnnotations: @[location1, location2, location3, location4, location5]];
+}
+
+#pragma mark - Set/Get
+
+- (UIBarButtonItem *)doneButton
+{
+    if (!_doneButton) {
+        _doneButton = [[UIBarButtonItem alloc] initWithTitle: @"Done" style: UIBarButtonItemStyleDone target: self action: @selector(didSelectDone)];
+    }
+    return _doneButton;
+}
+
+- (UIBarButtonItem *)switchButton
+{
+    if (!_switchButton) {
+        _switchButton = [[UIBarButtonItem alloc] initWithTitle: @"Switch" style: UIBarButtonItemStylePlain target: self action: @selector(didSelectDone)];
+    }
+    return _switchButton;
 }
 
 @end
