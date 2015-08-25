@@ -415,7 +415,14 @@
     self.infoViewController.regularHeight = height;
     
     CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
-    popup.destinationBounds = CGRectMake(0, 0, 300, height);
+    
+    CGRect screenBounds = [UIScreen mainScreen].bounds;
+    if (self.view.bounds.size.height < 420 && height > screenBounds.size.height) {
+        popup.destinationBounds = CGRectMake(0, 0, 300, screenBounds.size.height - 20);
+    } else {
+        popup.destinationBounds = CGRectMake(0, 0, 300, height);
+    }
+    
     popup.presentedController = self.infoViewController;
     popup.presentingController = self;
     popup.dismissableByTouchingBackground = YES;
