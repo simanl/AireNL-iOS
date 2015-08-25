@@ -18,6 +18,7 @@
 #import "ILRadialGradientLayer.h"
 #import "ILLinearGradientView.h"
 #import "MapViewController.h"
+#import "InfoTableViewController.h"
 
 #import "CurrentResults.h"
 #import "PredictionResults.h"
@@ -28,12 +29,12 @@
 
 @interface MainViewController () <ResultsCellDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
+@property (nonatomic) CurrentResults *currentResults;
+@property (nonatomic) PredictionResults *predictionResults;
+
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
-
-@property (nonatomic) CurrentResults *currentResults;
-@property (nonatomic) PredictionResults *predictionResults;
 
 @property (nonatomic) BOOL backgroundHasBlur;
 @property (nonatomic) UIImage *normalBackground;
@@ -43,6 +44,8 @@
 @property (nonatomic) NSArray *backgroundImageNames;
 
 @property (nonatomic) CGFloat previousScrollViewYOffset;
+
+@property (nonatomic) InfoTableViewController *infoViewController;
 
 @end
 
@@ -240,6 +243,9 @@
     
     // BEFORE ROTATION
     
+    // Handle rotation if info popup is displayed
+    [self handleRotationForInfoScreenForSize: size withTransitionCoordinator: coordinator];
+    
     // Reload collection view layout
     self.cellWidths = nil;
     [self.collectionView.collectionViewLayout invalidateLayout];
@@ -387,20 +393,6 @@
     self.previousScrollViewYOffset = scrollOffset;
 }
 
-- (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height
-{
-    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier: name];
-    viewController.view.layer.cornerRadius = 4.0f;
-    
-    CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
-    popup.destinationBounds = CGRectMake(0, 0, 300, height);
-    popup.presentedController = viewController;
-    popup.presentingController = self;
-    popup.dismissableByTouchingBackground = YES;
-    
-    [self presentViewController: viewController animated: YES completion: nil];
-}
-
 - (void)showInfoScreenForAirQuality
 {
     [self showInfoScreenForControllerWithName: @"airQualityInfoViewController" height: 450.0f];
@@ -414,6 +406,40 @@
 - (void)showInfoScreenForContaminants
 {
     [self showInfoScreenForControllerWithName: @"contaminantesViewController" height: 380.0f];
+}
+
+- (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height
+{
+    self.infoViewController = [self.storyboard instantiateViewControllerWithIdentifier: name];
+    self.infoViewController.view.layer.cornerRadius = 4.0f;
+    self.infoViewController.regularHeight = height;
+    
+    CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
+    popup.destinationBounds = CGRectMake(0, 0, 300, height);
+    popup.presentedController = self.infoViewController;
+    popup.presentingController = self;
+    popup.dismissableByTouchingBackground = YES;
+    
+    [self presentViewController: self.infoViewController animated: YES completion: nil];
+}
+
+- (void)handleRotationForInfoScreenForSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    if (size.height < 420) {
+        
+        if (self.infoViewController.view.bounds.size.height < size.height) {
+            return;
+        }
+        
+        [UIView animateWithDuration: [coordinator transitionDuration] animations:^{
+            self.infoViewController.view.bounds = CGRectMake(0, 0, 300, size.height - 20);
+        }];
+        
+    } else {
+        [UIView animateWithDuration: [coordinator transitionDuration] animations:^{
+            self.infoViewController.view.bounds = CGRectMake(0, 0, 300, self.infoViewController.regularHeight);
+        }];
+    }
 }
 
 #pragma mark - Set/Get

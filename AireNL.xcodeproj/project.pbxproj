@@ -26,7 +26,6 @@
 		060A9EB61B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
-		061D50211B8BB82A00EF36EC /* AirQualityInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50201B8BB82A00EF36EC /* AirQualityInfoTableViewController.m */; };
 		061D50241B8BC3E000EF36EC /* MeasurementLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50231B8BC3E000EF36EC /* MeasurementLocation.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
@@ -56,6 +55,7 @@
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
 		06D8BA851B74106B007462A4 /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
+		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
 		06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */; };
 		06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */; };
@@ -125,8 +125,6 @@
 /* Begin PBXFileReference section */
 		060A9EB41B790A7900C5AAD6 /* ResultLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultLocation.h; sourceTree = "<group>"; };
 		060A9EB51B790A7900C5AAD6 /* ResultLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultLocation.m; sourceTree = "<group>"; };
-		061D501F1B8BB82A00EF36EC /* AirQualityInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirQualityInfoTableViewController.h; sourceTree = "<group>"; };
-		061D50201B8BB82A00EF36EC /* AirQualityInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirQualityInfoTableViewController.m; sourceTree = "<group>"; };
 		061D50221B8BC3E000EF36EC /* MeasurementLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementLocation.h; sourceTree = "<group>"; };
 		061D50231B8BC3E000EF36EC /* MeasurementLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementLocation.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
@@ -190,6 +188,8 @@
 		06D8BA811B74106B007462A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILBlurCollectionView.h; sourceTree = "<group>"; };
 		06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILBlurCollectionView.m; sourceTree = "<group>"; };
+		06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
+		06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewController.m; sourceTree = "<group>"; };
 		06F2C4401B680D4100BDF043 /* PronosticosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronosticosCollectionViewCell.h; sourceTree = "<group>"; };
 		06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticosCollectionViewCell.m; sourceTree = "<group>"; };
 		06F2C4421B680D4100BDF043 /* PronosticosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PronosticosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -423,8 +423,8 @@
 				0657530C1B5EBB3600FF226C /* MainViewController.m */,
 				065753081B5EBB2C00FF226C /* MapViewController.h */,
 				065753091B5EBB2C00FF226C /* MapViewController.m */,
-				061D501F1B8BB82A00EF36EC /* AirQualityInfoTableViewController.h */,
-				061D50201B8BB82A00EF36EC /* AirQualityInfoTableViewController.m */,
+				06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */,
+				06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -801,12 +801,12 @@
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
 				0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */,
-				061D50211B8BB82A00EF36EC /* AirQualityInfoTableViewController.m in Sources */,
 				06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */,
 				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
 				06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */,
+				06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,

@@ -1,23 +1,22 @@
 //
-//  AirQualityInfoTableViewController.m
+//  InfoTableViewController.m
 //  AireNL
 //
-//  Created by Daniel Lozano on 8/24/15.
+//  Created by Daniel Lozano on 8/25/15.
 //  Copyright (c) 2015 Icalia Labs. All rights reserved.
 //
 
-#import "AirQualityInfoTableViewController.h"
+#import "InfoTableViewController.h"
 
-@interface AirQualityInfoTableViewController ()
+@interface InfoTableViewController ()
 
 @end
 
-@implementation AirQualityInfoTableViewController
+@implementation InfoTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 - (void)didReceiveMemoryWarning {

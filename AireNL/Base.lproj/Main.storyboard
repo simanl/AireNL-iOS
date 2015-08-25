@@ -757,10 +757,10 @@
             </objects>
             <point key="canvasLocation" x="447" y="372"/>
         </scene>
-        <!--Air Quality Info Table View Controller-->
+        <!--Info Table View Controller-->
         <scene sceneID="Q0h-sV-4Zr">
             <objects>
-                <tableViewController storyboardIdentifier="airQualityInfoViewController" id="w9u-cX-bUl" customClass="AirQualityInfoTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="airQualityInfoViewController" id="w9u-cX-bUl" customClass="InfoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0QE-2k-Eol">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -800,7 +800,7 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="didSelectClose:" destination="w9u-cX-bUl" eventType="touchUpInside" id="8JU-gs-nB4"/>
+                                        <action selector="didSelectClose:" destination="w9u-cX-bUl" eventType="touchUpInside" id="ZO2-pT-pvN"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -930,8 +930,8 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="wNM-ji-Ay7"/>
                                                             <exclude reference="BM1-Aa-Y8G"/>
+                                                            <exclude reference="wNM-ji-Ay7"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -980,11 +980,11 @@
                                                 <mask key="constraints">
                                                     <exclude reference="3NL-Pa-7xH"/>
                                                     <exclude reference="OD0-Ih-b4t"/>
-                                                    <exclude reference="zUT-cM-nYI"/>
-                                                    <exclude reference="mOz-7a-6zw"/>
-                                                    <exclude reference="joc-ph-T2f"/>
-                                                    <exclude reference="maW-5e-jic"/>
                                                     <exclude reference="9Dt-Ze-8oz"/>
+                                                    <exclude reference="joc-ph-T2f"/>
+                                                    <exclude reference="mOz-7a-6zw"/>
+                                                    <exclude reference="maW-5e-jic"/>
+                                                    <exclude reference="zUT-cM-nYI"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1010,8 +1010,8 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="N22-UX-OTP"/>
                                                             <exclude reference="40u-4V-vH8"/>
+                                                            <exclude reference="N22-UX-OTP"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -1059,11 +1059,11 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="Pcc-OR-Ucn"/>
                                                     <exclude reference="DJ2-aw-zFC"/>
+                                                    <exclude reference="Pcc-OR-Ucn"/>
                                                     <exclude reference="7h4-0I-DiS"/>
-                                                    <exclude reference="OCr-yj-gax"/>
                                                     <exclude reference="NVQ-W9-CJ6"/>
+                                                    <exclude reference="OCr-yj-gax"/>
                                                     <exclude reference="l4G-5O-eNj"/>
                                                     <exclude reference="uKx-cY-7LV"/>
                                                 </mask>
@@ -1091,8 +1091,8 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="h2h-gc-m3L"/>
                                                             <exclude reference="MKJ-7t-bc5"/>
+                                                            <exclude reference="h2h-gc-m3L"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -1140,13 +1140,13 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="s0L-De-oa5"/>
                                                     <exclude reference="h6k-9O-mmS"/>
+                                                    <exclude reference="s0L-De-oa5"/>
+                                                    <exclude reference="0zt-Zj-QVZ"/>
                                                     <exclude reference="9gc-DV-lEC"/>
+                                                    <exclude reference="CHe-s6-IQV"/>
                                                     <exclude reference="Gpn-lV-B3h"/>
                                                     <exclude reference="orX-5N-Jn9"/>
-                                                    <exclude reference="CHe-s6-IQV"/>
-                                                    <exclude reference="0zt-Zj-QVZ"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1220,12 +1220,12 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="yG4-NE-jRv"/>
                                                     <exclude reference="Ewj-Vs-BPs"/>
-                                                    <exclude reference="qOR-6u-sXT"/>
-                                                    <exclude reference="NRF-0h-kox"/>
+                                                    <exclude reference="yG4-NE-jRv"/>
                                                     <exclude reference="0fM-w1-Hca"/>
                                                     <exclude reference="D92-Ff-NGY"/>
+                                                    <exclude reference="NRF-0h-kox"/>
+                                                    <exclude reference="qOR-6u-sXT"/>
                                                     <exclude reference="zOc-4a-Pif"/>
                                                 </mask>
                                             </variation>
@@ -1301,10 +1301,10 @@
             </objects>
             <point key="canvasLocation" x="1097" y="372"/>
         </scene>
-        <!--Air Quality Info Table View Controller-->
+        <!--Info Table View Controller-->
         <scene sceneID="Uhj-mp-OUj">
             <objects>
-                <tableViewController storyboardIdentifier="contaminantesViewController" id="l9V-Qb-Pfb" customClass="AirQualityInfoTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="contaminantesViewController" id="l9V-Qb-Pfb" customClass="InfoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Efy-b3-EZA">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1344,7 +1344,7 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="didSelectClose:" destination="l9V-Qb-Pfb" eventType="touchUpInside" id="0s1-Bi-2sw"/>
+                                        <action selector="didSelectClose:" destination="l9V-Qb-Pfb" eventType="touchUpInside" id="NC7-Tt-mT7"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -1364,8 +1364,8 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="eMV-Ey-FWP"/>
                                     <exclude reference="J8J-qA-h7c"/>
+                                    <exclude reference="eMV-Ey-FWP"/>
                                     <exclude reference="AD5-Yb-3Sy"/>
                                 </mask>
                             </variation>
@@ -1543,10 +1543,10 @@
             </objects>
             <point key="canvasLocation" x="646" y="1245"/>
         </scene>
-        <!--Air Quality Info Table View Controller-->
+        <!--Info Table View Controller-->
         <scene sceneID="1Gu-pq-jSF">
             <objects>
-                <tableViewController storyboardIdentifier="actividadesInfoViewController" id="9Ub-qx-KRd" customClass="AirQualityInfoTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="actividadesInfoViewController" id="9Ub-qx-KRd" customClass="InfoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="og3-fo-E0e">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1586,7 +1586,7 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="didSelectClose:" destination="9Ub-qx-KRd" eventType="touchUpInside" id="cBz-8F-5kW"/>
+                                        <action selector="didSelectClose:" destination="9Ub-qx-KRd" eventType="touchUpInside" id="jS3-3y-iKx"/>
                                     </connections>
                                 </button>
                             </subviews>
