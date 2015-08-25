@@ -247,6 +247,7 @@
         [view addSubview: self.customCalloutView];
         
         [self.mapView setCenterCoordinate: annotation.locationCoordinate animated: YES];
+        
     }
 }
 
@@ -309,7 +310,7 @@
     calloutView.backgroundColor = [UIColor whiteColor];
     calloutView.alpha = 0.95;
     calloutView.layer.cornerRadius = 5.0f;
-    calloutView.center = CGPointMake(view.bounds.size.width * 0.5f, -self.customCalloutView.bounds.size.height * 0.5f - 5.0f);
+    calloutView.center = CGPointMake(view.bounds.size.width * 0.5f, -view.bounds.size.height * 0.5f - 35.0f);
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 260, 20)];
     UILabel *subtitleLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 260, 20)];
