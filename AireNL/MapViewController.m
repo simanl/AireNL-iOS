@@ -22,6 +22,8 @@
 @property (nonatomic) MKMapRect lastGoodMapRect;
 @property (nonatomic) BOOL manuallyChangingMapRect;
 
+@property (nonatomic) MeasurementLocation *selectedLocation;
+
 @property (nonatomic) UIBarButtonItem *doneButton;
 @property (nonatomic) UIBarButtonItem *switchButton;
 
@@ -67,6 +69,35 @@
 
 - (void)didSelectDone
 {
+    [self dismissViewControllerAnimated: YES completion: nil];
+}
+
+- (void)didSelectSwitch
+{
+    if (!self.selectedLocation) return;
+    
+    CurrentResults *currentResults = [[CurrentResults alloc] init];
+    currentResults.date = [NSDate date];
+    currentResults.temperature = @(40);
+    currentResults.wind = @(140);
+    
+    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+    imecaResults.amount = @(40);
+    imecaResults.airQuality = self.selectedLocation.airQuality;
+    
+    ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
+    contamintResults.pm10 = @(4);
+    contamintResults.pm25 = @(14);
+    contamintResults.O3 = @(40);
+    
+    currentResults.imeca = imecaResults;
+    currentResults.contaminants = contamintResults;
+    currentResults.location = self.selectedLocation;
+    
+    if ([self.delegate respondsToSelector: @selector(didSelectLocationWithCurrentResults:)]) {
+        [self.delegate didSelectLocationWithCurrentResults: currentResults];
+    }
+    
     [self dismissViewControllerAnimated: YES completion: nil];
 }
 
@@ -203,11 +234,13 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+    self.selectedLocation = view.annotation;
     self.navigationItem.rightBarButtonItem = self.switchButton;
 }
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
+    self.selectedLocation = nil;
     self.navigationItem.rightBarButtonItem = nil;
 }
 
@@ -226,25 +259,30 @@
 
 - (void)addAnnotations
 {
-    MeasurementLocation *location1 = [[MeasurementLocation alloc] initWithName: @"Estacion Centro Obispado"
-                                                                    airQuality: MeasurementLocationAirQualityTypeGood
-                                                                    coordinate: CLLocationCoordinate2DMake(25.684299, -100.316563)];
+    MeasurementLocation *location1 = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+                                                                         areaName: @"Estacion Centro Obispado"
+                                                                       airQuality: AirQualityTypeGood
+                                                                       coordinate: CLLocationCoordinate2DMake(25.684299, -100.316563)];
     
-    MeasurementLocation *location2 = [[MeasurementLocation alloc] initWithName: @"Estacion San Nicolas"
-                                                                    airQuality: MeasurementLocationAirQualityTypeRegular
-                                                                    coordinate: CLLocationCoordinate2DMake(25.743689, -100.286994)];
+    MeasurementLocation *location2 = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+                                                                          areaName: @"Estacion San Nicolas"
+                                                                        airQuality: AirQualityTypeRegular
+                                                                        coordinate: CLLocationCoordinate2DMake(25.743689, -100.286994)];
     
-    MeasurementLocation *location3 = [[MeasurementLocation alloc] initWithName: @"Estacion Escobedo"
-                                                                    airQuality: MeasurementLocationAirQualityTypeBad
-                                                                    coordinate: CLLocationCoordinate2DMake(25.776156, -100.316177)];
-
-    MeasurementLocation *location4 = [[MeasurementLocation alloc] initWithName: @"Estacion Santa Catarina"
-                                                                    airQuality: MeasurementLocationAirQualityTypeVeryBad
-                                                                    coordinate: CLLocationCoordinate2DMake(25.673315, -100.457025)];
+    MeasurementLocation *location3 = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+                                                                          areaName: @"Estacion Escobedo"
+                                                                        airQuality: AirQualityTypeBad
+                                                                        coordinate: CLLocationCoordinate2DMake(25.776156, -100.316177)];
     
-    MeasurementLocation *location5 = [[MeasurementLocation alloc] initWithName: @"Estacion Guadalupe"
-                                                                    airQuality: MeasurementLocationAirQualityTypeExtremelyBad
-                                                                    coordinate: CLLocationCoordinate2DMake(25.660008, -100.191293)];
+    MeasurementLocation *location4 = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+                                                                          areaName: @"Estacion Santa Catarina"
+                                                                        airQuality: AirQualityTypeVeryBad
+                                                                        coordinate: CLLocationCoordinate2DMake(25.673315, -100.457025)];
+    
+    MeasurementLocation *location5 = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+                                                                          areaName: @"Estacion Guadalupe"
+                                                                        airQuality: AirQualityTypeExtremelyBad
+                                                                        coordinate: CLLocationCoordinate2DMake(25.660008, -100.191293)];
 
     [self.mapView addAnnotations: @[location1, location2, location3, location4, location5]];
 }
@@ -262,7 +300,7 @@
 - (UIBarButtonItem *)switchButton
 {
     if (!_switchButton) {
-        _switchButton = [[UIBarButtonItem alloc] initWithTitle: @"Switch" style: UIBarButtonItemStylePlain target: self action: @selector(didSelectDone)];
+        _switchButton = [[UIBarButtonItem alloc] initWithTitle: @"Switch" style: UIBarButtonItemStylePlain target: self action: @selector(didSelectSwitch)];
     }
     return _switchButton;
 }

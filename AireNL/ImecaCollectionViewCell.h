@@ -10,7 +10,7 @@
 
 #import "ResultsCellDelegate.h"
 
-@interface ImecaCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
+@interface ImecaCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 @property (weak, nonatomic) IBOutlet UILabel *imecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *imecaQualityLabel;

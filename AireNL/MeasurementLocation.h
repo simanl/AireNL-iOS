@@ -10,18 +10,17 @@
 
 #import <MapKit/MapKit.h>
 
-typedef NS_ENUM(NSInteger, MeasurementLocationAirQualityType){
-    MeasurementLocationAirQualityTypeGood,
-    MeasurementLocationAirQualityTypeRegular,
-    MeasurementLocationAirQualityTypeBad,
-    MeasurementLocationAirQualityTypeVeryBad,
-    MeasurementLocationAirQualityTypeExtremelyBad
-};
+#import "ImecaResults.h"
 
 @interface MeasurementLocation : NSObject <MKAnnotation>
 
-- (id)initWithName:(NSString *)name airQuality:(MeasurementLocationAirQualityType)type coordinate:(CLLocationCoordinate2D)coordinate;
-
+- (id)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName;
+- (id)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName airQuality:(AirQualityType)type coordinate:(CLLocationCoordinate2D)coordinate;
 - (UIImage *)annotationImage;
+
+@property (nonatomic, copy, readonly) NSString *cityName;
+@property (nonatomic, copy, readonly) NSString *areaName;
+@property (nonatomic, assign, readonly) AirQualityType airQuality;
+@property (nonatomic, assign, readonly) CLLocationCoordinate2D locationCoordinate;
 
 @end

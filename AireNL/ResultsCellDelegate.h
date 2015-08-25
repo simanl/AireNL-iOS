@@ -25,3 +25,9 @@
 @property (weak, nonatomic) id<ResultsCellDelegate> delegate;
 
 @end
+
+@protocol ResultsCellUpdateable <NSObject>
+
+- (void)updateCell;
+
+@end

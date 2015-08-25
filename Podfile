@@ -5,3 +5,4 @@ pod 'Mantle'
 
 #pod 'FXBlurView'
 pod 'CCMPopup'
+pod 'DXCustomCallout-ObjC'

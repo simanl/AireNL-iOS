@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A9726CF99692A7DB1A945DF"
-               BuildableName = "libPods-Mantle.a"
-               BlueprintName = "Pods-Mantle"
+               BlueprintIdentifier = "AF382AE705755B61B8EE8C3D"
+               BuildableName = "libPods-DXCustomCallout-ObjC.a"
+               BlueprintName = "Pods-DXCustomCallout-ObjC"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

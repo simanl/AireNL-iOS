@@ -10,7 +10,7 @@
 
 #import "ResultsCellDelegate.h"
 
-@interface PronosticosCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
+@interface PronosticosCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

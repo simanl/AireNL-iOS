@@ -10,7 +10,7 @@
 
 #import "ResultsCellDelegate.h"
 
-@interface ActividadesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
+@interface ActividadesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 - (IBAction)didSelectInfo:(id)sender;
 

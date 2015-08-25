@@ -12,10 +12,8 @@
 
 @synthesize delegate;
 
-- (void)layoutSubviews
+- (void)updateCell
 {
-    [super layoutSubviews];
-    
     CurrentResults *currentResults = [self.delegate getCurrentResults];
     self.imecaLabel.text = [currentResults.imeca.amount stringValue];
     self.imecaQualityLabel.text = [currentResults.imeca airQualityString];

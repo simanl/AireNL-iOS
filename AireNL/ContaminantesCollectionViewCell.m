@@ -12,10 +12,8 @@
 
 @synthesize delegate;
 
-- (void)layoutSubviews
+- (void)updateCell
 {
-    [super layoutSubviews];
-    
     CurrentResults *currentResults = [self.delegate getCurrentResults];
     self.contaminante10Label.text = [currentResults.contaminants.pm10 stringValue];
     self.contaminante25Label.text = [currentResults.contaminants.pm25 stringValue];

@@ -10,21 +10,32 @@
 
 @interface MeasurementLocation ()
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, assign) MeasurementLocationAirQualityType airQualityType;
-@property (nonatomic, assign) CLLocationCoordinate2D locationCoordinate;
+@property (nonatomic, copy, readwrite) NSString *cityName;
+@property (nonatomic, copy, readwrite) NSString *areaName;
+@property (nonatomic, assign, readwrite) AirQualityType airQuality;
+@property (nonatomic, assign, readwrite) CLLocationCoordinate2D locationCoordinate;
+
 
 @end
 
 @implementation MeasurementLocation
 
-- (id)initWithName:(NSString *)name airQuality:(MeasurementLocationAirQualityType)type coordinate:(CLLocationCoordinate2D)coordinate
+- (id)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName
+{
+    return [self initWithCityName: cityName
+                         areaName: areaName
+                       airQuality: AirQualityTypeGood
+                       coordinate: CLLocationCoordinate2DMake(0, 0)];
+}
+
+- (id)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName airQuality:(AirQualityType)type coordinate:(CLLocationCoordinate2D)coordinate
 {
     self = [super init];
     if (!self) return nil;
     
-    self.name = name;
-    self.airQualityType = type;
+    self.cityName = cityName;
+    self.areaName = areaName;
+    self.airQuality = type;
     self.locationCoordinate = coordinate;
     
     return self;
@@ -34,12 +45,12 @@
 
 - (NSString *)title
 {
-    return self.name;
+    return self.areaName;
 }
 
 - (NSString *)subtitle
 {
-    return [self descriptionForType: self.airQualityType];
+    return [self descriptionForType: self.airQuality];
 }
 
 - (CLLocationCoordinate2D)coordinate
@@ -51,31 +62,31 @@
 
 - (UIImage *)annotationImage
 {
-    return [self imageForType: self.airQualityType];
+    return [self imageForType: self.airQuality];
 }
 
 #pragma mark - Helper's
 
-- (UIImage *)imageForType:(MeasurementLocationAirQualityType)type
+- (UIImage *)imageForType:(AirQualityType)type
 {
     switch (type) {
-        case MeasurementLocationAirQualityTypeGood:{
+        case AirQualityTypeGood:{
             return [UIImage imageNamed: @"WaypointIconGood"];
             break;
         }
-        case MeasurementLocationAirQualityTypeRegular:{
+        case AirQualityTypeRegular:{
             return [UIImage imageNamed: @"WaypointIconRegular"];
             break;
         }
-        case MeasurementLocationAirQualityTypeBad:{
+        case AirQualityTypeBad:{
             return [UIImage imageNamed: @"WaypointIconBad"];
             break;
         }
-        case MeasurementLocationAirQualityTypeVeryBad:{
+        case AirQualityTypeVeryBad:{
             return [UIImage imageNamed: @"WaypointIconVeryBad"];
             break;
         }
-        case MeasurementLocationAirQualityTypeExtremelyBad:{
+        case AirQualityTypeExtremelyBad:{
             return [UIImage imageNamed: @"WaypointIconExtremelyBad"];
             break;
         }
@@ -85,26 +96,26 @@
     }
 }
 
-- (NSString *)descriptionForType:(MeasurementLocationAirQualityType)type
+- (NSString *)descriptionForType:(AirQualityType)type
 {
     switch (type) {
-        case MeasurementLocationAirQualityTypeGood:{
+        case AirQualityTypeGood:{
             return @"Calidad del Aire: Buena";
             break;
         }
-        case MeasurementLocationAirQualityTypeRegular:{
+        case AirQualityTypeRegular:{
             return @"Calidad del Aire: Regular";
             break;
         }
-        case MeasurementLocationAirQualityTypeBad:{
+        case AirQualityTypeBad:{
             return @"Calidad del Aire: Mala";
             break;
         }
-        case MeasurementLocationAirQualityTypeVeryBad:{
+        case AirQualityTypeVeryBad:{
             return @"Calidad del Aire: Muy Mala";
             break;
         }
-        case MeasurementLocationAirQualityTypeExtremelyBad:{
+        case AirQualityTypeExtremelyBad:{
             return @"Calidad del Aire: Extremadamente Mala";
             break;
         }

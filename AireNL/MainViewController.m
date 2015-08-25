@@ -27,7 +27,7 @@
 #define STATUS_BAR_HEIGHT 16
 #define NAV_BAR_HEIGHT 54
 
-@interface MainViewController () <ResultsCellDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+@interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property (nonatomic) CurrentResults *currentResults;
 @property (nonatomic) PredictionResults *predictionResults;
@@ -63,6 +63,7 @@
     [self registerNibs];
     
     [self loadAssets];
+    [self updateScreen];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +78,12 @@
     [self setBackgroundImageWithBlur: NO];
     
     [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+}
+
+- (void)updateScreen
+{
+    self.titleLabel.text = [self.currentResults.location.cityName uppercaseString];
+    self.stationLabel.text = [self.currentResults.location.areaName uppercaseString];
 }
 
 - (void)setBackgroundImages
@@ -154,9 +161,9 @@
 {
     MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
     mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
     mapVC.type = self.selectedBackgroundIndex;
-    
+    mapVC.delegate = self;
+
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
     [self presentViewController: navVC animated: YES completion: nil];
 }
@@ -185,7 +192,7 @@
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
     imecaResults.amount = @(40);
-    imecaResults.airQuality = AirQualityTypeExtremelyBad;
+    imecaResults.airQuality = AirQualityTypeGood;
     currentResults.imeca = imecaResults;
     
     ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
@@ -193,6 +200,9 @@
     contamintResults.pm25 = @(14);
     contamintResults.O3 = @(40);
     currentResults.contaminants = contamintResults;
+    
+    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: @"Downtown Obispado Station"];
+    currentResults.location = location;
     
     self.currentResults = currentResults;
     
@@ -300,6 +310,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath];
 
     ((id<ResultsDelegateSettable>)cell).delegate = self;
+    [((id<ResultsCellUpdateable>)cell) updateCell];
 
     return cell;
 }
@@ -343,6 +354,16 @@
         // Predictions Cell
         [self showInfoScreenForContaminants];
     }
+}
+
+#pragma mark - MapViewController Delegate
+
+- (void)didSelectLocationWithCurrentResults:(CurrentResults *)results
+{
+    self.currentResults = results;
+    
+    [self updateScreen];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - Helper's

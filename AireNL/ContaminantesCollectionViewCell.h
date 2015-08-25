@@ -10,7 +10,7 @@
 
 #import "ResultsCellDelegate.h"
 
-@interface ContaminantesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
+@interface ContaminantesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 @property (weak, nonatomic) IBOutlet UILabel *contaminante10TitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contaminante25TitleLabel;

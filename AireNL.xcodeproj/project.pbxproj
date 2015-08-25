@@ -23,12 +23,13 @@
 		060A9EAC1B79088600C5AAD6 /* ImecaResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05581B715BB800BCFCA3 /* ImecaResults.m */; };
 		060A9EAD1B79088600C5AAD6 /* PredictionResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */; };
 		060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
-		060A9EB61B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
-		060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
-		060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A9EB51B790A7900C5AAD6 /* ResultLocation.m */; };
 		061D50241B8BC3E000EF36EC /* MeasurementLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50231B8BC3E000EF36EC /* MeasurementLocation.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
+		064356B81B8D119200AFC1B8 /* MeasurementLocation.h in Sources */ = {isa = PBXBuildFile; fileRef = 061D50221B8BC3E000EF36EC /* MeasurementLocation.h */; };
+		064356B91B8D119200AFC1B8 /* MeasurementLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50231B8BC3E000EF36EC /* MeasurementLocation.m */; };
+		064356BA1B8D119F00AFC1B8 /* MeasurementLocation.h in Sources */ = {isa = PBXBuildFile; fileRef = 061D50221B8BC3E000EF36EC /* MeasurementLocation.h */; };
+		064356BB1B8D119F00AFC1B8 /* MeasurementLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50231B8BC3E000EF36EC /* MeasurementLocation.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
@@ -123,8 +124,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		060A9EB41B790A7900C5AAD6 /* ResultLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultLocation.h; sourceTree = "<group>"; };
-		060A9EB51B790A7900C5AAD6 /* ResultLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultLocation.m; sourceTree = "<group>"; };
 		061D50221B8BC3E000EF36EC /* MeasurementLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementLocation.h; sourceTree = "<group>"; };
 		061D50231B8BC3E000EF36EC /* MeasurementLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementLocation.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
@@ -395,8 +394,6 @@
 			children = (
 				06FE05601B715D3600BCFCA3 /* Current Results */,
 				06FE05611B715D4900BCFCA3 /* Prediction Results */,
-				061D50221B8BC3E000EF36EC /* MeasurementLocation.h */,
-				061D50231B8BC3E000EF36EC /* MeasurementLocation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -531,8 +528,8 @@
 			children = (
 				06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */,
 				06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */,
-				060A9EB41B790A7900C5AAD6 /* ResultLocation.h */,
-				060A9EB51B790A7900C5AAD6 /* ResultLocation.m */,
+				061D50221B8BC3E000EF36EC /* MeasurementLocation.h */,
+				061D50231B8BC3E000EF36EC /* MeasurementLocation.m */,
 				06FE05571B715BB800BCFCA3 /* ImecaResults.h */,
 				06FE05581B715BB800BCFCA3 /* ImecaResults.m */,
 				06FE05541B715BA000BCFCA3 /* ContaminantResults.h */,
@@ -810,7 +807,6 @@
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
-				060A9EB61B790A7900C5AAD6 /* ResultLocation.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
@@ -840,7 +836,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060A9EB81B790A7900C5AAD6 /* ResultLocation.m in Sources */,
+				064356B81B8D119200AFC1B8 /* MeasurementLocation.h in Sources */,
+				064356B91B8D119200AFC1B8 /* MeasurementLocation.m in Sources */,
 				060A9EA71B79088600C5AAD6 /* CurrentResults.h in Sources */,
 				060A9EA81B79088600C5AAD6 /* CurrentResults.m in Sources */,
 				060A9EA91B79088600C5AAD6 /* ContaminantResults.h in Sources */,
@@ -860,10 +857,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064356BA1B8D119F00AFC1B8 /* MeasurementLocation.h in Sources */,
+				064356BB1B8D119F00AFC1B8 /* MeasurementLocation.m in Sources */,
 				060A9E9F1B79087000C5AAD6 /* CurrentResults.h in Sources */,
 				060A9EA01B79087000C5AAD6 /* CurrentResults.m in Sources */,
 				060A9EA11B79087000C5AAD6 /* ContaminantResults.h in Sources */,
-				060A9EB71B790A7900C5AAD6 /* ResultLocation.m in Sources */,
 				060A9EA21B79087000C5AAD6 /* ContaminantResults.m in Sources */,
 				060A9EA31B79087000C5AAD6 /* ImecaResults.h in Sources */,
 				060A9EA41B79087000C5AAD6 /* ImecaResults.m in Sources */,

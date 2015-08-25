@@ -34,6 +34,11 @@
     
 }
 
+- (void)updateCell
+{
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableView Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

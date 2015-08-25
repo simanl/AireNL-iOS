@@ -64,9 +64,7 @@
     imecaResults.airQuality = AirQualityTypeRegular;
     currentResults.imeca = imecaResults;
     
-    ResultLocation *location = [[ResultLocation alloc] init];
-    location.cityName = @"Monterrey";
-    location.areaName = @"Estacion Centro Obispado";
+    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: @"Estacion Centro Obispado"];
     currentResults.location = location;
     
     self.currentResults = currentResults;

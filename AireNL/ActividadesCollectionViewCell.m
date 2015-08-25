@@ -12,6 +12,11 @@
 
 @synthesize delegate;
 
+- (void)updateCell
+{
+    
+}
+
 - (IBAction)didSelectInfo:(id)sender
 {
     if ([self.delegate respondsToSelector: @selector(didSelectInfoAtCell:)]) {

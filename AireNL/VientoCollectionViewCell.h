@@ -10,10 +10,9 @@
 
 #import "ResultsCellDelegate.h"
 
-@interface VientoCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable>
-
-@property (weak, nonatomic) IBOutlet UILabel *windLabel;
+@interface VientoCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 @property (weak, nonatomic) IBOutlet UIView *innerContentView;
+@property (weak, nonatomic) IBOutlet UILabel *windLabel;
 
 @end

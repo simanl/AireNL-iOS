@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - CCMPopup (1.1.0)
+  - DXCustomCallout-ObjC (0.2.0)
   - Mantle (2.0.4):
     - Mantle/extobjc (= 2.0.4)
   - Mantle/extobjc (2.0.4)
@@ -28,11 +29,13 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CCMPopup
+  - DXCustomCallout-ObjC
   - Mantle
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
+  DXCustomCallout-ObjC: fb223603ee148365de51c2d69bb10443943ff89b
   Mantle: 6bee68168423948be0c0c5924832bf3af188e099
 
 COCOAPODS: 0.37.1
