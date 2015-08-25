@@ -168,6 +168,14 @@
     [self presentViewController: navVC animated: YES completion: nil];
 }
 
+- (IBAction)didSelectGPS:(id)sender
+{
+    [self loadAssets];
+    
+    [self updateScreen];
+    [self.collectionView reloadData];
+}
+
 - (void)userDidSelectSwitchBackground
 {
     if (self.selectedBackgroundIndex == [self.backgroundImageNames count] - 1) {

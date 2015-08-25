@@ -234,14 +234,18 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
-    self.selectedLocation = view.annotation;
-    self.navigationItem.rightBarButtonItem = self.switchButton;
+    if ([view.annotation isKindOfClass: [MeasurementLocation class]]) {
+        self.selectedLocation = view.annotation;
+        self.navigationItem.rightBarButtonItem = self.switchButton;
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
-    self.selectedLocation = nil;
-    self.navigationItem.rightBarButtonItem = nil;
+    if ([view.annotation isKindOfClass: [MeasurementLocation class]]) {
+        self.selectedLocation = nil;
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 #pragma mark - Map Helper's

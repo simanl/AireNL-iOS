@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet ILBlurCollectionView *collectionView;
 
 - (IBAction)userDidSelectMap:(id)sender;
+- (IBAction)didSelectGPS:(id)sender;
 
 @end
