@@ -61,7 +61,7 @@
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
     imecaResults.amount = @(184);
-    imecaResults.quality = @"Aceptable";
+    imecaResults.airQuality = AirQualityTypeRegular;
     currentResults.imeca = imecaResults;
     
     ResultLocation *location = [[ResultLocation alloc] init];
@@ -80,7 +80,7 @@
     self.locationSubtitleLabel.text = [self.currentResults.location.areaName uppercaseString];
     
     self.imecaLabel.text = [self.currentResults.imeca.amount stringValue];
-    self.imecaQualityLabel.text = [NSString stringWithFormat: @"Calidad del aire:  %@", self.currentResults.imeca.quality];
+    self.imecaQualityLabel.text = [NSString stringWithFormat: @"Calidad del aire:  %@", [self.currentResults.imeca airQualityString]];
     
     self.windLabel.text = [self stringForWindValue: self.currentResults.wind];
     self.tempLabel.text = [self stringForTempValue: self.currentResults.temperature];

@@ -7,10 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSInteger, AirQualityType){
+    AirQualityTypeGood,
+    AirQualityTypeRegular,
+    AirQualityTypeBad,
+    AirQualityTypeVeryBad,
+    AirQualityTypeExtremelyBad
+};
 
 @interface ImecaResults : NSObject
 
 @property (nonatomic) NSNumber *amount;
-@property (nonatomic) NSString *quality;
+@property (nonatomic) AirQualityType airQuality;
+
+- (NSString *)airQualityString;
+- (UIColor *)airQualityColor;
 
 @end

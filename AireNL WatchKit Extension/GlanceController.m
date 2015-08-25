@@ -47,7 +47,7 @@
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
     imecaResults.amount = @(68);
-    imecaResults.quality = @"Muy Mala";
+    imecaResults.airQuality = AirQualityTypeVeryBad;
     currentResults.imeca = imecaResults;
     
     ResultLocation *location = [[ResultLocation alloc] init];
@@ -66,7 +66,7 @@
     [self.locationSubtitleLabel setText: self.currentResults.location.areaName];
     
     [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
-    [self.imecaQualityLabel setText: self.currentResults.imeca.quality];
+    [self.imecaQualityLabel setText: [self.currentResults.imeca airQualityString]];
 }
 
 @end

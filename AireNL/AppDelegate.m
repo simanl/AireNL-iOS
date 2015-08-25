@@ -56,8 +56,8 @@
 {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
-    [[UINavigationBar appearance] setBackgroundImage: [self imageWithColor: [UIColor il_blueMorningColorWithAlpha: 1]] forBarMetrics: UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage: [UIImage new]];
+//    [[UINavigationBar appearance] setBackgroundImage: [self imageWithColor: [UIColor il_blueMorningColorWithAlpha: 1]] forBarMetrics: UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setShadowImage: [UIImage new]];
     //    [[UINavigationBar appearance] setTranslucent: YES];
     
     [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];

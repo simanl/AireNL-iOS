@@ -185,7 +185,7 @@
     
     ImecaResults *imecaResults = [[ImecaResults alloc] init];
     imecaResults.amount = @(40);
-    imecaResults.quality = @"Buena";
+    imecaResults.airQuality = AirQualityTypeExtremelyBad;
     currentResults.imeca = imecaResults;
     
     ContaminantResults *contamintResults = [[ContaminantResults alloc] init];

@@ -18,7 +18,9 @@
     
     CurrentResults *currentResults = [self.delegate getCurrentResults];
     self.imecaLabel.text = [currentResults.imeca.amount stringValue];
-    self.imecaQualityLabel.text = currentResults.imeca.quality;
+    self.imecaQualityLabel.text = [currentResults.imeca airQualityString];
+    self.imecaQualityView.backgroundColor = [currentResults.imeca airQualityColor];
+    self.imecaQualityView.alpha = 0.8f;
 }
 
 - (IBAction)didSelectInfo:(id)sender

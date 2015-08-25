@@ -72,7 +72,7 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h39-Li-eSM">
+                                                        <view alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h39-Li-eSM">
                                                             <rect key="frame" x="66.5" y="135" width="197.5" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUENA" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-Vu-gVY">
@@ -95,7 +95,7 @@
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.70588235294117641" green="0.81176470588235294" blue="0.32549019607843138" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="0.70588235294117641" green="0.81176470588235294" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="4FS-Vu-gVY" secondAttribute="trailing" constant="30" id="5mi-YE-LSN"/>
                                                                 <constraint firstAttribute="height" constant="40" id="Gta-dp-vx2"/>
@@ -145,6 +145,7 @@
                                         <connections>
                                             <outlet property="imecaLabel" destination="h09-8l-Jvm" id="aan-wC-3tl"/>
                                             <outlet property="imecaQualityLabel" destination="4FS-Vu-gVY" id="DT8-eu-noc"/>
+                                            <outlet property="imecaQualityView" destination="h39-Li-eSM" id="taC-a9-NUh"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="actividadesCell" id="2Lh-sa-KL5" customClass="ActividadesCollectionViewCell">
@@ -822,7 +823,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpR-rn-bAk">
                                                     <rect key="frame" x="20" y="12" width="14" height="14"/>
-                                                    <color key="backgroundColor" red="0.36862745098039218" green="0.76862745098039209" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.31764705882352939" green="0.80392156862745101" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="0Kv-oy-Zwe"/>
                                                         <constraint firstAttribute="height" constant="20" id="2Us-nN-82x"/>
@@ -1196,7 +1197,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-0N-CPJ">
                                                     <rect key="frame" x="20" y="12" width="14" height="14"/>
-                                                    <color key="backgroundColor" red="0.45098039215686275" green="0.090196078431372548" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.45098039215686275" green="0.20392156862745098" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="JHu-nq-Xeh"/>
                                                         <constraint firstAttribute="width" constant="14" id="K6c-jG-BqC"/>
