@@ -395,7 +395,7 @@
 
 - (void)showInfoScreenForAirQuality
 {
-    [self showInfoScreenForControllerWithName: @"airQualityInfoViewController" height: 450.0f];
+    [self showInfoScreenForControllerWithName: @"airQualityInfoViewController" height: 430.0f];
 }
 
 - (void)showInfoScreenForActivities
@@ -418,7 +418,7 @@
     
     CGRect screenBounds = [UIScreen mainScreen].bounds;
     if (self.view.bounds.size.height < 420 && height > screenBounds.size.height) {
-        popup.destinationBounds = CGRectMake(0, 0, 300, screenBounds.size.height - 20);
+        popup.destinationBounds = CGRectMake(0, 0, 300, screenBounds.size.height - 35);
     } else {
         popup.destinationBounds = CGRectMake(0, 0, 300, height);
     }
@@ -426,6 +426,9 @@
     popup.presentedController = self.infoViewController;
     popup.presentingController = self;
     popup.dismissableByTouchingBackground = YES;
+    popup.backgroundBlurRadius = 20.0f;
+    popup.backgroundViewColor = [UIColor darkGrayColor];
+    popup.backgroundViewAlpha = 0.5f;
     
     [self presentViewController: self.infoViewController animated: YES completion: nil];
 }
@@ -439,7 +442,7 @@
         }
         
         [UIView animateWithDuration: [coordinator transitionDuration] animations:^{
-            self.infoViewController.view.bounds = CGRectMake(0, 0, 300, size.height - 20);
+            self.infoViewController.view.bounds = CGRectMake(0, 0, 300, size.height - 35);
         }];
         
     } else {
