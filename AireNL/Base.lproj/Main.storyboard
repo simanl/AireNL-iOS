@@ -72,7 +72,7 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h39-Li-eSM">
+                                                        <view alpha="0.93000000000000005" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h39-Li-eSM">
                                                             <rect key="frame" x="66" y="135" width="197.5" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUENA" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-Vu-gVY">

@@ -27,6 +27,8 @@
 @property (nonatomic) UIBarButtonItem *doneButton;
 @property (nonatomic) UIBarButtonItem *switchButton;
 
+@property (nonatomic) UIView *customCalloutView;
+
 @end
 
 @implementation MapViewController
@@ -221,7 +223,7 @@
             MeasurementLocation *measurementLocationAnnotation = (MeasurementLocation *)annotation;
             
             annotationView.image = [measurementLocationAnnotation annotationImage];
-            annotationView.canShowCallout = YES;
+            annotationView.canShowCallout = NO;
             return annotationView;
         }
         
@@ -235,8 +237,16 @@
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     if ([view.annotation isKindOfClass: [MeasurementLocation class]]) {
-        self.selectedLocation = view.annotation;
+        
+        MeasurementLocation *annotation = (MeasurementLocation *)view.annotation;
+        
+        self.selectedLocation = annotation;
         self.navigationItem.rightBarButtonItem = self.switchButton;
+        
+        self.customCalloutView = [self createCalloutViewForAnnotationView: view];
+        [view addSubview: self.customCalloutView];
+        
+        [self.mapView setCenterCoordinate: annotation.locationCoordinate animated: YES];
     }
 }
 
@@ -245,6 +255,8 @@
     if ([view.annotation isKindOfClass: [MeasurementLocation class]]) {
         self.selectedLocation = nil;
         self.navigationItem.rightBarButtonItem = nil;
+        
+        [self.customCalloutView removeFromSuperview];
     }
 }
 
@@ -289,6 +301,52 @@
                                                                         coordinate: CLLocationCoordinate2DMake(25.660008, -100.191293)];
 
     [self.mapView addAnnotations: @[location1, location2, location3, location4, location5]];
+}
+
+- (UIView *)createCalloutViewForAnnotationView:(MKAnnotationView *)view
+{
+    UIView *calloutView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 280, 110)];
+    calloutView.backgroundColor = [UIColor whiteColor];
+    calloutView.alpha = 0.95;
+    calloutView.layer.cornerRadius = 5.0f;
+    calloutView.center = CGPointMake(view.bounds.size.width * 0.5f, -self.customCalloutView.bounds.size.height * 0.5f - 5.0f);
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 260, 20)];
+    UILabel *subtitleLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 260, 20)];
+    
+    titleLabel.center = CGPointMake(140, 20);
+    titleLabel.text = [self.selectedLocation.areaName uppercaseString];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont fontWithName: @"Avenir-Medium" size: 16.0f];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.alpha = 0.7f;
+    
+    subtitleLabel.center = CGPointMake(140, 45);
+    subtitleLabel.text = @"CALIDAD DEL AIRE";
+    subtitleLabel.textAlignment = NSTextAlignmentCenter;
+    subtitleLabel.font = [UIFont fontWithName: @"Avenir-Light" size: 12.0f];
+    subtitleLabel.textColor = [UIColor blackColor];
+    subtitleLabel.alpha = 0.35f;
+    
+    [calloutView addSubview: titleLabel];
+    [calloutView addSubview: subtitleLabel];
+    
+    UIView *airQualityView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 260, 40)];
+    airQualityView.center = CGPointMake(140, 80);
+    airQualityView.backgroundColor = [self.selectedLocation airQualityColor];
+    airQualityView.layer.cornerRadius = 20.0f;
+    
+    UILabel *airQualityLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 240, 20)];
+    airQualityLabel.center = CGPointMake(130, 20);
+    airQualityLabel.text = [[self.selectedLocation airQualityString] uppercaseString];
+    airQualityLabel.textColor = [UIColor whiteColor];
+    airQualityLabel.textAlignment = NSTextAlignmentCenter;
+    airQualityLabel.font = [UIFont fontWithName: @"Avenir-Light" size: 16.0f];
+    
+    [airQualityView addSubview: airQualityLabel];
+    [calloutView addSubview: airQualityView];
+    
+    return calloutView;
 }
 
 #pragma mark - Set/Get

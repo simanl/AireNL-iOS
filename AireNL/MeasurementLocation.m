@@ -8,6 +8,8 @@
 
 #import "MeasurementLocation.h"
 
+#import "UIColor+ILColor.h"
+
 @interface MeasurementLocation ()
 
 @property (nonatomic, copy, readwrite) NSString *cityName;
@@ -50,7 +52,7 @@
 
 - (NSString *)subtitle
 {
-    return [self descriptionForType: self.airQuality];
+    return [NSString stringWithFormat: @"Calidad del Aire : %@", [self airQualityString]];
 }
 
 - (CLLocationCoordinate2D)coordinate
@@ -63,6 +65,54 @@
 - (UIImage *)annotationImage
 {
     return [self imageForType: self.airQuality];
+}
+
+- (NSString *)airQualityString
+{
+    switch (self.airQuality) {
+        case AirQualityTypeGood:
+            return @"Buena";
+            break;
+        case AirQualityTypeRegular:
+            return @"Regular";
+            break;
+        case AirQualityTypeBad:
+            return @"Mala";
+            break;
+        case AirQualityTypeVeryBad:
+            return @"Muy Mala";
+            break;
+        case AirQualityTypeExtremelyBad:
+            return @"Extremadamente Mala";
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
+
+- (UIColor *)airQualityColor
+{
+    switch (self.airQuality) {
+        case AirQualityTypeGood:
+            return [UIColor il_goodColor];
+            break;
+        case AirQualityTypeRegular:
+            return [UIColor il_regularColor];
+            break;
+        case AirQualityTypeBad:
+            return [UIColor il_badColor];
+            break;
+        case AirQualityTypeVeryBad:
+            return [UIColor il_veryBadColor];
+            break;
+        case AirQualityTypeExtremelyBad:
+            return [UIColor il_extremelyBadColor];
+            break;
+        default:
+            return nil;
+            break;
+    }
 }
 
 #pragma mark - Helper's
@@ -92,35 +142,6 @@
         }
         default:
             return nil;
-            break;
-    }
-}
-
-- (NSString *)descriptionForType:(AirQualityType)type
-{
-    switch (type) {
-        case AirQualityTypeGood:{
-            return @"Calidad del Aire: Buena";
-            break;
-        }
-        case AirQualityTypeRegular:{
-            return @"Calidad del Aire: Regular";
-            break;
-        }
-        case AirQualityTypeBad:{
-            return @"Calidad del Aire: Mala";
-            break;
-        }
-        case AirQualityTypeVeryBad:{
-            return @"Calidad del Aire: Muy Mala";
-            break;
-        }
-        case AirQualityTypeExtremelyBad:{
-            return @"Calidad del Aire: Extremadamente Mala";
-            break;
-        }
-        default:
-            return @"";
             break;
     }
 }

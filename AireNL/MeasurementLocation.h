@@ -16,7 +16,11 @@
 
 - (id)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName;
 - (id)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName airQuality:(AirQualityType)type coordinate:(CLLocationCoordinate2D)coordinate;
+
 - (UIImage *)annotationImage;
+
+- (NSString *)airQualityString;
+- (UIColor *)airQualityColor;
 
 @property (nonatomic, copy, readonly) NSString *cityName;
 @property (nonatomic, copy, readonly) NSString *areaName;
