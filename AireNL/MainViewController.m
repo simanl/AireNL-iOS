@@ -256,10 +256,14 @@
     CGFloat correctedOffset = scrollView.contentInset.top + scrollView.contentOffset.y;
     if (correctedOffset <= 10) {
         [self setBackgroundImageWithBlur: NO];
-        [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
+        if (IS_IPHONE) {
+            [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
+        }
     }else{
         [self setBackgroundImageWithBlur: YES];
-        [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationSlide];
+        if (IS_IPHONE) {
+            [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationSlide];
+        }
     }
     
     [self animateTopViewWithScrollView: scrollView];
@@ -423,6 +427,10 @@
 
 - (void)animateTopViewWithScrollView:(UIScrollView *)scrollView
 {
+    if (IS_IPAD) {
+        return;
+    }
+    
     CGRect frame = self.topView.frame;
     CGFloat size = frame.size.height - 21;
     CGFloat framePercentageHidden = ((20 - frame.origin.y) / (frame.size.height - 1));
