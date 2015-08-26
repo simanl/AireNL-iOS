@@ -34,6 +34,7 @@
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
 		0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */; };
+		069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */; };
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
 		06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */; };
 		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
@@ -150,6 +151,8 @@
 		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAnnotationView.h; sourceTree = "<group>"; };
 		0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAnnotationView.m; sourceTree = "<group>"; };
+		0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoContainerViewController.h; sourceTree = "<group>"; };
+		0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoContainerViewController.m; sourceTree = "<group>"; };
 		06A89EBD1B71161700FB67A4 /* ILLinearGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILLinearGradientView.h; sourceTree = "<group>"; };
 		06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILLinearGradientView.m; sourceTree = "<group>"; };
 		06A8C65E1B6FCDE600E42EE1 /* ILRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRadialGradientLayer.h; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				0657530C1B5EBB3600FF226C /* MainViewController.m */,
 				065753081B5EBB2C00FF226C /* MapViewController.h */,
 				065753091B5EBB2C00FF226C /* MapViewController.m */,
+				0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */,
+				0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */,
 				06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */,
 				06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */,
 			);
@@ -811,6 +816,7 @@
 				06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
+				069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */,

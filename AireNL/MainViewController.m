@@ -18,7 +18,8 @@
 #import "ILRadialGradientLayer.h"
 #import "ILLinearGradientView.h"
 #import "MapViewController.h"
-#import "InfoTableViewController.h"
+#import "InfoContainerViewController.h"
+//#import "InfoTableViewController.h"
 
 #import "CurrentResults.h"
 #import "PredictionResults.h"
@@ -45,7 +46,7 @@
 
 @property (nonatomic) CGFloat previousScrollViewYOffset;
 
-@property (nonatomic) InfoTableViewController *infoViewController;
+@property (nonatomic) InfoContainerViewController *infoViewController;
 
 @end
 
@@ -445,7 +446,7 @@
 - (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height
 {
     self.infoViewController = [self.storyboard instantiateViewControllerWithIdentifier: name];
-    self.infoViewController.view.layer.cornerRadius = 4.0f;
+    self.infoViewController.view.layer.cornerRadius = 5.0f;
     self.infoViewController.regularHeight = height;
     
     CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];

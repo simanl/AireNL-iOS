@@ -19,14 +19,10 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)didSelectClose:(id)sender
-{
-    [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 #pragma mark - UITableView Delegate

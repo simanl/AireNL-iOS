@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "InfoContainerViewController.h"
+
 @interface InfoTableViewController : UITableViewController
-
-@property (nonatomic) CGFloat regularHeight;
-
-- (IBAction)didSelectClose:(id)sender;
 
 @end
