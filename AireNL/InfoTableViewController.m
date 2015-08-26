@@ -29,4 +29,11 @@
     [self dismissViewControllerAnimated: YES completion: nil];
 }
 
+#pragma mark - UITableView Delegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = [UIColor clearColor];
+}
+
 @end
