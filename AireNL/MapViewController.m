@@ -12,6 +12,7 @@
 #import "MKMapView+ZoomLevel.h"
 
 #import "MeasurementLocation.h"
+#import "ILAnnotationView.h"
 #import "UIColor+ILColor.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
@@ -214,12 +215,12 @@
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     static NSString *SFAnnotationIdentifier = @"AnnotationIdentifier";
-    MKPinAnnotationView *pinView =
-    (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier: SFAnnotationIdentifier];
+    ILAnnotationView *pinView =
+    (ILAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier: SFAnnotationIdentifier];
     
     if (!pinView){
         if ([annotation isKindOfClass: [MeasurementLocation class]]) {
-            MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: SFAnnotationIdentifier];
+            ILAnnotationView *annotationView = [[ILAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: SFAnnotationIdentifier];
             MeasurementLocation *measurementLocationAnnotation = (MeasurementLocation *)annotation;
             
             annotationView.image = [measurementLocationAnnotation annotationImage];
@@ -237,9 +238,8 @@
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     if ([view.annotation isKindOfClass: [MeasurementLocation class]]) {
-        
         MeasurementLocation *annotation = (MeasurementLocation *)view.annotation;
-        
+
         self.selectedLocation = annotation;
         self.navigationItem.rightBarButtonItem = self.switchButton;
         
@@ -254,6 +254,7 @@
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
     if ([view.annotation isKindOfClass: [MeasurementLocation class]]) {
+        
         self.selectedLocation = nil;
         self.navigationItem.rightBarButtonItem = nil;
         
@@ -346,6 +347,9 @@
     
     [airQualityView addSubview: airQualityLabel];
     [calloutView addSubview: airQualityView];
+    
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(didSelectSwitch)];
+    [calloutView addGestureRecognizer: tapRecognizer];
     
     return calloutView;
 }
