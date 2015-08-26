@@ -49,6 +49,8 @@
 
 @property (nonatomic) InfoContainerViewController *infoViewController;
 
+@property (nonatomic) BOOL isUsingGPS;
+
 @end
 
 @implementation MainViewController
@@ -172,6 +174,11 @@
 
 - (IBAction)didSelectGPS:(id)sender
 {
+    if (self.isUsingGPS) {
+        [self showGpsAlreadyActivatedAlert];
+        return;
+    }
+    
     [self loadAssets];
     
     [self updateScreen];
@@ -195,6 +202,8 @@
 
 - (void)loadAssets
 {
+    self.isUsingGPS = YES;
+    
     CurrentResults *currentResults = [[CurrentResults alloc] init];
     currentResults.date = [NSDate date];
     currentResults.temperature = @(40);
@@ -375,25 +384,14 @@
 
 - (void)didSelectLocationWithCurrentResults:(CurrentResults *)results
 {
+    self.isUsingGPS = NO;
+
     self.currentResults = results;
     
     [self updateScreen];
     [self.collectionView reloadData];
     
-    [self showInformationAlert];
-}
-
-- (void)showInformationAlert
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsAlertKey];
-    
-    if (!hasShownGpsAlert) {
-        NSString *text = @"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.";
-        [TAOverlay showOverlayWithLabel: text Options: TAOverlayOptionOverlaySizeRoundedRect | TAOverlayOptionOverlayDismissTap | TAOverlayOptionOverlayTypeInfo];
-
-        [userDefaults setBool: YES forKey: kHasShownGpsAlertKey];
-    }
+    [self showFirstGpsUserAlert];
 }
 
 #pragma mark - Helper's
@@ -503,7 +501,42 @@
     }
 }
 
+- (void)showFirstGpsUserAlert
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsAlertKey];
+
+    if (!hasShownGpsAlert) {
+        NSString *text = @"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.";
+        [self showAlertWithText: text];
+    
+        [userDefaults setBool: YES forKey: kHasShownGpsAlertKey];
+    }
+}
+
+- (void)showGpsAlreadyActivatedAlert
+{
+    NSString *text = @"You are already using GPS to find the nearest station. If you want to change station use the map.";
+    [self showAlertWithText: text];
+}
+
+- (void)showAlertWithText:(NSString *)text
+{
+    [TAOverlay showOverlayWithLabel: text Options: TAOverlayOptionOverlaySizeRoundedRect | TAOverlayOptionOverlayDismissTap | TAOverlayOptionOverlayTypeInfo];
+}
+
 #pragma mark - Set/Get
+
+- (void)setIsUsingGPS:(BOOL)isUsingGPS
+{
+    _isUsingGPS = isUsingGPS;
+    
+    if (isUsingGPS) {
+        self.gpsButton.alpha = 1.0f;
+    }else{
+        self.gpsButton.alpha = 0.5f;
+    }
+}
 
 - (NSArray *)cellHeights
 {

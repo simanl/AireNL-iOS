@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stationLabel;
+@property (weak, nonatomic) IBOutlet UIButton *gpsButton;
 
 @property (weak, nonatomic) IBOutlet ILBlurCollectionView *collectionView;
 

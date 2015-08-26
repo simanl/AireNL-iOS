@@ -758,6 +758,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="gUK-ao-SVZ" id="GUI-Yv-vpt"/>
                         <outlet property="collectionView" destination="aGk-6S-54d" id="jvI-bW-zlj"/>
+                        <outlet property="gpsButton" destination="8hI-PB-6OQ" id="LCx-Eb-3ra"/>
                         <outlet property="stationLabel" destination="8Gg-SX-8k8" id="O4J-7e-uSY"/>
                         <outlet property="titleLabel" destination="1KS-1F-pO3" id="fiP-Dn-1Vs"/>
                         <outlet property="topView" destination="PgK-9j-pDS" id="RBG-uh-AlK"/>
