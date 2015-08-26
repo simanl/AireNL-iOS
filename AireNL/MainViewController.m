@@ -80,8 +80,9 @@
 - (void)customizeAppearance
 {
     [self setBackgroundImageWithBlur: NO];
-    
     [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+    
+    [TAOverlay setOverlayLabelFont: [UIFont fontWithName: @"Avenir-Light" size: 13.0f]];
 }
 
 - (void)updateScreen

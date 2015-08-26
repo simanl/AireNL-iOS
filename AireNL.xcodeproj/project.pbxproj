@@ -310,6 +310,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		069354D11B8E4DDF00AB810F /* Info Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */,
+				0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */,
+				06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */,
+				06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */,
+			);
+			name = "Info Controllers";
+			sourceTree = "<group>";
+		};
 		069B252D1B67F7890032CED2 /* Pronostico UICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,10 +422,10 @@
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
 				06F4C9571B7BFD1000876961 /* ILRoundedView.h */,
 				06F4C9581B7BFD1000876961 /* ILRoundedView.m */,
-				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
-				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
 				0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */,
 				0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */,
+				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
+				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
 				06FE05471B7159AA00BCFCA3 /* Blurs, Gradients */,
 				063366781B60064C00C32FF6 /* Table & Collection Cells */,
 			);
@@ -428,10 +439,7 @@
 				0657530C1B5EBB3600FF226C /* MainViewController.m */,
 				065753081B5EBB2C00FF226C /* MapViewController.h */,
 				065753091B5EBB2C00FF226C /* MapViewController.m */,
-				0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */,
-				0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */,
-				06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */,
-				06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */,
+				069354D11B8E4DDF00AB810F /* Info Controllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -439,9 +447,9 @@
 		06D367D11B54264A009E9D47 /* Helpers+Categories */ = {
 			isa = PBXGroup;
 			children = (
+				06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */,
 				06D367D31B54564D009E9D47 /* UIColor+ILColor.h */,
 				06D367D41B54564D009E9D47 /* UIColor+ILColor.m */,
-				06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */,
 				0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */,
 				0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */,
 			);
