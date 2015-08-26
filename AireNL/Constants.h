@@ -9,6 +9,10 @@
 #ifndef AireNL_Constants_h
 #define AireNL_Constants_h
 
+// NSUserDefaults
+
+static NSString *const kHasShownGpsAlertKey = @"hasShownGpsAlertKey";
+
 // DEVICE MACROS
 
 #define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)

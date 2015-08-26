@@ -11,6 +11,7 @@
 //#import <FXBlurView/FXBlurView.h>
 #import <CCMPopup/FXBlurView.h>
 #import <CCMPopup/CCMPopupTransitioning.h>
+#import <TAOverlay/TAOverlay.h>
 
 #import "Constants.h"
 #import "UIColor+ILColor.h"
@@ -378,6 +379,21 @@
     
     [self updateScreen];
     [self.collectionView reloadData];
+    
+    [self showInformationAlert];
+}
+
+- (void)showInformationAlert
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsAlertKey];
+    
+    if (!hasShownGpsAlert) {
+        NSString *text = @"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.";
+        [TAOverlay showOverlayWithLabel: text Options: TAOverlayOptionOverlaySizeRoundedRect | TAOverlayOptionOverlayDismissTap | TAOverlayOptionOverlayTypeInfo];
+
+        [userDefaults setBool: YES forKey: kHasShownGpsAlertKey];
+    }
 }
 
 #pragma mark - Helper's

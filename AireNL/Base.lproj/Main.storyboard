@@ -675,7 +675,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-PB-6OQ">
-                                        <rect key="frame" x="15" y="16" width="22" height="22"/>
+                                        <rect key="frame" x="15" y="15.5" width="22" height="23"/>
                                         <state key="normal" image="GPSIcon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -823,7 +823,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se puede realizar cualquier actividad al aire libre" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vb-hs-pHd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se puede realizar cualquier actividad al aire libre." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vb-hs-pHd">
                                                     <rect key="frame" x="54" y="33" width="226" height="38.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="VQA-1X-8Md"/>
@@ -1776,7 +1776,7 @@
     <resources>
         <image name="BackgroundNight" width="666" height="444"/>
         <image name="CloseIcon" width="14" height="12"/>
-        <image name="GPSIcon" width="22" height="21"/>
+        <image name="GPSIcon" width="22" height="23"/>
         <image name="InfoIcon" width="14" height="14"/>
         <image name="MapIcon" width="22" height="22"/>
         <image name="TempIcon" width="15" height="32"/>

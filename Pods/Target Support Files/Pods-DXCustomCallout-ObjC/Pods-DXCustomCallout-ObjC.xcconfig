@@ -1,1 +1,0 @@
-PODS_DXCUSTOMCALLOUT_OBJC_OTHER_LDFLAGS = -framework "MapKit" -framework "UIKit"

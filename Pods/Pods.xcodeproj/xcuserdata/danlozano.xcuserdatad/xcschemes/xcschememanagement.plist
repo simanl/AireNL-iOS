@@ -14,12 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-DXCustomCallout-ObjC.xcscheme</key>
+		<key>Pods-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Mantle.xcscheme</key>
+		<key>Pods-TAOverlay.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3272928D58FD313C0D610E36</key>
+		<key>6AFD502B7DFADAE471DEAC7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73495A08315D09E50185AF3C</key>
+		<key>7B39A6C2729D74531B0F2E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A9726CF99692A7DB1A945DF</key>
+		<key>86848E59740DD0FFC0B475D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF382AE705755B61B8EE8C3D</key>
+		<key>AB97215591B55C6B955E0054</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0D18C8E9ECAFE411DC5AFBE</key>
+		<key>C97A904A759512FF72572A6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

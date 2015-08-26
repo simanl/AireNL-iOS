@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.title = @"Puntos de Medicion";
     self.navigationItem.leftBarButtonItem = self.doneButton;
 
@@ -97,11 +97,12 @@
     currentResults.contaminants = contamintResults;
     currentResults.location = self.selectedLocation;
     
-    if ([self.delegate respondsToSelector: @selector(didSelectLocationWithCurrentResults:)]) {
-        [self.delegate didSelectLocationWithCurrentResults: currentResults];
-    }
+    [self dismissViewControllerAnimated: YES completion:^{
+        if ([self.delegate respondsToSelector: @selector(didSelectLocationWithCurrentResults:)]) {
+            [self.delegate didSelectLocationWithCurrentResults: currentResults];
+        }
+    }];
     
-    [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 - (void)setNavBarImageWithType:(MapViewControllerNavBarType)type
@@ -359,7 +360,7 @@
 - (UIBarButtonItem *)doneButton
 {
     if (!_doneButton) {
-        _doneButton = [[UIBarButtonItem alloc] initWithTitle: @"Done" style: UIBarButtonItemStyleDone target: self action: @selector(didSelectDone)];
+        _doneButton = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"CloseIconWhite"] style: UIBarButtonItemStylePlain target:self action: @selector(didSelectDone)];
     }
     return _doneButton;
 }
@@ -367,7 +368,7 @@
 - (UIBarButtonItem *)switchButton
 {
     if (!_switchButton) {
-        _switchButton = [[UIBarButtonItem alloc] initWithTitle: @"Switch" style: UIBarButtonItemStylePlain target: self action: @selector(didSelectSwitch)];
+        _switchButton = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"SwitchIcon"] style: UIBarButtonItemStylePlain target: self action: @selector(didSelectSwitch)];
     }
     return _switchButton;
 }
