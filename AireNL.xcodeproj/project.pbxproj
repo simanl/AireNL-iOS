@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0607DE511B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
+		0607DE521B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
+		0607DE531B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
+		0607DE541B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
 		060A9E9F1B79087000C5AAD6 /* CurrentResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */; };
 		060A9EA01B79087000C5AAD6 /* CurrentResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */; };
 		060A9EA11B79087000C5AAD6 /* ContaminantResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05541B715BA000BCFCA3 /* ContaminantResults.h */; };
@@ -126,22 +130,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0607DE411B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		0607DE421B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0607DE431B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoHeaderTableViewCell.strings; sourceTree = "<group>"; };
+		0607DE441B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoTableViewCell.strings; sourceTree = "<group>"; };
+		0607DE451B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		0607DE461B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
+		0607DE551B8FBDE6006E9A1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0607DE571B8FBDE8006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		061D50221B8BC3E000EF36EC /* MeasurementLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementLocation.h; sourceTree = "<group>"; };
 		061D50231B8BC3E000EF36EC /* MeasurementLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementLocation.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
-		0637ECA91B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		0637ECAA1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		0637ECAB1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoHeaderTableViewCell.strings; sourceTree = "<group>"; };
-		0637ECAC1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoTableViewCell.strings; sourceTree = "<group>"; };
-		0637ECAD1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainInterface.strings; sourceTree = "<group>"; };
-		0637ECAE1B83AB050091032B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
-		0637ECAF1B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Main.strings"; sourceTree = "<group>"; };
-		0637ECB01B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		0637ECB11B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/PronosticoHeaderTableViewCell.strings"; sourceTree = "<group>"; };
-		0637ECB21B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/PronosticoTableViewCell.strings"; sourceTree = "<group>"; };
-		0637ECB31B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/MainInterface.strings"; sourceTree = "<group>"; };
-		0637ECB41B83AB0A0091032B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Interface.strings"; sourceTree = "<group>"; };
 		0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
 		0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		065753081B5EBB2C00FF226C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -460,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				06D367B51B542615009E9D47 /* Images.xcassets */,
+				0607DE561B8FBDE6006E9A1A /* Localizable.strings */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -711,6 +712,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 06D3679C1B542615009E9D47;
 			productRefGroup = 06D367A61B542615009E9D47 /* Products */;
@@ -734,6 +736,7 @@
 				06F2C4441B680D4100BDF043 /* PronosticosCollectionViewCell.xib in Resources */,
 				06D367B41B542615009E9D47 /* Main.storyboard in Resources */,
 				06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */,
+				0607DE511B8FBDE6006E9A1A /* Localizable.strings in Resources */,
 				06D367B61B542615009E9D47 /* Images.xcassets in Resources */,
 				06C5E2971B83A9700017B15A /* PronosticoHeaderTableViewCell.xib in Resources */,
 				06C5E29C1B83A97C0017B15A /* PronosticoTableViewCell.xib in Resources */,
@@ -752,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D8BA741B74106B007462A4 /* Images.xcassets in Resources */,
+				0607DE531B8FBDE6006E9A1A /* Localizable.strings in Resources */,
 				06D8BA781B74106B007462A4 /* AireNL WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +765,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */,
+				0607DE541B8FBDE6006E9A1A /* Localizable.strings in Resources */,
 				06D8BA821B74106B007462A4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,6 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FAE3941B72BFB400B19700 /* Media.xcassets in Resources */,
+				0607DE521B8FBDE6006E9A1A /* Localizable.strings in Resources */,
 				06C5E2901B83A8540017B15A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -917,12 +923,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0607DE561B8FBDE6006E9A1A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0607DE551B8FBDE6006E9A1A /* Base */,
+				0607DE571B8FBDE8006E9A1A /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		06C5E2921B83A8540017B15A /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				06C5E2911B83A8540017B15A /* Base */,
-				0637ECAD1B83AB050091032B /* es */,
-				0637ECB31B83AB0A0091032B /* es-MX */,
+				0607DE451B8FB7F1006E9A1A /* es */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -931,8 +945,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06C5E2981B83A9700017B15A /* Base */,
-				0637ECAB1B83AB050091032B /* es */,
-				0637ECB11B83AB0A0091032B /* es-MX */,
+				0607DE431B8FB7F1006E9A1A /* es */,
 			);
 			name = PronosticoHeaderTableViewCell.xib;
 			sourceTree = "<group>";
@@ -941,8 +954,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06C5E29D1B83A97C0017B15A /* Base */,
-				0637ECAC1B83AB050091032B /* es */,
-				0637ECB21B83AB0A0091032B /* es-MX */,
+				0607DE441B8FB7F1006E9A1A /* es */,
 			);
 			name = PronosticoTableViewCell.xib;
 			sourceTree = "<group>";
@@ -951,8 +963,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06D367B31B542615009E9D47 /* Base */,
-				0637ECA91B83AB050091032B /* es */,
-				0637ECAF1B83AB0A0091032B /* es-MX */,
+				0607DE411B8FB7F1006E9A1A /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -961,8 +972,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06D367B81B542615009E9D47 /* Base */,
-				0637ECAA1B83AB050091032B /* es */,
-				0637ECB01B83AB0A0091032B /* es-MX */,
+				0607DE421B8FB7F1006E9A1A /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -971,8 +981,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06D8BA7F1B74106B007462A4 /* Base */,
-				0637ECAE1B83AB050091032B /* es */,
-				0637ECB41B83AB0A0091032B /* es-MX */,
+				0607DE461B8FB7F1006E9A1A /* es */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";

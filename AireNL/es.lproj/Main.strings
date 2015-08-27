@@ -2,23 +2,53 @@
 /* Class = "UILabel"; text = "MONTERREY"; ObjectID = "1KS-1F-pO3"; */
 "1KS-1F-pO3.text" = "MONTERREY";
 
+/* Class = "UILabel"; text = "Extremely Bad"; ObjectID = "3rk-Ot-bvk"; */
+"3rk-Ot-bvk.text" = "Extremadamente Mala";
+
 /* Class = "UILabel"; text = "GOOD"; ObjectID = "4FS-Vu-gVY"; */
 "4FS-Vu-gVY.text" = "BUENA";
 
+/* Class = "UILabel"; text = "O3"; ObjectID = "5qL-qG-Zb1"; */
+"5qL-qG-Zb1.text" = "O3";
+
 /* Class = "UILabel"; text = "DOWNTOWN OBISPADO STATION"; ObjectID = "8Gg-SX-8k8"; */
-"8Gg-SX-8k8.text" = "ESTACIÓN CENTRO OBISPADO";
+"8Gg-SX-8k8.text" = "ESTACION CENTRO OBISPADO";
 
 /* Class = "UILabel"; text = "WIND KM/H"; ObjectID = "8tE-TH-mHA"; */
 "8tE-TH-mHA.text" = "VIENTO KM/H";
 
+/* Class = "UILabel"; text = "You can perform any outdoor activities."; ObjectID = "8vb-hs-pHd"; */
+"8vb-hs-pHd.text" = "Se puede realizar cualquier actividad al aire libre.";
+
+/* Class = "UILabel"; text = "General population: abstain from any outdoor efforts."; ObjectID = "GAs-Gb-iLX"; */
+"GAs-Gb-iLX.text" = "Población en general: suspender esfuerzos al aire libre.";
+
 /* Class = "UILabel"; text = "120"; ObjectID = "H86-2S-tQw"; */
 "H86-2S-tQw.text" = "120";
+
+/* Class = "UILabel"; text = "Good"; ObjectID = "M4P-2I-82b"; */
+"M4P-2I-82b.text" = "Buena";
+
+/* Class = "UILabel"; text = "Kids, older adults, people who are doing intense physical activities or who have breathing or heart problems: limit prolonged outdoor efforts."; ObjectID = "MXs-Ef-mzH"; */
+"MXs-Ef-mzH.text" = "Niños, adultos mayores, quienes realicen actividad física intensa o con enfermedades respiratorias y cardiovasculares: limitar esfuerzos prolongados al aire libre.";
+
+/* Class = "UILabel"; text = "Bad"; ObjectID = "O7s-a7-26B"; */
+"O7s-a7-26B.text" = "Mala";
+
+/* Class = "UILabel"; text = "Very Bad"; ObjectID = "OPX-69-ENw"; */
+"OPX-69-ENw.text" = "Muy Mala";
+
+/* Class = "UILabel"; text = "For people who are sensitive to contamination: consider limiting prolonged outdoor efforts."; ObjectID = "PoA-1I-j4f"; */
+"PoA-1I-j4f.text" = "Personas extremadamente sensibles a la contaminación: consideren limitar los esfuerzos prolongados al aire libre.";
 
 /* Class = "UILabel"; text = "TEMPERATURE"; ObjectID = "R8Y-Af-67u"; */
 "R8Y-Af-67u.text" = "TEMPERATURA";
 
 /* Class = "UILabel"; text = "28"; ObjectID = "U2p-Wc-kx3"; */
 "U2p-Wc-kx3.text" = "28";
+
+/* Class = "UILabel"; text = "MORE INFORMATION"; ObjectID = "UK7-bX-hL7"; */
+"UK7-bX-hL7.text" = "MÁS INFORMACIÓN";
 
 /* Class = "UILabel"; text = "120"; ObjectID = "cIj-xb-muK"; */
 "cIj-xb-muK.text" = "120";
@@ -29,11 +59,20 @@
 /* Class = "UILabel"; text = "63"; ObjectID = "gDs-L4-amw"; */
 "gDs-L4-amw.text" = "63";
 
+/* Class = "UILabel"; text = "Fine particulate matter. It is an air pollutant that is a concern for people health when levels are high."; ObjectID = "gIS-c5-YCu"; */
+"gIS-c5-YCu.text" = "Son partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o fracción fina.";
+
 /* Class = "UILabel"; text = "49"; ObjectID = "h09-8l-Jvm"; */
 "h09-8l-Jvm.text" = "49";
 
 /* Class = "UILabel"; text = "O3"; ObjectID = "ij7-oY-aRX"; */
 "ij7-oY-aRX.text" = "O3";
+
+/* Class = "UILabel"; text = "Kids, older adults, people who are doing intense physical activities or who have breathing or heart problems: avoid prolonged outdoor efforts."; ObjectID = "jTe-TN-RMY"; */
+"jTe-TN-RMY.text" = "Niños, adultos mayores, quienes realicen actividad física intensa o con enfermedades respiratorias y cardiovasculares: evitar el esfuerzo prolongado al aire libre.";
+
+/* Class = "UILabel"; text = "MORE INFORMATION"; ObjectID = "kqo-dA-oWL"; */
+"kqo-dA-oWL.text" = "MÁS INFORMACIÓN";
 
 /* Class = "UILabel"; text = "RECOMENDED ACTIVITIES"; ObjectID = "ktJ-B3-cu6"; */
 "ktJ-B3-cu6.text" = "ACTIVIDADES RECOMENDADAS";
@@ -41,8 +80,29 @@
 /* Class = "UILabel"; text = "87"; ObjectID = "lcv-Md-V74"; */
 "lcv-Md-V74.text" = "87";
 
+/* Class = "UILabel"; text = "Particulate matter up to 10 micrometers in size. These particules cause less severe health effects."; ObjectID = "lwW-lo-MGw"; */
+"lwW-lo-MGw.text" = "Son partículas en suspensión con un diámetro aerodinámico de hasta 10 µm, es decir, comprende las fracciones fina y gruesa.";
+
+/* Class = "UILabel"; text = "Regular"; ObjectID = "o8r-Tc-pzF"; */
+"o8r-Tc-pzF.text" = "Regular";
+
+/* Class = "UILabel"; text = "THE AIR QUALITY IS"; ObjectID = "rgR-Fr-HU9"; */
+"rgR-Fr-HU9.text" = "LA CALIDAD DEL AIRE ES";
+
+/* Class = "UILabel"; text = "PM 2.5"; ObjectID = "xjL-S2-mLl"; */
+"xjL-S2-mLl.text" = "PM 2.5";
+
+/* Class = "UILabel"; text = "MORE INFORMATION"; ObjectID = "xjz-8T-t3d"; */
+"xjz-8T-t3d.text" = "MÁS INFORMACIÓN";
+
+/* Class = "UILabel"; text = "PM 10"; ObjectID = "xxj-x4-zO7"; */
+"xxj-x4-zO7.text" = "PM 10";
+
 /* Class = "UILabel"; text = "IMECA"; ObjectID = "zML-3N-I8u"; */
 "zML-3N-I8u.text" = "IMECA";
 
 /* Class = "UILabel"; text = "PM 2.5"; ObjectID = "zTw-3e-IPu"; */
 "zTw-3e-IPu.text" = "PM 2.5";
+
+/* Class = "UILabel"; text = "Natural gas composed of three atoms of oxygen."; ObjectID = "zd7-rD-Tha"; */
+"zd7-rD-Tha.text" = "Gas natural compuesto de tres atomos de oxygeno.";

@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  AireNL
+
+  Created by Daniel Lozano on 8/27/15.
+  Copyright (c) 2015 Icalia Labs. All rights reserved.
+*/
+
+"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner." = "Para regresar al comportamiento default de usar el GPS para encontrar la estacion mas cercana persiona el boton en la esquina superior izquierda.";
+
+"You are already using GPS to find the nearest station. If you want to change station use the map." = "Ya estas usando GPS para encontrar la estacion mas cercana. Si quieres cambiar de estacion usa el mapa.";
+
+"Downtown Obispado Station" = "Estacion Centro Obispado";
+"San Nicolas Station" = "Estacion San Nicolas";
+"Santa Catarina Station" = "Estacion Santa Catarina";
+"Escobedo Station" =  "Estacion Escobedo";
+"Guadalupe Station" = "Estacion Guadalupe";
+
+"Good" = "Buena";
+"Regular" = "Regular";
+"Bad" = "Mala";
+"Very Bad" = "Muy Mala";
+"Extremely Bad" = "Extremadamente Mala";
+
+"Measurement Stations" = "Estaciones de Medicion";
+"AIR QUALITY" = "CALIDAD DEL AIRE";

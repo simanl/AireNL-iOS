@@ -71,19 +71,19 @@
 {
     switch (self.airQuality) {
         case AirQualityTypeGood:
-            return @"Buena";
+            return NSLocalizedString(@"Good", nil);
             break;
         case AirQualityTypeRegular:
-            return @"Regular";
+            return NSLocalizedString(@"Regular", nil);
             break;
         case AirQualityTypeBad:
-            return @"Mala";
+            return NSLocalizedString(@"Bad", nil);
             break;
         case AirQualityTypeVeryBad:
-            return @"Muy Mala";
+            return NSLocalizedString(@"Very Bad", nil);
             break;
         case AirQualityTypeExtremelyBad:
-            return @"Extremadamente Mala";
+            return NSLocalizedString(@"Extremely Bad", nil);
             break;
         default:
             return nil;

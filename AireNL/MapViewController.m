@@ -38,7 +38,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Puntos de Medicion";
+    self.title = NSLocalizedString(@"Measurement Stations", nil);
     self.navigationItem.leftBarButtonItem = self.doneButton;
 
     [self setUpLocationManager];
@@ -279,27 +279,27 @@
 - (void)addAnnotations
 {
     MeasurementLocation *location1 = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-                                                                          areaName: @"Estacion Centro Obispado"
+                                                                          areaName: NSLocalizedString(@"Downtown Obispado Station", nil)
                                                                         airQuality: AirQualityTypeGood
                                                                         coordinate: CLLocationCoordinate2DMake(25.684299, -100.316563)];
     
     MeasurementLocation *location2 = [[MeasurementLocation alloc] initWithCityName: @"San Nicolas de los Garza"
-                                                                          areaName: @"Estacion San Nicolas"
+                                                                          areaName: NSLocalizedString(@"San Nicolas Station", nil)
                                                                         airQuality: AirQualityTypeRegular
                                                                         coordinate: CLLocationCoordinate2DMake(25.743689, -100.286994)];
     
     MeasurementLocation *location3 = [[MeasurementLocation alloc] initWithCityName: @"Escobedo"
-                                                                          areaName: @"Estacion Escobedo"
+                                                                          areaName: NSLocalizedString(@"Escobedo Station", nil)
                                                                         airQuality: AirQualityTypeBad
                                                                         coordinate: CLLocationCoordinate2DMake(25.776156, -100.316177)];
     
     MeasurementLocation *location4 = [[MeasurementLocation alloc] initWithCityName: @"Santa Catarina"
-                                                                          areaName: @"Estacion Santa Catarina"
+                                                                          areaName: NSLocalizedString(@"Santa Catarina Station", nil)
                                                                         airQuality: AirQualityTypeVeryBad
                                                                         coordinate: CLLocationCoordinate2DMake(25.673315, -100.457025)];
     
     MeasurementLocation *location5 = [[MeasurementLocation alloc] initWithCityName: @"Guadalupe"
-                                                                          areaName: @"Estacion Guadalupe"
+                                                                          areaName: NSLocalizedString(@"Guadalupe Station", nil)
                                                                         airQuality: AirQualityTypeExtremelyBad
                                                                         coordinate: CLLocationCoordinate2DMake(25.660008, -100.191293)];
 
@@ -325,7 +325,7 @@
     titleLabel.alpha = 0.7f;
     
     subtitleLabel.center = CGPointMake(140, 45);
-    subtitleLabel.text = @"CALIDAD DEL AIRE";
+    subtitleLabel.text = NSLocalizedString(@"AIR QUALITY",  nil);
     subtitleLabel.textAlignment = NSTextAlignmentCenter;
     subtitleLabel.font = [UIFont fontWithName: @"Avenir-Light" size: 12.0f];
     subtitleLabel.textColor = [UIColor blackColor];

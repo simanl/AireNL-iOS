@@ -221,7 +221,7 @@
     contamintResults.O3 = @(40);
     currentResults.contaminants = contamintResults;
     
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: @"Downtown Obispado Station"];
+    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
     currentResults.location = location;
     
     self.currentResults = currentResults;
@@ -516,7 +516,7 @@
     BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsAlertKey];
 
     if (!hasShownGpsAlert) {
-        NSString *text = @"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.";
+        NSString *text = NSLocalizedString(@"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.", nil);
         [self showAlertWithText: text];
     
         [userDefaults setBool: YES forKey: kHasShownGpsAlertKey];
@@ -525,7 +525,7 @@
 
 - (void)showGpsAlreadyActivatedAlert
 {
-    NSString *text = @"You are already using GPS to find the nearest station. If you want to change station use the map.";
+    NSString *text = NSLocalizedString(@"You are already using GPS to find the nearest station. If you want to change station use the map.", nil);
     [self showAlertWithText: text];
 }
 
