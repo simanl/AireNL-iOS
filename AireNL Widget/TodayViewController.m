@@ -64,7 +64,8 @@
     imecaResults.airQuality = AirQualityTypeRegular;
     currentResults.imeca = imecaResults;
     
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: @"Estacion Centro Obispado"];
+    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
     currentResults.location = location;
     
     self.currentResults = currentResults;
@@ -78,7 +79,9 @@
     self.locationSubtitleLabel.text = [self.currentResults.location.areaName uppercaseString];
     
     self.imecaLabel.text = [self.currentResults.imeca.amount stringValue];
-    self.imecaQualityLabel.text = [NSString stringWithFormat: @"Calidad del aire:  %@", [self.currentResults.imeca airQualityString]];
+    
+    NSString *localizedQualityText = NSLocalizedString(@"Air Quality", nil);
+    self.imecaQualityLabel.text = [NSString stringWithFormat: @"%@: %@", localizedQualityText, [self.currentResults.imeca airQualityString]];
     
     self.windLabel.text = [self stringForWindValue: self.currentResults.wind];
     self.tempLabel.text = [self stringForTempValue: self.currentResults.temperature];
