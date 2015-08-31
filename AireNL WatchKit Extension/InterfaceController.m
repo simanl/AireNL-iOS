@@ -57,7 +57,7 @@
     currentResults.imeca = imecaResults;
     
     MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-                                                                         areaName: @"Estacion Centro Obispado de Nuevo Leon"];
+                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
     currentResults.location = location;
     
     self.currentResults = currentResults;
