@@ -42,6 +42,9 @@
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
 		06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */; };
 		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
+		06AA94C91BA779DA00326F16 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; settings = {ASSET_TAGS = (); }; };
+		06AA94CC1BA779E900326F16 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; settings = {ASSET_TAGS = (); }; };
+		06AA94CF1BA77B8900326F16 /* StationsRequestResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CE1BA77B8900326F16 /* StationsRequestResults.m */; settings = {ASSET_TAGS = (); }; };
 		06B01CB71B7947A10094861C /* AirQualityInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B01CB61B7947A10094861C /* AirQualityInterfaceController.m */; };
 		06B01CBA1B7947C30094861C /* TempWindInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B01CB91B7947C30094861C /* TempWindInterfaceController.m */; };
 		06C5E2901B83A8540017B15A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C5E2921B83A8540017B15A /* MainInterface.storyboard */; };
@@ -159,6 +162,12 @@
 		06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRadialGradientLayer.m; sourceTree = "<group>"; };
 		06A8C6611B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantesCollectionViewCell.h; sourceTree = "<group>"; };
 		06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantesCollectionViewCell.m; sourceTree = "<group>"; };
+		06AA94C71BA779DA00326F16 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		06AA94C81BA779DA00326F16 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		06AA94CA1BA779E900326F16 /* Measurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measurement.h; sourceTree = "<group>"; };
+		06AA94CB1BA779E900326F16 /* Measurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Measurement.m; sourceTree = "<group>"; };
+		06AA94CD1BA77B8900326F16 /* StationsRequestResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsRequestResults.h; sourceTree = "<group>"; };
+		06AA94CE1BA77B8900326F16 /* StationsRequestResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsRequestResults.m; sourceTree = "<group>"; };
 		06B01CB51B7947A10094861C /* AirQualityInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirQualityInterfaceController.h; sourceTree = "<group>"; };
 		06B01CB61B7947A10094861C /* AirQualityInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirQualityInterfaceController.m; sourceTree = "<group>"; };
 		06B01CB81B7947C30094861C /* TempWindInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempWindInterfaceController.h; sourceTree = "<group>"; };
@@ -298,6 +307,12 @@
 		065753071B5EBA3B00FF226C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				06AA94CD1BA77B8900326F16 /* StationsRequestResults.h */,
+				06AA94CE1BA77B8900326F16 /* StationsRequestResults.m */,
+				06AA94C71BA779DA00326F16 /* Station.h */,
+				06AA94C81BA779DA00326F16 /* Station.m */,
+				06AA94CA1BA779E900326F16 /* Measurement.h */,
+				06AA94CB1BA779E900326F16 /* Measurement.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -821,6 +836,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
+				06AA94CF1BA77B8900326F16 /* StationsRequestResults.m in Sources */,
 				0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */,
 				06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */,
 				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
@@ -829,6 +845,7 @@
 				06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */,
 				06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
+				06AA94CC1BA779E900326F16 /* Measurement.m in Sources */,
 				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
 				069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
@@ -846,6 +863,7 @@
 				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
 				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,
+				06AA94C91BA779DA00326F16 /* Station.m in Sources */,
 				06FE05591B715BB800BCFCA3 /* ImecaResults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
