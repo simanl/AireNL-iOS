@@ -78,14 +78,17 @@
         if (!error) {
             
             NSLog(@"SUCCESS!");
-            NSLog(@"STATIONS : %@", [results stations]);
-            NSLog(@"MEASUREMENTS : %@", [results measurements]);
+//            NSLog(@"STATIONS : %@", [results stations]);
+//            NSLog(@"MEASUREMENTS : %@", [results measurements]);
             
             Station *station = [[results stations] firstObject];
             Measurement *measurement = [results lastMeasurementForStation: station];
             NSLog(@"STATION : %@", station);
             NSLog(@"MEASUREMENT : %@", measurement);
-                        
+            
+            CLLocationCoordinate2D coordinate = [station.coordinate MKCoordinateValue];
+            NSLog(@"COORDINATE : LATITUDE=%f LONGITUDE=%f", coordinate.latitude, coordinate.longitude);
+            
         }else{
             NSLog(@"ERROR : %@", error);
         }
