@@ -4,22 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CCMPopup.xcscheme</key>
+		<key>CCMPopup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Mantle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-TAOverlay.xcscheme</key>
+		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,30 +24,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TAOverlay.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6AFD502B7DFADAE471DEAC7E</key>
+		<key>1512126BD78F6B7D346D1E0DAEECB9DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B39A6C2729D74531B0F2E10</key>
+		<key>41F9F35C52FDE78B4F54570FF9A4BF37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86848E59740DD0FFC0B475D9</key>
+		<key>74D52A1BF4D298D9B1B632098AFFB542</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB97215591B55C6B955E0054</key>
+		<key>B629685C10E8528D3D0430A4B91F3093</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C97A904A759512FF72572A6A</key>
+		<key>F84D83ED1945F936EF5B970DCABA2608</key>
 		<dict>
 			<key>primary</key>
 			<true/>

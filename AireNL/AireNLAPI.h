@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AireNLAPI : NSObject
+#import "AFHTTPSessionManager.h"
+#import "APIResults.h"
+
+typedef void (^CompletionBlock)(BOOL success, NSError *error);
+typedef void (^ArrayCompletionBlock)(APIResults *results, NSError *error);
+
+@interface AireNLAPI : AFHTTPSessionManager
+
++ (id)sharedAPI;
+
+- (void)getStationsWithCompletion:(ArrayCompletionBlock)completion;
 
 @end

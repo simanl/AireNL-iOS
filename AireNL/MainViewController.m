@@ -26,6 +26,8 @@
 #import "PredictionResults.h"
 #import "ResultsCellDelegate.h"
 
+#import "AireNLAPI.h"
+
 #define STATUS_BAR_HEIGHT 16
 #define NAV_BAR_HEIGHT 54
 
@@ -68,6 +70,28 @@
     
     [self loadAssets];
     [self updateScreen];
+    
+    NSLog(@"LOADING STATIONS");
+    
+    [[AireNLAPI sharedAPI] getStationsWithCompletion:^(APIResults *results, NSError *error) {
+        
+        if (!error) {
+            
+            NSLog(@"SUCCESS!");
+            NSLog(@"STATIONS : %@", [results stations]);
+            NSLog(@"MEASUREMENTS : %@", [results measurements]);
+            
+            Station *station = [[results stations] firstObject];
+            Measurement *measurement = [results lastMeasurementForStation: station];
+            NSLog(@"STATION : %@", station);
+            NSLog(@"MEASUREMENT : %@", measurement);
+                        
+        }else{
+            NSLog(@"ERROR : %@", error);
+        }
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning

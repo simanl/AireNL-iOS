@@ -9,6 +9,10 @@
 #ifndef AireNL_Constants_h
 #define AireNL_Constants_h
 
+// BACKEND API
+
+static NSString *const kBaseURL = @"http://198.199.108.152:3000";
+
 // NSUserDefaults
 
 static NSString *const kHasShownGpsAlertKey = @"hasShownGpsAlertKey";

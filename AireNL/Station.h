@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #import <CoreLocation/CoreLocation.h>
+#import <Mantle/Mantle.h>
 
-@interface Station : NSObject
+@interface Station : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic) NSNumber *stationID;
 
@@ -18,7 +19,7 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *shortName;
 
-@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic) NSValue *coordinate;
 
 // RELATIONSHIPS
 

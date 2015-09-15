@@ -21,9 +21,9 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - CCMPopup (1.1.0)
-  - Mantle (2.0.4):
-    - Mantle/extobjc (= 2.0.4)
-  - Mantle/extobjc (2.0.4)
+  - Mantle (2.0.5):
+    - Mantle/extobjc (= 2.0.5)
+  - Mantle/extobjc (2.0.5)
   - TAOverlay (2.0.1)
 
 DEPENDENCIES:
@@ -35,7 +35,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
-  Mantle: 6bee68168423948be0c0c5924832bf3af188e099
+  Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
   TAOverlay: 940e37fdb45fbc9acfc73bf1089668367e3b1be6
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.38.2

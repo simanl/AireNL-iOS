@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Measurement : NSObject
+#import <Mantle/Mantle.h>
+
+@interface Measurement : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic) NSNumber *measurementID;
 
@@ -31,9 +33,5 @@
 @property (nonatomic) NSNumber *suspendedParticulateMatter;
 @property (nonatomic) NSNumber *respirableSuspendedParticles;
 @property (nonatomic) NSNumber *fineParticles;
-
-// RELATIONSHIPS
-
-@property (nonatomic) NSNumber *stationID;
 
 @end
