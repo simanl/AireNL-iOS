@@ -8,6 +8,8 @@
 
 #import "Measurement.h"
 
+#import "UIColor+ILColor.h"
+
 @implementation Measurement
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionaryValue error:(NSError **)error
@@ -61,6 +63,107 @@
         
     }
 
+}
+
+#pragma mark - Public API
+
+- (AirQualityDescriptor)airQuality
+{
+    if ([self.imecaPoints integerValue] == 0) {
+        return AirQualityDescriptorGood;
+    }else if ([self.imecaPoints integerValue] == 1) {
+        return AirQualityDescriptorRegular;
+    }else if ([self.imecaPoints integerValue] == 2) {
+        return AirQualityDescriptorBad;
+    }else if ([self.imecaPoints integerValue] == 3) {
+        return AirQualityDescriptorVeryBad;
+    }else{
+        return AirQualityDescriptorExtremelyBad;
+    }
+}
+
+- (NSString *)stringForAirQuality
+{
+    switch ([self airQuality]) {
+        case AirQualityDescriptorGood:
+            return NSLocalizedString(@"Good", nil);
+            break;
+        case AirQualityDescriptorRegular:
+            return NSLocalizedString(@"Regular", nil);
+            break;
+        case AirQualityDescriptorBad:
+            return NSLocalizedString(@"Bad", nil);
+            break;
+        case AirQualityDescriptorVeryBad:
+            return NSLocalizedString(@"Very Bad", nil);
+            break;
+        case AirQualityDescriptorExtremelyBad:
+            return NSLocalizedString(@"Extremely Bad", nil);
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
+
+- (UIColor *)colorForAirQuality
+{
+    switch ([self airQuality]) {
+        case AirQualityDescriptorGood:
+            return [UIColor il_goodColor];
+            break;
+        case AirQualityDescriptorRegular:
+            return [UIColor il_regularColor];
+            break;
+        case AirQualityDescriptorBad:
+            return [UIColor il_badColor];
+            break;
+        case AirQualityDescriptorVeryBad:
+            return [UIColor il_veryBadColor];
+            break;
+        case AirQualityDescriptorExtremelyBad:
+            return [UIColor il_extremelyBadColor];
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
+
+- (UIImage *)annotationImage
+{
+    return [self imageForType: [self airQuality]];
+}
+
+#pragma mark - Helper's
+
+- (UIImage *)imageForType:(AirQualityDescriptor)type
+{
+    switch (type) {
+        case AirQualityDescriptorGood:{
+            return [UIImage imageNamed: @"WaypointIconGood"];
+            break;
+        }
+        case AirQualityDescriptorRegular:{
+            return [UIImage imageNamed: @"WaypointIconRegular"];
+            break;
+        }
+        case AirQualityDescriptorBad:{
+            return [UIImage imageNamed: @"WaypointIconBad"];
+            break;
+        }
+        case AirQualityDescriptorVeryBad:{
+            return [UIImage imageNamed: @"WaypointIconVeryBad"];
+            break;
+        }
+        case AirQualityDescriptorExtremelyBad:{
+            return [UIImage imageNamed: @"WaypointIconExtremelyBad"];
+            break;
+        }
+        default:
+            return nil;
+            break;
+    }
 }
 
 @end

@@ -31,7 +31,11 @@
 #define STATUS_BAR_HEIGHT 16
 #define NAV_BAR_HEIGHT 54
 
-@interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+@interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic) BOOL loadingNearestStation;
+@property (nonatomic) BOOL isUsingGPS;
+@property (nonatomic) CLLocationManager *locationManager;
 
 @property (nonatomic) CurrentResults *currentResults;
 @property (nonatomic) PredictionResults *predictionResults;
@@ -51,8 +55,6 @@
 
 @property (nonatomic) InfoContainerViewController *infoViewController;
 
-@property (nonatomic) BOOL isUsingGPS;
-
 @end
 
 @implementation MainViewController
@@ -61,6 +63,9 @@
 {
     [super viewDidLoad];
     
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
     [self setBackgroundImages];
     [self addMotionEffectToBackground];
     
@@ -68,18 +73,46 @@
     [self addGestureRecognizers];
     [self registerNibs];
     
+//    [self loadNearestStation]; ??? being called currently by changed status method
+    
     [self loadAssets];
     [self updateScreen];
     
-    NSLog(@"LOADING STATIONS");
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Network
+
+- (void)loadNearestStation
+{
+    NSLog(@"LOADING NEAREST STATION");
     
-    [[AireNLAPI sharedAPI] getStationsWithCompletion:^(APIResults *results, NSError *error) {
+    if (self.loadingNearestStation) {
+        return;
+    }
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        [self askLocationPermision];
+        return;
+    }else if (status == kCLAuthorizationStatusDenied){
+        NSLog(@"WARNING: LOCATION TRACKING DENIED");
+        return;
+    }
+    
+    self.loadingNearestStation = YES;
+    
+    CLLocationCoordinate2D currentLocation = self.locationManager.location.coordinate;
+    
+    [[AireNLAPI sharedAPI] getNearestStationForCoordinate: currentLocation withCompletion:^(APIResults *results, NSError *error) {
         
-        if (!error) {
+        if (!error){
             
-            NSLog(@"SUCCESS!");
-//            NSLog(@"STATIONS : %@", [results stations]);
-//            NSLog(@"MEASUREMENTS : %@", [results measurements]);
+            NSLog(@"LOADED NEAREST STATION : SUCCESS!");
             
             Station *station = [[results stations] firstObject];
             Measurement *measurement = [results lastMeasurementForStation: station];
@@ -88,18 +121,86 @@
             
             CLLocationCoordinate2D coordinate = [station.coordinate MKCoordinateValue];
             NSLog(@"COORDINATE : LATITUDE=%f LONGITUDE=%f", coordinate.latitude, coordinate.longitude);
+
             
         }else{
-            NSLog(@"ERROR : %@", error);
+            NSLog(@"LOADING NEAREST STATION : ERROR = %@", error);
         }
+        
+        self.loadingNearestStation = NO;
         
     }];
     
 }
 
-- (void)didReceiveMemoryWarning
+- (void)loadAssets
 {
-    [super didReceiveMemoryWarning];
+//    [[AireNLAPI sharedAPI] getStationsWithCompletion:^(APIResults *results, NSError *error) {
+//        
+//        if (!error) {
+//            
+//            NSLog(@"SUCCESS!");
+//            //            NSLog(@"STATIONS : %@", [results stations]);
+//            //            NSLog(@"MEASUREMENTS : %@", [results measurements]);
+//            
+//            Station *station = [[results stations] firstObject];
+//            Measurement *measurement = [results lastMeasurementForStation: station];
+//            NSLog(@"STATION : %@", station);
+//            NSLog(@"MEASUREMENT : %@", measurement);
+//            
+//            CLLocationCoordinate2D coordinate = [station.coordinate MKCoordinateValue];
+//            NSLog(@"COORDINATE : LATITUDE=%f LONGITUDE=%f", coordinate.latitude, coordinate.longitude);
+//            
+//        }else{
+//            NSLog(@"ERROR : %@", error);
+//        }
+//        
+//    }];
+    
+    self.isUsingGPS = YES;
+    
+    CurrentResults *currentResults = [[CurrentResults alloc] init];
+    currentResults.date = [NSDate date];
+    currentResults.temperature = @(40);
+    currentResults.wind = @(140);
+    
+    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+    imecaResults.amount = @(40);
+    imecaResults.airQuality = AirQualityTypeGood;
+    currentResults.imeca = imecaResults;
+    
+    ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
+    contamintResults.pm10 = @(4);
+    contamintResults.pm25 = @(14);
+    contamintResults.O3 = @(40);
+    currentResults.contaminants = contamintResults;
+    
+    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
+    currentResults.location = location;
+    
+    self.currentResults = currentResults;
+    
+    ContaminantResults *periodOneContamintResults = [[ContaminantResults alloc] init];
+    periodOneContamintResults.pm10 = @(4);
+    periodOneContamintResults.pm25 = @(14);
+    periodOneContamintResults.O3 = @(40);
+    
+    ContaminantResults *periodTwoContamintResults = [[ContaminantResults alloc] init];
+    periodTwoContamintResults.pm10 = @(5);
+    periodTwoContamintResults.pm25 = @(15);
+    periodTwoContamintResults.O3 = @(50);
+    
+    ContaminantResults *periodThreeContamintResults = [[ContaminantResults alloc] init];
+    periodThreeContamintResults.pm10 = @(6);
+    periodThreeContamintResults.pm25 = @(16);
+    periodThreeContamintResults.O3 = @(60);
+    
+    PredictionResults *predictionResults = [[PredictionResults alloc] init];
+    predictionResults.periodOne = periodOneContamintResults;
+    predictionResults.periodTwo = periodTwoContamintResults;
+    predictionResults.periodThree = periodThreeContamintResults;
+    
+    self.predictionResults = predictionResults;
 }
 
 #pragma mark - Appearance / Initial Setup
@@ -224,56 +325,6 @@
     [self setBackgroundImages];
     
     self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
-}
-
-#pragma mark - Network
-
-- (void)loadAssets
-{
-    self.isUsingGPS = YES;
-    
-    CurrentResults *currentResults = [[CurrentResults alloc] init];
-    currentResults.date = [NSDate date];
-    currentResults.temperature = @(40);
-    currentResults.wind = @(140);
-    
-    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(40);
-    imecaResults.airQuality = AirQualityTypeGood;
-    currentResults.imeca = imecaResults;
-    
-    ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
-    contamintResults.pm10 = @(4);
-    contamintResults.pm25 = @(14);
-    contamintResults.O3 = @(40);
-    currentResults.contaminants = contamintResults;
-    
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-    currentResults.location = location;
-    
-    self.currentResults = currentResults;
-    
-    ContaminantResults *periodOneContamintResults = [[ContaminantResults alloc] init];
-    periodOneContamintResults.pm10 = @(4);
-    periodOneContamintResults.pm25 = @(14);
-    periodOneContamintResults.O3 = @(40);
-    
-    ContaminantResults *periodTwoContamintResults = [[ContaminantResults alloc] init];
-    periodTwoContamintResults.pm10 = @(5);
-    periodTwoContamintResults.pm25 = @(15);
-    periodTwoContamintResults.O3 = @(50);
-    
-    ContaminantResults *periodThreeContamintResults = [[ContaminantResults alloc] init];
-    periodThreeContamintResults.pm10 = @(6);
-    periodThreeContamintResults.pm25 = @(16);
-    periodThreeContamintResults.O3 = @(60);
-    
-    PredictionResults *predictionResults = [[PredictionResults alloc] init];
-    predictionResults.periodOne = periodOneContamintResults;
-    predictionResults.periodTwo = periodTwoContamintResults;
-    predictionResults.periodThree = periodThreeContamintResults;
-    
-    self.predictionResults = predictionResults;
 }
 
 #pragma mark - UIScrollView Delegate
@@ -417,13 +468,56 @@
 - (void)didSelectLocationWithCurrentResults:(CurrentResults *)results
 {
     self.isUsingGPS = NO;
-
+    
     self.currentResults = results;
     
     [self updateScreen];
     [self.collectionView reloadData];
     
     [self showFirstGpsUserAlert];
+}
+
+#pragma mark - CLLocationManager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+            [self askLocationPermision];
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            [self loadNearestStation];
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Location Helper's
+
+- (void)askLocationPermision
+{
+    NSLog(@"ASKING LOCATION PERMISSION");
+    [self.locationManager requestWhenInUseAuthorization];
+}
+
+- (void)showFirstGpsUserAlert
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsAlertKey];
+    
+    if (!hasShownGpsAlert) {
+        NSString *text = NSLocalizedString(@"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.", nil);
+        [self showAlertWithText: text];
+        
+        [userDefaults setBool: YES forKey: kHasShownGpsAlertKey];
+    }
+}
+
+- (void)showGpsAlreadyActivatedAlert
+{
+    NSString *text = NSLocalizedString(@"You are already using GPS to find the nearest station. If you want to change station use the map.", nil);
+    [self showAlertWithText: text];
 }
 
 #pragma mark - Helper's
@@ -535,25 +629,6 @@
             self.infoViewController.view.bounds = CGRectMake(0, 0, 300, self.infoViewController.regularHeight);
         }];
     }
-}
-
-- (void)showFirstGpsUserAlert
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsAlertKey];
-
-    if (!hasShownGpsAlert) {
-        NSString *text = NSLocalizedString(@"To go back to the default behavior of using GPS to find the nearest station press the icon in the top left corner.", nil);
-        [self showAlertWithText: text];
-    
-        [userDefaults setBool: YES forKey: kHasShownGpsAlertKey];
-    }
-}
-
-- (void)showGpsAlreadyActivatedAlert
-{
-    NSString *text = NSLocalizedString(@"You are already using GPS to find the nearest station. If you want to change station use the map.", nil);
-    [self showAlertWithText: text];
 }
 
 - (void)showAlertWithText:(NSString *)text

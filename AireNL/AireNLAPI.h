@@ -12,12 +12,13 @@
 #import "APIResults.h"
 
 typedef void (^CompletionBlock)(BOOL success, NSError *error);
-typedef void (^ArrayCompletionBlock)(APIResults *results, NSError *error);
+typedef void (^ResultCompletionBlock)(APIResults *results, NSError *error);
 
 @interface AireNLAPI : AFHTTPSessionManager
 
 + (id)sharedAPI;
 
-- (void)getStationsWithCompletion:(ArrayCompletionBlock)completion;
+- (void)getStationsWithCompletion:(ResultCompletionBlock)completion;
+- (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion: (ResultCompletionBlock)completion;
 
 @end

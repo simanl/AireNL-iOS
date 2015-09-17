@@ -8,6 +8,8 @@
 
 #import "Station.h"
 
+#import "Measurement.h"
+
 @implementation Station
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionaryValue error:(NSError **)error
