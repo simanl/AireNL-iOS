@@ -33,16 +33,31 @@
 
 @interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, CLLocationManagerDelegate>
 
-@property (nonatomic) BOOL loadingNearestStation;
+// MAIN, LOCATION
+
 @property (nonatomic) BOOL isUsingGPS;
+@property (nonatomic) BOOL loadingStation;
 @property (nonatomic) CLLocationManager *locationManager;
+
+// MODEL DATA
+
+@property (nonatomic) Station *selectedStation;
+@property (nonatomic) Measurement *selectedMeasurement;
 
 @property (nonatomic) CurrentResults *currentResults;
 @property (nonatomic) PredictionResults *predictionResults;
 
+// TABLE, SCROLL VIEW, POPUP
+
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
+
+@property (nonatomic) CGFloat previousScrollViewYOffset;
+
+@property (nonatomic) InfoContainerViewController *infoViewController;
+
+// BACKGROUND
 
 @property (nonatomic) BOOL backgroundHasBlur;
 @property (nonatomic) UIImage *normalBackground;
@@ -50,10 +65,6 @@
 
 @property (nonatomic) NSUInteger selectedBackgroundIndex;
 @property (nonatomic) NSArray *backgroundImageNames;
-
-@property (nonatomic) CGFloat previousScrollViewYOffset;
-
-@property (nonatomic) InfoContainerViewController *infoViewController;
 
 @end
 
@@ -91,7 +102,7 @@
 {
     NSLog(@"LOADING NEAREST STATION");
     
-    if (self.loadingNearestStation) {
+    if (self.loadingStation) {
         return;
     }
     
@@ -100,11 +111,13 @@
         [self askLocationPermision];
         return;
     }else if (status == kCLAuthorizationStatusDenied){
-        NSLog(@"WARNING: LOCATION TRACKING DENIED");
+        NSLog(@"LOCATION TRACKING DENIED");
+        [self loadDefaultStation];
         return;
     }
     
-    self.loadingNearestStation = YES;
+    self.isUsingGPS = YES;
+    self.loadingStation = YES;
     
     CLLocationCoordinate2D currentLocation = self.locationManager.location.coordinate;
     
@@ -114,49 +127,29 @@
             
             NSLog(@"LOADED NEAREST STATION : SUCCESS!");
             
-            Station *station = [[results stations] firstObject];
-            Measurement *measurement = [results lastMeasurementForStation: station];
-            NSLog(@"STATION : %@", station);
-            NSLog(@"MEASUREMENT : %@", measurement);
+            self.selectedStation = [[results stations] firstObject];
+            self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
             
-            CLLocationCoordinate2D coordinate = [station.coordinate MKCoordinateValue];
-            NSLog(@"COORDINATE : LATITUDE=%f LONGITUDE=%f", coordinate.latitude, coordinate.longitude);
-
+            NSLog(@"STATION : %@", self.selectedStation);
+            NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
             
         }else{
             NSLog(@"LOADING NEAREST STATION : ERROR = %@", error);
         }
         
-        self.loadingNearestStation = NO;
+        self.loadingStation = NO;
         
     }];
     
 }
 
+- (void)loadDefaultStation
+{
+    NSLog(@"LOADING DEFAULT STATION");
+}
+
 - (void)loadAssets
 {
-//    [[AireNLAPI sharedAPI] getStationsWithCompletion:^(APIResults *results, NSError *error) {
-//        
-//        if (!error) {
-//            
-//            NSLog(@"SUCCESS!");
-//            //            NSLog(@"STATIONS : %@", [results stations]);
-//            //            NSLog(@"MEASUREMENTS : %@", [results measurements]);
-//            
-//            Station *station = [[results stations] firstObject];
-//            Measurement *measurement = [results lastMeasurementForStation: station];
-//            NSLog(@"STATION : %@", station);
-//            NSLog(@"MEASUREMENT : %@", measurement);
-//            
-//            CLLocationCoordinate2D coordinate = [station.coordinate MKCoordinateValue];
-//            NSLog(@"COORDINATE : LATITUDE=%f LONGITUDE=%f", coordinate.latitude, coordinate.longitude);
-//            
-//        }else{
-//            NSLog(@"ERROR : %@", error);
-//        }
-//        
-//    }];
-    
     self.isUsingGPS = YES;
     
     CurrentResults *currentResults = [[CurrentResults alloc] init];
@@ -308,10 +301,10 @@
         return;
     }
     
-    [self loadAssets];
+    [self loadNearestStation];
     
-    [self updateScreen];
-    [self.collectionView reloadData];
+//    [self updateScreen];
+//    [self.collectionView reloadData];
 }
 
 - (void)userDidSelectSwitchBackground
@@ -470,6 +463,19 @@
     self.isUsingGPS = NO;
     
     self.currentResults = results;
+    
+    [self updateScreen];
+    [self.collectionView reloadData];
+    
+    [self showFirstGpsUserAlert];
+}
+
+- (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement
+{
+    self.isUsingGPS = NO;
+    
+    self.selectedStation = station;
+    self.selectedMeasurement = measurement;
     
     [self updateScreen];
     [self.collectionView reloadData];
