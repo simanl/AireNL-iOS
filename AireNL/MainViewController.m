@@ -153,6 +153,7 @@
     }else if (status == kCLAuthorizationStatusDenied){
         NSLog(@"LOCATION TRACKING DENIED");
         [self loadDefaultStation];
+        // POPUP SAYING THAT THEY NEED TO GO INTO SETTINGS AND GIVE PERMISSION !
         NSLog(@"ABORTED");
         return;
     }
@@ -284,6 +285,15 @@
     [self.collectionView reloadData];
 }
 
+- (void)setGpsButtonOpacity
+{
+    if ([self isUsingGPS]) {
+        self.gpsButton.alpha = 1.0f;
+    }else{
+        self.gpsButton.alpha = 0.5f;
+    }
+}
+
 - (void)setBackgroundImages
 {
     NSString *backgroundImageName = self.backgroundImageNames[self.selectedBackgroundIndex];
@@ -375,8 +385,6 @@
     
     [self loadNearestStation];
     
-//    [self updateScreen];
-//    [self.collectionView reloadData];
 }
 
 - (void)userDidSelectSwitchBackground
@@ -530,17 +538,17 @@
 
 #pragma mark - MapViewController Delegate
 
-- (void)didSelectLocationWithCurrentResults:(CurrentResults *)results
-{
-    self.isUsingGPS = NO;
-    
-    self.currentResults = results;
-    
-    [self updateScreen];
-    [self.collectionView reloadData];
-    
-    [self showFirstGpsUserAlert];
-}
+//- (void)didSelectLocationWithCurrentResults:(CurrentResults *)results
+//{
+//    self.isUsingGPS = NO;
+//    
+//    self.currentResults = results;
+//    
+//    [self updateScreen];
+//    [self.collectionView reloadData];
+//    
+//    [self showFirstGpsUserAlert];
+//}
 
 - (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement
 {
@@ -564,6 +572,7 @@
             [self askLocationPermision];
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
+            // DO SOMETHING ABOUT THIS , NEEDS TO BE CALLED BUT MAY INTERFERE WHEN NOT USING GPS
 //            [self loadNearestStation];
             break;
         default:
@@ -588,15 +597,6 @@
 {
     [[NSUserDefaults standardUserDefaults] setBool: isUsing forKey: kIsUsingGpsKey];
     [self setGpsButtonOpacity];
-}
-         
-- (void)setGpsButtonOpacity
-{
-    if ([self isUsingGPS]) {
-        self.gpsButton.alpha = 1.0f;
-    }else{
-        self.gpsButton.alpha = 0.5f;
-    }
 }
 
 - (void)showFirstGpsUserAlert
@@ -627,8 +627,7 @@
     [UIView animateWithDuration: 0.2 animations:^{
         self.collectionView.contentOffset = topPoint;
     }];
-    
-    //    [self.collectionView setContentOffset: topPoint animated: YES];
+
 }
 
 - (CGFloat)getCellHeightsTotalWithLimit:(NSInteger)limit
