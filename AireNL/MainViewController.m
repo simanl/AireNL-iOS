@@ -35,7 +35,6 @@
 
 // MAIN, LOCATION
 
-@property (nonatomic) BOOL isUsingGPS;
 @property (nonatomic) BOOL loadingStation;
 @property (nonatomic) CLLocationManager *locationManager;
 
@@ -74,6 +73,8 @@
 {
     [super viewDidLoad];
     
+    [self cacheLoadData];
+    
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     
@@ -84,11 +85,7 @@
     [self addGestureRecognizers];
     [self registerNibs];
     
-//    [self loadNearestStation]; ??? being called currently by changed status method
-    
-    [self loadAssets];
-    [self updateScreen];
-    
+    [self loadStation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,25 +93,71 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Persistance
+
+- (void)cacheLoadData
+{
+    NSLog(@"CACHE : LOADING DATA");
+    
+    NSData *stationData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedStationKey];
+    NSData *measurementData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedMeasurementKey];
+    
+    Station *station = [NSKeyedUnarchiver unarchiveObjectWithData: stationData];
+    Measurement *measurement = [NSKeyedUnarchiver unarchiveObjectWithData: measurementData];
+    
+    NSLog(@"CACHED STATION : %@", station);
+    NSLog(@"CACHED MEASUREMENT: %@", measurement);
+    
+    self.selectedStation = station;
+    self.selectedMeasurement = measurement;
+    
+    [self updateScreen];
+}
+
+- (void)cacheSaveData
+{
+    NSLog(@"CACHE : SAVING DATA");
+    
+    NSData *stationData = [NSKeyedArchiver archivedDataWithRootObject: self.selectedStation];
+    NSData *measurementData = [NSKeyedArchiver archivedDataWithRootObject: self.selectedMeasurement];
+    
+    [[NSUserDefaults standardUserDefaults] setObject: stationData forKey: kCachedStationKey];
+    [[NSUserDefaults standardUserDefaults] setObject: measurementData forKey: kCachedMeasurementKey];
+}
+
 #pragma mark - Network
+
+- (void)loadStation
+{
+    if ([self isUsingGPS]) {
+        [self loadNearestStation];
+    }else{
+        [self loadCurrentStation];
+    }
+}
 
 - (void)loadNearestStation
 {
-    NSLog(@"LOADING NEAREST STATION");
+    NSLog(@"ATTEMPTING : LOAD NEAREST STATION");
     
     if (self.loadingStation) {
+        NSLog(@"ABORTED");
         return;
     }
     
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if (status == kCLAuthorizationStatusNotDetermined) {
         [self askLocationPermision];
+        NSLog(@"ABORTED");
         return;
     }else if (status == kCLAuthorizationStatusDenied){
         NSLog(@"LOCATION TRACKING DENIED");
         [self loadDefaultStation];
+        NSLog(@"ABORTED");
         return;
     }
+    
+    NSLog(@"LOADING NEAREST STATION");
     
     self.isUsingGPS = YES;
     self.loadingStation = YES;
@@ -122,30 +165,55 @@
     CLLocationCoordinate2D currentLocation = self.locationManager.location.coordinate;
     
     [[AireNLAPI sharedAPI] getNearestStationForCoordinate: currentLocation withCompletion:^(APIResults *results, NSError *error) {
-        
-        if (!error){
-            
-            NSLog(@"LOADED NEAREST STATION : SUCCESS!");
-            
-            self.selectedStation = [[results stations] firstObject];
-            self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
-            
-            NSLog(@"STATION : %@", self.selectedStation);
-            NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
-            
-        }else{
-            NSLog(@"LOADING NEAREST STATION : ERROR = %@", error);
-        }
-        
+        [self handleResults: results withError: error];
         self.loadingStation = NO;
-        
     }];
     
+}
+
+- (void)loadCurrentStation
+{
+    NSLog(@"LOADING CURRENT STATION");
+    
+    if (self.selectedStation) {
+        
+        [[AireNLAPI sharedAPI] getStationWithId: self.selectedStation.stationID withCompletion:^(APIResults *results, NSError *error) {
+            [self handleResults: results withError: error];
+        }];
+        
+    }else{
+        [self loadDefaultStation];
+    }
 }
 
 - (void)loadDefaultStation
 {
     NSLog(@"LOADING DEFAULT STATION");
+    
+    [[AireNLAPI sharedAPI] getDefaultStationWithCompletion:^(APIResults *results, NSError *error) {
+        [self handleResults: results withError: error];
+    }];
+    
+}
+
+- (void)handleResults:(APIResults *)results withError:(NSError *)error
+{
+    if (!error){
+        
+        NSLog(@"SUCCESS!");
+        
+        self.selectedStation = [[results stations] firstObject];
+        self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
+        
+        NSLog(@"STATION : %@", self.selectedStation);
+        NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
+        
+        [self cacheSaveData];
+        [self updateScreen];
+        
+    }else{
+        NSLog(@"ERROR = %@", error);
+    }
 }
 
 - (void)loadAssets
@@ -210,6 +278,10 @@
 {
     self.titleLabel.text = [self.currentResults.location.cityName uppercaseString];
     self.stationLabel.text = [self.currentResults.location.areaName uppercaseString];
+    
+    [self setGpsButtonOpacity];
+    
+    [self.collectionView reloadData];
 }
 
 - (void)setBackgroundImages
@@ -492,7 +564,7 @@
             [self askLocationPermision];
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
-            [self loadNearestStation];
+//            [self loadNearestStation];
             break;
         default:
             break;
@@ -505,6 +577,26 @@
 {
     NSLog(@"ASKING LOCATION PERMISSION");
     [self.locationManager requestWhenInUseAuthorization];
+}
+
+- (BOOL)isUsingGPS
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey: kIsUsingGpsKey];
+}
+
+- (void)setIsUsingGPS:(BOOL)isUsing
+{
+    [[NSUserDefaults standardUserDefaults] setBool: isUsing forKey: kIsUsingGpsKey];
+    [self setGpsButtonOpacity];
+}
+         
+- (void)setGpsButtonOpacity
+{
+    if ([self isUsingGPS]) {
+        self.gpsButton.alpha = 1.0f;
+    }else{
+        self.gpsButton.alpha = 0.5f;
+    }
 }
 
 - (void)showFirstGpsUserAlert
@@ -643,17 +735,6 @@
 }
 
 #pragma mark - Set/Get
-
-- (void)setIsUsingGPS:(BOOL)isUsingGPS
-{
-    _isUsingGPS = isUsingGPS;
-    
-    if (isUsingGPS) {
-        self.gpsButton.alpha = 1.0f;
-    }else{
-        self.gpsButton.alpha = 0.5f;
-    }
-}
 
 - (NSArray *)cellHeights
 {

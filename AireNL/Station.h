@@ -20,7 +20,9 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *shortName;
 
-@property (nonatomic) NSValue *coordinate;
+@property (nonatomic) NSString *coordinateString;
+
+- (CLLocationCoordinate2D)coordinate;
 
 // RELATIONSHIPS
 

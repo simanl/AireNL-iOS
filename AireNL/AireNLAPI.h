@@ -19,6 +19,10 @@ typedef void (^ResultCompletionBlock)(APIResults *results, NSError *error);
 + (id)sharedAPI;
 
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion;
-- (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion: (ResultCompletionBlock)completion;
+
+- (void)getDefaultStationWithCompletion:(ResultCompletionBlock)completion;
+- (void)getStationWithId:(NSNumber *)stationID withCompletion:(ResultCompletionBlock)completion;
+
+- (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion:(ResultCompletionBlock)completion;
 
 @end

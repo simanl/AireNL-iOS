@@ -13,6 +13,8 @@
 
 @implementation AireNLAPI
 
+#pragma mark - Init
+
 + (id)sharedAPI
 {
     static AireNLAPI *__instance;
@@ -30,6 +32,8 @@
     return __instance;
 }
 
+#pragma mark - Public API
+
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion
 {
     NSDictionary *params = @{@"include" : @"last_measurement"};
@@ -43,6 +47,26 @@
         completion(nil, error);
     }];
     
+}
+
+- (void)getDefaultStationWithCompletion:(ResultCompletionBlock)completion
+{
+    [self getStationWithId: @(1) withCompletion: completion];
+}
+
+- (void)getStationWithId:(NSNumber *)stationID withCompletion:(ResultCompletionBlock)completion
+{
+    NSDictionary *params = @{@"include" : @"last_measurement"};
+    NSString *url = [NSString stringWithFormat: @"/stations/%@", stationID];
+    
+    [self GET: url parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        
+        APIResults *results = [self resultsForResponseObject: responseObject];
+        completion(results, nil);
+        
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
 }
 
 - (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion:(ResultCompletionBlock)completion

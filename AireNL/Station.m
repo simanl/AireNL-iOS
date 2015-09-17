@@ -27,7 +27,7 @@
          @"code" : @"attributes.code",
          @"name" : @"attributes.name",
          @"shortName" : @"attributes.short_name",
-         @"coordinate" : @"attributes.latlon",
+         @"coordinateString" : @"attributes.latlon",
          @"lastMeasurementID" : @"relationships.last_measurement.data.id"
     };
 }
@@ -54,24 +54,41 @@
     
 }
 
-+ (NSValueTransformer *)coordinateJSONTransformer
+//+ (NSValueTransformer *)coordinateJSONTransformer
+//{
+//    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *coordinateString, BOOL *success, NSError *__autoreleasing *error) {
+//
+//        NSArray *separatedString = [coordinateString componentsSeparatedByString: @","];
+//
+//        NSString *latitude = separatedString[0];
+//        NSString *longitude = separatedString[1];
+//
+//        CLLocationDegrees lat = [latitude doubleValue];
+//        CLLocationDegrees lon = [longitude doubleValue];
+//
+//        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
+//        NSValue *value = [NSValue valueWithBytes: &coordinate objCType: @encode(CLLocationCoordinate2D)];
+//
+//        return value;
+//
+//    }];
+//}
+
+#pragma mark - Public API
+
+- (CLLocationCoordinate2D)coordinate
 {
-    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *coordinateString, BOOL *success, NSError *__autoreleasing *error) {
-        
-        NSArray *separatedString = [coordinateString componentsSeparatedByString: @","];
-        
-        NSString *latitude = separatedString[0];
-        NSString *longitude = separatedString[1];
-        
-        CLLocationDegrees lat = [latitude doubleValue];
-        CLLocationDegrees lon = [longitude doubleValue];
-        
-        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
-        NSValue *value = [NSValue valueWithBytes: &coordinate objCType: @encode(CLLocationCoordinate2D)];
-        
-        return value;
-        
-    }];
+    NSArray *separatedString = [self.coordinateString componentsSeparatedByString: @","];
+
+    NSString *latitude = separatedString[0];
+    NSString *longitude = separatedString[1];
+
+    CLLocationDegrees lat = [latitude doubleValue];
+    CLLocationDegrees lon = [longitude doubleValue];
+
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
+    
+    return coordinate;
 }
 
 @end
