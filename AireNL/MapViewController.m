@@ -15,7 +15,11 @@
 #import "ILAnnotationView.h"
 #import "UIColor+ILColor.h"
 
+#import "AireNLAPI.h"
+
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+
+@property (nonatomic) APIResults *stationsAPIResults;
 
 @property (nonatomic) CLLocationManager *locationManager;
 
@@ -41,27 +45,16 @@
     self.title = NSLocalizedString(@"Measurement Stations", nil);
     self.navigationItem.leftBarButtonItem = self.doneButton;
 
-    [self setUpLocationManager];
-    [self setNavBarImageWithType: self.type];
-    
-    
-    CLLocationCoordinate2D monterreyCenter = CLLocationCoordinate2DMake(25.670104, -100.309675);
-    CLLocationDistance latitudeDistance = 50000;
-    CLLocationDistance longitudeDistance = 50000;
-    MKCoordinateRegion monterreyRegion = MKCoordinateRegionMakeWithDistance(monterreyCenter, latitudeDistance, longitudeDistance);
-    self.monterreyRect = [self MKMapRectForCoordinateRegion: monterreyRegion];
-    
-    [self.mapView setCenterCoordinate: monterreyCenter zoomLevel: 5 animated: YES];
-    [self addAnnotations];
-    
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
+    
+    [self setUpLocationManager];
+    [self setNavBarImageWithType: self.type];
 
-    // "Zoom" to a coordinate
-    //    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(monterreyCenter, 100, 100);
-    //    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits: viewRegion];
-    //    [self.mapView setRegion: adjustedRegion animated: YES];
-
+    [self loadStations];
+    [self zoomToMonterrey];
+    [self addAnnotations];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +62,49 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Network
+
+- (void)loadStations
+{
+    [[AireNLAPI sharedAPI] getStationsWithCompletion:^(APIResults *results, NSError *error) {
+        
+        if (!error) {
+            
+            self.stationsAPIResults = results;
+            
+        }else{
+            NSLog(@"ERROR : %@", error);
+        }
+        
+    }];
+}
+
+#pragma mark - Appearance
+
+- (void)setNavBarImageWithType:(MapViewControllerNavBarType)type
+{
+    NSString *imageName;
+    switch (type) {
+        case MapViewControllerNavBarTypeDay:
+            imageName = @"NavBarDay";
+            break;
+        case MapViewControllerNavBarTypeSunset:
+            imageName = @"NavBarSunset";
+            break;
+        case MapViewControllerNavBarTypeNight:
+            imageName = @"NavBarNight";
+            break;
+        default:
+            return;
+            break;
+    }
+    
+    UIImage *navBarImage = [UIImage imageNamed: imageName];
+    [self.navigationController.navigationBar setBackgroundImage: navBarImage forBarMetrics: UIBarMetricsDefault];
+}
+
+#pragma mark - IBAction's
 
 - (void)didSelectDone
 {
@@ -105,27 +141,7 @@
     
 }
 
-- (void)setNavBarImageWithType:(MapViewControllerNavBarType)type
-{    
-    NSString *imageName;
-    switch (type) {
-        case MapViewControllerNavBarTypeDay:
-            imageName = @"NavBarDay";
-            break;
-        case MapViewControllerNavBarTypeSunset:
-            imageName = @"NavBarSunset";
-            break;
-        case MapViewControllerNavBarTypeNight:
-            imageName = @"NavBarNight";
-            break;
-        default:
-            return;
-            break;
-    }
-    
-    UIImage *navBarImage = [UIImage imageNamed: imageName];
-    [self.navigationController.navigationBar setBackgroundImage: navBarImage forBarMetrics: UIBarMetricsDefault];
-}
+#pragma mark - Map/Location
 
 - (void)setUpLocationManager
 {
@@ -156,6 +172,17 @@
 {
     self.mapView.showsUserLocation = YES;
 //    [self.mapView setUserTrackingMode: MKUserTrackingModeFollow];
+}
+
+- (void)zoomToMonterrey
+{
+    CLLocationCoordinate2D monterreyCenter = CLLocationCoordinate2DMake(25.670104, -100.309675);
+    CLLocationDistance latitudeDistance = 50000;
+    CLLocationDistance longitudeDistance = 50000;
+    MKCoordinateRegion monterreyRegion = MKCoordinateRegionMakeWithDistance(monterreyCenter, latitudeDistance, longitudeDistance);
+    self.monterreyRect = [self MKMapRectForCoordinateRegion: monterreyRegion];
+    
+    [self.mapView setCenterCoordinate: monterreyCenter zoomLevel: 5 animated: YES];
 }
 
 #pragma mark - CLLocationManager Delegate

@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Station.h"
+#import "Measurement.h"
+
 #import "CurrentResults.h"
 #import "PredictionResults.h"
 
 @protocol ResultsCellDelegate <NSObject>
+
+- (Station *)getSelectedStation;
+- (Measurement *)getSelectedMeasurement;
 
 - (CurrentResults *)getCurrentResults;
 - (PredictionResults *)getPredictionResults;

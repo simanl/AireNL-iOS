@@ -14,8 +14,11 @@
 
 - (void)updateCell
 {
-    CurrentResults *currentResults = [self.delegate getCurrentResults];
-    self.temperatureLabel.text = [currentResults.temperature stringValue];
+    Measurement *measurement = [self.delegate getSelectedMeasurement];
+    
+    NSNumber *temperature = measurement.temperature ?: @(0);
+    
+    self.temperatureLabel.text = [temperature stringValue];
 }
 
 @end

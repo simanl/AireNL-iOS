@@ -73,6 +73,7 @@
 {
     [super viewDidLoad];
     
+    [self loadFakeData];
     [self cacheLoadData];
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -217,31 +218,8 @@
     }
 }
 
-- (void)loadAssets
+- (void)loadFakeData
 {
-    self.isUsingGPS = YES;
-    
-    CurrentResults *currentResults = [[CurrentResults alloc] init];
-    currentResults.date = [NSDate date];
-    currentResults.temperature = @(40);
-    currentResults.wind = @(140);
-    
-    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(40);
-    imecaResults.airQuality = AirQualityTypeGood;
-    currentResults.imeca = imecaResults;
-    
-    ContaminantResults *contamintResults = [[ContaminantResults alloc] init];
-    contamintResults.pm10 = @(4);
-    contamintResults.pm25 = @(14);
-    contamintResults.O3 = @(40);
-    currentResults.contaminants = contamintResults;
-    
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey" areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-    currentResults.location = location;
-    
-    self.currentResults = currentResults;
-    
     ContaminantResults *periodOneContamintResults = [[ContaminantResults alloc] init];
     periodOneContamintResults.pm10 = @(4);
     periodOneContamintResults.pm25 = @(14);
@@ -277,9 +255,9 @@
 
 - (void)updateScreen
 {
-    self.titleLabel.text = [self.currentResults.location.cityName uppercaseString];
-    self.stationLabel.text = [self.currentResults.location.areaName uppercaseString];
-    
+    self.titleLabel.text = @"MONTERREY";
+    self.stationLabel.text = [self.selectedStation.name uppercaseString];
+        
     [self setGpsButtonOpacity];
     
     [self.collectionView reloadData];
@@ -508,14 +486,19 @@
 
 #pragma mark - ResultsCellDelegate
 
-- (CurrentResults *)getCurrentResults
-{
-    return self.currentResults;
-}
-
 - (PredictionResults *)getPredictionResults
 {
     return self.predictionResults;
+}
+
+- (Station *)getSelectedStation
+{
+    return self.selectedStation;
+}
+
+- (Measurement *)getSelectedMeasurement
+{
+    return self.selectedMeasurement;
 }
 
 - (void)didSelectInfoAtCell:(UICollectionViewCell *)cell

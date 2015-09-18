@@ -33,7 +33,9 @@
     }
     
     __stations = [NSDictionary dictionaryWithDictionary: tempStations];
-    __measurements = [NSDictionary dictionaryWithDictionary: tempMeasurements];
+    if (tempMeasurements) {
+        __measurements = [NSDictionary dictionaryWithDictionary: tempMeasurements];
+    }
     
     return self;
 }

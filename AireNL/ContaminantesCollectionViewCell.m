@@ -14,10 +14,16 @@
 
 - (void)updateCell
 {
-    CurrentResults *currentResults = [self.delegate getCurrentResults];
-    self.contaminante10Label.text = [currentResults.contaminants.pm10 stringValue];
-    self.contaminante25Label.text = [currentResults.contaminants.pm25 stringValue];
-    self.contaminante03Label.text = [currentResults.contaminants.O3 stringValue];
+    Measurement *measurement = [self.delegate getSelectedMeasurement];
+    
+    NSNumber *pm10 = measurement.suspendedParticulateMatter ?: @(0);
+    NSNumber *pm25 = measurement.fineParticles ?: @(0);
+    NSNumber *O3 = measurement.ozone ?: @(0);
+    
+    self.contaminante10Label.text = [pm10 stringValue];
+    self.contaminante25Label.text = [pm25 stringValue];
+    self.contaminante03Label.text = [O3 stringValue];
+
 }
 
 @end

@@ -14,8 +14,11 @@
 
 - (void)updateCell
 {
-    CurrentResults *currentResults = [self.delegate getCurrentResults];
-    self.windLabel.text = [currentResults.wind stringValue];
+    Measurement *measurement = [self.delegate getSelectedMeasurement];
+    
+    NSNumber *windSpeed = measurement.windSpeed ?: @(0);
+    
+    self.windLabel.text = [windSpeed stringValue];
 }
 
 @end
