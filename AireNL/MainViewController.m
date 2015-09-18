@@ -521,24 +521,14 @@
 
 #pragma mark - MapViewController Delegate
 
-//- (void)didSelectLocationWithCurrentResults:(CurrentResults *)results
-//{
-//    self.isUsingGPS = NO;
-//    
-//    self.currentResults = results;
-//    
-//    [self updateScreen];
-//    [self.collectionView reloadData];
-//    
-//    [self showFirstGpsUserAlert];
-//}
-
 - (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement
 {
     self.isUsingGPS = NO;
     
     self.selectedStation = station;
     self.selectedMeasurement = measurement;
+    
+    [self cacheSaveData];
     
     [self updateScreen];
     [self.collectionView reloadData];

@@ -40,6 +40,7 @@
     
     [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
+        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
         APIResults *results = [self resultsForResponseObject: responseObject];
         completion(results, nil);
         
@@ -61,7 +62,7 @@
     
     [self GET: url parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
-        APIResults *results = [self resultsForResponseObject: responseObject];
+        APIResults *results = [self resultsForSingleResponseObject: responseObject];
         completion(results, nil);
         
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
@@ -79,6 +80,7 @@
     
     [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
+        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
         APIResults *results = [self resultsForResponseObject: responseObject];
         completion(results, nil);
         
@@ -88,6 +90,33 @@
 }
 
 #pragma mark - Helper's
+
+- (APIResults *)resultsForSingleResponseObject:(NSDictionary *)responseObject
+{
+    NSDictionary *stationDict = responseObject[@"data"];
+//    NSDictionary *measurementDict = responseObject[@"included"];
+    
+    NSError *stationError = nil;
+    Station *station = [MTLJSONAdapter modelOfClass: Station.class
+                                 fromJSONDictionary: stationDict
+                                              error: &stationError];
+    if (stationError) {
+        NSLog(@"MANTLE PARSE ERROR : %@", stationError);
+        return nil;
+    }
+    
+//    NSError *measurementError = nil;
+//    Measurement *measurement = [MTLJSONAdapter modelOfClass: Measurement.class
+//                                         fromJSONDictionary: measurementDict
+//                                                      error: &measurementError];
+//    if (measurementError) {
+//        NSLog(@"MANTLE PARSE ERROR : %@", measurementError);
+//        return nil;
+//    }
+    
+    return [[APIResults alloc] initWithStations: @[station] measurements: nil];
+
+}
 
 - (APIResults *)resultsForResponseObject:(NSDictionary *)responseObject
 {

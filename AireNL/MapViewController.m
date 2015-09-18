@@ -119,6 +119,8 @@
         
         if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
             Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
+            NSLog(@"STATION : %@", self.selectedStation);
+            NSLog(@"MEASUREMENT : %@", measurement);
             [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
         }
         
