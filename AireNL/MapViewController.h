@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CurrentResults.h"
+#import "Station.h"
+#import "Measurement.h"
 
 typedef NS_ENUM(NSInteger, MapViewControllerNavBarType){
     MapViewControllerNavBarTypeNight = 0,
@@ -18,7 +19,7 @@ typedef NS_ENUM(NSInteger, MapViewControllerNavBarType){
 
 @protocol MapViewControllerDelegate <NSObject>
 
-- (void)didSelectLocationWithCurrentResults:(CurrentResults *)results;
+- (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement;
 
 @end
 

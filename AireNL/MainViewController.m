@@ -257,7 +257,7 @@
 {
     self.titleLabel.text = @"MONTERREY";
     self.stationLabel.text = [self.selectedStation.name uppercaseString];
-        
+    
     [self setGpsButtonOpacity];
     
     [self.collectionView reloadData];

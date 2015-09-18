@@ -76,7 +76,7 @@
 
 #pragma mark - Public API
 
-- (CLLocationCoordinate2D)coordinate
+- (CLLocationCoordinate2D)coordinateFromString
 {
     NSArray *separatedString = [self.coordinateString componentsSeparatedByString: @","];
 
@@ -89,6 +89,23 @@
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
     
     return coordinate;
+}
+
+#pragma mark - MKAnnotation Protocol
+
+- (NSString *)title
+{
+    return self.name;
+}
+
+- (NSString *)subtitle
+{
+    return self.shortName;
+}
+
+- (CLLocationCoordinate2D)coordinate
+{
+    return [self coordinateFromString];
 }
 
 @end

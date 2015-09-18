@@ -10,9 +10,10 @@
 #import <UIKit/UIKit.h>
 
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 #import <Mantle/Mantle.h>
 
-@interface Station : MTLModel <MTLJSONSerializing>
+@interface Station : MTLModel <MTLJSONSerializing, MKAnnotation>
 
 @property (nonatomic) NSNumber *stationID;
 

@@ -130,7 +130,7 @@
     }
 }
 
-- (UIImage *)annotationImage
+- (UIImage *)mapAnnotationImageForAirQuality
 {
     return [self imageForType: [self airQuality]];
 }
