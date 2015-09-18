@@ -33,8 +33,9 @@
 
 @interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, CLLocationManagerDelegate>
 
-// MAIN, LOCATION
+// LOCATION
 
+@property (nonatomic) BOOL gettingLocation;
 @property (nonatomic) BOOL loadingStation;
 @property (nonatomic) CLLocationManager *locationManager;
 
@@ -78,6 +79,8 @@
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     [self setBackgroundImages];
     [self addMotionEffectToBackground];
@@ -106,9 +109,6 @@
     Station *station = [NSKeyedUnarchiver unarchiveObjectWithData: stationData];
     Measurement *measurement = [NSKeyedUnarchiver unarchiveObjectWithData: measurementData];
     
-    NSLog(@"CACHED STATION : %@", station);
-    NSLog(@"CACHED MEASUREMENT: %@", measurement);
-    
     self.selectedStation = station;
     self.selectedMeasurement = measurement;
     
@@ -130,6 +130,7 @@
 
 - (void)loadStation
 {
+    // TO DO : IS USING GPS = YES SHOULD BE THE DEFAULT, AND IT IS NOT RIGHT NOW
     if ([self isUsingGPS]) {
         [self loadNearestStation];
     }else{
@@ -139,48 +140,61 @@
 
 - (void)loadNearestStation
 {
-    NSLog(@"ATTEMPTING : LOAD NEAREST STATION");
+    NSLog(@"LOAD NEAREST STATION : ATTEMPTING");
     
-    if (self.loadingStation) {
-        NSLog(@"ABORTED");
+    if (self.gettingLocation) {
+        NSLog(@"LOAD NEAREST STATION : ABORTED");
         return;
     }
     
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if (status == kCLAuthorizationStatusNotDetermined) {
         [self askLocationPermision];
-        NSLog(@"ABORTED");
+        NSLog(@"LOAD NEAREST STATION : PERMISSION NOT DETERMINED : ABORTED");
         return;
     }else if (status == kCLAuthorizationStatusDenied){
-        NSLog(@"LOCATION TRACKING DENIED");
+        NSLog(@"LOAD NEAREST STATION : PERMISSION DENIED : ABORTED");
         [self loadDefaultStation];
         // POPUP SAYING THAT THEY NEED TO GO INTO SETTINGS AND GIVE PERMISSION !
-        NSLog(@"ABORTED");
         return;
     }
     
-    NSLog(@"LOADING NEAREST STATION");
+    NSLog(@"LOADING NEAREST STATION!");
+    [self showLoading];
     
     self.isUsingGPS = YES;
+    self.gettingLocation = YES;
+    
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)loadNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    self.gettingLocation = NO;
+    
+    if (self.loadingStation){
+        return;
+    }
+    
     self.loadingStation = YES;
     
-    CLLocationCoordinate2D currentLocation = self.locationManager.location.coordinate;
-    
-    [[AireNLAPI sharedAPI] getNearestStationForCoordinate: currentLocation withCompletion:^(APIResults *results, NSError *error) {
+    [[AireNLAPI sharedAPI] getNearestStationForCoordinate: coordinate withCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
+        [self hideLoading];
         self.loadingStation = NO;
     }];
-    
 }
 
 - (void)loadCurrentStation
 {
     NSLog(@"LOADING CURRENT STATION");
+    [self showLoading];
     
     if (self.selectedStation) {
         
         [[AireNLAPI sharedAPI] getStationWithId: self.selectedStation.stationID withCompletion:^(APIResults *results, NSError *error) {
             [self handleResults: results withError: error];
+            [self hideLoading];
         }];
         
     }else{
@@ -191,9 +205,11 @@
 - (void)loadDefaultStation
 {
     NSLog(@"LOADING DEFAULT STATION");
+    [self showLoading];
     
     [[AireNLAPI sharedAPI] getDefaultStationWithCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
+        [self hideLoading];
     }];
     
 }
@@ -362,7 +378,6 @@
     }
     
     [self loadNearestStation];
-    
 }
 
 - (void)userDidSelectSwitchBackground
@@ -530,13 +545,36 @@
     
     [self cacheSaveData];
     
-    [self updateScreen];
-    [self.collectionView reloadData];
-    
+    [self updateScreen];    
     [self showFirstGpsUserAlert];
 }
 
 #pragma mark - CLLocationManager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+{
+    CLLocation *location = [locations lastObject];
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    CLLocationAccuracy horizontalAccuracy = location.horizontalAccuracy;
+    CLLocationAccuracy verticalAccuracy = location.verticalAccuracy;
+    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+    
+    NSLog(@"DID UPDATE LOCATION : %f , %f", coordinate.latitude, coordinate.longitude);
+    NSLog(@"WITH ACCURACY : %f , %f", horizontalAccuracy, verticalAccuracy);
+    
+    if (verticalAccuracy < 0 || horizontalAccuracy < 0) {
+        NSLog(@"LOCATION ABORTED : ACCURACY");
+        return;
+    }
+    
+    if (locationAge > 5.0){
+        NSLog(@"LOCATION ABORTED : AGE");
+        return;
+    }
+    
+    [manager stopUpdatingLocation];
+    [self loadNearestStationForCoordinate: coordinate];
+}
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
@@ -545,8 +583,9 @@
             [self askLocationPermision];
             break;
         case kCLAuthorizationStatusAuthorizedWhenInUse:
-            // DO SOMETHING ABOUT THIS , NEEDS TO BE CALLED BUT MAY INTERFERE WHEN NOT USING GPS
-//            [self loadNearestStation];
+            if ([self isUsingGPS]) {
+                [self loadNearestStation];
+            }
             break;
         default:
             break;
@@ -592,6 +631,24 @@
 }
 
 #pragma mark - Helper's
+
+- (void)showLoading
+{
+    self.titleLabel.hidden = YES;
+    self.stationLabel.hidden = YES;
+
+    self.activityView.hidden = NO;
+    [self.activityView startAnimating];
+}
+
+- (void)hideLoading
+{
+    [self.activityView stopAnimating];
+    self.activityView.hidden = YES;
+    
+    self.titleLabel.hidden = NO;
+    self.stationLabel.hidden = NO;
+}
 
 - (void)scrollCollectionViewToTop
 {

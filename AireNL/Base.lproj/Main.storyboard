@@ -722,7 +722,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-PB-6OQ">
-                                        <rect key="frame" x="15" y="15.5" width="22" height="23"/>
+                                        <rect key="frame" x="15" y="15" width="22" height="23"/>
                                         <animations/>
                                         <state key="normal" image="GPSIcon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -731,6 +731,10 @@
                                             <action selector="didSelectGPS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bfh-WC-ReV"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="A6K-4j-M5F">
+                                        <rect key="frame" x="290" y="17" width="20" height="20"/>
+                                        <animations/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
@@ -742,12 +746,14 @@
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="2.5" id="OQw-NX-1jo"/>
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="leading" secondItem="PgK-9j-pDS" secondAttribute="leading" constant="50" id="YZo-4l-L7g"/>
                                     <constraint firstAttribute="height" constant="54" id="asR-Rz-5B8"/>
+                                    <constraint firstItem="A6K-4j-M5F" firstAttribute="centerX" secondItem="PgK-9j-pDS" secondAttribute="centerX" id="cMf-I6-tng"/>
                                     <constraint firstAttribute="centerX" secondItem="8Gg-SX-8k8" secondAttribute="centerX" id="cVM-EE-dKt"/>
                                     <constraint firstItem="8hI-PB-6OQ" firstAttribute="leading" secondItem="PgK-9j-pDS" secondAttribute="leading" constant="15" id="hLQ-Ix-EUq"/>
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="-1" id="hhw-GS-qc4"/>
                                     <constraint firstAttribute="centerX" secondItem="1KS-1F-pO3" secondAttribute="centerX" id="isW-TU-Elz"/>
                                     <constraint firstItem="1KS-1F-pO3" firstAttribute="leading" secondItem="PgK-9j-pDS" secondAttribute="leading" constant="50" id="iw9-wA-sb9"/>
                                     <constraint firstAttribute="centerY" secondItem="LnT-fm-Ccj" secondAttribute="centerY" id="nM0-kF-6Bp"/>
+                                    <constraint firstItem="A6K-4j-M5F" firstAttribute="centerY" secondItem="PgK-9j-pDS" secondAttribute="centerY" id="oG0-vm-oXe"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -812,6 +818,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="activityView" destination="A6K-4j-M5F" id="lBh-b0-lkc"/>
                         <outlet property="backgroundImageView" destination="gUK-ao-SVZ" id="GUI-Yv-vpt"/>
                         <outlet property="collectionView" destination="aGk-6S-54d" id="jvI-bW-zlj"/>
                         <outlet property="gpsButton" destination="8hI-PB-6OQ" id="LCx-Eb-3ra"/>
