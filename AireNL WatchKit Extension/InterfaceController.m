@@ -8,11 +8,27 @@
 
 #import "InterfaceController.h"
 
-//#import "CurrentResults.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface InterfaceController()
+#import "AireNLAPI.h"
+#import "APIResults.h"
 
-//@property (nonatomic) CurrentResults *currentResults;
+#import "Station.h"
+#import "Measurement.h"
+
+@interface InterfaceController() <CLLocationManagerDelegate>
+
+// MODEL DATA
+
+@property (nonatomic) Station *selectedStation;
+@property (nonatomic) Measurement *selectedMeasurement;
+
+// LOCATION
+
+@property (nonatomic) BOOL gettingLocation;
+@property (nonatomic) CLLocationManager *locationManager;
+
+@property (nonatomic) BOOL loadingStation;
 
 @end
 
@@ -23,53 +39,170 @@
     // Configure interface objects here.
     [super awakeWithContext: context];
 
-    [self loadAssets];
+    [self loadNearestStation];
 }
 
 - (void)willActivate
 {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-    
-    
 }
 
 - (void)didDeactivate
 {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
-    
-    
 }
 
 #pragma mark - Network
 
-- (void)loadAssets
+#pragma mark - Network
+
+- (void)loadNearestStation
 {
-//    CurrentResults *currentResults = [[CurrentResults alloc] init];
-//    currentResults.date = [NSDate date];
-//    currentResults.temperature = @(100);
-//    currentResults.wind = @(500);
-//    
-//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-//    imecaResults.amount = @(68);
-//    imecaResults.airQuality = AirQualityTypeVeryBad;
-//    currentResults.imeca = imecaResults;
-//    
-//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-//    currentResults.location = location;
-//    
-//    self.currentResults = currentResults;
-//    
-//    [self updateScreen];
+    NSLog(@"LOAD NEAREST STATION : ATTEMPTING");
+    
+    if (self.gettingLocation) {
+        NSLog(@"LOAD NEAREST STATION : ABORTED");
+        return;
+    }
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        NSLog(@"LOAD NEAREST STATION : PERMISSION NOT DETERMINED : ABORTED");
+        [self loadDefaultStation];
+        return;
+    }else if (status == kCLAuthorizationStatusDenied){
+        NSLog(@"LOAD NEAREST STATION : PERMISSION DENIED : ABORTED");
+        [self loadDefaultStation];
+        return;
+    }
+    
+    NSLog(@"LOADING NEAREST STATION!");
+//    [self showLoading];
+    
+    self.gettingLocation = YES;
+    [self.locationManager startUpdatingLocation];
 }
+
+- (void)loadNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    self.gettingLocation = NO;
+    
+    if (self.loadingStation){
+        return;
+    }
+    
+    self.loadingStation = YES;
+    
+    [[AireNLAPI sharedAPI] getNearestStationForCoordinate: coordinate withCompletion:^(APIResults *results, NSError *error) {
+        [self handleResults: results withError: error];
+//        [self hideLoading];
+        self.loadingStation = NO;
+    }];
+}
+
+- (void)loadDefaultStation
+{
+    NSLog(@"LOADING DEFAULT STATION");
+//    [self showLoading];
+    
+    self.loadingStation = YES;
+    
+    [[AireNLAPI sharedAPI] getDefaultStationWithCompletion:^(APIResults *results, NSError *error) {
+        [self handleResults: results withError: error];
+//        [self hideLoading];
+        self.loadingStation = NO;
+    }];
+    
+}
+
+- (void)handleResults:(APIResults *)results withError:(NSError *)error
+{
+    if (!error){
+        
+        NSLog(@"SUCCESS!");
+        
+        self.selectedStation = [[results stations] firstObject];
+        self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
+        
+        NSLog(@"STATION : %@", self.selectedStation);
+        NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
+        
+        [self updateScreen];
+        
+    }else{
+        NSLog(@"ERROR = %@", error);
+    }
+}
+
+#pragma mark - Appearance
 
 - (void)updateScreen
 {
-//    [self setTitle: self.currentResults.location.cityName];
-//    
-//    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
+    [self setTitle: self.selectedStation.name];
+    
+    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints ?: @(0);
+    [self.imecaAmountLabel setText: [imecaPoints stringValue]];
+}
+
+#pragma mark - CLLocationManager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+{
+    CLLocation *location = [locations lastObject];
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    CLLocationAccuracy horizontalAccuracy = location.horizontalAccuracy;
+    CLLocationAccuracy verticalAccuracy = location.verticalAccuracy;
+    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+    
+    NSLog(@"DID UPDATE LOCATION : %f , %f", coordinate.latitude, coordinate.longitude);
+    NSLog(@"WITH ACCURACY : %f , %f", horizontalAccuracy, verticalAccuracy);
+    
+    //    if (verticalAccuracy < 0 || horizontalAccuracy < 0) {
+    //        NSLog(@"LOCATION ABORTED : ACCURACY");
+    //        return;
+    //    }
+    
+    if (locationAge > 5.0){
+        NSLog(@"LOCATION ABORTED : AGE");
+        return;
+    }
+    
+    [manager stopUpdatingLocation];
+    [self loadNearestStationForCoordinate: coordinate];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+//    switch (status) {
+//        case kCLAuthorizationStatusNotDetermined:
+//            [self askLocationPermision];
+//            break;
+//        case kCLAuthorizationStatusAuthorizedWhenInUse:
+//            [self loadNearestStation];
+//            break;
+//        default:
+//            break;
+//    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"LOCATION MANAGER : ERROR : %@", error.localizedDescription);
+}
+
+#pragma mark - Set/Get
+
+- (CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = kCLDistanceFilterNone;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    }
+    return _locationManager;
 }
 
 @end

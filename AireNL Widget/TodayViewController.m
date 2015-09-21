@@ -12,10 +12,10 @@
 #import <NotificationCenter/NotificationCenter.h>
 
 #import "AireNLAPI.h"
+#import "APIResults.h"
 
 #import "Station.h"
 #import "Measurement.h"
-#import "APIResults.h"
 
 @interface TodayViewController () <NCWidgetProviding, CLLocationManagerDelegate>
 
@@ -232,7 +232,6 @@
     NSLog(@"ASKING LOCATION PERMISSION");
     [self.locationManager requestWhenInUseAuthorization];
 }
-
 
 #pragma mark - Helper's
 
