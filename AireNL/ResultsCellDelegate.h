@@ -11,7 +11,6 @@
 #import "Station.h"
 #import "Measurement.h"
 
-#import "CurrentResults.h"
 #import "PredictionResults.h"
 
 @protocol ResultsCellDelegate <NSObject>

@@ -31,7 +31,6 @@
 		0617237E1BB078E600FDA3DC /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; };
 		0617237F1BB078E600FDA3DC /* Measurement.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CA1BA779E900326F16 /* Measurement.h */; };
 		061723801BB078E600FDA3DC /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
-		061D50241B8BC3E000EF36EC /* MeasurementLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 061D50231B8BC3E000EF36EC /* MeasurementLocation.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
 		065142201BA8764300312C09 /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; settings = {ASSET_TAGS = (); }; };
@@ -66,6 +65,7 @@
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
 		06D8BA851B74106B007462A4 /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06DDB79E1BB0A54D00BED963 /* Constants.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05621B715E4200BCFCA3 /* Constants.h */; };
+		06DDB7A11BB0B7AE00BED963 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */; settings = {ASSET_TAGS = (); }; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
@@ -81,9 +81,6 @@
 		06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054C1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m */; };
 		06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */; };
 		06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */; };
-		06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05551B715BA000BCFCA3 /* ContaminantResults.m */; };
-		06FE05591B715BB800BCFCA3 /* ImecaResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05581B715BB800BCFCA3 /* ImecaResults.m */; };
-		06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */; };
 		06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
 		133B2427027D8A773265A892 /* libPods-AireNL WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0319D2E937418B20F2F1C7 /* libPods-AireNL WatchKit Extension.a */; };
 		5D748C5603C979673F4FA710 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4261A2766F39D9B777146A8 /* libPods-AireNL.a */; };
@@ -146,8 +143,6 @@
 		0607DE461B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		0607DE551B8FBDE6006E9A1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0607DE571B8FBDE8006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		061D50221B8BC3E000EF36EC /* MeasurementLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementLocation.h; sourceTree = "<group>"; };
-		061D50231B8BC3E000EF36EC /* MeasurementLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementLocation.m; sourceTree = "<group>"; };
 		063366841B60544000C32FF6 /* ILSpacedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSpacedLabel.h; sourceTree = "<group>"; };
 		063366851B60544000C32FF6 /* ILSpacedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSpacedLabel.m; sourceTree = "<group>"; };
 		0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
@@ -207,6 +202,8 @@
 		06D8BA7D1B74106B007462A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D8BA7F1B74106B007462A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		06D8BA811B74106B007462A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		06DDB79F1BB0B7AE00BED963 /* ContaminantResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantResults.h; sourceTree = "<group>"; };
+		06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantResults.m; sourceTree = "<group>"; };
 		06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILBlurCollectionView.h; sourceTree = "<group>"; };
 		06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILBlurCollectionView.m; sourceTree = "<group>"; };
 		06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
@@ -234,12 +231,6 @@
 		06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperaturaCollectionViewCell.m; sourceTree = "<group>"; };
 		06FE05511B715A5800BCFCA3 /* VientoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VientoCollectionViewCell.h; sourceTree = "<group>"; };
 		06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VientoCollectionViewCell.m; sourceTree = "<group>"; };
-		06FE05541B715BA000BCFCA3 /* ContaminantResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantResults.h; sourceTree = "<group>"; };
-		06FE05551B715BA000BCFCA3 /* ContaminantResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantResults.m; sourceTree = "<group>"; };
-		06FE05571B715BB800BCFCA3 /* ImecaResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImecaResults.h; sourceTree = "<group>"; };
-		06FE05581B715BB800BCFCA3 /* ImecaResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImecaResults.m; sourceTree = "<group>"; };
-		06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentResults.h; sourceTree = "<group>"; };
-		06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentResults.m; sourceTree = "<group>"; };
 		06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictionResults.h; sourceTree = "<group>"; };
 		06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredictionResults.m; sourceTree = "<group>"; };
 		06FE05621B715E4200BCFCA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -330,10 +321,6 @@
 				0651421F1BA8764300312C09 /* AireNLAPI.m */,
 				06AA94D01BA8752000326F16 /* APIResults.h */,
 				06AA94D11BA8752000326F16 /* APIResults.m */,
-				06AA94C71BA779DA00326F16 /* Station.h */,
-				06AA94C81BA779DA00326F16 /* Station.m */,
-				06AA94CA1BA779E900326F16 /* Measurement.h */,
-				06AA94CB1BA779E900326F16 /* Measurement.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -445,7 +432,10 @@
 		06D367CE1B542631009E9D47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				06FE05601B715D3600BCFCA3 /* Current Results */,
+				06AA94C71BA779DA00326F16 /* Station.h */,
+				06AA94C81BA779DA00326F16 /* Station.m */,
+				06AA94CA1BA779E900326F16 /* Measurement.h */,
+				06AA94CB1BA779E900326F16 /* Measurement.m */,
 				06FE05611B715D4900BCFCA3 /* Prediction Results */,
 			);
 			name = Models;
@@ -578,24 +568,11 @@
 			name = "Blurs, Gradients";
 			sourceTree = "<group>";
 		};
-		06FE05601B715D3600BCFCA3 /* Current Results */ = {
-			isa = PBXGroup;
-			children = (
-				06FE055A1B715C3D00BCFCA3 /* CurrentResults.h */,
-				06FE055B1B715C3E00BCFCA3 /* CurrentResults.m */,
-				061D50221B8BC3E000EF36EC /* MeasurementLocation.h */,
-				061D50231B8BC3E000EF36EC /* MeasurementLocation.m */,
-				06FE05571B715BB800BCFCA3 /* ImecaResults.h */,
-				06FE05581B715BB800BCFCA3 /* ImecaResults.m */,
-				06FE05541B715BA000BCFCA3 /* ContaminantResults.h */,
-				06FE05551B715BA000BCFCA3 /* ContaminantResults.m */,
-			);
-			name = "Current Results";
-			sourceTree = "<group>";
-		};
 		06FE05611B715D4900BCFCA3 /* Prediction Results */ = {
 			isa = PBXGroup;
 			children = (
+				06DDB79F1BB0B7AE00BED963 /* ContaminantResults.h */,
+				06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */,
 				06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */,
 				06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */,
 			);
@@ -941,11 +918,10 @@
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				06AA94CC1BA779E900326F16 /* Measurement.m in Sources */,
 				065142201BA8764300312C09 /* AireNLAPI.m in Sources */,
-				06FE055C1B715C3E00BCFCA3 /* CurrentResults.m in Sources */,
 				069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
+				06DDB7A11BB0B7AE00BED963 /* ContaminantResults.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
-				06FE05561B715BA000BCFCA3 /* ContaminantResults.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06AA94D21BA8752000326F16 /* APIResults.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
@@ -955,12 +931,10 @@
 				0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */,
 				06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
-				061D50241B8BC3E000EF36EC /* MeasurementLocation.m in Sources */,
 				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
 				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,
 				06AA94C91BA779DA00326F16 /* Station.m in Sources */,
-				06FE05591B715BB800BCFCA3 /* ImecaResults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
