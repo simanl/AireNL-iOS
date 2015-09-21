@@ -8,11 +8,11 @@
 
 #import "AirQualityInterfaceController.h"
 
-#import "CurrentResults.h"
+//#import "CurrentResults.h"
 
 @interface AirQualityInterfaceController ()
 
-@property (nonatomic) CurrentResults *currentResults;
+//@property (nonatomic) CurrentResults *currentResults;
 
 @end
 
@@ -42,30 +42,30 @@
 
 - (void)loadAssets
 {
-    CurrentResults *currentResults = [[CurrentResults alloc] init];
-    currentResults.date = [NSDate date];
-    currentResults.temperature = @(100);
-    currentResults.wind = @(500);
-    
-    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(68);
-    imecaResults.airQuality = AirQualityTypeVeryBad;
-    currentResults.imeca = imecaResults;
-    
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-    currentResults.location = location;
-    
-    self.currentResults = currentResults;
+//    CurrentResults *currentResults = [[CurrentResults alloc] init];
+//    currentResults.date = [NSDate date];
+//    currentResults.temperature = @(100);
+//    currentResults.wind = @(500);
+//    
+//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+//    imecaResults.amount = @(68);
+//    imecaResults.airQuality = AirQualityTypeVeryBad;
+//    currentResults.imeca = imecaResults;
+//    
+//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
+//    currentResults.location = location;
+//    
+//    self.currentResults = currentResults;
     
     [self updateScreen];
 }
 
 - (void)updateScreen
 {
-    [self setTitle: self.currentResults.location.cityName];
-    
-    [self.airQualityLabel setText: [self.currentResults.imeca airQualityString]];
+//    [self setTitle: self.currentResults.location.cityName];
+//    
+//    [self.airQualityLabel setText: [self.currentResults.imeca airQualityString]];
 }
 
 @end

@@ -8,11 +8,11 @@
 
 #import "InterfaceController.h"
 
-#import "CurrentResults.h"
+//#import "CurrentResults.h"
 
 @interface InterfaceController()
 
-@property (nonatomic) CurrentResults *currentResults;
+//@property (nonatomic) CurrentResults *currentResults;
 
 @end
 
@@ -46,30 +46,30 @@
 
 - (void)loadAssets
 {
-    CurrentResults *currentResults = [[CurrentResults alloc] init];
-    currentResults.date = [NSDate date];
-    currentResults.temperature = @(100);
-    currentResults.wind = @(500);
-    
-    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(68);
-    imecaResults.airQuality = AirQualityTypeVeryBad;
-    currentResults.imeca = imecaResults;
-    
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-    currentResults.location = location;
-    
-    self.currentResults = currentResults;
-    
-    [self updateScreen];
+//    CurrentResults *currentResults = [[CurrentResults alloc] init];
+//    currentResults.date = [NSDate date];
+//    currentResults.temperature = @(100);
+//    currentResults.wind = @(500);
+//    
+//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+//    imecaResults.amount = @(68);
+//    imecaResults.airQuality = AirQualityTypeVeryBad;
+//    currentResults.imeca = imecaResults;
+//    
+//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
+//    currentResults.location = location;
+//    
+//    self.currentResults = currentResults;
+//    
+//    [self updateScreen];
 }
 
 - (void)updateScreen
 {
-    [self setTitle: self.currentResults.location.cityName];
-    
-    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
+//    [self setTitle: self.currentResults.location.cityName];
+//    
+//    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
 }
 
 @end

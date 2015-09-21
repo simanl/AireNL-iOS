@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -18,6 +19,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONTERREY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0m-7U-kNf">
                                 <rect key="frame" x="7" y="7" width="100" height="22"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="tVT-k7-xh5"/>
                                     <constraint firstAttribute="width" constant="100" id="vzP-KZ-DcS"/>
@@ -26,26 +28,30 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 km/h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwn-31-VRX">
-                                <rect key="frame" x="253" y="49" width="60" height="16.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29.6 k/h" lineBreakMode="tailTruncation" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="cwn-31-VRX">
+                                <rect key="frame" x="273" y="49" width="40" height="16.5"/>
+                                <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="ISP-R6-blM"/>
+                                    <constraint firstAttribute="width" constant="40" id="ISP-R6-blM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="VientoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-PN-hPM">
-                                <rect key="frame" x="217" y="48" width="29" height="19"/>
+                                <rect key="frame" x="237" y="48" width="29" height="19"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOWNTOWN OBISPADO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-iF-dIn">
                                 <rect key="frame" x="111" y="13" width="202" height="14"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="187" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lA-tD-rwh">
                                 <rect key="frame" x="7" y="33" width="150" height="77"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="9XG-SC-A7P"/>
                                     <constraint firstAttribute="height" constant="120" id="rNS-tI-p67"/>
@@ -60,7 +66,8 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Quality: Good" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xje-Rr-RSU">
-                                <rect key="frame" x="7" y="132" width="94" height="20.5"/>
+                                <rect key="frame" x="7" y="132" width="306" height="20.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="ITO-iA-MMk"/>
                                 </constraints>
@@ -68,8 +75,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-Bt-Spo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 C" lineBreakMode="tailTruncation" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-Bt-Spo">
                                 <rect key="frame" x="273" y="89" width="40" height="16.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="8Th-Gf-f05"/>
                                 </constraints>
@@ -79,14 +87,21 @@
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TempIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-hP-EvV">
                                 <rect key="frame" x="249" y="80" width="15" height="32"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMECA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lc-de-OUy">
                                 <rect key="frame" x="7" y="114" width="31.5" height="14"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dTh-N4-i4d">
+                                <rect key="frame" x="142" y="61" width="37" height="37"/>
+                                <animations/>
+                            </activityIndicatorView>
                         </subviews>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Xje-Rr-RSU" secondAttribute="bottom" priority="999" constant="7.5" id="09d-aX-kme"/>
                             <constraint firstItem="bzi-iF-dIn" firstAttribute="leading" secondItem="z0m-7U-kNf" secondAttribute="trailing" constant="4" id="0FA-wP-oeb"/>
@@ -97,13 +112,16 @@
                             <constraint firstItem="z0m-7U-kNf" firstAttribute="leading" secondItem="2lc-de-OUy" secondAttribute="leading" id="AWg-6O-bCO"/>
                             <constraint firstAttribute="centerY" secondItem="cwn-31-VRX" secondAttribute="centerY" constant="22.75" id="Hcr-lo-ZeV"/>
                             <constraint firstItem="2lc-de-OUy" firstAttribute="top" secondItem="0lA-tD-rwh" secondAttribute="bottom" constant="4" id="IFb-Vo-SAo"/>
+                            <constraint firstItem="dTh-N4-i4d" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="KFY-hd-ZjH"/>
                             <constraint firstItem="z0m-7U-kNf" firstAttribute="leading" secondItem="Xje-Rr-RSU" secondAttribute="leading" id="QKk-Pj-4bh"/>
+                            <constraint firstItem="9Dd-Bt-Spo" firstAttribute="trailing" secondItem="Xje-Rr-RSU" secondAttribute="trailing" id="RRS-Nn-iqO"/>
                             <constraint firstItem="Xje-Rr-RSU" firstAttribute="top" secondItem="2lc-de-OUy" secondAttribute="bottom" constant="4" id="U21-35-s2m"/>
                             <constraint firstAttribute="trailing" secondItem="cwn-31-VRX" secondAttribute="trailing" constant="7" id="UNc-om-Oaz"/>
                             <constraint firstItem="0lA-tD-rwh" firstAttribute="leading" secondItem="z0m-7U-kNf" secondAttribute="leading" id="Y5p-nA-Jpd"/>
                             <constraint firstAttribute="centerY" secondItem="9Dd-Bt-Spo" secondAttribute="centerY" constant="-17.25" id="ZQe-vj-gyp"/>
                             <constraint firstItem="0lA-tD-rwh" firstAttribute="top" secondItem="z0m-7U-kNf" secondAttribute="bottom" constant="4" id="aIy-zY-9PU"/>
                             <constraint firstItem="9Dd-Bt-Spo" firstAttribute="leading" secondItem="ayY-hP-EvV" secondAttribute="trailing" constant="9" id="dF9-0m-p6D"/>
+                            <constraint firstItem="dTh-N4-i4d" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="fnx-zb-Khi"/>
                             <constraint firstItem="z0m-7U-kNf" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="7" id="ih6-yu-IFD"/>
                             <constraint firstItem="9Dd-Bt-Spo" firstAttribute="top" secondItem="ayY-hP-EvV" secondAttribute="bottom" constant="-22.5" id="ikt-YB-128"/>
                             <constraint firstItem="cwn-31-VRX" firstAttribute="leading" secondItem="Qo4-PN-hPM" secondAttribute="trailing" constant="7" id="lj3-Sp-K5m"/>
@@ -117,6 +135,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="160"/>
                     <connections>
+                        <outlet property="activityView" destination="dTh-N4-i4d" id="zHM-MV-Blk"/>
                         <outlet property="imecaLabel" destination="0lA-tD-rwh" id="sht-Rx-h5p"/>
                         <outlet property="imecaQualityLabel" destination="Xje-Rr-RSU" id="R5O-Wi-fQR"/>
                         <outlet property="locationSubtitleLabel" destination="bzi-iF-dIn" id="yu6-SU-Nee"/>
@@ -134,9 +153,4 @@
         <image name="TempIcon" width="15" height="32"/>
         <image name="VientoIcon" width="29" height="19"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

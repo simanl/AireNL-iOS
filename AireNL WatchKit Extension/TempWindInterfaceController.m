@@ -8,11 +8,11 @@
 
 #import "TempWindInterfaceController.h"
 
-#import "CurrentResults.h"
+//#import "CurrentResults.h"
 
 @interface TempWindInterfaceController ()
 
-@property (nonatomic) CurrentResults *currentResults;
+//@property (nonatomic) CurrentResults *currentResults;
 
 @end
 
@@ -42,31 +42,31 @@
 
 - (void)loadAssets
 {
-    CurrentResults *currentResults = [[CurrentResults alloc] init];
-    currentResults.date = [NSDate date];
-    currentResults.temperature = @(100);
-    currentResults.wind = @(500);
-    
-    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(68);
-    imecaResults.airQuality = AirQualityTypeVeryBad;
-    currentResults.imeca = imecaResults;
-    
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-    currentResults.location = location;
-    
-    self.currentResults = currentResults;
+//    CurrentResults *currentResults = [[CurrentResults alloc] init];
+//    currentResults.date = [NSDate date];
+//    currentResults.temperature = @(100);
+//    currentResults.wind = @(500);
+//    
+//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+//    imecaResults.amount = @(68);
+//    imecaResults.airQuality = AirQualityTypeVeryBad;
+//    currentResults.imeca = imecaResults;
+//    
+//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
+//    currentResults.location = location;
+//    
+//    self.currentResults = currentResults;
     
     [self updateScreen];
 }
 
 - (void)updateScreen
 {
-    [self setTitle: self.currentResults.location.cityName];
-    
-    [self.windLabel setText: [self stringForWindValue: self.currentResults.wind]];
-    [self.tempLabel setText: [self stringForTempValue: self.currentResults.temperature]];
+//    [self setTitle: self.currentResults.location.cityName];
+//    
+//    [self.windLabel setText: [self stringForWindValue: self.currentResults.wind]];
+//    [self.tempLabel setText: [self stringForTempValue: self.currentResults.temperature]];
 }
 
 #pragma mark - Helper's

@@ -19,4 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *windLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
+
 @end

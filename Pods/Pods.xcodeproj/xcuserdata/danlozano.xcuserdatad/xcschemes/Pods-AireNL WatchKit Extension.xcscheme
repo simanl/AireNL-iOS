@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D79AC7870BA4C06CD836087A"
-               BuildableName = "libPods.a"
-               BlueprintName = "Pods"
+               BlueprintIdentifier = "921C2BC1CBE330206507A43D"
+               BuildableName = "libPods-AireNL WatchKit Extension.a"
+               BlueprintName = "Pods-AireNL WatchKit Extension"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

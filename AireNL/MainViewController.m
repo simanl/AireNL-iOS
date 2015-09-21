@@ -8,7 +8,6 @@
 
 #import "MainViewController.h"
 
-//#import <FXBlurView/FXBlurView.h>
 #import <CCMPopup/FXBlurView.h>
 #import <CCMPopup/CCMPopupTransitioning.h>
 #import <TAOverlay/TAOverlay.h>
@@ -20,13 +19,10 @@
 #import "ILLinearGradientView.h"
 #import "MapViewController.h"
 #import "InfoContainerViewController.h"
-//#import "InfoTableViewController.h"
-
-#import "CurrentResults.h"
-#import "PredictionResults.h"
-#import "ResultsCellDelegate.h"
 
 #import "AireNLAPI.h"
+#import "PredictionResults.h"
+#import "ResultsCellDelegate.h"
 
 #define STATUS_BAR_HEIGHT 16
 #define NAV_BAR_HEIGHT 54
@@ -77,11 +73,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self loadFakeData]; // REMOVE
     [self cacheLoadData];
     
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    self.locationManager.distanceFilter = kCLDistanceFilterNone;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     [self setBackgroundImages];
     [self addMotionEffectToBackground];
     
@@ -89,7 +80,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self addGestureRecognizers];
     [self registerNibs];
     
-//    [self loadStation];
+//    [self loadStation]; // This is handled by the 'AppDidBecomeActive notification'
 }
 
 - (void)didReceiveMemoryWarning
@@ -782,6 +773,17 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 }
 
 #pragma mark - Set/Get
+
+- (CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = kCLDistanceFilterNone;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    }
+    return _locationManager;
+}
 
 - (NSArray *)cellHeights
 {

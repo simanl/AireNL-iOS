@@ -8,11 +8,11 @@
 
 #import "GlanceController.h"
 
-#import "CurrentResults.h"
+//#import "CurrentResults.h"
 
 @interface GlanceController()
 
-@property (nonatomic) CurrentResults *currentResults;
+//@property (nonatomic) CurrentResults *currentResults;
 
 @end
 
@@ -40,32 +40,32 @@
 
 - (void)loadAssets
 {
-    CurrentResults *currentResults = [[CurrentResults alloc] init];
-    currentResults.date = [NSDate date];
-    currentResults.temperature = @(100);
-    currentResults.wind = @(500);
-    
-    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-    imecaResults.amount = @(68);
-    imecaResults.airQuality = AirQualityTypeVeryBad;
-    currentResults.imeca = imecaResults;
-    
-    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-    currentResults.location = location;
-    
-    self.currentResults = currentResults;
+//    CurrentResults *currentResults = [[CurrentResults alloc] init];
+//    currentResults.date = [NSDate date];
+//    currentResults.temperature = @(100);
+//    currentResults.wind = @(500);
+//    
+//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
+//    imecaResults.amount = @(68);
+//    imecaResults.airQuality = AirQualityTypeVeryBad;
+//    currentResults.imeca = imecaResults;
+//    
+//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
+//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
+//    currentResults.location = location;
+//    
+//    self.currentResults = currentResults;
     
     [self updateScreen];
 }
 
 - (void)updateScreen
 {
-    [self.locationTitleLabel setText: self.currentResults.location.cityName];
-    [self.locationSubtitleLabel setText: self.currentResults.location.areaName];
-    
-    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
-    [self.imecaQualityLabel setText: [self.currentResults.imeca airQualityString]];
+//    [self.locationTitleLabel setText: self.currentResults.location.cityName];
+//    [self.locationSubtitleLabel setText: self.currentResults.location.areaName];
+//    
+//    [self.imecaAmountLabel setText: [self.currentResults.imeca.amount stringValue]];
+//    [self.imecaQualityLabel setText: [self.currentResults.imeca airQualityString]];
 }
 
 @end

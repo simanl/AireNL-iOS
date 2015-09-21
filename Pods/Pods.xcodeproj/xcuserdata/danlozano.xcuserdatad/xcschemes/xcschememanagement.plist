@@ -19,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-AireNL WatchKit Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AireNL Widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AireNL.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,22 +47,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41F9F35C52FDE78B4F54570FF9A4BF37</key>
+		<key>31C1C26C60E7A5D9151FD9886C6A6C6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74D52A1BF4D298D9B1B632098AFFB542</key>
+		<key>42BC2CE76C01C19F3D8D905BB85E76C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B629685C10E8528D3D0430A4B91F3093</key>
+		<key>92C4CF8EFCDC13BA9FDADE5EE979B15A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F84D83ED1945F936EF5B970DCABA2608</key>
+		<key>92DA2B4AB049878165886F111F906867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3ABD8836A05E72D75AAF9D08E8BCA63</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECC671A3BBCFA58D8FADF672007072F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
