@@ -113,12 +113,19 @@
 
 - (void)loadDefaultStation
 {
+    if (self.loadingStation) {
+        return;
+    }
+    
     NSLog(@"LOADING DEFAULT STATION");
     [self showLoading];
+    
+    self.loadingStation = YES;
     
     [[AireNLAPI sharedAPI] getDefaultStationWithCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
         [self hideLoading];
+        self.loadingStation = NO;
     }];
     
 }

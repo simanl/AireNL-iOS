@@ -106,6 +106,10 @@
 
 - (void)loadDefaultStation
 {
+    if (self.loadingStation) {
+        return;
+    }
+    
     NSLog(@"LOADING DEFAULT STATION");
 //    [self showLoading];
     
