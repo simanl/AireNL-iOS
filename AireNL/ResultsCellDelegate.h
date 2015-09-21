@@ -18,8 +18,6 @@
 
 - (Station *)getSelectedStation;
 - (Measurement *)getSelectedMeasurement;
-
-- (CurrentResults *)getCurrentResults;
 - (PredictionResults *)getPredictionResults;
 
 - (void)didSelectInfoAtCell:(UICollectionViewCell *)cell;

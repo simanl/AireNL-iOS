@@ -31,7 +31,8 @@
 #define STATUS_BAR_HEIGHT 16
 #define NAV_BAR_HEIGHT 54
 
-@interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, CLLocationManagerDelegate>
+@interface MainViewController () <ResultsCellDelegate, MapViewControllerDelegate,
+UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, CLLocationManagerDelegate>
 
 // LOCATION
 
@@ -43,8 +44,6 @@
 
 @property (nonatomic) Station *selectedStation;
 @property (nonatomic) Measurement *selectedMeasurement;
-
-@property (nonatomic) CurrentResults *currentResults;
 @property (nonatomic) PredictionResults *predictionResults;
 
 // TABLE, SCROLL VIEW, POPUP
@@ -74,7 +73,8 @@
 {
     [super viewDidLoad];
     
-    [self loadFakeData];
+    [self setUpNotifications];
+    [self loadFakeData]; // REMOVE
     [self cacheLoadData];
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -89,12 +89,24 @@
     [self addGestureRecognizers];
     [self registerNibs];
     
-    [self loadStation];
+//    [self loadStation];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)setUpNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(loadStation)
+                                                 name: UIApplicationDidBecomeActiveNotification object: nil];
+
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
 
 #pragma mark - Persistance
@@ -130,7 +142,6 @@
 
 - (void)loadStation
 {
-    // TO DO : IS USING GPS = YES SHOULD BE THE DEFAULT, AND IT IS NOT RIGHT NOW
     if ([self isUsingGPS]) {
         [self loadNearestStation];
     }else{
@@ -155,7 +166,7 @@
     }else if (status == kCLAuthorizationStatusDenied){
         NSLog(@"LOAD NEAREST STATION : PERMISSION DENIED : ABORTED");
         [self loadDefaultStation];
-        // POPUP SAYING THAT THEY NEED TO GO INTO SETTINGS AND GIVE PERMISSION !
+//        [self showGpsPermissionAlert];
         return;
     }
     
@@ -372,7 +383,7 @@
 
 - (IBAction)didSelectGPS:(id)sender
 {
-    if (self.isUsingGPS) {
+    if ([self isUsingGPS]) {
         [self showGpsAlreadyActivatedAlert];
         return;
     }
@@ -602,12 +613,14 @@
 
 - (BOOL)isUsingGPS
 {
-    return [[NSUserDefaults standardUserDefaults] boolForKey: kIsUsingGpsKey];
+//    return [[NSUserDefaults standardUserDefaults] boolForKey: kIsUsingGpsKey];
+    return ![[NSUserDefaults standardUserDefaults] boolForKey: kIsGpsDisabledKey];
 }
 
 - (void)setIsUsingGPS:(BOOL)isUsing
 {
-    [[NSUserDefaults standardUserDefaults] setBool: isUsing forKey: kIsUsingGpsKey];
+//    [[NSUserDefaults standardUserDefaults] setBool: isUsing forKey: kIsUsingGpsKey];
+    [[NSUserDefaults standardUserDefaults] setBool: !isUsing forKey: kIsGpsDisabledKey];
     [self setGpsButtonOpacity];
 }
 
@@ -628,6 +641,11 @@
 {
     NSString *text = NSLocalizedString(@"You are already using GPS to find the nearest station. If you want to change station use the map.", nil);
     [self showAlertWithText: text];
+}
+
+- (void)showGpsPermissionAlert
+{
+    
 }
 
 #pragma mark - Helper's

@@ -17,6 +17,7 @@ static NSString *const kBaseURL = @"http://198.199.108.152:3000";
 
 static NSString *const kHasShownGpsAlertKey = @"hasShownGpsAlertKey";
 static NSString *const kIsUsingGpsKey = @"isUsingGpsKey";
+static NSString *const kIsGpsDisabledKey = @"isGpsDisabledKey";
 
 static NSString *const kCachedStationKey = @"cachedStationKey";
 static NSString *const kCachedMeasurementKey = @"cachedMeasurementKey";
