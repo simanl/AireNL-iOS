@@ -8,11 +8,15 @@
 
 #import "TempWindInterfaceController.h"
 
-//#import "CurrentResults.h"
+#import "Station.h"
+#import "Measurement.h"
+
+#import "Constants.h"
 
 @interface TempWindInterfaceController ()
 
-//@property (nonatomic) CurrentResults *currentResults;
+@property (nonatomic) Station *selectedStation;
+@property (nonatomic) Measurement *selectedMeasurement;
 
 @end
 
@@ -23,7 +27,7 @@
     // Configure interface objects here.
     [super awakeWithContext:context];
     
-    [self loadAssets];
+    [self setUpNotifications];
 }
 
 - (void)willActivate
@@ -38,47 +42,48 @@
     [super didDeactivate];
 }
 
+- (void)setUpNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleLoadNotification:)
+                                                 name: kWatchkitDidDownloadDataNotification
+                                               object: nil];
+}
+
 #pragma mark - Network
 
-- (void)loadAssets
+- (void)handleLoadNotification:(NSNotification *)notification
 {
-//    CurrentResults *currentResults = [[CurrentResults alloc] init];
-//    currentResults.date = [NSDate date];
-//    currentResults.temperature = @(100);
-//    currentResults.wind = @(500);
-//    
-//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-//    imecaResults.amount = @(68);
-//    imecaResults.airQuality = AirQualityTypeVeryBad;
-//    currentResults.imeca = imecaResults;
-//    
-//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-//    currentResults.location = location;
-//    
-//    self.currentResults = currentResults;
+    NSLog(@"TempWind Controller : Handle Load Notification");
+    
+    NSDictionary *userInfo = notification.userInfo;
+    
+    self.selectedStation = userInfo[@"selectedStation"];
+    self.selectedMeasurement = userInfo[@"selectedMeasurement"];
     
     [self updateScreen];
 }
 
+#pragma mark - Appearance
+
 - (void)updateScreen
 {
-//    [self setTitle: self.currentResults.location.cityName];
-//    
-//    [self.windLabel setText: [self stringForWindValue: self.currentResults.wind]];
-//    [self.tempLabel setText: [self stringForTempValue: self.currentResults.temperature]];
+    [self setTitle: self.selectedStation.name];
+    
+    [self.windLabel setText: [self stringForWindValue: self.selectedMeasurement.windSpeed]];
+    [self.tempLabel setText: [self stringForTempValue: self.selectedMeasurement.temperature]];
 }
 
 #pragma mark - Helper's
 
 - (NSString *)stringForWindValue:(NSNumber *)value
 {
-    return [NSString stringWithFormat: @"%@ k/h", value];
+    return [NSString stringWithFormat: @"%@ k/h", value?:@(0)];
 }
 
 - (NSString *)stringForTempValue:(NSNumber *)value
 {
-    return [NSString stringWithFormat: @"%@ \u00B0 C", value];
+    return [NSString stringWithFormat: @"%@ \u00B0 C", value?:@(0)];
 }
 
 @end

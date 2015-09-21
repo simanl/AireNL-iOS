@@ -8,11 +8,15 @@
 
 #import "AirQualityInterfaceController.h"
 
-//#import "CurrentResults.h"
+#import "Station.h"
+#import "Measurement.h"
+
+#import "Constants.h"
 
 @interface AirQualityInterfaceController ()
 
-//@property (nonatomic) CurrentResults *currentResults;
+@property (nonatomic) Station *selectedStation;
+@property (nonatomic) Measurement *selectedMeasurement;
 
 @end
 
@@ -23,7 +27,8 @@
     // Configure interface objects here.
     [super awakeWithContext:context];
     
-    [self loadAssets];
+    [self setUpNotifications];
+//    [self loadAssets];
 }
 
 - (void)willActivate
@@ -38,34 +43,34 @@
     [super didDeactivate];
 }
 
+- (void)setUpNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleLoadNotification:)
+                                                 name: kWatchkitDidDownloadDataNotification
+                                               object: nil];
+}
+
 #pragma mark - Network
 
-- (void)loadAssets
+- (void)handleLoadNotification:(NSNotification *)notification
 {
-//    CurrentResults *currentResults = [[CurrentResults alloc] init];
-//    currentResults.date = [NSDate date];
-//    currentResults.temperature = @(100);
-//    currentResults.wind = @(500);
-//    
-//    ImecaResults *imecaResults = [[ImecaResults alloc] init];
-//    imecaResults.amount = @(68);
-//    imecaResults.airQuality = AirQualityTypeVeryBad;
-//    currentResults.imeca = imecaResults;
-//    
-//    MeasurementLocation *location = [[MeasurementLocation alloc] initWithCityName: @"Monterrey"
-//                                                                         areaName: NSLocalizedString(@"Downtown Obispado Station", nil)];
-//    currentResults.location = location;
-//    
-//    self.currentResults = currentResults;
+    NSLog(@"Air Quality Controller : Handle Load Notification");
+    
+    NSDictionary *userInfo = notification.userInfo;
+    
+    self.selectedStation = userInfo[@"selectedStation"];
+    self.selectedMeasurement = userInfo[@"selectedMeasurement"];
     
     [self updateScreen];
 }
 
+#pragma mark - Appearance
+
 - (void)updateScreen
 {
-//    [self setTitle: self.currentResults.location.cityName];
-//    
-//    [self.airQualityLabel setText: [self.currentResults.imeca airQualityString]];
+    [self setTitle: self.selectedStation.name];
+    [self.airQualityLabel setText: [self.selectedMeasurement stringForAirQuality]];
 }
 
 @end

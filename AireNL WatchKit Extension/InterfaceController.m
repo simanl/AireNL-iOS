@@ -16,6 +16,8 @@
 #import "Station.h"
 #import "Measurement.h"
 
+#import "Constants.h"
+
 @interface InterfaceController() <CLLocationManagerDelegate>
 
 // MODEL DATA
@@ -39,13 +41,15 @@
     // Configure interface objects here.
     [super awakeWithContext: context];
 
-    [self loadNearestStation];
+//    [self loadNearestStation];
 }
 
 - (void)willActivate
 {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [self loadNearestStation];
 }
 
 - (void)didDeactivate
@@ -53,8 +57,6 @@
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
-
-#pragma mark - Network
 
 #pragma mark - Network
 
@@ -129,11 +131,27 @@
         NSLog(@"STATION : %@", self.selectedStation);
         NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
         
+        [self postNotification];
         [self updateScreen];
         
     }else{
         NSLog(@"ERROR = %@", error);
     }
+}
+
+- (void)postNotification
+{
+    NSDictionary *userInfo;
+    if (self.selectedStation && self.selectedMeasurement) {
+        userInfo = @{@"selectedStation" : self.selectedStation,
+                     @"selectedMeasurement" : self.selectedMeasurement};
+    }else if(self.selectedStation){
+        userInfo = @{@"selectedStation" : self.selectedStation};
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName: kWatchkitDidDownloadDataNotification
+                                                        object: self
+                                                      userInfo: userInfo];
 }
 
 #pragma mark - Appearance
@@ -190,6 +208,8 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"LOCATION MANAGER : ERROR : %@", error.localizedDescription);
+    
+    [self loadDefaultStation];
 }
 
 #pragma mark - Set/Get

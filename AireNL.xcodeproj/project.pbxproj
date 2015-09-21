@@ -65,6 +65,7 @@
 		06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA7E1B74106B007462A4 /* Interface.storyboard */; };
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
 		06D8BA851B74106B007462A4 /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06DDB79E1BB0A54D00BED963 /* Constants.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05621B715E4200BCFCA3 /* Constants.h */; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
@@ -975,6 +976,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DDB79E1BB0A54D00BED963 /* Constants.h in Sources */,
 				061723791BB078E600FDA3DC /* AireNLAPI.h in Sources */,
 				0617237A1BB078E600FDA3DC /* AireNLAPI.m in Sources */,
 				0617237B1BB078E600FDA3DC /* APIResults.h in Sources */,
