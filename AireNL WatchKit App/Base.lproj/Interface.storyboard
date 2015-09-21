@@ -16,7 +16,7 @@
                                     <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
-                                <label width="1" alignment="left" text="68" textAlignment="center" id="Onf-ne-ANI">
+                                <label width="1" alignment="left" text="0" textAlignment="center" id="Onf-ne-ANI">
                                     <fontDescription key="font" type="system" weight="ultraLight" pointSize="90"/>
                                 </label>
                             </items>
@@ -70,11 +70,11 @@
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
                                 <imageView alignment="center" image="WindIcon" id="3IN-bH-5Ua"/>
-                                <label alignment="center" text="11 k/h" id="2Gs-uP-ouT">
+                                <label alignment="center" text="0 k/h" id="2Gs-uP-ouT">
                                     <fontDescription key="font" type="system" weight="thin" pointSize="18"/>
                                 </label>
                                 <imageView alignment="center" image="TempIcon" id="chl-kT-mrP"/>
-                                <label alignment="center" text="28 C" id="xhk-ti-KCU">
+                                <label alignment="center" text="0 C" id="xhk-ti-KCU">
                                     <fontDescription key="font" type="system" weight="thin" pointSize="18"/>
                                 </label>
                             </items>
@@ -98,7 +98,7 @@
                         <label alignment="left" text="Obispado Downtown" minimumScaleFactor="0.80000000000000004" id="Za2-n3-fsA"/>
                         <group alignment="left" id="uCw-4Q-Ouw">
                             <items>
-                                <label alignment="left" verticalAlignment="center" text="187" id="vNH-So-5BS">
+                                <label alignment="left" verticalAlignment="center" text="0" id="vNH-So-5BS">
                                     <fontDescription key="font" type="system" weight="ultraLight" pointSize="70"/>
                                 </label>
                                 <label alignment="left" verticalAlignment="bottom" text="IMECA" id="72v-OX-WCp">
@@ -108,7 +108,7 @@
                             </items>
                         </group>
                         <label alignment="left" text="Air Quality" id="bPr-4c-WFD"/>
-                        <label alignment="left" text="Very Bad" id="aJM-Id-88N"/>
+                        <label alignment="left" text="Good" id="aJM-Id-88N"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
