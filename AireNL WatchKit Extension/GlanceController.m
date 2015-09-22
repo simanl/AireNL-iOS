@@ -78,7 +78,7 @@
     //    [self showLoading];
     
     self.gettingLocation = YES;
-    [self.locationManager startUpdatingLocation];
+    [self.locationManager requestLocation];
 }
 
 - (void)loadNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate

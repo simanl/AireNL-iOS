@@ -11,6 +11,12 @@
 #import "Constants.h"
 #import "APIResults.h"
 
+@interface AireNLAPI ()
+
+@property (nonatomic) NSURLSession *session;
+
+@end
+
 @implementation AireNLAPI
 
 #pragma mark - Init
@@ -21,12 +27,14 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        NSURL *baseURL = [NSURL URLWithString: kBaseURL];
-        __instance = [[AireNLAPI alloc] initWithBaseURL: baseURL];
-        __instance.requestSerializer = [AFJSONRequestSerializer serializer];
-        __instance.responseSerializer = [AFJSONResponseSerializer serializer];
-//        [__instance.requestSerializer setValue: @"application/vnd.twenty_one.com+json; version=1" forHTTPHeaderField: @"Accept"];
-//        [__instance.requestSerializer setValue: [[Session sharedSession] sessionToken] forHTTPHeaderField: @"Authorization"];
+//        NSURL *baseURL = [NSURL URLWithString: kBaseURL];
+//        __instance = [[AireNLAPI alloc] initWithBaseURL: baseURL];
+//        __instance.requestSerializer = [AFJSONRequestSerializer serializer];
+//        __instance.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        __instance = [[AireNLAPI alloc] init];
+        __instance.session = [NSURLSession sessionWithConfiguration: configuration];
 
     });
     return __instance;
@@ -36,17 +44,37 @@
 
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion
 {
-    NSDictionary *params = @{@"include" : @"last_measurement"};
+    NSString *address = [NSString stringWithFormat: @"%@/stations.json", kBaseURL];
+    NSString *params = [NSString stringWithFormat: @"?include=last_measurement"];
     
-    [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    [self GETadress: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
         
-        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
-        APIResults *results = [self resultsForResponseObject: responseObject];
-        completion(results, nil);
+        if (!error) {
+            
+            // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
+            APIResults *results = [self resultsForResponseObject: responseObject];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(results, nil);
+            });
+            
+        }else{
+            completion(nil, error);
+        }
         
-    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-        completion(nil, error);
     }];
+    
+//    NSDictionary *params = @{@"include" : @"last_measurement"};
+//    
+//    [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        
+//        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
+//        APIResults *results = [self resultsForResponseObject: responseObject];
+//        completion(results, nil);
+//        
+//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+//        completion(nil, error);
+//    }];
     
 }
 
@@ -57,36 +85,112 @@
 
 - (void)getStationWithId:(NSNumber *)stationID withCompletion:(ResultCompletionBlock)completion
 {
-    NSDictionary *params = @{@"include" : @"last_measurement"};
-    NSString *url = [NSString stringWithFormat: @"/stations/%@", stationID];
-    
-    [self GET: url parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    NSString *address = [NSString stringWithFormat: @"%@/stations/%@", kBaseURL, stationID];
+    NSString *params = [NSString stringWithFormat: @"?include=last_measurement"];
+
+    [self GETadress: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
         
-        APIResults *results = [self resultsForSingleResponseObject: responseObject];
-        completion(results, nil);
+        if (!error) {
+            
+            APIResults *results = [self resultsForSingleResponseObject: responseObject];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(results, nil);
+            });
+            
+        }else{
+            completion(nil, error);
+        }
         
-    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-        completion(nil, error);
     }];
+    
+//    NSDictionary *params = @{@"include" : @"last_measurement"};
+//    NSString *url = [NSString stringWithFormat: @"/stations/%@", stationID];
+//    
+//    [self GET: url parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        
+//        APIResults *results = [self resultsForSingleResponseObject: responseObject];
+//        completion(results, nil);
+//        
+//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+//        completion(nil, error);
+//    }];
 }
 
 - (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion:(ResultCompletionBlock)completion
 {
+    NSString *address = [NSString stringWithFormat: @"%@/stations.json", kBaseURL];
+
     NSString *coordinateString = [NSString stringWithFormat: @"%f,%f", coordinate.latitude, coordinate.longitude];
+    NSString *params = [NSString stringWithFormat: @"?include=last_measurement&page[limit]=1&nearest_from=%@", coordinateString];
     
-    NSDictionary *params = @{@"page[limit]" : @(1),
-                             @"include" : @"last_measurement",
-                             @"nearest_from" : coordinateString};
+    [self GETadress: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
+         
+         if (!error) {
+             
+             // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
+             APIResults *results = [self resultsForResponseObject: responseObject];
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 completion(results, nil);
+             });
+             
+         }else{
+             completion(nil, error);
+         }
+         
+     }];
     
-    [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//    NSString *coordinateString = [NSString stringWithFormat: @"%f,%f", coordinate.latitude, coordinate.longitude];
+    
+//    NSDictionary *params = @{@"page[limit]" : @(1),
+//                             @"include" : @"last_measurement",
+//                             @"nearest_from" : coordinateString};
+//    
+//    [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        
+//        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
+//        APIResults *results = [self resultsForResponseObject: responseObject];
+//        completion(results, nil);
+//        
+//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+//        completion(nil, error);
+//    }];
+}
+
+#pragma mark - NSURLSession
+
+- (void)GETadress:(NSString *)address withParameters:(NSString *)params withCompletion:(APICompletionBlock)completion
+{
+    NSString *URLString = [NSString stringWithFormat: @"%@%@", address, params];
+    NSURL *URL = [NSURL URLWithString: URLString];
+    
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL: URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
-        APIResults *results = [self resultsForResponseObject: responseObject];
-        completion(results, nil);
+        if (!error) {
+            
+            NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *)response;
+            if (httpResp.statusCode == 200) {
+                
+                NSError *jsonError;
+                NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingAllowFragments error: &jsonError];
+                
+                if (!jsonError) {
+                    completion(JSON, nil);
+                }else{
+                    completion(nil, jsonError);
+                }
+            
+            }else{
+                completion(nil, error);
+            }
+            
+        }else{
+            completion(nil, error);
+        }
         
-    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-        completion(nil, error);
     }];
+    
+    [dataTask resume];
+    
 }
 
 #pragma mark - Helper's

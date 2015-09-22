@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFHTTPSessionManager.h"
+//#import <AFNetworking/AFHTTPSessionManager.h>
 #import "APIResults.h"
 
 typedef void (^CompletionBlock)(BOOL success, NSError *error);
 typedef void (^ResultCompletionBlock)(APIResults *results, NSError *error);
 
-@interface AireNLAPI : AFHTTPSessionManager
+typedef void (^APICompletionBlock)(id responseObject, NSError *error);
+
+@interface AireNLAPI : NSObject
 
 + (id)sharedAPI;
 

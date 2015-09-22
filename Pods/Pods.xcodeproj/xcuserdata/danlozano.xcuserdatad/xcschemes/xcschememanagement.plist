@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>CCMPopup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Mantle.xcscheme</key>
+		<key>Pods-AireNL WatchKit Extension-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -25,6 +20,11 @@
 			<false/>
 		</dict>
 		<key>Pods-AireNL Widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AireNL-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>012B52BF090CC2C907F7FB891027AAB1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>10DA020A72542564FB86DBB31B6E3381</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1512126BD78F6B7D346D1E0DAEECB9DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31C1C26C60E7A5D9151FD9886C6A6C6B</key>
+		<key>40B70071DFDB43C2F41BB4F8BC0CFF9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>42BC2CE76C01C19F3D8D905BB85E76C6</key>
+		<key>47787FE86E844EC1DB0C2BF09378D218</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92C4CF8EFCDC13BA9FDADE5EE979B15A</key>
+		<key>D167E334B026F8AE3CC72DE04D6E5A9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92DA2B4AB049878165886F111F906867</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C3ABD8836A05E72D75AAF9D08E8BCA63</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ECC671A3BBCFA58D8FADF672007072F8</key>
+		<key>EE005FD26D4147EC9756457F54AFE400</key>
 		<dict>
 			<key>primary</key>
 			<true/>

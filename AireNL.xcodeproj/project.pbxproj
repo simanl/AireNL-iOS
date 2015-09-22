@@ -11,25 +11,15 @@
 		0607DE521B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
 		0607DE531B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
 		0607DE541B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
-		060A9EA51B79087000C5AAD6 /* PredictionResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */; };
 		060A9EA61B79087000C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
-		060A9EAD1B79088600C5AAD6 /* PredictionResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */; };
 		060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
-		061723711BB078C100FDA3DC /* AireNLAPI.h in Sources */ = {isa = PBXBuildFile; fileRef = 0651421E1BA8764300312C09 /* AireNLAPI.h */; };
 		061723721BB078C100FDA3DC /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
-		061723731BB078C100FDA3DC /* APIResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D01BA8752000326F16 /* APIResults.h */; };
 		061723741BB078C100FDA3DC /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; };
-		061723751BB078C100FDA3DC /* Station.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C71BA779DA00326F16 /* Station.h */; };
 		061723761BB078C100FDA3DC /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; };
-		061723771BB078C100FDA3DC /* Measurement.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CA1BA779E900326F16 /* Measurement.h */; };
 		061723781BB078C100FDA3DC /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
-		061723791BB078E600FDA3DC /* AireNLAPI.h in Sources */ = {isa = PBXBuildFile; fileRef = 0651421E1BA8764300312C09 /* AireNLAPI.h */; };
 		0617237A1BB078E600FDA3DC /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
-		0617237B1BB078E600FDA3DC /* APIResults.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D01BA8752000326F16 /* APIResults.h */; };
 		0617237C1BB078E600FDA3DC /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; };
-		0617237D1BB078E600FDA3DC /* Station.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C71BA779DA00326F16 /* Station.h */; };
 		0617237E1BB078E600FDA3DC /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; };
-		0617237F1BB078E600FDA3DC /* Measurement.h in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CA1BA779E900326F16 /* Measurement.h */; };
 		061723801BB078E600FDA3DC /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
@@ -60,11 +50,8 @@
 		06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA6B1B74106B007462A4 /* InterfaceController.m */; };
 		06D8BA721B74106B007462A4 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA711B74106B007462A4 /* GlanceController.m */; };
 		06D8BA741B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA731B74106B007462A4 /* Images.xcassets */; };
-		06D8BA781B74106B007462A4 /* AireNL WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
 		06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA7E1B74106B007462A4 /* Interface.storyboard */; };
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
-		06D8BA851B74106B007462A4 /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		06DDB79E1BB0A54D00BED963 /* Constants.h in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05621B715E4200BCFCA3 /* Constants.h */; };
 		06DDB7A11BB0B7AE00BED963 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */; settings = {ASSET_TAGS = (); }; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
@@ -82,10 +69,11 @@
 		06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */; };
 		06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */; };
 		06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
-		133B2427027D8A773265A892 /* libPods-AireNL WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0319D2E937418B20F2F1C7 /* libPods-AireNL WatchKit Extension.a */; };
-		5D748C5603C979673F4FA710 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4261A2766F39D9B777146A8 /* libPods-AireNL.a */; };
-		D2F0869EC7379D94E67B90E4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE7FB868C685FB3C0F45E35 /* libPods.a */; };
-		EB026E34778A4CFC938FE848 /* libPods-AireNL Widget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3B93BA1E26C46CACE4C3B4 /* libPods-AireNL Widget.a */; };
+		06FED4A51BB1F61300DFCDAF /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06FED4A81BB1F61300DFCDAF /* AireNL WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
+		B03EDB9CFB10733F57BE1B66 /* libPods-AireNL Widget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBFA071CE5B9223C540D91D /* libPods-AireNL Widget.a */; };
+		C11B3EE383266F2F2E17F274 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */; };
+		F0F7A196A94178912EE1F71E /* libPods-AireNL WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,26 +84,26 @@
 			remoteGlobalIDString = 06D367A41B542615009E9D47;
 			remoteInfo = AireNL;
 		};
-		06D8BA791B74106B007462A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 06D3679D1B542615009E9D47 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 06D8BA761B74106B007462A4;
-			remoteInfo = "AireNL WatchKit App";
-		};
-		06D8BA831B74106B007462A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 06D3679D1B542615009E9D47 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 06D8BA641B74106B007462A4;
-			remoteInfo = "AireNL WatchKit Extension";
-		};
 		06FAE38C1B72B9C200B19700 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 06D3679D1B542615009E9D47 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 06FAE3801B72B9C200B19700;
 			remoteInfo = "AireNL Widget";
+		};
+		06FED4A31BB1F61300DFCDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06D3679D1B542615009E9D47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06D8BA641B74106B007462A4;
+			remoteInfo = "AireNL WatchKit Extension";
+		};
+		06FED4A61BB1F61300DFCDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06D3679D1B542615009E9D47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06D8BA761B74106B007462A4;
+			remoteInfo = "AireNL WatchKit App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -126,10 +114,31 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				06D8BA851B74106B007462A4 /* AireNL WatchKit Extension.appex in Embed App Extensions */,
 				06FAE38E1B72B9C200B19700 /* AireNL Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06FED4A91BB1F61300DFCDAF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				06FED4A51BB1F61300DFCDAF /* AireNL WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06FED4AA1BB1F61300DFCDAF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				06FED4A81BB1F61300DFCDAF /* AireNL WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -235,18 +244,15 @@
 		06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredictionResults.m; sourceTree = "<group>"; };
 		06FE05621B715E4200BCFCA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellDelegate.h; sourceTree = "<group>"; };
-		0AE7FB868C685FB3C0F45E35 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B3B93BA1E26C46CACE4C3B4 /* libPods-AireNL Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C303C0E9D12CEB5FD316AF3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		5D0319D2E937418B20F2F1C7 /* libPods-AireNL WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A24BFB6A12C905DD3E7FC4B0 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
-		A4261A2766F39D9B777146A8 /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA4CB791F84C2480FEC52D0F /* Pods-AireNL Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget.release.xcconfig"; sourceTree = "<group>"; };
-		D0A5B397F2309EE5B477E76F /* Pods-AireNL WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		E561D436F3FA75A06758C659 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		EAB722DD2D6D20AAE5A54849 /* Pods-AireNL Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget.debug.xcconfig"; sourceTree = "<group>"; };
-		FB089F33C64C54D2D3481831 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
-		FB254569D2CAE2BD3371DCD8 /* Pods-AireNL WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30FA26A5B04475243CAA5344 /* Pods-AireNL Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget.release.xcconfig"; sourceTree = "<group>"; };
+		4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
+		52D9E41D8AAE8899B2C12F46 /* Pods-AireNL WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
+		AA02464CFA27DDA7FD62D67B /* Pods-AireNL WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		B306F5300924CAE313E9D1FE /* Pods-AireNL Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		CDBFA071CE5B9223C540D91D /* libPods-AireNL Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,8 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */,
-				D2F0869EC7379D94E67B90E4 /* libPods.a in Frameworks */,
-				5D748C5603C979673F4FA710 /* libPods-AireNL.a in Frameworks */,
+				C11B3EE383266F2F2E17F274 /* libPods-AireNL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133B2427027D8A773265A892 /* libPods-AireNL WatchKit Extension.a in Frameworks */,
+				F0F7A196A94178912EE1F71E /* libPods-AireNL WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */,
-				EB026E34778A4CFC938FE848 /* libPods-AireNL Widget.a in Frameworks */,
+				B03EDB9CFB10733F57BE1B66 /* libPods-AireNL Widget.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,14 +587,12 @@
 		7DDB6118893D8D39D7CD7C12 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E561D436F3FA75A06758C659 /* Pods.debug.xcconfig */,
-				5C303C0E9D12CEB5FD316AF3 /* Pods.release.xcconfig */,
-				FB254569D2CAE2BD3371DCD8 /* Pods-AireNL WatchKit Extension.debug.xcconfig */,
-				D0A5B397F2309EE5B477E76F /* Pods-AireNL WatchKit Extension.release.xcconfig */,
-				EAB722DD2D6D20AAE5A54849 /* Pods-AireNL Widget.debug.xcconfig */,
-				AA4CB791F84C2480FEC52D0F /* Pods-AireNL Widget.release.xcconfig */,
-				FB089F33C64C54D2D3481831 /* Pods-AireNL.debug.xcconfig */,
-				A24BFB6A12C905DD3E7FC4B0 /* Pods-AireNL.release.xcconfig */,
+				4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */,
+				89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */,
+				AA02464CFA27DDA7FD62D67B /* Pods-AireNL WatchKit Extension.debug.xcconfig */,
+				52D9E41D8AAE8899B2C12F46 /* Pods-AireNL WatchKit Extension.release.xcconfig */,
+				B306F5300924CAE313E9D1FE /* Pods-AireNL Widget.debug.xcconfig */,
+				30FA26A5B04475243CAA5344 /* Pods-AireNL Widget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -597,11 +600,10 @@
 		B8522DD162297A694322873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AE7FB868C685FB3C0F45E35 /* libPods.a */,
 				06FAE3821B72B9C200B19700 /* NotificationCenter.framework */,
-				A4261A2766F39D9B777146A8 /* libPods-AireNL.a */,
-				5D0319D2E937418B20F2F1C7 /* libPods-AireNL WatchKit Extension.a */,
-				0B3B93BA1E26C46CACE4C3B4 /* libPods-AireNL Widget.a */,
+				0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */,
+				254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */,
+				CDBFA071CE5B9223C540D91D /* libPods-AireNL Widget.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -619,12 +621,13 @@
 				06D367A31B542615009E9D47 /* Resources */,
 				1661E4839A3A757B79DA8EC6 /* Copy Pods Resources */,
 				06FAE3921B72B9C200B19700 /* Embed App Extensions */,
+				06FED4AA1BB1F61300DFCDAF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				06FAE38D1B72B9C200B19700 /* PBXTargetDependency */,
-				06D8BA841B74106B007462A4 /* PBXTargetDependency */,
+				06FED4A71BB1F61300DFCDAF /* PBXTargetDependency */,
 			);
 			name = AireNL;
 			productName = AireNL;
@@ -662,27 +665,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				06D8BA7A1B74106B007462A4 /* PBXTargetDependency */,
 			);
 			name = "AireNL WatchKit Extension";
 			productName = "AireNL WatchKit Extension";
 			productReference = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		06D8BA761B74106B007462A4 /* AireNL WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06D8BA8A1B74106B007462A4 /* Build configuration list for PBXNativeTarget "AireNL WatchKit App" */;
 			buildPhases = (
 				06D8BA751B74106B007462A4 /* Resources */,
+				06FED4A91BB1F61300DFCDAF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				06FED4A41BB1F61300DFCDAF /* PBXTargetDependency */,
 			);
 			name = "AireNL WatchKit App";
 			productName = "AireNL WatchKit App";
 			productReference = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productType = "com.apple.product-type.application.watchapp2";
 		};
 		06FAE3801B72B9C200B19700 /* AireNL Widget */ = {
 			isa = PBXNativeTarget;
@@ -709,7 +713,7 @@
 		06D3679D1B542615009E9D47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Icalia Labs";
 				TargetAttributes = {
 					06D367A41B542615009E9D47 = {
@@ -722,6 +726,7 @@
 					};
 					06D8BA641B74106B007462A4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = TAGM86AK24;
 					};
 					06D8BA761B74106B007462A4 = {
 						CreatedOnToolsVersion = 6.4;
@@ -783,7 +788,6 @@
 			files = (
 				06D8BA741B74106B007462A4 /* Images.xcassets in Resources */,
 				0607DE531B8FBDE6006E9A1A /* Localizable.strings in Resources */,
-				06D8BA781B74106B007462A4 /* AireNL WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,18 +954,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06DDB79E1BB0A54D00BED963 /* Constants.h in Sources */,
-				061723791BB078E600FDA3DC /* AireNLAPI.h in Sources */,
 				0617237A1BB078E600FDA3DC /* AireNLAPI.m in Sources */,
-				0617237B1BB078E600FDA3DC /* APIResults.h in Sources */,
 				0617237C1BB078E600FDA3DC /* APIResults.m in Sources */,
-				0617237D1BB078E600FDA3DC /* Station.h in Sources */,
 				0617237E1BB078E600FDA3DC /* Station.m in Sources */,
-				0617237F1BB078E600FDA3DC /* Measurement.h in Sources */,
 				061723801BB078E600FDA3DC /* Measurement.m in Sources */,
 				06B01CB71B7947A10094861C /* AirQualityInterfaceController.m in Sources */,
 				06B01CBA1B7947C30094861C /* TempWindInterfaceController.m in Sources */,
-				060A9EAD1B79088600C5AAD6 /* PredictionResults.h in Sources */,
 				060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */,
 				06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */,
 				06D8BA721B74106B007462A4 /* GlanceController.m in Sources */,
@@ -972,15 +970,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061723711BB078C100FDA3DC /* AireNLAPI.h in Sources */,
 				061723721BB078C100FDA3DC /* AireNLAPI.m in Sources */,
-				061723731BB078C100FDA3DC /* APIResults.h in Sources */,
 				061723741BB078C100FDA3DC /* APIResults.m in Sources */,
-				061723751BB078C100FDA3DC /* Station.h in Sources */,
 				061723761BB078C100FDA3DC /* Station.m in Sources */,
-				061723771BB078C100FDA3DC /* Measurement.h in Sources */,
 				061723781BB078C100FDA3DC /* Measurement.m in Sources */,
-				060A9EA51B79087000C5AAD6 /* PredictionResults.h in Sources */,
 				060A9EA61B79087000C5AAD6 /* PredictionResults.m in Sources */,
 				06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */,
 			);
@@ -994,20 +987,20 @@
 			target = 06D367A41B542615009E9D47 /* AireNL */;
 			targetProxy = 06D367BF1B542615009E9D47 /* PBXContainerItemProxy */;
 		};
-		06D8BA7A1B74106B007462A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 06D8BA761B74106B007462A4 /* AireNL WatchKit App */;
-			targetProxy = 06D8BA791B74106B007462A4 /* PBXContainerItemProxy */;
-		};
-		06D8BA841B74106B007462A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 06D8BA641B74106B007462A4 /* AireNL WatchKit Extension */;
-			targetProxy = 06D8BA831B74106B007462A4 /* PBXContainerItemProxy */;
-		};
 		06FAE38D1B72B9C200B19700 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 06FAE3801B72B9C200B19700 /* AireNL Widget */;
 			targetProxy = 06FAE38C1B72B9C200B19700 /* PBXContainerItemProxy */;
+		};
+		06FED4A41BB1F61300DFCDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06D8BA641B74106B007462A4 /* AireNL WatchKit Extension */;
+			targetProxy = 06FED4A31BB1F61300DFCDAF /* PBXContainerItemProxy */;
+		};
+		06FED4A71BB1F61300DFCDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06D8BA761B74106B007462A4 /* AireNL WatchKit App */;
+			targetProxy = 06FED4A61BB1F61300DFCDAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1100,6 +1093,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1120,6 +1114,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1158,29 +1153,32 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 		06D367C91B542615009E9D47 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB089F33C64C54D2D3481831 /* Pods-AireNL.debug.xcconfig */;
+			baseConfigurationReference = 4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		06D367CA1B542615009E9D47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A24BFB6A12C905DD3E7FC4B0 /* Pods-AireNL.release.xcconfig */;
+			baseConfigurationReference = 89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1199,6 +1197,7 @@
 				);
 				INFOPLIST_FILE = AireNLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AireNL.app/AireNL";
 			};
@@ -1214,6 +1213,7 @@
 				);
 				INFOPLIST_FILE = AireNLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AireNL.app/AireNL";
 			};
@@ -1221,9 +1221,10 @@
 		};
 		06D8BA861B74106B007462A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB254569D2CAE2BD3371DCD8 /* Pods-AireNL WatchKit Extension.debug.xcconfig */;
+			baseConfigurationReference = AA02464CFA27DDA7FD62D67B /* Pods-AireNL WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1231,20 +1232,37 @@
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		06D8BA871B74106B007462A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0A5B397F2309EE5B477E76F /* Pods-AireNL WatchKit Extension.release.xcconfig */;
+			baseConfigurationReference = 52D9E41D8AAE8899B2C12F46 /* Pods-AireNL WatchKit Extension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1260,12 +1278,15 @@
 				);
 				IBSC_MODULE = AireNL_WatchKit_Extension;
 				INFOPLIST_FILE = "AireNL WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1277,18 +1298,20 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = AireNL_WatchKit_Extension;
 				INFOPLIST_FILE = "AireNL WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 		06FAE3901B72B9C200B19700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAB722DD2D6D20AAE5A54849 /* Pods-AireNL Widget.debug.xcconfig */;
+			baseConfigurationReference = B306F5300924CAE313E9D1FE /* Pods-AireNL Widget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1298,6 +1321,7 @@
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1305,11 +1329,12 @@
 		};
 		06FAE3911B72B9C200B19700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA4CB791F84C2480FEC52D0F /* Pods-AireNL Widget.release.xcconfig */;
+			baseConfigurationReference = 30FA26A5B04475243CAA5344 /* Pods-AireNL Widget.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

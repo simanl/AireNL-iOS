@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C1D190B903F8F583664ED6A"
+               BlueprintIdentifier = "CAA0F22C3E68A22ABFD6DBCF"
                BuildableName = "libPods-AireNL Widget.a"
                BlueprintName = "Pods-AireNL Widget"
                ReferencedContainer = "container:Pods.xcodeproj">
