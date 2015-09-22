@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-//#import <AFNetworking/AFHTTPSessionManager.h>
 #import "APIResults.h"
 
 typedef void (^CompletionBlock)(BOOL success, NSError *error);

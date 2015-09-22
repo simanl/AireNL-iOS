@@ -27,15 +27,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-//        NSURL *baseURL = [NSURL URLWithString: kBaseURL];
-//        __instance = [[AireNLAPI alloc] initWithBaseURL: baseURL];
-//        __instance.requestSerializer = [AFJSONRequestSerializer serializer];
-//        __instance.responseSerializer = [AFJSONResponseSerializer serializer];
-        
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         __instance = [[AireNLAPI alloc] init];
         __instance.session = [NSURLSession sessionWithConfiguration: configuration];
-
+        
     });
     return __instance;
 }
@@ -53,13 +48,14 @@
             
             // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
             APIResults *results = [self resultsForResponseObject: responseObject];
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 completion(results, nil);
             });
             
         }else{
-            completion(nil, error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(nil, error);
+            });
         }
         
     }];
@@ -98,7 +94,9 @@
             });
             
         }else{
-            completion(nil, error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(nil, error);
+            });
         }
         
     }];
@@ -134,7 +132,9 @@
              });
              
          }else{
-             completion(nil, error);
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 completion(nil, error);
+             });
          }
          
      }];
@@ -163,7 +163,8 @@
     NSString *URLString = [NSString stringWithFormat: @"%@%@", address, params];
     NSURL *URL = [NSURL URLWithString: URLString];
     
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL: URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *dataTask =
+    [self.session dataTaskWithURL: URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (!error) {
             
