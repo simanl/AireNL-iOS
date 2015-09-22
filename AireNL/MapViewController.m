@@ -29,6 +29,10 @@
 
 @property (nonatomic) UIBarButtonItem *doneButton;
 @property (nonatomic) UIBarButtonItem *switchButton;
+
+@property (nonatomic) UIBarButtonItem *activityButton;
+@property (nonatomic) UIActivityIndicatorView *activityView;
+
 @property (nonatomic) UIView *customCalloutView;
 
 @end
@@ -64,6 +68,7 @@
 - (void)loadStations
 {
     NSLog(@"MAP : LOADING STATIONS");
+    [self showLoading];
     
     [[AireNLAPI sharedAPI] getStationsWithCompletion:^(APIResults *results, NSError *error) {
         
@@ -76,7 +81,7 @@
         }else{
             NSLog(@"ERROR : %@", error);
         }
-        
+        [self hideLoading];
     }];
 }
 
@@ -108,7 +113,8 @@
 
 - (void)didSelectDone
 {
-    [self dismissViewControllerAnimated: YES completion: nil];
+    [self loadStations];
+//    [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 - (void)didSelectSwitch
@@ -345,6 +351,20 @@
     return calloutView;
 }
 
+#pragma mark - Helper's
+
+- (void)showLoading
+{
+    self.navigationItem.rightBarButtonItem = self.activityButton;
+    [self.activityView startAnimating];
+}
+
+- (void)hideLoading
+{
+    [self.activityView stopAnimating];
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
 #pragma mark - Set/Get
 
 - (UIBarButtonItem *)doneButton
@@ -361,6 +381,22 @@
         _switchButton = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"SwitchIcon"] style: UIBarButtonItemStylePlain target: self action: @selector(didSelectSwitch)];
     }
     return _switchButton;
+}
+
+- (UIBarButtonItem *)activityButton
+{
+    if (!_activityButton) {
+        _activityButton = [[UIBarButtonItem alloc] initWithCustomView: self.activityView];
+    }
+    return _activityButton;
+}
+
+- (UIActivityIndicatorView *)activityView
+{
+    if (!_activityView) {
+        _activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhite];
+    }
+    return _activityView;
 }
 
 @end
