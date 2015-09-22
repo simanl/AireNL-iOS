@@ -462,8 +462,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcp-sV-2CN" userLabel="contentView">
                                                     <rect key="frame" x="5" y="5" width="310" height="90"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q84-H1-9UC" userLabel="centerView">
-                                                            <rect key="frame" x="104" y="0.0" width="100" height="90"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q84-H1-9UC" userLabel="centerView">
+                                                            <rect key="frame" x="105" y="0.0" width="100" height="90"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TempIcon" translatesAutoresizingMaskIntoConstraints="NO" id="poF-us-V2A">
                                                                     <rect key="frame" x="14" y="17" width="13" height="31"/>
@@ -580,8 +580,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWq-zo-EBh" userLabel="contentView">
                                                     <rect key="frame" x="15" y="5" width="310" height="90"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0I-HP-1jv" userLabel="centerView">
-                                                            <rect key="frame" x="104" y="0.0" width="100" height="90"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0I-HP-1jv" userLabel="centerView">
+                                                            <rect key="frame" x="105" y="0.0" width="100" height="90"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="VientoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lZT-Dz-tPO">
                                                                     <rect key="frame" x="5" y="23" width="29" height="19"/>

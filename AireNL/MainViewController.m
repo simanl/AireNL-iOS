@@ -573,20 +573,20 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     CLLocationCoordinate2D coordinate = location.coordinate;
     CLLocationAccuracy horizontalAccuracy = location.horizontalAccuracy;
     CLLocationAccuracy verticalAccuracy = location.verticalAccuracy;
-    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+//    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
     
     NSLog(@"DID UPDATE LOCATION : %f , %f", coordinate.latitude, coordinate.longitude);
     NSLog(@"WITH ACCURACY : %f , %f", horizontalAccuracy, verticalAccuracy);
     
-    if (verticalAccuracy < 0 || horizontalAccuracy < 0) {
-        NSLog(@"LOCATION ABORTED : ACCURACY");
-        return;
-    }
-    
-    if (locationAge > 5.0){
-        NSLog(@"LOCATION ABORTED : AGE");
-        return;
-    }
+//    if (verticalAccuracy < 0 || horizontalAccuracy < 0) {
+//        NSLog(@"LOCATION ABORTED : ACCURACY");
+//        return;
+//    }
+//    
+//    if (locationAge > 5.0){
+//        NSLog(@"LOCATION ABORTED : AGE");
+//        return;
+//    }
     
     [manager stopUpdatingLocation];
     [self loadNearestStationForCoordinate: coordinate];
@@ -613,6 +613,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 {
     NSLog(@"LOCATION MANAGER : ERROR : %@", error);
     [self hideLoading];
+    [self loadCurrentStation];
 }
 
 #pragma mark - Location Helper's

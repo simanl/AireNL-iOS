@@ -113,8 +113,7 @@
 
 - (void)didSelectDone
 {
-    [self loadStations];
-//    [self dismissViewControllerAnimated: YES completion: nil];
+    [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 - (void)didSelectSwitch
