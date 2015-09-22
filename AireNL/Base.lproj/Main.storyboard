@@ -712,8 +712,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnT-fm-Ccj">
-                                        <rect key="frame" x="563" y="16" width="22" height="22"/>
+                                        <rect key="frame" x="550" y="0.0" width="50" height="54"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Hwe-kp-s9Z"/>
+                                        </constraints>
                                         <state key="normal" image="MapIcon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -722,8 +725,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-PB-6OQ">
-                                        <rect key="frame" x="15" y="15" width="22" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="54"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="IlO-29-kVK"/>
+                                        </constraints>
                                         <state key="normal" image="GPSIcon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -740,10 +746,12 @@
                                 <constraints>
                                     <constraint firstItem="1KS-1F-pO3" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="top" constant="8" id="5Oh-yg-kG7"/>
                                     <constraint firstAttribute="centerY" secondItem="8hI-PB-6OQ" secondAttribute="centerY" id="F7Y-iy-aRm"/>
+                                    <constraint firstAttribute="bottom" secondItem="LnT-fm-Ccj" secondAttribute="bottom" id="KtX-SE-LSd"/>
                                     <constraint firstAttribute="trailing" secondItem="LnT-fm-Ccj" secondAttribute="trailing" constant="15" id="MNh-4l-KgZ"/>
                                     <constraint firstAttribute="trailing" secondItem="1KS-1F-pO3" secondAttribute="trailing" constant="50" id="NRt-lu-5v6"/>
                                     <constraint firstAttribute="trailing" secondItem="8Gg-SX-8k8" secondAttribute="trailing" constant="50" id="NnT-wh-kSO"/>
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="2.5" id="OQw-NX-1jo"/>
+                                    <constraint firstItem="8hI-PB-6OQ" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="top" id="RIS-Jo-5D2"/>
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="leading" secondItem="PgK-9j-pDS" secondAttribute="leading" constant="50" id="YZo-4l-L7g"/>
                                     <constraint firstAttribute="height" constant="54" id="asR-Rz-5B8"/>
                                     <constraint firstItem="A6K-4j-M5F" firstAttribute="centerX" secondItem="PgK-9j-pDS" secondAttribute="centerX" id="cMf-I6-tng"/>
@@ -752,14 +760,22 @@
                                     <constraint firstItem="8Gg-SX-8k8" firstAttribute="top" secondItem="1KS-1F-pO3" secondAttribute="bottom" constant="-1" id="hhw-GS-qc4"/>
                                     <constraint firstAttribute="centerX" secondItem="1KS-1F-pO3" secondAttribute="centerX" id="isW-TU-Elz"/>
                                     <constraint firstItem="1KS-1F-pO3" firstAttribute="leading" secondItem="PgK-9j-pDS" secondAttribute="leading" constant="50" id="iw9-wA-sb9"/>
+                                    <constraint firstAttribute="trailing" secondItem="LnT-fm-Ccj" secondAttribute="trailing" id="kQS-3u-l5n"/>
+                                    <constraint firstItem="LnT-fm-Ccj" firstAttribute="top" secondItem="PgK-9j-pDS" secondAttribute="top" id="lSP-Gd-4g0"/>
+                                    <constraint firstItem="8hI-PB-6OQ" firstAttribute="leading" secondItem="PgK-9j-pDS" secondAttribute="leading" id="m41-zN-uK4"/>
                                     <constraint firstAttribute="centerY" secondItem="LnT-fm-Ccj" secondAttribute="centerY" id="nM0-kF-6Bp"/>
                                     <constraint firstItem="A6K-4j-M5F" firstAttribute="centerY" secondItem="PgK-9j-pDS" secondAttribute="centerY" id="oG0-vm-oXe"/>
+                                    <constraint firstAttribute="bottom" secondItem="8hI-PB-6OQ" secondAttribute="bottom" id="s6o-Xd-9CN"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="F7Y-iy-aRm"/>
+                                        <exclude reference="hLQ-Ix-EUq"/>
                                         <exclude reference="isW-TU-Elz"/>
                                         <exclude reference="cVM-EE-dKt"/>
                                         <exclude reference="hhw-GS-qc4"/>
+                                        <exclude reference="MNh-4l-KgZ"/>
+                                        <exclude reference="nM0-kF-6Bp"/>
                                     </mask>
                                 </variation>
                             </view>
