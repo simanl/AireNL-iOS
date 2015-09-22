@@ -594,6 +594,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
+    NSLog(@"LOCATION MANAGER : DID CHANGE AUTHORIZATION STATUS");
     switch (status) {
         case kCLAuthorizationStatusNotDetermined:
             [self askLocationPermision];
@@ -606,6 +607,12 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         default:
             break;
     }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"LOCATION MANAGER : ERROR : %@", error);
+    [self hideLoading];
 }
 
 #pragma mark - Location Helper's
