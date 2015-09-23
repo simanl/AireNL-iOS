@@ -26,27 +26,32 @@
     static AireNLAPI *__instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         __instance = [[AireNLAPI alloc] init];
-        __instance.session = [NSURLSession sessionWithConfiguration: configuration];
-        
     });
     return __instance;
+}
+
+- (id)init
+{
+    self = [super init]; if (!self) return nil;
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    self.session = [NSURLSession sessionWithConfiguration: configuration];
+    
+    return self;
 }
 
 #pragma mark - Public API
 
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion
 {
-    NSString *address = [NSString stringWithFormat: @"%@/stations.json", kBaseURL];
-    NSString *params = [NSString stringWithFormat: @"?include=last_measurement"];
+    NSString *address = @"/stations.json";
+    NSDictionary *params = @{@"include" : @"last_measurement"};
     
-    [self GETadress: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
+    [self GET: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
         
         if (!error) {
             
-            // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
             APIResults *results = [self resultsForResponseObject: responseObject];
             dispatch_async(dispatch_get_main_queue(), ^{
                 completion(results, nil);
@@ -60,18 +65,6 @@
         
     }];
     
-//    NSDictionary *params = @{@"include" : @"last_measurement"};
-//    
-//    [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        
-//        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
-//        APIResults *results = [self resultsForResponseObject: responseObject];
-//        completion(results, nil);
-//        
-//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-//        completion(nil, error);
-//    }];
-    
 }
 
 - (void)getDefaultStationWithCompletion:(ResultCompletionBlock)completion
@@ -81,11 +74,11 @@
 
 - (void)getStationWithId:(NSNumber *)stationID withCompletion:(ResultCompletionBlock)completion
 {
-    NSString *address = [NSString stringWithFormat: @"%@/stations/%@", kBaseURL, stationID];
-    NSString *params = [NSString stringWithFormat: @"?include=last_measurement"];
+    NSString *address = [NSString stringWithFormat: @"/stations/%@", stationID];
+    NSDictionary *params = @{@"include" : @"last_measurement"};
 
-    [self GETadress: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
-        
+    [self GET: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
+       
         if (!error) {
             
             APIResults *results = [self resultsForSingleResponseObject: responseObject];
@@ -101,67 +94,41 @@
         
     }];
     
-//    NSDictionary *params = @{@"include" : @"last_measurement"};
-//    NSString *url = [NSString stringWithFormat: @"/stations/%@", stationID];
-//    
-//    [self GET: url parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        
-//        APIResults *results = [self resultsForSingleResponseObject: responseObject];
-//        completion(results, nil);
-//        
-//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-//        completion(nil, error);
-//    }];
 }
 
 - (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion:(ResultCompletionBlock)completion
 {
-    NSString *address = [NSString stringWithFormat: @"%@/stations.json", kBaseURL];
-
+    NSString *address = @"/stations.json";
+    
     NSString *coordinateString = [NSString stringWithFormat: @"%f,%f", coordinate.latitude, coordinate.longitude];
-    NSString *params = [NSString stringWithFormat: @"?include=last_measurement&page[limit]=1&nearest_from=%@", coordinateString];
+    NSDictionary *params = @{@"include" : @"last_measurement",
+                             @"page[limit]" : @"1",
+                             @"nearest_from" : coordinateString};
     
-    [self GETadress: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
-         
-         if (!error) {
-             
-             // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
-             APIResults *results = [self resultsForResponseObject: responseObject];
-             dispatch_async(dispatch_get_main_queue(), ^{
-                 completion(results, nil);
-             });
-             
-         }else{
-             dispatch_async(dispatch_get_main_queue(), ^{
-                 completion(nil, error);
-             });
-         }
-         
-     }];
+    [self GET: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
+        
+        if (!error) {
+            
+            APIResults *results = [self resultsForResponseObject: responseObject];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(results, nil);
+            });
+            
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(nil, error);
+            });
+        }
+        
+    }];
     
-//    NSString *coordinateString = [NSString stringWithFormat: @"%f,%f", coordinate.latitude, coordinate.longitude];
-    
-//    NSDictionary *params = @{@"page[limit]" : @(1),
-//                             @"include" : @"last_measurement",
-//                             @"nearest_from" : coordinateString};
-//    
-//    [self GET: @"/stations.json" parameters: params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        
-//        // THIS IS GOING TO CRASH WHEN RESULTS HAVE SINGLE OBJECT INSTEAD OF ARRAY
-//        APIResults *results = [self resultsForResponseObject: responseObject];
-//        completion(results, nil);
-//        
-//    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-//        completion(nil, error);
-//    }];
 }
 
-#pragma mark - NSURLSession
+#pragma mark - Private HTTP Methods (NSURLSession)
 
-- (void)GETadress:(NSString *)address withParameters:(NSString *)params withCompletion:(APICompletionBlock)completion
+- (void)GET:(NSString *)urlString withParameters:(NSDictionary *)params withCompletion:(APICompletionBlock)completion
 {
-    NSString *URLString = [NSString stringWithFormat: @"%@%@", address, params];
-    NSURL *URL = [NSURL URLWithString: URLString];
+    NSURL *URL = [self URLforRelativePath: urlString withURLParameters: params];
     
     NSURLSessionDataTask *dataTask =
     [self.session dataTaskWithURL: URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -191,10 +158,25 @@
     }];
     
     [dataTask resume];
-    
 }
 
-#pragma mark - Helper's
+#pragma mark - URL Helper's
+
+- (NSURL *)URLforRelativePath:(NSString *)path withURLParameters:(NSDictionary *)parameters
+{
+    NSString *URLString = [NSString stringWithFormat: @"%@%@", kBaseURL, path];
+    NSURLComponents *components = [NSURLComponents componentsWithString: URLString];
+    
+    NSMutableArray *queryItems = [NSMutableArray array];
+    for (NSString *key in parameters) {
+        [queryItems addObject: [NSURLQueryItem queryItemWithName: key value: parameters[key]]];
+    }
+    components.queryItems = queryItems;
+    
+    return components.URL;
+}
+
+#pragma mark - APIResults Helper's
 
 - (APIResults *)resultsForSingleResponseObject:(NSDictionary *)responseObject
 {

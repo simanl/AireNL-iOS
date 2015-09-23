@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
 @property (nonatomic) NSNumber *windSpeed;
 
 @property (nonatomic) NSNumber *imecaPoints;
-@property (nonatomic) NSNumber *rainfall;
+@property (nonatomic) NSNumber *precipitation;
 @property (nonatomic) NSNumber *carbonMonoxide;
 @property (nonatomic) NSNumber *nitricOxide;
 @property (nonatomic) NSNumber *nitrogenDioxide;

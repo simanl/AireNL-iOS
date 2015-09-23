@@ -10,9 +10,7 @@
 
 #import "APIResults.h"
 
-typedef void (^CompletionBlock)(BOOL success, NSError *error);
 typedef void (^ResultCompletionBlock)(APIResults *results, NSError *error);
-
 typedef void (^APICompletionBlock)(id responseObject, NSError *error);
 
 @interface AireNLAPI : NSObject

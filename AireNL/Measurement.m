@@ -30,7 +30,7 @@
              @"windDirection" : @"attributes.wind_direction",
              @"windSpeed" : @"attributes.wind_speed",
              @"imecaPoints" : @"attributes.imeca_points",
-             @"rainfall" : @"attributes.rainfall",
+             @"precipitation" : @"attributes.precipitation",
              @"carbonMonoxide" : @"attributes.carbon_monoxide",
              @"nitricOxide" : @"attributes.nitric_oxide",
              @"nitrogenDioxide" : @"attributes.nitrogen_dioxide",

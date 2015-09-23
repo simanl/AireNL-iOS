@@ -186,10 +186,10 @@
     //        return;
     //    }
     
-    if (locationAge > 5.0){
-        NSLog(@"LOCATION ABORTED : AGE");
-        return;
-    }
+//    if (locationAge > 5.0){
+//        NSLog(@"LOCATION ABORTED : AGE");
+//        return;
+//    }
     
     [manager stopUpdatingLocation];
     [self loadNearestStationForCoordinate: coordinate];
