@@ -18,10 +18,10 @@ typedef void (^APICompletionBlock)(id responseObject, NSError *error);
 + (id)sharedAPI;
 
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion;
-
 - (void)getDefaultStationWithCompletion:(ResultCompletionBlock)completion;
 - (void)getStationWithId:(NSNumber *)stationID withCompletion:(ResultCompletionBlock)completion;
-
 - (void)getNearestStationForCoordinate:(CLLocationCoordinate2D)coordinate withCompletion:(ResultCompletionBlock)completion;
+
+- (void)disableCaching;
 
 @end

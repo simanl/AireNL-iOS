@@ -11,13 +11,9 @@
 		0607DE521B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
 		0607DE531B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
 		0607DE541B8FBDE6006E9A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0607DE561B8FBDE6006E9A1A /* Localizable.strings */; };
-		060A9EA61B79087000C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
-		060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
-		061723721BB078C100FDA3DC /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
 		061723741BB078C100FDA3DC /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; };
 		061723761BB078C100FDA3DC /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; };
 		061723781BB078C100FDA3DC /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
-		0617237A1BB078E600FDA3DC /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
 		0617237C1BB078E600FDA3DC /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; };
 		0617237E1BB078E600FDA3DC /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; };
 		061723801BB078E600FDA3DC /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
@@ -62,6 +58,8 @@
 		06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C9581B7BFD1000876961 /* ILRoundedView.m */; };
 		06F733AC1BB321B200EB73BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F733AB1BB321B200EB73BE /* CoreLocation.framework */; };
 		06F733AE1BB321C300EB73BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F733AD1BB321C300EB73BE /* CoreLocation.framework */; };
+		06F733AF1BB3230400EB73BE /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
+		06F733B01BB3231600EB73BE /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
 		06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FAE3821B72B9C200B19700 /* NotificationCenter.framework */; };
 		06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FAE3881B72B9C200B19700 /* TodayViewController.m */; };
 		06FAE38E1B72B9C200B19700 /* AireNL Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06FAE3811B72B9C200B19700 /* AireNL Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -962,13 +960,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0617237A1BB078E600FDA3DC /* AireNLAPI.m in Sources */,
+				06F733B01BB3231600EB73BE /* AireNLAPI.m in Sources */,
 				0617237C1BB078E600FDA3DC /* APIResults.m in Sources */,
 				0617237E1BB078E600FDA3DC /* Station.m in Sources */,
 				061723801BB078E600FDA3DC /* Measurement.m in Sources */,
 				06B01CB71B7947A10094861C /* AirQualityInterfaceController.m in Sources */,
 				06B01CBA1B7947C30094861C /* TempWindInterfaceController.m in Sources */,
-				060A9EAE1B79088600C5AAD6 /* PredictionResults.m in Sources */,
 				06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */,
 				06D8BA721B74106B007462A4 /* GlanceController.m in Sources */,
 			);
@@ -978,11 +975,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061723721BB078C100FDA3DC /* AireNLAPI.m in Sources */,
+				06F733AF1BB3230400EB73BE /* AireNLAPI.m in Sources */,
 				061723741BB078C100FDA3DC /* APIResults.m in Sources */,
 				061723761BB078C100FDA3DC /* Station.m in Sources */,
 				061723781BB078C100FDA3DC /* Measurement.m in Sources */,
-				060A9EA61B79087000C5AAD6 /* PredictionResults.m in Sources */,
 				06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,7 +41,7 @@
     // Configure interface objects here.
     [super awakeWithContext: context];
 
-//    [self loadNearestStation];
+    [[AireNLAPI sharedAPI] disableCaching];    
 }
 
 - (void)willActivate
@@ -176,7 +176,7 @@
     CLLocationCoordinate2D coordinate = location.coordinate;
     CLLocationAccuracy horizontalAccuracy = location.horizontalAccuracy;
     CLLocationAccuracy verticalAccuracy = location.verticalAccuracy;
-    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+//    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
     
     NSLog(@"DID UPDATE LOCATION : %f , %f", coordinate.latitude, coordinate.longitude);
     NSLog(@"WITH ACCURACY : %f , %f", horizontalAccuracy, verticalAccuracy);

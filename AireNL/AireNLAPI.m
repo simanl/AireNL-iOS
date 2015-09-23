@@ -43,6 +43,13 @@
 
 #pragma mark - Public API
 
+- (void)disableCaching
+{
+    NSURLSessionConfiguration *newConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    newConfiguration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    self.session = [NSURLSession sessionWithConfiguration: newConfiguration];
+}
+
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion
 {
     NSString *address = @"/stations.json";
@@ -137,7 +144,7 @@
             
             NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *)response;
             if (httpResp.statusCode == 200) {
-                
+                                
                 NSError *jsonError;
                 NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingAllowFragments error: &jsonError];
                 

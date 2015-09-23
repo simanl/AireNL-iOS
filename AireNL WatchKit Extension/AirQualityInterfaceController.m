@@ -28,13 +28,14 @@
     [super awakeWithContext:context];
     
     [self setUpNotifications];
-//    [self loadAssets];
 }
 
 - (void)willActivate
 {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [self updateScreen];
 }
 
 - (void)didDeactivate
@@ -61,7 +62,7 @@
     
     self.selectedStation = userInfo[@"selectedStation"];
     self.selectedMeasurement = userInfo[@"selectedMeasurement"];
-    
+        
     [self updateScreen];
 }
 
