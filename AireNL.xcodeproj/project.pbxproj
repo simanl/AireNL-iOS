@@ -60,6 +60,8 @@
 		06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C44B1B680E7000BDF043 /* PronosticoTableViewCell.m */; };
 		06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */; };
 		06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C9581B7BFD1000876961 /* ILRoundedView.m */; };
+		06F733AC1BB321B200EB73BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F733AB1BB321B200EB73BE /* CoreLocation.framework */; };
+		06F733AE1BB321C300EB73BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F733AD1BB321C300EB73BE /* CoreLocation.framework */; };
 		06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FAE3821B72B9C200B19700 /* NotificationCenter.framework */; };
 		06FAE3891B72B9C200B19700 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FAE3881B72B9C200B19700 /* TodayViewController.m */; };
 		06FAE38E1B72B9C200B19700 /* AireNL Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06FAE3811B72B9C200B19700 /* AireNL Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -226,6 +228,8 @@
 		06F2C4501B6811D100BDF043 /* PronosticoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronosticoHeaderTableViewCell.m; sourceTree = "<group>"; };
 		06F4C9571B7BFD1000876961 /* ILRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRoundedView.h; sourceTree = "<group>"; };
 		06F4C9581B7BFD1000876961 /* ILRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRoundedView.m; sourceTree = "<group>"; };
+		06F733AB1BB321B200EB73BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		06F733AD1BB321C300EB73BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		06FAE3811B72B9C200B19700 /* AireNL Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AireNL Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FAE3821B72B9C200B19700 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		06FAE3861B72B9C200B19700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F733AE1BB321C300EB73BE /* CoreLocation.framework in Frameworks */,
 				F0F7A196A94178912EE1F71E /* libPods-AireNL WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F733AC1BB321B200EB73BE /* CoreLocation.framework in Frameworks */,
 				06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */,
 				B03EDB9CFB10733F57BE1B66 /* libPods-AireNL Widget.a in Frameworks */,
 			);
@@ -600,6 +606,8 @@
 		B8522DD162297A694322873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06F733AD1BB321C300EB73BE /* CoreLocation.framework */,
+				06F733AB1BB321B200EB73BE /* CoreLocation.framework */,
 				06FAE3821B72B9C200B19700 /* NotificationCenter.framework */,
 				0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */,
 				254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */,
