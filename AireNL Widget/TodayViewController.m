@@ -40,7 +40,6 @@
     [super viewDidLoad];
 
     [self loadNearestStation];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -194,7 +193,7 @@
     CLLocationCoordinate2D coordinate = location.coordinate;
     CLLocationAccuracy horizontalAccuracy = location.horizontalAccuracy;
     CLLocationAccuracy verticalAccuracy = location.verticalAccuracy;
-    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+//    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
     
     NSLog(@"DID UPDATE LOCATION : %f , %f", coordinate.latitude, coordinate.longitude);
     NSLog(@"WITH ACCURACY : %f , %f", horizontalAccuracy, verticalAccuracy);
@@ -204,10 +203,10 @@
 //        return;
 //    }
     
-    if (locationAge > 5.0){
-        NSLog(@"LOCATION ABORTED : AGE");
-        return;
-    }
+//    if (locationAge > 5.0){
+//        NSLog(@"LOCATION ABORTED : AGE");
+//        return;
+//    }
     
     [manager stopUpdatingLocation];
     [self loadNearestStationForCoordinate: coordinate];

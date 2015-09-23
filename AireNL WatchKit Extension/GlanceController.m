@@ -38,16 +38,20 @@
 {
     // Configure interface objects here.
     [super awakeWithContext:context];
+    
+    [[AireNLAPI sharedAPI] disableCaching];
 }
 
-- (void)willActivate {
+- (void)willActivate
+{
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     
     [self loadNearestStation];
 }
 
-- (void)didDeactivate {
+- (void)didDeactivate
+{
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
@@ -75,8 +79,6 @@
     }
     
     NSLog(@"LOADING NEAREST STATION!");
-    //    [self showLoading];
-    
     self.gettingLocation = YES;
     [self.locationManager requestLocation];
 }
@@ -93,7 +95,6 @@
     
     [[AireNLAPI sharedAPI] getNearestStationForCoordinate: coordinate withCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
-        //        [self hideLoading];
         self.loadingStation = NO;
     }];
 }
@@ -105,13 +106,10 @@
     }
     
     NSLog(@"LOADING DEFAULT STATION");
-    //    [self showLoading];
-    
     self.loadingStation = YES;
     
     [[AireNLAPI sharedAPI] getDefaultStationWithCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
-        //        [self hideLoading];
         self.loadingStation = NO;
     }];
     
@@ -156,43 +154,28 @@
     CLLocationCoordinate2D coordinate = location.coordinate;
     CLLocationAccuracy horizontalAccuracy = location.horizontalAccuracy;
     CLLocationAccuracy verticalAccuracy = location.verticalAccuracy;
-    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
+//    NSTimeInterval locationAge = -[location.timestamp timeIntervalSinceNow];
     
     NSLog(@"DID UPDATE LOCATION : %f , %f", coordinate.latitude, coordinate.longitude);
     NSLog(@"WITH ACCURACY : %f , %f", horizontalAccuracy, verticalAccuracy);
     
-    //    if (verticalAccuracy < 0 || horizontalAccuracy < 0) {
-    //        NSLog(@"LOCATION ABORTED : ACCURACY");
-    //        return;
-    //    }
+//    if (verticalAccuracy < 0 || horizontalAccuracy < 0) {
+//        NSLog(@"LOCATION ABORTED : ACCURACY");
+//        return;
+//    }
     
-    if (locationAge > 5.0){
-        NSLog(@"LOCATION ABORTED : AGE");
-        return;
-    }
+//    if (locationAge > 5.0){
+//        NSLog(@"LOCATION ABORTED : AGE");
+//        return;
+//    }
     
     [manager stopUpdatingLocation];
     [self loadNearestStationForCoordinate: coordinate];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
-{
-    //    switch (status) {
-    //        case kCLAuthorizationStatusNotDetermined:
-    //            [self askLocationPermision];
-    //            break;
-    //        case kCLAuthorizationStatusAuthorizedWhenInUse:
-    //            [self loadNearestStation];
-    //            break;
-    //        default:
-    //            break;
-    //    }
-}
-
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"LOCATION MANAGER : ERROR : %@", error.localizedDescription);
-    
     [self loadDefaultStation];
 }
 
@@ -210,6 +193,3 @@
 }
 
 @end
-
-
-

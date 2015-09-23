@@ -81,8 +81,6 @@
     }
     
     NSLog(@"LOADING NEAREST STATION!");
-//    [self showLoading];
-    
     self.gettingLocation = YES;
     [self.locationManager requestLocation];
 }
@@ -99,7 +97,6 @@
     
     [[AireNLAPI sharedAPI] getNearestStationForCoordinate: coordinate withCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
-//        [self hideLoading];
         self.loadingStation = NO;
     }];
 }
@@ -111,13 +108,10 @@
     }
     
     NSLog(@"LOADING DEFAULT STATION");
-//    [self showLoading];
-    
     self.loadingStation = YES;
     
     [[AireNLAPI sharedAPI] getDefaultStationWithCompletion:^(APIResults *results, NSError *error) {
         [self handleResults: results withError: error];
-//        [self hideLoading];
         self.loadingStation = NO;
     }];
     
@@ -195,24 +189,9 @@
     [self loadNearestStationForCoordinate: coordinate];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
-{
-//    switch (status) {
-//        case kCLAuthorizationStatusNotDetermined:
-//            [self askLocationPermision];
-//            break;
-//        case kCLAuthorizationStatusAuthorizedWhenInUse:
-//            [self loadNearestStation];
-//            break;
-//        default:
-//            break;
-//    }
-}
-
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"LOCATION MANAGER : ERROR : %@", error.localizedDescription);
-    
     [self loadDefaultStation];
 }
 
@@ -230,6 +209,3 @@
 }
 
 @end
-
-
-

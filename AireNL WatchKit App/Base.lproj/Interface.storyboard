@@ -43,7 +43,7 @@
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
                                 <imageView alignment="center" image="AirIcon" id="yYz-qq-YYl"/>
-                                <label alignment="center" text="Good" id="oz1-g0-JWN">
+                                <label alignment="center" text=" " id="oz1-g0-JWN">
                                     <fontDescription key="font" type="system" weight="light" pointSize="16"/>
                                 </label>
                             </items>
@@ -95,7 +95,7 @@
                 <glanceController spacing="0.0" topTemplateType="mediumBody1" bottomTemplateType="groupBody1Footer" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <label alignment="left" text="Monterrey" id="80c-iJ-NFz"/>
-                        <label alignment="left" text="Obispado Downtown" minimumScaleFactor="0.80000000000000004" id="Za2-n3-fsA"/>
+                        <label alignment="left" text=" " minimumScaleFactor="0.80000000000000004" id="Za2-n3-fsA"/>
                         <group alignment="left" id="uCw-4Q-Ouw">
                             <items>
                                 <label alignment="left" verticalAlignment="center" text="0" id="vNH-So-5BS">
@@ -108,7 +108,7 @@
                             </items>
                         </group>
                         <label alignment="left" text="Air Quality" id="bPr-4c-WFD"/>
-                        <label alignment="left" text="Good" id="aJM-Id-88N"/>
+                        <label alignment="left" text=" " id="aJM-Id-88N"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
