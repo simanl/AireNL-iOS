@@ -19,6 +19,7 @@
 #import "ILLinearGradientView.h"
 #import "MapViewController.h"
 #import "InfoContainerViewController.h"
+#import "BackgroundImageHelper.h"
 
 #import "AireNLAPI.h"
 #import "PredictionResults.h"
@@ -44,6 +45,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 // TABLE, SCROLL VIEW, POPUP
 
+//@property (nonatomic) UICollectionViewCell *pronosticoCellCache;
+
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
 @property (nonatomic) NSArray *cellIdentifiers;
@@ -57,9 +60,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 @property (nonatomic) BOOL backgroundHasBlur;
 @property (nonatomic) UIImage *normalBackground;
 @property (nonatomic) UIImage *blurredBackground;
-
-@property (nonatomic) NSUInteger selectedBackgroundIndex;
-@property (nonatomic) NSArray *backgroundImageNames;
+@property (nonatomic) ILTimeOfDay currentTimeOfDay;
 
 @end
 
@@ -73,11 +74,10 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self loadFakeData]; // REMOVE
     [self cacheLoadData];
     
-    [self setBackgroundImages];
+    [self updateBackgroundImagesFirstTime: YES];
     [self addMotionEffectToBackground];
-    
     [self customizeAppearance];
-    [self addGestureRecognizers];
+//    [self addGestureRecognizers];
     [self registerNibs];
     
 //    [self loadStation]; // This is handled by the 'AppDidBecomeActive notification'
@@ -90,7 +90,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)setUpNotifications
 {
-    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(loadStation)
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(appDidBecomeActive)
                                                  name: UIApplicationDidBecomeActiveNotification object: nil];
 
 }
@@ -98,6 +98,12 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver: self];
+}
+
+- (void)appDidBecomeActive
+{
+    [self updateBackgroundImagesFirstTime: NO];
+    [self loadStation];
 }
 
 #pragma mark - Persistance
@@ -157,7 +163,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     }else if (status == kCLAuthorizationStatusDenied){
         NSLog(@"LOAD NEAREST STATION : PERMISSION DENIED : ABORTED");
         [self loadDefaultStation];
-//        [self showGpsPermissionAlert];
+        [self showGpsPermissionAlert];
         return;
     }
     
@@ -279,7 +285,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)customizeAppearance
 {
-    [self setBackgroundImageWithBlur: NO];
+    self.backgroundImageView.image = self.normalBackground;
     [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
     
     [TAOverlay setOverlayLabelFont: [UIFont fontWithName: @"Avenir-Light" size: 13.0f]];
@@ -304,13 +310,27 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     }
 }
 
-- (void)setBackgroundImages
+- (void)updateBackgroundImagesFirstTime:(BOOL)first
 {
-    NSString *backgroundImageName = self.backgroundImageNames[self.selectedBackgroundIndex];
-    UIImage *backgroundImage = [UIImage imageNamed: backgroundImageName];
+    NSLog(@"UPDATING BACKGROUND IMAGES : %@", first ? @"FIRST TIME" : @"NOT FIRST TIME");
     
-    self.normalBackground = backgroundImage;
-    self.blurredBackground = [backgroundImage blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
+    ILTimeOfDay timeOfDay = [BackgroundImageHelper currentTimeOfDay];
+    UIImage *backgroundImage = [BackgroundImageHelper backgroundImageForCurrentTime];
+
+    if (first) {
+        self.currentTimeOfDay = timeOfDay;
+        self.normalBackground = backgroundImage;
+        self.blurredBackground = [backgroundImage blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
+    }else{
+        if (timeOfDay != self.currentTimeOfDay) {
+            NSLog(@"SETTING NEW IMAGES");
+            self.normalBackground = backgroundImage;
+            self.blurredBackground = [backgroundImage blurredImageWithRadius: 10.0f iterations: 2 tintColor: nil];
+        }else{
+            NSLog(@"ABORTED SETTING IMAGES");
+        }
+    }
+    
 }
 
 - (void)setBackgroundImageWithBlur:(BOOL)blur
@@ -333,14 +353,13 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self.collectionView registerNib: pronosticosNib forCellWithReuseIdentifier: @"pronosticosCollectionViewCell"];
 }
 
-- (void)addGestureRecognizers
-{
-    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
-                                                                                          action: @selector(userDidSelectSwitchBackground)];
-    doubleTapRecognizer.numberOfTapsRequired = 2;
-    [self.topView addGestureRecognizer: doubleTapRecognizer];
-
-}
+//- (void)addGestureRecognizers
+//{
+//    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
+//                                                                                          action: @selector(userDidSelectSwitchBackground)];
+//    doubleTapRecognizer.numberOfTapsRequired = 2;
+//    [self.topView addGestureRecognizer: doubleTapRecognizer];
+//}
 
 - (void)addMotionEffectToBackground
 {
@@ -379,7 +398,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 {
     MapViewController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MapViewController"];
     mapVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    mapVC.type = self.selectedBackgroundIndex;
     mapVC.delegate = self;
 
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: mapVC];
@@ -396,18 +414,18 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self loadNearestStation];
 }
 
-- (void)userDidSelectSwitchBackground
-{
-    if (self.selectedBackgroundIndex == [self.backgroundImageNames count] - 1) {
-        self.selectedBackgroundIndex = 0;
-    }else{
-        self.selectedBackgroundIndex ++;
-    }
-    
-    [self setBackgroundImages];
-    
-    self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
-}
+//- (void)userDidSelectSwitchBackground
+//{
+//    if (self.selectedBackgroundIndex == [self.backgroundImageNames count] - 1) {
+//        self.selectedBackgroundIndex = 0;
+//    }else{
+//        self.selectedBackgroundIndex ++;
+//    }
+//    
+//    [self setBackgroundImages];
+//    
+//    self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
+//}
 
 #pragma mark - UIScrollView Delegate
 
@@ -658,7 +676,15 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)showGpsPermissionAlert
 {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasShownGpsAlert = [userDefaults boolForKey: kHasShownGpsDisabledAlertKey];
     
+    if (!hasShownGpsAlert) {
+        NSString *text = NSLocalizedString(@"GPS tracking is disabled on your phone. If you want to enable this functionality to find the nearest station automatically go to Settings and turn it on.", nil);
+        [self showAlertWithText: text];
+        
+        [userDefaults setBool: YES forKey: kHasShownGpsDisabledAlertKey];
+    }
 }
 
 #pragma mark - Helper's
@@ -832,12 +858,12 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     return _cellIdentifiers;
 }
 
-- (NSArray *)backgroundImageNames
-{
-    if (!_backgroundImageNames) {
-        _backgroundImageNames = @[@"BackgroundNight", @"BackgroundDay", @"BackgroundSunset"];
-    }
-    return _backgroundImageNames;
-}
+//- (NSArray *)backgroundImageNames
+//{
+//    if (!_backgroundImageNames) {
+//        _backgroundImageNames = @[@"BackgroundNight", @"BackgroundDay", @"BackgroundSunset"];
+//    }
+//    return _backgroundImageNames;
+//}
 
 @end

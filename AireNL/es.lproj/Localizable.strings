@@ -10,6 +10,8 @@
 
 "You are already using GPS to find the nearest station. If you want to change station use the map." = "Ya estas usando GPS para encontrar la estacion mas cercana. Si quieres cambiar de estacion usa el mapa.";
 
+"GPS tracking is disabled on your phone. If you want to enable this functionality to find the nearest station automatically go to Settings and turn it on." = "La funcionalidad de GPS esta apagada en tu telefono. Si quieres que se encuentre la estacion mas cercana a ti automaticamente entra a las Preferencias de tu celular y activa la ubicacion para AireNL.";
+
 "Downtown Obispado Station" = "Estacion Centro Obispado";
 "San Nicolas Station" = "Estacion San Nicolas";
 "Santa Catarina Station" = "Estacion Santa Catarina";

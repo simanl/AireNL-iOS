@@ -10,6 +10,8 @@
 
 "You are already using GPS to find the nearest station. If you want to change station use the map." = "You are already using GPS to find the nearest station. If you want to change station use the map.";
 
+"GPS tracking is disabled on your phone. If you want to enable this functionality to find the nearest station automatically go to Settings and turn it on." = "GPS tracking is disabled on your phone. If you want to enable this functionality to find the nearest station automatically go to Settings and turn it on.";
+
 "Downtown Obispado Station" = "Downtown Obispado Station";
 "San Nicolas Station" = "San Nicolas Station";
 "Santa Catarina Station" = "Santa Catarina Station";

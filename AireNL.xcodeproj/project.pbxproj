@@ -28,6 +28,7 @@
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
 		06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */; };
 		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
+		06A97B461BB4659C0047A419 /* BackgroundImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A97B451BB4659C0047A419 /* BackgroundImageHelper.m */; settings = {ASSET_TAGS = (); }; };
 		06AA94C91BA779DA00326F16 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; settings = {ASSET_TAGS = (); }; };
 		06AA94CC1BA779E900326F16 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; settings = {ASSET_TAGS = (); }; };
 		06AA94D21BA8752000326F16 /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; settings = {ASSET_TAGS = (); }; };
@@ -173,6 +174,8 @@
 		06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRadialGradientLayer.m; sourceTree = "<group>"; };
 		06A8C6611B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantesCollectionViewCell.h; sourceTree = "<group>"; };
 		06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantesCollectionViewCell.m; sourceTree = "<group>"; };
+		06A97B441BB4659C0047A419 /* BackgroundImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundImageHelper.h; sourceTree = "<group>"; };
+		06A97B451BB4659C0047A419 /* BackgroundImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundImageHelper.m; sourceTree = "<group>"; };
 		06AA94C71BA779DA00326F16 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		06AA94C81BA779DA00326F16 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		06AA94CA1BA779E900326F16 /* Measurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measurement.h; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 				06D367D41B54564D009E9D47 /* UIColor+ILColor.m */,
 				0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */,
 				0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */,
+				06A97B441BB4659C0047A419 /* BackgroundImageHelper.h */,
+				06A97B451BB4659C0047A419 /* BackgroundImageHelper.m */,
 			);
 			name = "Helpers+Categories";
 			sourceTree = "<group>";
@@ -924,6 +929,7 @@
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
 				06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */,
+				06A97B461BB4659C0047A419 /* BackgroundImageHelper.m in Sources */,
 				06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */,
 				0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */,
 				06AA94CC1BA779E900326F16 /* Measurement.m in Sources */,

@@ -32,6 +32,7 @@
     UINib *cellNib = [UINib nibWithNibName: @"PronosticoTableViewCell" bundle: [NSBundle mainBundle]];
     [self.tableView registerNib: cellNib forCellReuseIdentifier: @"pronosticoTableViewCell"];
     
+    [self.tableView reloadData];
 }
 
 - (void)updateCell
