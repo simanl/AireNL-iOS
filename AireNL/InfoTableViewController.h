@@ -12,4 +12,8 @@
 
 @interface InfoTableViewController : UITableViewController
 
+@property (nonatomic) NSString *infoText;
+
+@property (weak, nonatomic) IBOutlet UILabel *infoTextLabel;
+
 @end

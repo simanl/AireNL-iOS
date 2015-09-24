@@ -27,9 +27,31 @@
 
 #pragma mark - UITableView Delegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44.0f;
+}
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     cell.backgroundColor = [UIColor clearColor];
+}
+
+#pragma mark - Set/Get
+
+- (void)setInfoText:(NSString *)infoText
+{
+    _infoText = infoText;
+    
+    if (self.infoText.length > 0) {
+        self.infoTextLabel.text = self.infoText;
+        [self.tableView reloadData];
+    }
 }
 
 @end

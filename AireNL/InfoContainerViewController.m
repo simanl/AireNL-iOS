@@ -18,9 +18,9 @@
 
 @implementation InfoContainerViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +40,14 @@
 - (IBAction)didSelectCloseButton:(id)sender
 {
     [self dismissViewControllerAnimated: YES completion: nil];
+}
+
+#pragma mark - Set/Get
+
+- (void)setInfoText:(NSString *)infoText
+{
+    _infoText = infoText;
+    self.childViewController.infoText = infoText;
 }
 
 @end

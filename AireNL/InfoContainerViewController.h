@@ -11,6 +11,7 @@
 @interface InfoContainerViewController : UIViewController
 
 @property (nonatomic) CGFloat regularHeight;
+@property (nonatomic) NSString *infoText;
 
 - (IBAction)didSelectCloseButton:(id)sender;
 

@@ -12,6 +12,6 @@
 
 @interface ActividadesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
-- (IBAction)didSelectInfo:(id)sender;
+@property (weak, nonatomic) IBOutlet UICollectionView *innerCollectionView;
 
 @end

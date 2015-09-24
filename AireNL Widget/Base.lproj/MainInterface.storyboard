@@ -38,7 +38,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="VientoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-PN-hPM">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="VientoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-PN-hPM">
                                 <rect key="frame" x="237" y="48" width="29" height="19"/>
                                 <animations/>
                             </imageView>

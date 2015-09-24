@@ -20,6 +20,7 @@
 - (PredictionResults *)getPredictionResults;
 
 - (void)didSelectInfoAtCell:(UICollectionViewCell *)cell;
+- (void)actividadesDidSelectInfoWithText:(NSString *)text;
 
 @end
 

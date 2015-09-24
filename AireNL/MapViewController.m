@@ -124,8 +124,8 @@
         
         if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
             Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
-            NSLog(@"STATION : %@", self.selectedStation);
-            NSLog(@"MEASUREMENT : %@", measurement);
+            NSLog(@"MAP : CALLING DELEGATE W/STATION : %@", self.selectedStation);
+            NSLog(@"MAP : CALLING DELEGATE W/MEASUREMENT : %@", measurement);
             [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
         }
         
@@ -264,6 +264,8 @@
         
         Station *annotation = (Station *)view.annotation;
 
+        NSLog(@"MAP : SELECTED STATION : %@", annotation);
+        
         self.selectedStation = annotation;
         self.navigationItem.rightBarButtonItem = self.switchButton;
         

@@ -558,14 +558,15 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         // Header Cell
         [self showInfoScreenForAirQuality];
         
-    }else if (indexPath.row == 1) {
-        // Actividades Cell
-        [self showInfoScreenForActivities];
-        
     }else if(indexPath.row == 5){
         // Predictions Cell
         [self showInfoScreenForContaminants];
     }
+}
+
+- (void)actividadesDidSelectInfoWithText:(NSString *)text
+{
+    [self showInfoScreenForActivityWithText: text];
 }
 
 #pragma mark - MapViewController Delegate
@@ -758,24 +759,25 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)showInfoScreenForAirQuality
 {
-    [self showInfoScreenForControllerWithName: @"airQualityInfoViewController" height: 430.0f];
-}
-
-- (void)showInfoScreenForActivities
-{
-    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 200.0f];
+    [self showInfoScreenForControllerWithName: @"airQualityInfoViewController" height: 430.0f infoText: nil];
 }
 
 - (void)showInfoScreenForContaminants
 {
-    [self showInfoScreenForControllerWithName: @"contaminantesViewController" height: 380.0f];
+    [self showInfoScreenForControllerWithName: @"contaminantesViewController" height: 380.0f infoText: nil];
 }
 
-- (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height
+- (void)showInfoScreenForActivityWithText:(NSString *)text
+{
+    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 170.0f infoText: text];
+}
+
+- (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height infoText:(NSString *)infoText
 {
     self.infoViewController = [self.storyboard instantiateViewControllerWithIdentifier: name];
     self.infoViewController.view.layer.cornerRadius = 5.0f;
     self.infoViewController.regularHeight = height;
+    self.infoViewController.infoText = infoText;
     
     CCMPopupTransitioning *popup = [CCMPopupTransitioning sharedInstance];
     
