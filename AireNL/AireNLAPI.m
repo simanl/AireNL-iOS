@@ -186,9 +186,10 @@
 #pragma mark - APIResults Helper's
 
 - (APIResults *)resultsForSingleResponseObject:(NSDictionary *)responseObject
-{
+{    
     NSDictionary *stationDict = responseObject[@"data"];
-//    NSDictionary *measurementDict = responseObject[@"included"];
+    NSArray *included = responseObject[@"included"];
+    NSDictionary *measurementDict = [included firstObject];
     
     NSError *stationError = nil;
     Station *station = [MTLJSONAdapter modelOfClass: Station.class
@@ -199,16 +200,16 @@
         return nil;
     }
     
-//    NSError *measurementError = nil;
-//    Measurement *measurement = [MTLJSONAdapter modelOfClass: Measurement.class
-//                                         fromJSONDictionary: measurementDict
-//                                                      error: &measurementError];
-//    if (measurementError) {
-//        NSLog(@"MANTLE PARSE ERROR : %@", measurementError);
-//        return nil;
-//    }
+    NSError *measurementError = nil;
+    Measurement *measurement = [MTLJSONAdapter modelOfClass: Measurement.class
+                                         fromJSONDictionary: measurementDict
+                                                      error: &measurementError];
+    if (measurementError) {
+        NSLog(@"MANTLE PARSE ERROR : %@", measurementError);
+        return nil;
+    }
     
-    return [[APIResults alloc] initWithStations: @[station] measurements: nil];
+    return [[APIResults alloc] initWithStations: @[station] measurements: @[measurement]];
 
 }
 
