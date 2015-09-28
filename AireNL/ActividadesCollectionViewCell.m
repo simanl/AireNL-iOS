@@ -12,8 +12,6 @@
 
 @interface ActividadesCollectionViewCell () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic) BOOL goodAirQuality;
-
 @property (nonatomic) NSArray *activityIcons;
 @property (nonatomic) NSArray *iconExplanations;
 
@@ -24,9 +22,7 @@
 @synthesize delegate;
 
 - (void)awakeFromNib
-{
-    self.goodAirQuality = NO;
-    
+{    
     self.innerCollectionView.dataSource = self;
     self.innerCollectionView.delegate = self;
 }
@@ -50,8 +46,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    InnerActividadesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:
-                                                @"IconoActividadCell" forIndexPath: indexPath];
+    InnerActividadesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"IconoActividadCell" forIndexPath: indexPath];
     cell.activityImageView.image = [UIImage imageNamed: self.activityIcons[indexPath.row]];
     return cell;
 }

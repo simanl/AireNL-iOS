@@ -260,6 +260,8 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+    NSLog(@"DID SELECT ANNOTATION VIEW");
+    
     if ([view.annotation isKindOfClass: [Station class]]) {
         
         Station *annotation = (Station *)view.annotation;
@@ -279,6 +281,8 @@
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
+    NSLog(@"DID DE-SELECT ANNOTATION VIEW");
+    
     if ([view.annotation isKindOfClass: [Station class]]) {
         
         self.selectedStation = nil;
@@ -346,8 +350,8 @@
     [airQualityView addSubview: airQualityLabel];
     [calloutView addSubview: airQualityView];
     
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(didSelectSwitch)];
-    [calloutView addGestureRecognizer: tapRecognizer];
+//    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(didSelectSwitch)];
+//    [calloutView addGestureRecognizer: tapRecognizer];
     
     return calloutView;
 }
