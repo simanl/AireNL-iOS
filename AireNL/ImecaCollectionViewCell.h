@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *imecaQualityLabel;
 @property (weak, nonatomic) IBOutlet UIView *imecaQualityView;
 
+@property (weak, nonatomic) IBOutlet UILabel *measurementDateLabel;
+
 - (IBAction)didSelectInfo:(id)sender;
 
 @end

@@ -8,6 +8,12 @@
 
 #import "ImecaCollectionViewCell.h"
 
+@interface ImecaCollectionViewCell ()
+
+@property (nonatomic) NSDateFormatter *dateFormatter;
+
+@end
+
 @implementation ImecaCollectionViewCell
 
 @synthesize delegate;
@@ -21,6 +27,13 @@
     self.imecaLabel.text = [imecaPoints stringValue];
     self.imecaQualityLabel.text = [measurement stringForAirQuality];
     self.imecaQualityView.backgroundColor = [measurement colorForAirQuality];
+    
+    if (measurement.date) {
+        self.measurementDateLabel.text = measurement.date;
+    }else{
+        self.measurementDateLabel.text = [self.dateFormatter stringFromDate: [NSDate date]];
+    }
+    
 }
 
 - (IBAction)didSelectInfo:(id)sender
@@ -28,6 +41,17 @@
     if ([self.delegate respondsToSelector: @selector(didSelectInfoAtCell:)]) {
         [self.delegate didSelectInfoAtCell: self];
     }
+}
+
+#pragma mark - Set/Get
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        _dateFormatter.dateFormat = @"HH:mm dd-MM-yyyy";
+    }
+    return _dateFormatter;
 }
 
 @end

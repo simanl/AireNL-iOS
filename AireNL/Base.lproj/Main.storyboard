@@ -24,7 +24,7 @@
                                 <animations/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-6S-54d" customClass="ILBlurCollectionView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="x6F-Hc-A3q">
@@ -72,14 +72,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE AIR QUALITY IS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-Fr-HU9">
-                                                            <rect key="frame" x="66" y="113" width="197.5" height="14"/>
+                                                            <rect key="frame" x="66" y="103" width="197.5" height="14"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h39-Li-eSM">
-                                                            <rect key="frame" x="66" y="135" width="197.5" height="40"/>
+                                                            <rect key="frame" x="66" y="125" width="197.5" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-Vu-gVY">
                                                                     <rect key="frame" x="30" y="5" width="137.5" height="30"/>
@@ -120,19 +120,30 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/01 14:29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-dw-3uO">
+                                                            <rect key="frame" x="66" y="169" width="197.5" height="11"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="8"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="h39-Li-eSM" secondAttribute="bottom" constant="5" id="1Oh-0y-sRx"/>
                                                         <constraint firstItem="h39-Li-eSM" firstAttribute="width" secondItem="IHr-OC-rwH" secondAttribute="width" multiplier="0.6" priority="999" id="8Eu-9h-BYx"/>
                                                         <constraint firstItem="zML-3N-I8u" firstAttribute="top" secondItem="h09-8l-Jvm" secondAttribute="bottom" id="EId-np-fd4"/>
+                                                        <constraint firstItem="cbC-dw-3uO" firstAttribute="trailing" secondItem="h39-Li-eSM" secondAttribute="trailing" id="JK8-B7-1zv"/>
+                                                        <constraint firstItem="cbC-dw-3uO" firstAttribute="top" secondItem="h39-Li-eSM" secondAttribute="bottom" constant="4" id="Jzv-SU-xR6"/>
                                                         <constraint firstItem="h09-8l-Jvm" firstAttribute="top" secondItem="IHr-OC-rwH" secondAttribute="top" id="OSQ-2P-PgD"/>
                                                         <constraint firstItem="rgR-Fr-HU9" firstAttribute="leading" secondItem="h39-Li-eSM" secondAttribute="leading" id="Sdi-7T-X2o"/>
                                                         <constraint firstAttribute="centerX" secondItem="zML-3N-I8u" secondAttribute="centerX" constant="-0.25" id="Syx-aq-XHU"/>
+                                                        <constraint firstItem="cbC-dw-3uO" firstAttribute="leading" secondItem="h39-Li-eSM" secondAttribute="leading" id="bIK-Y3-VB4"/>
                                                         <constraint firstAttribute="trailing" secondItem="h09-8l-Jvm" secondAttribute="trailing" constant="20" id="cjG-Ln-AfG"/>
                                                         <constraint firstAttribute="centerX" secondItem="h39-Li-eSM" secondAttribute="centerX" id="iuc-Yf-vlc"/>
                                                         <constraint firstItem="h09-8l-Jvm" firstAttribute="leading" secondItem="IHr-OC-rwH" secondAttribute="leading" constant="20" id="kuR-bY-fFZ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="h39-Li-eSM" secondAttribute="bottom" constant="5" id="rRt-ok-O0C"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cbC-dw-3uO" secondAttribute="bottom" id="n2K-oe-kSo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="h39-Li-eSM" secondAttribute="bottom" constant="15" id="rRt-ok-O0C"/>
                                                         <constraint firstItem="h39-Li-eSM" firstAttribute="top" secondItem="rgR-Fr-HU9" secondAttribute="bottom" constant="8" id="uAR-8S-ga7"/>
                                                         <constraint firstItem="rgR-Fr-HU9" firstAttribute="trailing" secondItem="h39-Li-eSM" secondAttribute="trailing" id="zTG-pU-LAy"/>
                                                     </constraints>
@@ -158,6 +169,7 @@
                                             <outlet property="imecaLabel" destination="h09-8l-Jvm" id="aan-wC-3tl"/>
                                             <outlet property="imecaQualityLabel" destination="4FS-Vu-gVY" id="DT8-eu-noc"/>
                                             <outlet property="imecaQualityView" destination="h39-Li-eSM" id="taC-a9-NUh"/>
+                                            <outlet property="measurementDateLabel" destination="cbC-dw-3uO" id="1Za-Zt-gGH"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="actividadesCell" id="2Lh-sa-KL5" customClass="ActividadesCollectionViewCell">
@@ -832,7 +844,7 @@
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jnN-AH-u8R"/>
                             <constraint firstAttribute="bottom" secondItem="aGk-6S-54d" secondAttribute="bottom" id="lFy-E2-r6g"/>
                             <constraint firstItem="aGk-6S-54d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="n6i-H6-IMR"/>
-                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nCz-6V-SK4"/>
+                            <constraint firstItem="aGk-6S-54d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="nCz-6V-SK4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aGk-6S-54d" secondAttribute="bottom" id="oRC-Xv-ghS"/>
                             <constraint firstAttribute="trailing" secondItem="aGk-6S-54d" secondAttribute="trailing" id="qJA-lr-ACc"/>
                             <constraint firstItem="gUK-ao-SVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="qSa-qa-obW"/>
