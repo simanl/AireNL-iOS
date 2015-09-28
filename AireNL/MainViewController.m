@@ -45,7 +45,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 // TABLE, SCROLL VIEW, POPUP
 
-//@property (nonatomic) UICollectionViewCell *pronosticoCellCache;
+@property (nonatomic) UIRefreshControl *refreshControl;
 
 @property (nonatomic) NSArray *cellHeights;
 @property (nonatomic) NSArray *cellWidths;
@@ -287,6 +287,11 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 {
     self.backgroundImageView.image = self.normalBackground;
     [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+    
+//    self.refreshControl = [[UIRefreshControl alloc] init];
+//    self.refreshControl.tintColor = [UIColor whiteColor];
+//    [self.refreshControl addTarget: self action: @selector(loadStation) forControlEvents: UIControlEventValueChanged];
+//    [self.collectionView addSubview: self.refreshControl];
     
     [TAOverlay setOverlayLabelFont: [UIFont fontWithName: @"Avenir-Light" size: 13.0f]];
 }
@@ -769,7 +774,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)showInfoScreenForActivityWithText:(NSString *)text
 {
-    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 170.0f infoText: text];
+    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 150.0f infoText: text];
 }
 
 - (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height infoText:(NSString *)infoText
@@ -838,7 +843,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (NSArray *)cellHeights
 {
     if (!_cellHeights) {
-        _cellHeights = @[@(180), @(120), @(100), @(100), @(100), @(190)];
+        _cellHeights = @[@(180), @(128), @(100), @(100), @(100), @(190)];
     }
     return _cellHeights;
 }

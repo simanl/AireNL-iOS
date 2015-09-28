@@ -26,3 +26,12 @@
 
 "Measurement Stations" = "Measurement Stations";
 "AIR QUALITY" = "AIR QUALITY";
+
+"ACTIVITY_OUTDOORS" = "If air quality is bad, avoid spending prolonged periods outdoors.";
+"ACTIVITY_WINDOWS" = "If air quality is bad, keep windows and doors closed";
+"ACTIVITY_EXERCISE" = "If air quality is bad, do not practice exercise outdoors.";
+"ACTIVITY_ALLERGIES" = "If air quality is bad, people with allergies, especially asthma, should stay indoors.";
+"ACTIVITY_TOBACCO" = "If air quality is bad, people who smoke any kind of tobacco should abstain from doing so.";
+"ACTIVITY_HEART" = "If air quality is bad, people with a history of heart problems should stay indoors or in low risk zones.";
+"ACTIVITY_GAS" = "If air quality is bad, people who use fuel, like cooks, should abstain from doing so until air quality improves.";
+"ACTIVITY_CAR" = "If air quality is bad, vehicle use should be reduces as much as possible.";

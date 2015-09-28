@@ -8,13 +8,13 @@
 
 #import "ActividadesCollectionViewCell.h"
 
+#import "InnerActividadesCollectionViewCell.h"
+
 @interface ActividadesCollectionViewCell () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic) BOOL goodAirQuality;
 
-@property (nonatomic) NSArray *positiveIcons;
-@property (nonatomic) NSArray *negativeIcons;
-
+@property (nonatomic) NSArray *activityIcons;
 @property (nonatomic) NSArray *iconExplanations;
 
 @end
@@ -45,23 +45,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (self.goodAirQuality) {
-        return [self.positiveIcons count];
-    }else{
-        return [self.negativeIcons count];
-    }
+    return [self.activityIcons count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"IconoActividadCell" forIndexPath: indexPath];
-    
-    if (self.goodAirQuality) {
-        cell.backgroundColor = [UIColor greenColor];
-    }else{
-        cell.backgroundColor = [UIColor redColor];
-    }
-    
+    InnerActividadesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:
+                                                @"IconoActividadCell" forIndexPath: indexPath];
+    cell.activityImageView.image = [UIImage imageNamed: self.activityIcons[indexPath.row]];
     return cell;
 }
 
@@ -76,26 +67,25 @@
 
 #pragma mark - Set/Get
 
-- (NSArray *)positiveIcons
+- (NSArray *)activityIcons
 {
-    if (!_positiveIcons) {
-        _positiveIcons = @[@"", @"", @"", @"", @"", @"", @"", @"", @""];
+    if (!_activityIcons) {
+        _activityIcons = @[@"OutdoorsActivityIcon", @"WindowActivityIcon", @"ExerciseActivityIcon", @"AllergyActivityIcon", @"CigarretteActivityIcon", @"HeartActivityIcon", @"GasActivityIcon", @"CarActivityIcon"];
     }
-    return _positiveIcons;
-}
-
-- (NSArray *)negativeIcons
-{
-    if (!_negativeIcons) {
-        _negativeIcons = @[@"", @"", @"", @"", @"", @"", @"", @"", @""];
-    }
-    return _negativeIcons;
+    return _activityIcons;
 }
 
 - (NSArray *)iconExplanations
 {
     if (!_iconExplanations) {
-        _iconExplanations = @[@"Explicacion1", @"Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2Explicacion2", @"Explicacion3", @"Explicacion4", @"Explicacion5", @"Explicacion6", @"Explicacion7", @"Explicacion8", @"Explicacion9"];
+        _iconExplanations = @[NSLocalizedString(@"ACTIVITY_OUTDOORS", nil),
+                              NSLocalizedString(@"ACTIVITY_WINDOWS", nil),
+                              NSLocalizedString(@"ACTIVITY_EXERCISE", nil),
+                              NSLocalizedString(@"ACTIVITY_ALLERGIES", nil),
+                              NSLocalizedString(@"ACTIVITY_TOBACCO", nil),
+                              NSLocalizedString(@"ACTIVITY_HEART", nil),
+                              NSLocalizedString(@"ACTIVITY_GAS", nil),
+                              NSLocalizedString(@"ACTIVITY_CAR", nil)];
     }
     return _iconExplanations;
 }
