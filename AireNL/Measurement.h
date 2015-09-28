@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
 
 // API DATA
 
-@property (nonatomic) NSNumber *measurementID;
+@property (nonatomic) NSString *measurementID;
 
 @property (nonatomic) NSString *date;
 

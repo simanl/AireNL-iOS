@@ -43,27 +43,27 @@
              };
 }
 
-+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
-{
-    if ([key isEqualToString: @"date"]) {
-        return nil;
-    }else{
-        
-        return [MTLValueTransformer transformerUsingForwardBlock: ^id(id value, BOOL *success, NSError *__autoreleasing *error) {
-            
-            if ([value isKindOfClass: [NSString class]]) {
-                NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                formatter.numberStyle = NSNumberFormatterDecimalStyle;
-                return [formatter numberFromString: value];
-            }else{
-                return nil;
-            }
-            
-        }];
-        
-    }
-
-}
+//+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
+//{
+//    if ([key isEqualToString: @"date"]) {
+//        return nil;
+//    }else{
+//        
+//        return [MTLValueTransformer transformerUsingForwardBlock: ^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+//            
+//            if ([value isKindOfClass: [NSString class]]) {
+//                NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+//                formatter.numberStyle = NSNumberFormatterDecimalStyle;
+//                return [formatter numberFromString: value];
+//            }else{
+//                return nil;
+//            }
+//            
+//        }];
+//        
+//    }
+//
+//}
 
 #pragma mark - Public API
 

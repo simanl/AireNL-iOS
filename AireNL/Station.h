@@ -15,7 +15,7 @@
 
 @interface Station : MTLModel <MTLJSONSerializing, MKAnnotation>
 
-@property (nonatomic) NSNumber *stationID;
+@property (nonatomic) NSString *stationID;
 
 @property (nonatomic) NSString *code;
 @property (nonatomic) NSString *name;
@@ -27,6 +27,6 @@
 
 // RELATIONSHIPS
 
-@property (nonatomic) NSNumber *lastMeasurementID;
+@property (nonatomic) NSString *lastMeasurementID;
 
 @end
