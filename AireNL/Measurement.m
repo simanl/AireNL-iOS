@@ -69,17 +69,20 @@
 
 - (AirQualityDescriptor)airQuality
 {
-    if ([self.imecaPoints integerValue] == 0) {
+    NSInteger imecaPoints = [self.imecaPoints integerValue];
+    
+    if (imecaPoints <= 130) {
         return AirQualityDescriptorGood;
-    }else if ([self.imecaPoints integerValue] == 1) {
+    }else if (imecaPoints > 130 && imecaPoints <= 140) {
         return AirQualityDescriptorRegular;
-    }else if ([self.imecaPoints integerValue] == 2) {
+    }else if (imecaPoints > 140 && imecaPoints <= 165) {
         return AirQualityDescriptorBad;
-    }else if ([self.imecaPoints integerValue] == 3) {
+    }else if (imecaPoints > 165 && imecaPoints <= 185) {
         return AirQualityDescriptorVeryBad;
     }else{
         return AirQualityDescriptorExtremelyBad;
     }
+    
 }
 
 - (NSString *)stringForAirQuality
