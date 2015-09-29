@@ -45,6 +45,8 @@
 		06D367B91B542615009E9D47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D367B71B542615009E9D47 /* LaunchScreen.xib */; };
 		06D367C51B542615009E9D47 /* AireNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367C41B542615009E9D47 /* AireNLTests.m */; };
 		06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367D41B54564D009E9D47 /* UIColor+ILColor.m */; };
+		06D5833F1BBA17240055ABCD /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; };
+		06D583401BBA172C0055ABCD /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; };
 		06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA6B1B74106B007462A4 /* InterfaceController.m */; };
 		06D8BA721B74106B007462A4 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA711B74106B007462A4 /* GlanceController.m */; };
 		06D8BA741B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA731B74106B007462A4 /* Images.xcassets */; };
@@ -918,6 +920,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D583401BBA172C0055ABCD /* NSDictionary+WithoutNSNull.m in Sources */,
 				06F733B01BB3231600EB73BE /* AireNLAPI.m in Sources */,
 				0617237C1BB078E600FDA3DC /* APIResults.m in Sources */,
 				0617237E1BB078E600FDA3DC /* Station.m in Sources */,
@@ -933,6 +936,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D5833F1BBA17240055ABCD /* NSDictionary+WithoutNSNull.m in Sources */,
 				06F733AF1BB3230400EB73BE /* AireNLAPI.m in Sources */,
 				061723741BB078C100FDA3DC /* APIResults.m in Sources */,
 				061723761BB078C100FDA3DC /* Station.m in Sources */,
