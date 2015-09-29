@@ -13,5 +13,6 @@
 @interface PronosticosCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *backgroundImageDescriptionLabel;
 
 @end

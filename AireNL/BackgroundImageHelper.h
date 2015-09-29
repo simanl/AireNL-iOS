@@ -19,5 +19,6 @@ typedef NS_ENUM(NSInteger, ILTimeOfDay){
 
 + (ILTimeOfDay)currentTimeOfDay;
 + (UIImage *)backgroundImageForCurrentTime;
++ (NSString *)descriptionForImageForCurrentTime;
 
 @end

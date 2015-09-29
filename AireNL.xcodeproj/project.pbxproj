@@ -404,9 +404,9 @@
 		06D367A71B542615009E9D47 /* AireNL */ = {
 			isa = PBXGroup;
 			children = (
-				060A9E9E1B79081C00C5AAD6 /* AireNL API */,
 				06D367CF1B542638009E9D47 /* Views */,
 				06D367D01B542642009E9D47 /* Controllers */,
+				060A9E9E1B79081C00C5AAD6 /* AireNL API */,
 				06D367D11B54264A009E9D47 /* Helpers+Categories */,
 				06D367D21B542653009E9D47 /* Assets */,
 				06FE05621B715E4200BCFCA3 /* Constants.h */,
@@ -1137,7 +1137,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8becb652-11e1-42bc-a07a-aec43c967828";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -1153,7 +1153,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b45aa537-f28b-4a46-b1ff-1cf7aba2c367";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};

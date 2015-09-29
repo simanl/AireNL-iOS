@@ -8,10 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pronosticosCollectionViewCell" id="gTV-IL-0wX" customClass="PronosticosCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="165"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="165"/>
                 <subviews>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jiz-zx-deZ">
                         <rect key="frame" x="15" y="5" width="270" height="135"/>
@@ -31,6 +31,13 @@
                             </mask>
                         </variation>
                     </tableView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monterrey, NL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZp-lZ-Ufq">
+                        <rect key="frame" x="15" y="142" width="270.5" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -38,16 +45,21 @@
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="jiz-zx-deZ" secondAttribute="bottom" constant="10" id="Xfs-mn-dgr"/>
+                <constraint firstAttribute="trailing" secondItem="YZp-lZ-Ufq" secondAttribute="trailing" constant="14.5" id="3hM-2u-7Jv"/>
+                <constraint firstAttribute="bottom" secondItem="jiz-zx-deZ" secondAttribute="bottom" constant="25" id="Xfs-mn-dgr"/>
+                <constraint firstItem="YZp-lZ-Ufq" firstAttribute="top" secondItem="jiz-zx-deZ" secondAttribute="bottom" constant="2" id="a3P-6g-xXA"/>
                 <constraint firstItem="jiz-zx-deZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="bZW-cI-bAg"/>
+                <constraint firstAttribute="bottom" secondItem="YZp-lZ-Ufq" secondAttribute="bottom" constant="2" id="hnt-I2-9qF"/>
                 <constraint firstAttribute="trailing" secondItem="jiz-zx-deZ" secondAttribute="trailing" constant="15" id="mWo-VE-dfG"/>
                 <constraint firstItem="jiz-zx-deZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="o35-1q-75M"/>
+                <constraint firstItem="YZp-lZ-Ufq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="wYV-Pi-ED4"/>
             </constraints>
             <size key="customSize" width="299" height="100"/>
             <connections>
+                <outlet property="backgroundImageDescriptionLabel" destination="YZp-lZ-Ufq" id="UPJ-70-P8C"/>
                 <outlet property="tableView" destination="jiz-zx-deZ" id="95D-UO-a9M"/>
             </connections>
-            <point key="canvasLocation" x="-283" y="180"/>
+            <point key="canvasLocation" x="-28" y="215"/>
         </collectionViewCell>
     </objects>
 </document>

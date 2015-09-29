@@ -843,7 +843,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (NSArray *)cellHeights
 {
     if (!_cellHeights) {
-        _cellHeights = @[@(180), @(128), @(100), @(100), @(100), @(190)];
+        _cellHeights = @[@(180), @(128), @(100), @(100), @(100), @(205)];
     }
     return _cellHeights;
 }

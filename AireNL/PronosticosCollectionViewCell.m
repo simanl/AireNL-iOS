@@ -11,6 +11,8 @@
 #import "PronosticoTableViewCell.h"
 #import "PronosticoHeaderTableViewCell.h"
 
+#import "BackgroundImageHelper.h"
+
 @interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource, PronosticoCellDelegate, PronosticoHeaderDelegate>
 
 @property (nonatomic) NSArray *contaminantNames;
@@ -37,6 +39,7 @@
 
 - (void)updateCell
 {
+    self.backgroundImageDescriptionLabel.text = [BackgroundImageHelper descriptionForImageForCurrentTime];
     [self.tableView reloadData];
 }
 

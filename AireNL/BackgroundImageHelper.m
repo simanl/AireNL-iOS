@@ -10,6 +10,29 @@
 
 @implementation BackgroundImageHelper
 
++ (NSString *)descriptionForImageForCurrentTime
+{
+    NSString *description;
+    
+    switch ([self currentTimeOfDay]) {
+        case ILTimeOfDayDay:
+            description = @"Cerro de la Silla, Monterrey, NL.";
+            break;
+        case ILTimeOfDayNight:
+            description = @"Mesa del Oso, NL.";
+            break;
+        case ILTimeOfDaySunsetSunrise:
+            description = @"San Pedro Garza Garcia, NL.";
+            break;
+        default:{
+            description = @"San Pedro Garza Garcia, NL.";
+            break;
+        }
+    }
+    
+    return description;
+}
+
 + (UIImage *)backgroundImageForCurrentTime
 {
     NSString *imageName;
