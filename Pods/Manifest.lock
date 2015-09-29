@@ -1,18 +1,13 @@
 PODS:
   - CCMPopup (1.1.0)
-  - Mantle (2.0.5):
-    - Mantle/extobjc (= 2.0.5)
-  - Mantle/extobjc (2.0.5)
   - TAOverlay (2.0.1)
 
 DEPENDENCIES:
   - CCMPopup
-  - Mantle
   - TAOverlay
 
 SPEC CHECKSUMS:
   CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
-  Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
   TAOverlay: 940e37fdb45fbc9acfc73bf1089668367e3b1be6
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0.beta.3

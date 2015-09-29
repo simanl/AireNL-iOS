@@ -7,679 +7,287 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A1970EE3E76D7EDCE6EBA92D82E107E /* NSDictionary+MTLMappingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34468FD770BC926C03AFFCFF1E9EB2B8 /* NSDictionary+MTLMappingAdditions.h */; };
-		0DEFEE854C5B7DC72EFC2C8F32543EE7 /* MTLTransformerErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBBA5793B32424F4894F5B8A3B994BD /* MTLTransformerErrorHandling.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		12D7032C59507FA0FF42C6A23819C72A /* NSError+MTLModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = 0208150D8229C436EF299D6630991586 /* NSError+MTLModelException.m */; };
-		136FAF12310FCE93D8C982F7A050359C /* Pods-AireNL WatchKit Extension-Mantle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 838221BEAE10183E5A0DE76E7046DFBD /* Pods-AireNL WatchKit Extension-Mantle-dummy.m */; };
-		13B461C81B71301AD79A83D61F722951 /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B1DDFC06201FC8196177CEEA197C81 /* EXTKeyPathCoding.h */; };
-		15A5FD55956FE8030D26BF48BF7FE2F5 /* MTLReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD2FBD22776EF8F6762A149D69E1D4 /* MTLReflection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		16ECA3B57EB2DCE80FB3BAADEEC52013 /* UIViewController+CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB38AC68784C76E4328A4D6D71A46CF /* UIViewController+CCMPopupAnimation.h */; };
-		18B097F0A01D6C3217803F4D25BEA8D7 /* TAOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E41A8F7F527EC5A4E1E97C6182EEB /* TAOverlay.m */; };
-		2002561D2EC19ACA84DD6D4907A69EC2 /* MTLValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E68D731EE1156D129737F5BFD6C34F /* MTLValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		23E16C02A22F073BFD436AF2E69C817E /* MTLTransformerErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CF7362815DA5732284AA655DF8D360 /* MTLTransformerErrorHandling.h */; };
-		25F3197B70BE7C7EE8D4C53D36ABEF09 /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B2D15830EB27AC6A98F803990B5781 /* EXTScope.h */; };
-		26AB5D14882FA4157AEC74642E197369 /* MTLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF861C85B53F90047F6FC84656A5427 /* MTLModel.h */; };
-		296979A5EABE7157776DDCE3D1D99F30 /* MTLModel+NSCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D2F652BF1E0B564C16D38DC5AF90BE8 /* MTLModel+NSCoding.h */; };
-		2B424FFB197E41B36D285EE214EB757A /* MTLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF861C85B53F90047F6FC84656A5427 /* MTLModel.h */; };
-		2C2D778F5110FD8B97132D8838178805 /* Pods-AireNL-Mantle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A468223DFBBDFBFA06E2329BBFD29DA0 /* Pods-AireNL-Mantle-dummy.m */; };
-		2D2802644E975E0F4464808FE37C4076 /* TAOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 22076EB5908907E337026DFC77E4DB7C /* TAOverlay.h */; };
-		3156C492EB73DD435658449AE5026D3B /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4020357513BAE888F5789BD25B4C744 /* CCMCustomAnimation.m */; };
-		31B934A236FDEB7F9F1249BD46FE5BFF /* CCMPopupTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 329D849A6BFA868AEE6DF1EC43950A8C /* CCMPopupTransitioning.m */; };
-		37FC2C506D7CD25BEE86244904A4B3EA /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7942A5B6D527FCEFDDBF09D77806BA0 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */; };
-		38D2524579ECB35CE9E6C5C75301EFC4 /* MTLValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 56DEAF935648249C3476D54D637ED240 /* MTLValueTransformer.h */; };
-		38D39259EA72DA6F4FD43DF818950F97 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9E13C544DC4C01F6BA8451B22E85B0 /* UIImage+ImageEffects.h */; };
-		3D15E7731A1E2CE9FF05D436EB716D14 /* UIImage+screenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD8D0DB269D547C676F56D2959305CE /* UIImage+screenshot.h */; };
-		3DF29D2C2CF1963978E768F5AB313849 /* CCMPopupSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1B19AAA5EECF1598A3181E369D93CA /* CCMPopupSegue.h */; };
-		408AEEE397874AF52C322C3983688B2C /* Pods-AireNL Widget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 775DCDD1E06B8ED17B202F8E059473DB /* Pods-AireNL Widget-dummy.m */; };
-		479CD17F5072CB9350761558FBF0239D /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B1DDFC06201FC8196177CEEA197C81 /* EXTKeyPathCoding.h */; };
-		4BABA3DD0D1C5F50CA09E91A4857B851 /* NSValueTransformer+MTLInversionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C0E32366FB875BD7BA2D3C3D2045A7 /* NSValueTransformer+MTLInversionAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4F3FB1D4B735FDAD00475DAFA026B0D3 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 690E35E66CA76495662BF1AC880DADBF /* UIImage+ImageEffects.m */; };
-		5117F9D9C19A9B851BCE9EF17362E8EC /* NSArray+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4A30BE225AA0F654D941E5A4F81B05 /* NSArray+MTLManipulationAdditions.h */; };
-		535848FE1D08AD3DFD5BE6E6E46800E3 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA3F11E93795BE86ADF2A824EA6DD6 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		53E64782191529DB0CBB4E1A7E987114 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01A86BC8930F82994C111DDD84A523 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */; };
-		57436CCB7CF2F97BC5B7F7B87808AFE8 /* NSDictionary+MTLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 310999D12D3CD7552A50A2774A29B94A /* NSDictionary+MTLJSONKeyPath.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5845E6454CDC15F2E1B851884DF6A919 /* NSDictionary+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584DFF5072C7D07194854427ABADF66 /* NSDictionary+MTLManipulationAdditions.m */; };
-		598006D2918BF27326D609DE1808E208 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 524FB2CDD5E0AF89C280575FA4DAA06E /* metamacros.h */; };
-		5AA35819A827073F15868ED301FEDA76 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA3F11E93795BE86ADF2A824EA6DD6 /* EXTRuntimeExtensions.m */; };
-		5B1071FC94AFD13E7EEF10DD7ADD726B /* NSDictionary+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584DFF5072C7D07194854427ABADF66 /* NSDictionary+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5B39B0F892B48164484DAB5051BAC9E3 /* MTLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA752B32B9EFD097D6560A0A33EA800 /* MTLJSONAdapter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5D7DE53A934A5BC1F2E317FCC411DA61 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D06B6B5B35A8EC044F58AF865B6193 /* EXTRuntimeExtensions.h */; };
-		6264C720165B0CEA2739AB2D7CB57011 /* MTLReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD2FBD22776EF8F6762A149D69E1D4 /* MTLReflection.m */; };
-		62670FFB8ADA11E737B660034321B1AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798C917156996E3253B11D5BEF71947 /* Foundation.framework */; };
-		64A8024A6382B7B47B141B205C197208 /* MTLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA752B32B9EFD097D6560A0A33EA800 /* MTLJSONAdapter.m */; };
-		6B48B22BAAFA2E8C6846E7F5A4033CFA /* TAOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 860556C6A6F9E0C2588541B6F6DF90F0 /* TAOverlay-dummy.m */; };
-		6C6B6AB3B0BE9792B629FC8037FA130A /* NSValueTransformer+MTLInversionAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 68BE9BDEBE00C6E838EEE5E98476D9E2 /* NSValueTransformer+MTLInversionAdditions.h */; };
-		70103A8808EDF2FEACD93D3F1F044394 /* MTLTransformerErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBBA5793B32424F4894F5B8A3B994BD /* MTLTransformerErrorHandling.m */; };
-		70DAF60801D1A5195B9D21BA2E795827 /* NSDictionary+MTLMappingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34468FD770BC926C03AFFCFF1E9EB2B8 /* NSDictionary+MTLMappingAdditions.h */; };
-		70ED6E9B9082DEC57161B6529D1515F6 /* CCMPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EE511FE920D602DB1F0A9CD2126396 /* CCMPopup-dummy.m */; };
-		711C46CC63C64065D985D3969D709343 /* CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4CEC890100F8B29EB12B12A233E76D /* CCMPopupAnimation.m */; };
-		73189CAFCE3D698109CD4589B5B583E4 /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC77A7EEE199C19A8B6309A5297DB19A /* FXBlurView.h */; };
-		74FA08A1EEC4075010284A09854856A1 /* MTLTransformerErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CF7362815DA5732284AA655DF8D360 /* MTLTransformerErrorHandling.h */; };
-		7797EB7840F0F062CBD5C1795C6BBB6D /* CCMPopupTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 023402557AF23E31326F870EAD19089F /* CCMPopupTransitioning.h */; };
-		77A4AD5F4ED686492ADAFF84A866892C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798C917156996E3253B11D5BEF71947 /* Foundation.framework */; };
-		78DCB5D7EDAE3774B7FA695DBF48E0C2 /* NSArray+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1349086457882EB0602761EB057DAC /* NSArray+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		791D27B10554890A4058D27FC9924B59 /* NSError+MTLModelException.h in Headers */ = {isa = PBXBuildFile; fileRef = EF947F042799384CCB73B1194B714A35 /* NSError+MTLModelException.h */; };
-		7B8C2230D82489611949CA978A1634A8 /* CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2483C3FB04EFDAF24CE7615C93A07FBD /* CCMPopupAnimation.h */; };
-		7C1E21DCFEBA7C0E190CBD93113196C5 /* NSValueTransformer+MTLInversionAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 68BE9BDEBE00C6E838EEE5E98476D9E2 /* NSValueTransformer+MTLInversionAdditions.h */; };
-		7E5F58B41EAEEDBCFE3872250010B6CE /* MTLJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F89783FFE767402B7ADD0B27F6BFE9 /* MTLJSONAdapter.h */; };
-		800351024955454C0D5BE5CAB7F42FE0 /* NSDictionary+MTLJSONKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 289D5398F5AEA1F43687C99069279FE6 /* NSDictionary+MTLJSONKeyPath.h */; };
-		81867BD9D3BBF546A3792A5C226D6200 /* Mantle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8773E160C5C972D7935EB81627873E99 /* Mantle.h */; };
-		82463783B4051F72A18192198B51B552 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D06B6B5B35A8EC044F58AF865B6193 /* EXTRuntimeExtensions.h */; };
-		83F8636612BD451DF9FF1B075C30236F /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DAD142BBD74638DAC306B666AE31B /* UIViewController+CCMPopupAnimation.m */; };
-		8590F9A5E9ED8D59EFABBC35C89C5081 /* Pods-AireNL WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87539F32C435B8A741D0A444F5AA38 /* Pods-AireNL WatchKit Extension-dummy.m */; };
-		8F2DC1E20236F13CC80584BCB27E7CDD /* Pods-AireNL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD6F620060FCF44820AC0ABB74B5423 /* Pods-AireNL-dummy.m */; };
-		9504FA7458FD5321298CEC67831BD0D5 /* NSDictionary+MTLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 310999D12D3CD7552A50A2774A29B94A /* NSDictionary+MTLJSONKeyPath.m */; };
-		95341604A248CDF37201F0387F67D4B9 /* MTLJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F89783FFE767402B7ADD0B27F6BFE9 /* MTLJSONAdapter.h */; };
-		958940CD07BB5C9DDB1EE8E652456445 /* NSObject+MTLComparisonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BF79383E701AA6556A4994AF71E11 /* NSObject+MTLComparisonAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		987929DC30BCAA790271169AB76565F2 /* NSArray+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1349086457882EB0602761EB057DAC /* NSArray+MTLManipulationAdditions.m */; };
-		A043361B5CF9D9E536C52ED804CBBB2B /* MTLModel+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F19A714E8D52E09996300A9BA6D7CA /* MTLModel+NSCoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A12319C029F79EA8051F0BB551E63696 /* MTLModel+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F19A714E8D52E09996300A9BA6D7CA /* MTLModel+NSCoding.m */; };
-		A4EB23930B1609FF4C5137F25E833906 /* CCMPopupSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = A1457A434186412E340EBBF8454646BA /* CCMPopupSegue.m */; };
-		A553D3865D4C9DB20477B1D0BB0D57CE /* NSDictionary+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BBED7916234A792C6A163EFACA5ADBB8 /* NSDictionary+MTLManipulationAdditions.h */; };
-		A6D227CEE9DE978780C9D8A8A28861B9 /* Mantle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8773E160C5C972D7935EB81627873E99 /* Mantle.h */; };
-		A7FED6701A1F2AE5E7A87AF9560F7FB2 /* NSDictionary+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BBED7916234A792C6A163EFACA5ADBB8 /* NSDictionary+MTLManipulationAdditions.h */; };
-		A84E81A15FFB084AF5CC307EDD8CA786 /* NSObject+MTLComparisonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7FBF666487FA26A161DC34C3CF7DED5 /* NSObject+MTLComparisonAdditions.h */; };
-		A911D85BD9BF8B80B088DE1F8D1B125D /* NSObject+MTLComparisonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BF79383E701AA6556A4994AF71E11 /* NSObject+MTLComparisonAdditions.m */; };
-		AD63A31F9E764D744C760B4E79FC2AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C461DC299ED531060A803AD71CC8DBBC /* Foundation.framework */; };
-		B7D21852F18F2E20FF44F0E8DBFED479 /* MTLValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E68D731EE1156D129737F5BFD6C34F /* MTLValueTransformer.m */; };
-		BD7917B40E311AF20995F83C27D6B585 /* NSDictionary+MTLMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23DEE5CB2E55CE668F7FA1C8F33768 /* NSDictionary+MTLMappingAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C283BEB2987202FA38F07D46E33713E4 /* CCMCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA3310C44395E49C40EBE24859C479E /* CCMCustomAnimation.h */; };
-		C42D858092D253EFC175B67E89F6656D /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B2D15830EB27AC6A98F803990B5781 /* EXTScope.h */; };
-		C4AE65876BC74B6981815A1AF24912C3 /* NSError+MTLModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = 0208150D8229C436EF299D6630991586 /* NSError+MTLModelException.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CAE558B678704344C169713DB073233F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798C917156996E3253B11D5BEF71947 /* Foundation.framework */; };
-		CB46D7DF61E4983EE2E45809DBEA3392 /* MTLValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 56DEAF935648249C3476D54D637ED240 /* MTLValueTransformer.h */; };
-		D3D572E6A2E8AE3AEEFA3B839D523AF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798C917156996E3253B11D5BEF71947 /* Foundation.framework */; };
-		D7A0A7782B0AE9FF08AEB2671BEB7279 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C461DC299ED531060A803AD71CC8DBBC /* Foundation.framework */; };
-		E0DBEBDC2AAD71649A4DC99486D80FCD /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = C7023DDD7327532B94B7B4CA71616D2F /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E84CAE7D4484F1D610A016A75BD7753B /* NSObject+MTLComparisonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7FBF666487FA26A161DC34C3CF7DED5 /* NSObject+MTLComparisonAdditions.h */; };
-		E92E7A76114BF812ABE5E864A8CE0581 /* NSDictionary+MTLJSONKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 289D5398F5AEA1F43687C99069279FE6 /* NSDictionary+MTLJSONKeyPath.h */; };
-		E9469D9F9FED76C4304588D777408DA9 /* NSDictionary+MTLMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23DEE5CB2E55CE668F7FA1C8F33768 /* NSDictionary+MTLMappingAdditions.m */; };
-		EA4C45FD492B6726650C0ABA597BB7A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7798C917156996E3253B11D5BEF71947 /* Foundation.framework */; };
-		EAFD4DE450AC01B293808E7C2CB02F05 /* MTLModel+NSCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D2F652BF1E0B564C16D38DC5AF90BE8 /* MTLModel+NSCoding.h */; };
-		ED518E90A858D6E8B6EC616CFA474D89 /* MTLReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 990EAC41D4B23108115C95A7A54542E1 /* MTLReflection.h */; };
-		EF8A3A99424B4261E8BDD70A460E4EB3 /* NSValueTransformer+MTLInversionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C0E32366FB875BD7BA2D3C3D2045A7 /* NSValueTransformer+MTLInversionAdditions.m */; };
-		EFC6349B6F94C42FCE8BD3EC08DD930B /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = C7023DDD7327532B94B7B4CA71616D2F /* EXTScope.m */; };
-		F0101C6ECC607AF62BDD6496262DDDA5 /* NSArray+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4A30BE225AA0F654D941E5A4F81B05 /* NSArray+MTLManipulationAdditions.h */; };
-		F1CEA97B6DAEFF15EACADE1E5F36BAB9 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7942A5B6D527FCEFDDBF09D77806BA0 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */; };
-		F200F39FA198D7BCC60631067192AA1B /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01A86BC8930F82994C111DDD84A523 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F22B6EF749198160C57385C40C88ECD1 /* MTLReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 990EAC41D4B23108115C95A7A54542E1 /* MTLReflection.h */; };
-		F63495715FEF6FB3CE08D617600EB7A7 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E249C39C93BF7A74C100A1012DC0727 /* UIImage+screenshot.m */; };
-		F6E13871FCDCFBE617FDE3A5337A081F /* NSError+MTLModelException.h in Headers */ = {isa = PBXBuildFile; fileRef = EF947F042799384CCB73B1194B714A35 /* NSError+MTLModelException.h */; };
-		F8B7828C451D0F80FD345190B46E1D1E /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 524FB2CDD5E0AF89C280575FA4DAA06E /* metamacros.h */; };
-		F8DEC15984A1AD99974A99B2E278C7D3 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C01D3782DAC9775F20D9B90B51C047 /* FXBlurView.m */; };
-		F9EBB20A1A54F57823D3E2F1F2701A38 /* MTLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ADF0EC9D6370D554FBEA4A113D20AE /* MTLModel.m */; };
-		FA58AD5110F5603322B91E699478407C /* MTLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ADF0EC9D6370D554FBEA4A113D20AE /* MTLModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		03D89319368D9E6D8B836FED9E77766B /* CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BEF149FF5FB6A17D7DB983921B9B /* CCMPopupAnimation.m */; };
+		0FD4454E9E6E90079D9BC50CCCF56459 /* CCMPopupTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E381A16F1F8031F38F40B5D12CAE811 /* CCMPopupTransitioning.h */; };
+		1024A244B2F39AC728349749A5E40DD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */; };
+		18EF5F8AE928250B8FC2803870278352 /* UIImage+screenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = BB68EB49FB102A3D344A480A8CF10B4D /* UIImage+screenshot.h */; };
+		2DE3EBA81996B1349B216DF5B8FB9132 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DE82ECAB4176B98B77EB33B586798 /* FXBlurView.m */; };
+		383E2519B22211AF178503EE2D342AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */; };
+		41D4B46EC9DB955B612592F90B126C67 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D7CC400D48A4462837761B6F53349 /* UIImage+screenshot.m */; };
+		5F8F598D45E68313AEFB99F6AF48AB69 /* CCMPopupSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3755D4910CE70279FD9B8DECD783D /* CCMPopupSegue.m */; };
+		61D93733519326D90036056F2F93578C /* TAOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE90FC30F4764163A6964A8CCC9B0D /* TAOverlay.m */; };
+		6AA5580697545ACF25D9E741B00457AC /* UIViewController+CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA6ADDABF18FA2BD7EA29ECBB4100CF /* UIViewController+CCMPopupAnimation.h */; };
+		6BC8FEFA34BC53A330C502F154103F44 /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA526626DEFEA006FE6E260DED0954E4 /* FXBlurView.h */; };
+		8942C99D49AB9F2B800B9248680B423E /* CCMPopupSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F261CE378CF317C972312C7EEF65E49 /* CCMPopupSegue.h */; };
+		927BB3E3141D930FE21E42C438BAB951 /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EC75C006F1D0D9DE524BAC306B84 /* CCMCustomAnimation.m */; };
+		98EEC665C9387944C7DC2CE3E596A8B1 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 166B18EEFD004BCFA7B38A41929AD66B /* UIImage+ImageEffects.h */; };
+		C8B5A037E7437072AE8A57DDB9C390FA /* Pods-AireNL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2812306DF3F87C950DA7178245D16734 /* Pods-AireNL-dummy.m */; };
+		D14490FE030F1F4374CD525D9251862E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9A2EEF4AD5C7567116403FA14DFDA /* UIImage+ImageEffects.m */; };
+		D6D4FB165CA296D76359A215DBA54B4D /* CCMPopupTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CC204247CE477903C228F47E8026A5 /* CCMPopupTransitioning.m */; };
+		D8BF9B8BB15DF92324B091A40FE0D47E /* TAOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 253BD84789D956D6185B74D1C890443D /* TAOverlay-dummy.m */; };
+		D9AF00E38ADD4DA4C34A9B7BF1765386 /* CCMPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0A896D9518FAC2AF946E78DD089C0 /* CCMPopup-dummy.m */; };
+		DB18F4B1FC99C181E26E208AD47A3A83 /* TAOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 5798BCCE8244E2C10E2495C4273D8DB1 /* TAOverlay.h */; };
+		DBABA00D4F59AA6235747D6DB9757DB7 /* CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6E08D1E28702C5B8369BB6B6B890780 /* CCMPopupAnimation.h */; };
+		EFE685A76D6B921849816FB985077BCD /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B53BD04A58F24193BABF2A4BB6CC4 /* UIViewController+CCMPopupAnimation.m */; };
+		F71EA5D35898CDA61101B99D82A81964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */; };
+		F7E19A882B23ABD0C422F9468B54042B /* CCMCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 66245E3E3EBAC3561FBB7C595FFCD2F2 /* CCMCustomAnimation.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02F8108A56D70EA082AA17BCBA305685 /* PBXContainerItemProxy */ = {
+		D587B6EE1212B47E041D3B0B2935C5E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 012B52BF090CC2C907F7FB891027AAB1;
-			remoteInfo = "Pods-AireNL WatchKit Extension-Mantle";
-		};
-		0BEA0090C7BE60C4978BCAC0E8DFA509 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1512126BD78F6B7D346D1E0DAEECB9DC;
+			remoteGlobalIDString = 4A0224F852C0D26ED1D86E7D9F3956BA;
 			remoteInfo = TAOverlay;
 		};
-		49963F773FF01637080657771EBB4E40 /* PBXContainerItemProxy */ = {
+		E39E3FE0C215254D5F4DE9EB4BACFA66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EE005FD26D4147EC9756457F54AFE400;
+			remoteGlobalIDString = 80349E1C2E18A8D75FD62E88593A9AFD;
 			remoteInfo = CCMPopup;
-		};
-		C64D76A6C067A6C7DCB8A7D350C2E9EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47787FE86E844EC1DB0C2BF09378D218;
-			remoteInfo = "Pods-AireNL-Mantle";
-		};
-		F6A199F42B2D396227ADB51665C10EBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47787FE86E844EC1DB0C2BF09378D218;
-			remoteInfo = "Pods-AireNL-Mantle";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0208150D8229C436EF299D6630991586 /* NSError+MTLModelException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+MTLModelException.m"; path = "Mantle/NSError+MTLModelException.m"; sourceTree = "<group>"; };
-		023402557AF23E31326F870EAD19089F /* CCMPopupTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupTransitioning.h; path = CCMPopup/CCMPopupTransitioning.h; sourceTree = "<group>"; };
-		025E41A8F7F527EC5A4E1E97C6182EEB /* TAOverlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAOverlay.m; path = TAOverlay/TAOverlay.m; sourceTree = "<group>"; };
-		06F19A714E8D52E09996300A9BA6D7CA /* MTLModel+NSCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MTLModel+NSCoding.m"; path = "Mantle/MTLModel+NSCoding.m"; sourceTree = "<group>"; };
-		10C01D3782DAC9775F20D9B90B51C047 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = CCMPopup/FXBlurView/FXBlurView.m; sourceTree = "<group>"; };
-		115F94BE8D46982ADE5C08A6DF266F08 /* TAOverlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TAOverlay-prefix.pch"; sourceTree = "<group>"; };
-		1B1B19829FCC926C6E8E1E21EDF970CD /* Pods-AireNL Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL Widget.release.xcconfig"; sourceTree = "<group>"; };
-		1F2F6EAE1DCF79329D658CA303A7D719 /* CCMPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCMPopup.xcconfig; sourceTree = "<group>"; };
-		1FF861C85B53F90047F6FC84656A5427 /* MTLModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLModel.h; path = Mantle/MTLModel.h; sourceTree = "<group>"; };
-		2067EE23A92F57B445612401FB1B808E /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
-		22076EB5908907E337026DFC77E4DB7C /* TAOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAOverlay.h; path = TAOverlay/TAOverlay.h; sourceTree = "<group>"; };
-		2483C3FB04EFDAF24CE7615C93A07FBD /* CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupAnimation.h; path = CCMPopup/CCMPopupAnimation.h; sourceTree = "<group>"; };
-		25F89783FFE767402B7ADD0B27F6BFE9 /* MTLJSONAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLJSONAdapter.h; path = Mantle/MTLJSONAdapter.h; sourceTree = "<group>"; };
-		289D5398F5AEA1F43687C99069279FE6 /* NSDictionary+MTLJSONKeyPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLJSONKeyPath.h"; path = "Mantle/NSDictionary+MTLJSONKeyPath.h"; sourceTree = "<group>"; };
-		2BD6F620060FCF44820AC0ABB74B5423 /* Pods-AireNL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL-dummy.m"; sourceTree = "<group>"; };
-		2F852F78314356C3A0FC6F3F67739BD8 /* Pods-AireNL Widget-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AireNL Widget-acknowledgements.markdown"; sourceTree = "<group>"; };
-		310999D12D3CD7552A50A2774A29B94A /* NSDictionary+MTLJSONKeyPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLJSONKeyPath.m"; path = "Mantle/NSDictionary+MTLJSONKeyPath.m"; sourceTree = "<group>"; };
-		329D849A6BFA868AEE6DF1EC43950A8C /* CCMPopupTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupTransitioning.m; path = CCMPopup/CCMPopupTransitioning.m; sourceTree = "<group>"; };
-		34468FD770BC926C03AFFCFF1E9EB2B8 /* NSDictionary+MTLMappingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLMappingAdditions.h"; path = "Mantle/NSDictionary+MTLMappingAdditions.h"; sourceTree = "<group>"; };
-		39BA3F11E93795BE86ADF2A824EA6DD6 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = Mantle/extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
-		3BA3310C44395E49C40EBE24859C479E /* CCMCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMCustomAnimation.h; path = CCMPopup/CCMCustomAnimation.h; sourceTree = "<group>"; };
-		3C9E13C544DC4C01F6BA8451B22E85B0 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		3EE500AD29AFA69D3D7660EC713F6A2F /* Pods-AireNL WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AireNL WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		4060DCB24479BE072D35FB9C9DE64739 /* Pods-AireNL WatchKit Extension-Mantle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AireNL WatchKit Extension-Mantle-prefix.pch"; sourceTree = "<group>"; };
-		494ADF351246ADC4E2C248C2A3D87B55 /* TAOverlay-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TAOverlay-Private.xcconfig"; sourceTree = "<group>"; };
-		524FB2CDD5E0AF89C280575FA4DAA06E /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = Mantle/extobjc/metamacros.h; sourceTree = "<group>"; };
-		55B2D15830EB27AC6A98F803990B5781 /* EXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = Mantle/extobjc/EXTScope.h; sourceTree = "<group>"; };
-		56DEAF935648249C3476D54D637ED240 /* MTLValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLValueTransformer.h; path = Mantle/MTLValueTransformer.h; sourceTree = "<group>"; };
-		5A1349086457882EB0602761EB057DAC /* NSArray+MTLManipulationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MTLManipulationAdditions.m"; path = "Mantle/NSArray+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
-		5AEE5455DADEF16A1D28C05BF4EEA71B /* Pods-AireNL-Mantle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL-Mantle.xcconfig"; path = "../Pods-AireNL-Mantle/Pods-AireNL-Mantle.xcconfig"; sourceTree = "<group>"; };
-		5D2F652BF1E0B564C16D38DC5AF90BE8 /* MTLModel+NSCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MTLModel+NSCoding.h"; path = "Mantle/MTLModel+NSCoding.h"; sourceTree = "<group>"; };
-		63B856E5A56EB0B25110CF1244123975 /* Pods-AireNL-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AireNL-acknowledgements.plist"; sourceTree = "<group>"; };
-		6597D133D6C2C8D62F571229C1C6769E /* libPods-AireNL WatchKit Extension-Mantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL WatchKit Extension-Mantle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		68BE9BDEBE00C6E838EEE5E98476D9E2 /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
-		690E35E66CA76495662BF1AC880DADBF /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		69AEB7791B82ED6CA48AB9925E0DC3AC /* Pods-AireNL WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		6CD8D0DB269D547C676F56D2959305CE /* UIImage+screenshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+screenshot.h"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.h"; sourceTree = "<group>"; };
-		747DFBAB8453C742A57D34F2D08C4379 /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		750BF79383E701AA6556A4994AF71E11 /* NSObject+MTLComparisonAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MTLComparisonAdditions.m"; path = "Mantle/NSObject+MTLComparisonAdditions.m"; sourceTree = "<group>"; };
-		76B1DDFC06201FC8196177CEEA197C81 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTKeyPathCoding.h; path = Mantle/extobjc/EXTKeyPathCoding.h; sourceTree = "<group>"; };
-		775DCDD1E06B8ED17B202F8E059473DB /* Pods-AireNL Widget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL Widget-dummy.m"; sourceTree = "<group>"; };
-		7798C917156996E3253B11D5BEF71947 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7A904B5323F1BC687117494E36123197 /* libTAOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTAOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DA752B32B9EFD097D6560A0A33EA800 /* MTLJSONAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLJSONAdapter.m; path = Mantle/MTLJSONAdapter.m; sourceTree = "<group>"; };
-		838221BEAE10183E5A0DE76E7046DFBD /* Pods-AireNL WatchKit Extension-Mantle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL WatchKit Extension-Mantle-dummy.m"; sourceTree = "<group>"; };
-		8584DFF5072C7D07194854427ABADF66 /* NSDictionary+MTLManipulationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLManipulationAdditions.m"; path = "Mantle/NSDictionary+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
-		860556C6A6F9E0C2588541B6F6DF90F0 /* TAOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TAOverlay-dummy.m"; sourceTree = "<group>"; };
-		86307C0AF0B687901142A4B1D7CEA14E /* CCMPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCMPopup-prefix.pch"; sourceTree = "<group>"; };
-		8773E160C5C972D7935EB81627873E99 /* Mantle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mantle.h; path = Mantle/Mantle.h; sourceTree = "<group>"; };
-		89227B8312C697AC9AAA9B0B09AEF923 /* Pods-AireNL Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL Widget.debug.xcconfig"; sourceTree = "<group>"; };
-		8A23DEE5CB2E55CE668F7FA1C8F33768 /* NSDictionary+MTLMappingAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLMappingAdditions.m"; path = "Mantle/NSDictionary+MTLMappingAdditions.m"; sourceTree = "<group>"; };
-		8B4A30BE225AA0F654D941E5A4F81B05 /* NSArray+MTLManipulationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MTLManipulationAdditions.h"; path = "Mantle/NSArray+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
-		8E1B19AAA5EECF1598A3181E369D93CA /* CCMPopupSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupSegue.h; path = CCMPopup/CCMPopupSegue.h; sourceTree = "<group>"; };
-		8E249C39C93BF7A74C100A1012DC0727 /* UIImage+screenshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+screenshot.m"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.m"; sourceTree = "<group>"; };
-		8FAE0FCDEA12A2B5FAA903ABC27168E2 /* Pods-AireNL Widget-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL Widget-resources.sh"; sourceTree = "<group>"; };
-		902738A41BE099C19BDA9AD89BFACC08 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
-		92ADF0EC9D6370D554FBEA4A113D20AE /* MTLModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLModel.m; path = Mantle/MTLModel.m; sourceTree = "<group>"; };
-		990EAC41D4B23108115C95A7A54542E1 /* MTLReflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLReflection.h; path = Mantle/MTLReflection.h; sourceTree = "<group>"; };
-		A1457A434186412E340EBBF8454646BA /* CCMPopupSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupSegue.m; path = CCMPopup/CCMPopupSegue.m; sourceTree = "<group>"; };
-		A4020357513BAE888F5789BD25B4C744 /* CCMCustomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMCustomAnimation.m; path = CCMPopup/CCMCustomAnimation.m; sourceTree = "<group>"; };
-		A468223DFBBDFBFA06E2329BBFD29DA0 /* Pods-AireNL-Mantle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-AireNL-Mantle-dummy.m"; path = "../Pods-AireNL-Mantle/Pods-AireNL-Mantle-dummy.m"; sourceTree = "<group>"; };
-		A4E68D731EE1156D129737F5BFD6C34F /* MTLValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLValueTransformer.m; path = Mantle/MTLValueTransformer.m; sourceTree = "<group>"; };
-		A50DAD142BBD74638DAC306B666AE31B /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CCMPopupAnimation.m"; path = "CCMPopup/UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
-		A75B679891B6E34C3BBF18D7AA495004 /* Pods-AireNL-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AireNL-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A7942A5B6D527FCEFDDBF09D77806BA0 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.h"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
-		AF441EFE66AA0B025C3C50D0687C7595 /* Pods-AireNL-Mantle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL-Mantle-Private.xcconfig"; path = "../Pods-AireNL-Mantle/Pods-AireNL-Mantle-Private.xcconfig"; sourceTree = "<group>"; };
-		B2D06B6B5B35A8EC044F58AF865B6193 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTRuntimeExtensions.h; path = Mantle/extobjc/EXTRuntimeExtensions.h; sourceTree = "<group>"; };
-		B46BDB8A0701E3956C69363CE21F267B /* Pods-AireNL WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AireNL WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B7990FBC490FF40BF9248FA510EF9804 /* Pods-AireNL WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		BA44CF57EEBB4185E00BDE7A1150879D /* Pods-AireNL WatchKit Extension-Mantle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL WatchKit Extension-Mantle.xcconfig"; sourceTree = "<group>"; };
+		0DF84A2DBFE9FDA1A8EC31766B7559BA /* CCMPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCMPopup-prefix.pch"; sourceTree = "<group>"; };
+		0F261CE378CF317C972312C7EEF65E49 /* CCMPopupSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupSegue.h; path = CCMPopup/CCMPopupSegue.h; sourceTree = "<group>"; };
+		166B18EEFD004BCFA7B38A41929AD66B /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		1ADFFEA0EC45A515A225E7798059839B /* Pods-AireNL-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AireNL-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1C789D9FBF210576F28B3C3441DD10DF /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TAOverlay.xcconfig; sourceTree = "<group>"; };
+		253BD84789D956D6185B74D1C890443D /* TAOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TAOverlay-dummy.m"; sourceTree = "<group>"; };
+		27FB2A100C1821A3951B074DA3B5A217 /* Pods-AireNL-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AireNL-acknowledgements.plist"; sourceTree = "<group>"; };
+		2812306DF3F87C950DA7178245D16734 /* Pods-AireNL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL-dummy.m"; sourceTree = "<group>"; };
+		28CC204247CE477903C228F47E8026A5 /* CCMPopupTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupTransitioning.m; path = CCMPopup/CCMPopupTransitioning.m; sourceTree = "<group>"; };
+		2ECD931AC07AAD511409A9B6608DC312 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
+		2EF9A2EEF4AD5C7567116403FA14DFDA /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		330D7CC400D48A4462837761B6F53349 /* UIImage+screenshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+screenshot.m"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.m"; sourceTree = "<group>"; };
+		3BC2EC75C006F1D0D9DE524BAC306B84 /* CCMCustomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMCustomAnimation.m; path = CCMPopup/CCMCustomAnimation.m; sourceTree = "<group>"; };
+		3CE3755D4910CE70279FD9B8DECD783D /* CCMPopupSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupSegue.m; path = CCMPopup/CCMPopupSegue.m; sourceTree = "<group>"; };
+		3CF8F2FF023448B8B844BD3FA870D41C /* TAOverlay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TAOverlay.bundle; path = TAOverlay/TAOverlay.bundle; sourceTree = "<group>"; };
+		3FBE90FC30F4764163A6964A8CCC9B0D /* TAOverlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAOverlay.m; path = TAOverlay/TAOverlay.m; sourceTree = "<group>"; };
+		5798BCCE8244E2C10E2495C4273D8DB1 /* TAOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAOverlay.h; path = TAOverlay/TAOverlay.h; sourceTree = "<group>"; };
+		66245E3E3EBAC3561FBB7C595FFCD2F2 /* CCMCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMCustomAnimation.h; path = CCMPopup/CCMCustomAnimation.h; sourceTree = "<group>"; };
+		6BB3A2DE025D47A42CF909DB17F53349 /* Pods-AireNL-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL-frameworks.sh"; sourceTree = "<group>"; };
+		7D664691C405A926879412476769EA82 /* TAOverlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TAOverlay-prefix.pch"; sourceTree = "<group>"; };
+		7FF0A896D9518FAC2AF946E78DD089C0 /* CCMPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCMPopup-dummy.m"; sourceTree = "<group>"; };
+		7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		80A8BEF149FF5FB6A17D7DB983921B9B /* CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupAnimation.m; path = CCMPopup/CCMPopupAnimation.m; sourceTree = "<group>"; };
+		8E381A16F1F8031F38F40B5D12CAE811 /* CCMPopupTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupTransitioning.h; path = CCMPopup/CCMPopupTransitioning.h; sourceTree = "<group>"; };
+		9C0B53BD04A58F24193BABF2A4BB6CC4 /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CCMPopupAnimation.m"; path = "CCMPopup/UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
+		AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCMPopup.xcconfig; sourceTree = "<group>"; };
+		B0F381F54F570EBA8EDCCA2301630974 /* libCCMPopup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCMPopup.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBED7916234A792C6A163EFACA5ADBB8 /* NSDictionary+MTLManipulationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLManipulationAdditions.h"; path = "Mantle/NSDictionary+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
-		C352A1B7D80DBC80AE43719836B5E78C /* libCCMPopup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCMPopup.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C461DC299ED531060A803AD71CC8DBBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C594CE7569A222DA9F564600495FD51F /* libPods-AireNL WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7023DDD7327532B94B7B4CA71616D2F /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = Mantle/extobjc/EXTScope.m; sourceTree = "<group>"; };
-		C929252A337088EC47D401AD5A65E3F2 /* TAOverlay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TAOverlay.bundle; path = TAOverlay/TAOverlay.bundle; sourceTree = "<group>"; };
-		CC77A7EEE199C19A8B6309A5297DB19A /* FXBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = CCMPopup/FXBlurView/FXBlurView.h; sourceTree = "<group>"; };
-		CF3451438AC7F49D2475A99D0E5DED3E /* Pods-AireNL Widget-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AireNL Widget-acknowledgements.plist"; sourceTree = "<group>"; };
-		D9A7F8F3EA06B63E33974C3D1430AA3E /* Pods-AireNL-Mantle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-AireNL-Mantle-prefix.pch"; path = "../Pods-AireNL-Mantle/Pods-AireNL-Mantle-prefix.pch"; sourceTree = "<group>"; };
-		DB0E2F3AA91825D543315E71CBC7D339 /* libPods-AireNL-Mantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL-Mantle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBBBA5793B32424F4894F5B8A3B994BD /* MTLTransformerErrorHandling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLTransformerErrorHandling.m; path = Mantle/MTLTransformerErrorHandling.m; sourceTree = "<group>"; };
-		DF22C682791E937DC9BF4CC729935AD1 /* libPods-AireNL Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E07C022AED3203D678C52364542B8BE7 /* Pods-AireNL WatchKit Extension-Mantle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL WatchKit Extension-Mantle-Private.xcconfig"; sourceTree = "<group>"; };
-		E2CF7362815DA5732284AA655DF8D360 /* MTLTransformerErrorHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLTransformerErrorHandling.h; path = Mantle/MTLTransformerErrorHandling.h; sourceTree = "<group>"; };
-		E2FA99B77B6CAD9C55AC211FC6CEAD52 /* TAOverlay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TAOverlay.xcconfig; sourceTree = "<group>"; };
-		E3048572957D9483F9C9A2880C5F7F29 /* Pods-AireNL-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL-resources.sh"; sourceTree = "<group>"; };
-		E5CA801DDB6CE5360F81E72DD20D0AB2 /* Pods-AireNL WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
-		E7FBF666487FA26A161DC34C3CF7DED5 /* NSObject+MTLComparisonAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTLComparisonAdditions.h"; path = "Mantle/NSObject+MTLComparisonAdditions.h"; sourceTree = "<group>"; };
-		E90A00762DB274F4C996AD49666CB212 /* CCMPopup-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CCMPopup-Private.xcconfig"; sourceTree = "<group>"; };
-		EACD2FBD22776EF8F6762A149D69E1D4 /* MTLReflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLReflection.m; path = Mantle/MTLReflection.m; sourceTree = "<group>"; };
-		ECB38AC68784C76E4328A4D6D71A46CF /* UIViewController+CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CCMPopupAnimation.h"; path = "CCMPopup/UIViewController+CCMPopupAnimation.h"; sourceTree = "<group>"; };
-		EF947F042799384CCB73B1194B714A35 /* NSError+MTLModelException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+MTLModelException.h"; path = "Mantle/NSError+MTLModelException.h"; sourceTree = "<group>"; };
-		F1C0E32366FB875BD7BA2D3C3D2045A7 /* NSValueTransformer+MTLInversionAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLInversionAdditions.m"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.m"; sourceTree = "<group>"; };
-		F1EE511FE920D602DB1F0A9CD2126396 /* CCMPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCMPopup-dummy.m"; sourceTree = "<group>"; };
-		FA01A86BC8930F82994C111DDD84A523 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.m"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
-		FB87539F32C435B8A741D0A444F5AA38 /* Pods-AireNL WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
-		FC4CEC890100F8B29EB12B12A233E76D /* CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupAnimation.m; path = CCMPopup/CCMPopupAnimation.m; sourceTree = "<group>"; };
+		BB68EB49FB102A3D344A480A8CF10B4D /* UIImage+screenshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+screenshot.h"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.h"; sourceTree = "<group>"; };
+		BF65447544FD1FB5F1ABD9A3035B7C64 /* libTAOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTAOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAFF3386F14BDD8669E817CE3C5992F /* Pods-AireNL-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL-resources.sh"; sourceTree = "<group>"; };
+		D46A50567DC922BCBE150EC8774058F9 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
+		EA8DE82ECAB4176B98B77EB33B586798 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = CCMPopup/FXBlurView/FXBlurView.m; sourceTree = "<group>"; };
+		F6E08D1E28702C5B8369BB6B6B890780 /* CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupAnimation.h; path = CCMPopup/CCMPopupAnimation.h; sourceTree = "<group>"; };
+		FA526626DEFEA006FE6E260DED0954E4 /* FXBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = CCMPopup/FXBlurView/FXBlurView.h; sourceTree = "<group>"; };
+		FBA6ADDABF18FA2BD7EA29ECBB4100CF /* UIViewController+CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CCMPopupAnimation.h"; path = "CCMPopup/UIViewController+CCMPopupAnimation.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2939BC8598F81DB941C65909FB3F0B75 /* Frameworks */ = {
+		ABF894B1FC3A970A92D81F4F5B9017A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A0A7782B0AE9FF08AEB2671BEB7279 /* Foundation.framework in Frameworks */,
+				1024A244B2F39AC728349749A5E40DD7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		624575AF02E2622A7E62476F99DDB334 /* Frameworks */ = {
+		E9BB1448C5B3033C8074E4CF1BB75776 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD63A31F9E764D744C760B4E79FC2AE9 /* Foundation.framework in Frameworks */,
+				383E2519B22211AF178503EE2D342AA2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA7568C426F4A40C9A995CA1C01C892B /* Frameworks */ = {
+		F4FEE5055FD259FF823503A752D57927 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62670FFB8ADA11E737B660034321B1AA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD49CF2F5870DC4C1E87DB877B4FA31C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				77A4AD5F4ED686492ADAFF84A866892C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C80A901740330DAD75B35D42FBFD11F8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3D572E6A2E8AE3AEEFA3B839D523AF8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C941F4B306F552F2383303E9F6B01045 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA4C45FD492B6726650C0ABA597BB7A3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFDC4E1A06EFA7C4E16F3CCCD89C5C8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CAE558B678704344C169713DB073233F /* Foundation.framework in Frameworks */,
+				F71EA5D35898CDA61101B99D82A81964 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0EA8D206393BD3481907144B80CC20EB /* Pods-AireNL */ = {
+		0CE76EB491C7277B4AC3DDEA061EC274 /* TAOverlay */ = {
 			isa = PBXGroup;
 			children = (
-				A75B679891B6E34C3BBF18D7AA495004 /* Pods-AireNL-acknowledgements.markdown */,
-				63B856E5A56EB0B25110CF1244123975 /* Pods-AireNL-acknowledgements.plist */,
-				2BD6F620060FCF44820AC0ABB74B5423 /* Pods-AireNL-dummy.m */,
-				E3048572957D9483F9C9A2880C5F7F29 /* Pods-AireNL-resources.sh */,
-				902738A41BE099C19BDA9AD89BFACC08 /* Pods-AireNL.debug.xcconfig */,
-				2067EE23A92F57B445612401FB1B808E /* Pods-AireNL.release.xcconfig */,
+				5798BCCE8244E2C10E2495C4273D8DB1 /* TAOverlay.h */,
+				3FBE90FC30F4764163A6964A8CCC9B0D /* TAOverlay.m */,
+				A5CC5BCCE333C57F93410D91579FF44E /* Resources */,
+				72662AEA277948A4288349E5EB3F55D6 /* Support Files */,
 			);
-			name = "Pods-AireNL";
-			path = "Target Support Files/Pods-AireNL";
+			path = TAOverlay;
 			sourceTree = "<group>";
 		};
-		2673B3803D2FBC39A41909BD501353D1 /* Mantle */ = {
+		27F5F3867CE1850FEB8F3376B50DE9A4 /* CCMPopup */ = {
 			isa = PBXGroup;
 			children = (
-				25F89783FFE767402B7ADD0B27F6BFE9 /* MTLJSONAdapter.h */,
-				7DA752B32B9EFD097D6560A0A33EA800 /* MTLJSONAdapter.m */,
-				1FF861C85B53F90047F6FC84656A5427 /* MTLModel.h */,
-				92ADF0EC9D6370D554FBEA4A113D20AE /* MTLModel.m */,
-				5D2F652BF1E0B564C16D38DC5AF90BE8 /* MTLModel+NSCoding.h */,
-				06F19A714E8D52E09996300A9BA6D7CA /* MTLModel+NSCoding.m */,
-				990EAC41D4B23108115C95A7A54542E1 /* MTLReflection.h */,
-				EACD2FBD22776EF8F6762A149D69E1D4 /* MTLReflection.m */,
-				E2CF7362815DA5732284AA655DF8D360 /* MTLTransformerErrorHandling.h */,
-				DBBBA5793B32424F4894F5B8A3B994BD /* MTLTransformerErrorHandling.m */,
-				56DEAF935648249C3476D54D637ED240 /* MTLValueTransformer.h */,
-				A4E68D731EE1156D129737F5BFD6C34F /* MTLValueTransformer.m */,
-				8773E160C5C972D7935EB81627873E99 /* Mantle.h */,
-				8B4A30BE225AA0F654D941E5A4F81B05 /* NSArray+MTLManipulationAdditions.h */,
-				5A1349086457882EB0602761EB057DAC /* NSArray+MTLManipulationAdditions.m */,
-				289D5398F5AEA1F43687C99069279FE6 /* NSDictionary+MTLJSONKeyPath.h */,
-				310999D12D3CD7552A50A2774A29B94A /* NSDictionary+MTLJSONKeyPath.m */,
-				BBED7916234A792C6A163EFACA5ADBB8 /* NSDictionary+MTLManipulationAdditions.h */,
-				8584DFF5072C7D07194854427ABADF66 /* NSDictionary+MTLManipulationAdditions.m */,
-				34468FD770BC926C03AFFCFF1E9EB2B8 /* NSDictionary+MTLMappingAdditions.h */,
-				8A23DEE5CB2E55CE668F7FA1C8F33768 /* NSDictionary+MTLMappingAdditions.m */,
-				EF947F042799384CCB73B1194B714A35 /* NSError+MTLModelException.h */,
-				0208150D8229C436EF299D6630991586 /* NSError+MTLModelException.m */,
-				E7FBF666487FA26A161DC34C3CF7DED5 /* NSObject+MTLComparisonAdditions.h */,
-				750BF79383E701AA6556A4994AF71E11 /* NSObject+MTLComparisonAdditions.m */,
-				68BE9BDEBE00C6E838EEE5E98476D9E2 /* NSValueTransformer+MTLInversionAdditions.h */,
-				F1C0E32366FB875BD7BA2D3C3D2045A7 /* NSValueTransformer+MTLInversionAdditions.m */,
-				A7942A5B6D527FCEFDDBF09D77806BA0 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */,
-				FA01A86BC8930F82994C111DDD84A523 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */,
-				456FDFF100BD8D359684031BFD804E9B /* Support Files */,
-				F024BF867011EA3B980B7C754E9A2D14 /* extobjc */,
+				66245E3E3EBAC3561FBB7C595FFCD2F2 /* CCMCustomAnimation.h */,
+				3BC2EC75C006F1D0D9DE524BAC306B84 /* CCMCustomAnimation.m */,
+				F6E08D1E28702C5B8369BB6B6B890780 /* CCMPopupAnimation.h */,
+				80A8BEF149FF5FB6A17D7DB983921B9B /* CCMPopupAnimation.m */,
+				0F261CE378CF317C972312C7EEF65E49 /* CCMPopupSegue.h */,
+				3CE3755D4910CE70279FD9B8DECD783D /* CCMPopupSegue.m */,
+				8E381A16F1F8031F38F40B5D12CAE811 /* CCMPopupTransitioning.h */,
+				28CC204247CE477903C228F47E8026A5 /* CCMPopupTransitioning.m */,
+				FA526626DEFEA006FE6E260DED0954E4 /* FXBlurView.h */,
+				EA8DE82ECAB4176B98B77EB33B586798 /* FXBlurView.m */,
+				166B18EEFD004BCFA7B38A41929AD66B /* UIImage+ImageEffects.h */,
+				2EF9A2EEF4AD5C7567116403FA14DFDA /* UIImage+ImageEffects.m */,
+				BB68EB49FB102A3D344A480A8CF10B4D /* UIImage+screenshot.h */,
+				330D7CC400D48A4462837761B6F53349 /* UIImage+screenshot.m */,
+				FBA6ADDABF18FA2BD7EA29ECBB4100CF /* UIViewController+CCMPopupAnimation.h */,
+				9C0B53BD04A58F24193BABF2A4BB6CC4 /* UIViewController+CCMPopupAnimation.m */,
+				A1293E500FB1A4BB5ED0EEC2AB06C186 /* Support Files */,
 			);
-			path = Mantle;
+			path = CCMPopup;
 			sourceTree = "<group>";
 		};
-		3B6BC7AB5092989EDDA65705FDFC23BF /* Support Files */ = {
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1F2F6EAE1DCF79329D658CA303A7D719 /* CCMPopup.xcconfig */,
-				E90A00762DB274F4C996AD49666CB212 /* CCMPopup-Private.xcconfig */,
-				F1EE511FE920D602DB1F0A9CD2126396 /* CCMPopup-dummy.m */,
-				86307C0AF0B687901142A4B1D7CEA14E /* CCMPopup-prefix.pch */,
+				7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CCMPopup";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		3DFC787F0C253E40EF0A3E1D33FE5533 /* Targets Support Files */ = {
+		6D002980B94816B8558877F48F38FE1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EA8D206393BD3481907144B80CC20EB /* Pods-AireNL */,
-				934029CB010F1A0B55E51A1D5377A289 /* Pods-AireNL WatchKit Extension */,
-				69BFA645126237058E2926916C81EE6D /* Pods-AireNL Widget */,
+				B0F381F54F570EBA8EDCCA2301630974 /* libCCMPopup.a */,
+				1C789D9FBF210576F28B3C3441DD10DF /* libPods-AireNL.a */,
+				BF65447544FD1FB5F1ABD9A3035B7C64 /* libTAOverlay.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		724AAC910BC000625A54DB78C45771A1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28D56FF45BAEA74B0CD2D67C6507F49 /* Pods-AireNL */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		456FDFF100BD8D359684031BFD804E9B /* Support Files */ = {
+		72662AEA277948A4288349E5EB3F55D6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA44CF57EEBB4185E00BDE7A1150879D /* Pods-AireNL WatchKit Extension-Mantle.xcconfig */,
-				E07C022AED3203D678C52364542B8BE7 /* Pods-AireNL WatchKit Extension-Mantle-Private.xcconfig */,
-				838221BEAE10183E5A0DE76E7046DFBD /* Pods-AireNL WatchKit Extension-Mantle-dummy.m */,
-				4060DCB24479BE072D35FB9C9DE64739 /* Pods-AireNL WatchKit Extension-Mantle-prefix.pch */,
-				5AEE5455DADEF16A1D28C05BF4EEA71B /* Pods-AireNL-Mantle.xcconfig */,
-				AF441EFE66AA0B025C3C50D0687C7595 /* Pods-AireNL-Mantle-Private.xcconfig */,
-				A468223DFBBDFBFA06E2329BBFD29DA0 /* Pods-AireNL-Mantle-dummy.m */,
-				D9A7F8F3EA06B63E33974C3D1430AA3E /* Pods-AireNL-Mantle-prefix.pch */,
+				232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */,
+				253BD84789D956D6185B74D1C890443D /* TAOverlay-dummy.m */,
+				7D664691C405A926879412476769EA82 /* TAOverlay-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Pods-AireNL WatchKit Extension-Mantle";
-			sourceTree = "<group>";
-		};
-		5122A3F52D800E80BACD9CC992713105 /* watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				C461DC299ED531060A803AD71CC8DBBC /* Foundation.framework */,
-			);
-			name = watchOS;
-			sourceTree = "<group>";
-		};
-		69BFA645126237058E2926916C81EE6D /* Pods-AireNL Widget */ = {
-			isa = PBXGroup;
-			children = (
-				2F852F78314356C3A0FC6F3F67739BD8 /* Pods-AireNL Widget-acknowledgements.markdown */,
-				CF3451438AC7F49D2475A99D0E5DED3E /* Pods-AireNL Widget-acknowledgements.plist */,
-				775DCDD1E06B8ED17B202F8E059473DB /* Pods-AireNL Widget-dummy.m */,
-				8FAE0FCDEA12A2B5FAA903ABC27168E2 /* Pods-AireNL Widget-resources.sh */,
-				89227B8312C697AC9AAA9B0B09AEF923 /* Pods-AireNL Widget.debug.xcconfig */,
-				1B1B19829FCC926C6E8E1E21EDF970CD /* Pods-AireNL Widget.release.xcconfig */,
-			);
-			name = "Pods-AireNL Widget";
-			path = "Target Support Files/Pods-AireNL Widget";
-			sourceTree = "<group>";
-		};
-		7135772DFAA5E880038F9E9CBCDF28E1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C929252A337088EC47D401AD5A65E3F2 /* TAOverlay.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7886F84121BA19DD09FEC4186683DD78 /* TAOverlay */ = {
-			isa = PBXGroup;
-			children = (
-				22076EB5908907E337026DFC77E4DB7C /* TAOverlay.h */,
-				025E41A8F7F527EC5A4E1E97C6182EEB /* TAOverlay.m */,
-				7135772DFAA5E880038F9E9CBCDF28E1 /* Resources */,
-				A6592222EEDAB93B968C86CACD112B1A /* Support Files */,
-			);
-			path = TAOverlay;
+			path = "../Target Support Files/TAOverlay";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				8F91EE078EA3977443D1BDC2601132EF /* Frameworks */,
-				CC60C65AE418443D8674BB68891CFB59 /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				3DFC787F0C253E40EF0A3E1D33FE5533 /* Targets Support Files */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F451B33E6A2EB5C0F701146E64A3F7C6 /* Pods */,
+				6D002980B94816B8558877F48F38FE1F /* Products */,
+				724AAC910BC000625A54DB78C45771A1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F91EE078EA3977443D1BDC2601132EF /* Frameworks */ = {
+		A1293E500FB1A4BB5ED0EEC2AB06C186 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D198B77EEC4D69C49F1FE4EBB1CCDE99 /* iOS */,
-				5122A3F52D800E80BACD9CC992713105 /* watchOS */,
+				AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */,
+				7FF0A896D9518FAC2AF946E78DD089C0 /* CCMPopup-dummy.m */,
+				0DF84A2DBFE9FDA1A8EC31766B7559BA /* CCMPopup-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CCMPopup";
+			sourceTree = "<group>";
+		};
+		A28D56FF45BAEA74B0CD2D67C6507F49 /* Pods-AireNL */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFFEA0EC45A515A225E7798059839B /* Pods-AireNL-acknowledgements.markdown */,
+				27FB2A100C1821A3951B074DA3B5A217 /* Pods-AireNL-acknowledgements.plist */,
+				2812306DF3F87C950DA7178245D16734 /* Pods-AireNL-dummy.m */,
+				6BB3A2DE025D47A42CF909DB17F53349 /* Pods-AireNL-frameworks.sh */,
+				CBAFF3386F14BDD8669E817CE3C5992F /* Pods-AireNL-resources.sh */,
+				D46A50567DC922BCBE150EC8774058F9 /* Pods-AireNL.debug.xcconfig */,
+				2ECD931AC07AAD511409A9B6608DC312 /* Pods-AireNL.release.xcconfig */,
+			);
+			name = "Pods-AireNL";
+			path = "Target Support Files/Pods-AireNL";
+			sourceTree = "<group>";
+		};
+		A5CC5BCCE333C57F93410D91579FF44E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CF8F2FF023448B8B844BD3FA870D41C /* TAOverlay.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		934029CB010F1A0B55E51A1D5377A289 /* Pods-AireNL WatchKit Extension */ = {
+		F451B33E6A2EB5C0F701146E64A3F7C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B46BDB8A0701E3956C69363CE21F267B /* Pods-AireNL WatchKit Extension-acknowledgements.markdown */,
-				3EE500AD29AFA69D3D7660EC713F6A2F /* Pods-AireNL WatchKit Extension-acknowledgements.plist */,
-				FB87539F32C435B8A741D0A444F5AA38 /* Pods-AireNL WatchKit Extension-dummy.m */,
-				E5CA801DDB6CE5360F81E72DD20D0AB2 /* Pods-AireNL WatchKit Extension-resources.sh */,
-				69AEB7791B82ED6CA48AB9925E0DC3AC /* Pods-AireNL WatchKit Extension.debug.xcconfig */,
-				B7990FBC490FF40BF9248FA510EF9804 /* Pods-AireNL WatchKit Extension.release.xcconfig */,
-			);
-			name = "Pods-AireNL WatchKit Extension";
-			path = "Target Support Files/Pods-AireNL WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		A6592222EEDAB93B968C86CACD112B1A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E2FA99B77B6CAD9C55AC211FC6CEAD52 /* TAOverlay.xcconfig */,
-				494ADF351246ADC4E2C248C2A3D87B55 /* TAOverlay-Private.xcconfig */,
-				860556C6A6F9E0C2588541B6F6DF90F0 /* TAOverlay-dummy.m */,
-				115F94BE8D46982ADE5C08A6DF266F08 /* TAOverlay-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TAOverlay";
-			sourceTree = "<group>";
-		};
-		CC60C65AE418443D8674BB68891CFB59 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E503F84C12139E301818977FE4FF2EC4 /* CCMPopup */,
-				2673B3803D2FBC39A41909BD501353D1 /* Mantle */,
-				7886F84121BA19DD09FEC4186683DD78 /* TAOverlay */,
+				27F5F3867CE1850FEB8F3376B50DE9A4 /* CCMPopup */,
+				0CE76EB491C7277B4AC3DDEA061EC274 /* TAOverlay */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C352A1B7D80DBC80AE43719836B5E78C /* libCCMPopup.a */,
-				747DFBAB8453C742A57D34F2D08C4379 /* libPods-AireNL.a */,
-				C594CE7569A222DA9F564600495FD51F /* libPods-AireNL WatchKit Extension.a */,
-				6597D133D6C2C8D62F571229C1C6769E /* libPods-AireNL WatchKit Extension-Mantle.a */,
-				DF22C682791E937DC9BF4CC729935AD1 /* libPods-AireNL Widget.a */,
-				DB0E2F3AA91825D543315E71CBC7D339 /* libPods-AireNL-Mantle.a */,
-				7A904B5323F1BC687117494E36123197 /* libTAOverlay.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D198B77EEC4D69C49F1FE4EBB1CCDE99 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				7798C917156996E3253B11D5BEF71947 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E503F84C12139E301818977FE4FF2EC4 /* CCMPopup */ = {
-			isa = PBXGroup;
-			children = (
-				3BA3310C44395E49C40EBE24859C479E /* CCMCustomAnimation.h */,
-				A4020357513BAE888F5789BD25B4C744 /* CCMCustomAnimation.m */,
-				2483C3FB04EFDAF24CE7615C93A07FBD /* CCMPopupAnimation.h */,
-				FC4CEC890100F8B29EB12B12A233E76D /* CCMPopupAnimation.m */,
-				8E1B19AAA5EECF1598A3181E369D93CA /* CCMPopupSegue.h */,
-				A1457A434186412E340EBBF8454646BA /* CCMPopupSegue.m */,
-				023402557AF23E31326F870EAD19089F /* CCMPopupTransitioning.h */,
-				329D849A6BFA868AEE6DF1EC43950A8C /* CCMPopupTransitioning.m */,
-				CC77A7EEE199C19A8B6309A5297DB19A /* FXBlurView.h */,
-				10C01D3782DAC9775F20D9B90B51C047 /* FXBlurView.m */,
-				3C9E13C544DC4C01F6BA8451B22E85B0 /* UIImage+ImageEffects.h */,
-				690E35E66CA76495662BF1AC880DADBF /* UIImage+ImageEffects.m */,
-				6CD8D0DB269D547C676F56D2959305CE /* UIImage+screenshot.h */,
-				8E249C39C93BF7A74C100A1012DC0727 /* UIImage+screenshot.m */,
-				ECB38AC68784C76E4328A4D6D71A46CF /* UIViewController+CCMPopupAnimation.h */,
-				A50DAD142BBD74638DAC306B666AE31B /* UIViewController+CCMPopupAnimation.m */,
-				3B6BC7AB5092989EDDA65705FDFC23BF /* Support Files */,
-			);
-			path = CCMPopup;
-			sourceTree = "<group>";
-		};
-		F024BF867011EA3B980B7C754E9A2D14 /* extobjc */ = {
-			isa = PBXGroup;
-			children = (
-				76B1DDFC06201FC8196177CEEA197C81 /* EXTKeyPathCoding.h */,
-				B2D06B6B5B35A8EC044F58AF865B6193 /* EXTRuntimeExtensions.h */,
-				39BA3F11E93795BE86ADF2A824EA6DD6 /* EXTRuntimeExtensions.m */,
-				55B2D15830EB27AC6A98F803990B5781 /* EXTScope.h */,
-				C7023DDD7327532B94B7B4CA71616D2F /* EXTScope.m */,
-				524FB2CDD5E0AF89C280575FA4DAA06E /* metamacros.h */,
-			);
-			name = extobjc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BAEED8B20D9084E5A28419C8C833FC61 /* Headers */ = {
+		54B0A380B77E7B41FEC7B318A047BA5A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C283BEB2987202FA38F07D46E33713E4 /* CCMCustomAnimation.h in Headers */,
-				7B8C2230D82489611949CA978A1634A8 /* CCMPopupAnimation.h in Headers */,
-				3DF29D2C2CF1963978E768F5AB313849 /* CCMPopupSegue.h in Headers */,
-				7797EB7840F0F062CBD5C1795C6BBB6D /* CCMPopupTransitioning.h in Headers */,
-				73189CAFCE3D698109CD4589B5B583E4 /* FXBlurView.h in Headers */,
-				38D39259EA72DA6F4FD43DF818950F97 /* UIImage+ImageEffects.h in Headers */,
-				3D15E7731A1E2CE9FF05D436EB716D14 /* UIImage+screenshot.h in Headers */,
-				16ECA3B57EB2DCE80FB3BAADEEC52013 /* UIViewController+CCMPopupAnimation.h in Headers */,
+				F7E19A882B23ABD0C422F9468B54042B /* CCMCustomAnimation.h in Headers */,
+				DBABA00D4F59AA6235747D6DB9757DB7 /* CCMPopupAnimation.h in Headers */,
+				8942C99D49AB9F2B800B9248680B423E /* CCMPopupSegue.h in Headers */,
+				0FD4454E9E6E90079D9BC50CCCF56459 /* CCMPopupTransitioning.h in Headers */,
+				6BC8FEFA34BC53A330C502F154103F44 /* FXBlurView.h in Headers */,
+				98EEC665C9387944C7DC2CE3E596A8B1 /* UIImage+ImageEffects.h in Headers */,
+				18EF5F8AE928250B8FC2803870278352 /* UIImage+screenshot.h in Headers */,
+				6AA5580697545ACF25D9E741B00457AC /* UIViewController+CCMPopupAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2CDB6A1E67F4CB657EEFD23EBD2EBDE /* Headers */ = {
+		A6164643FE06381B31AA7C4B531D6D89 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B461C81B71301AD79A83D61F722951 /* EXTKeyPathCoding.h in Headers */,
-				82463783B4051F72A18192198B51B552 /* EXTRuntimeExtensions.h in Headers */,
-				C42D858092D253EFC175B67E89F6656D /* EXTScope.h in Headers */,
-				7E5F58B41EAEEDBCFE3872250010B6CE /* MTLJSONAdapter.h in Headers */,
-				296979A5EABE7157776DDCE3D1D99F30 /* MTLModel+NSCoding.h in Headers */,
-				2B424FFB197E41B36D285EE214EB757A /* MTLModel.h in Headers */,
-				F22B6EF749198160C57385C40C88ECD1 /* MTLReflection.h in Headers */,
-				74FA08A1EEC4075010284A09854856A1 /* MTLTransformerErrorHandling.h in Headers */,
-				38D2524579ECB35CE9E6C5C75301EFC4 /* MTLValueTransformer.h in Headers */,
-				81867BD9D3BBF546A3792A5C226D6200 /* Mantle.h in Headers */,
-				F0101C6ECC607AF62BDD6496262DDDA5 /* NSArray+MTLManipulationAdditions.h in Headers */,
-				E92E7A76114BF812ABE5E864A8CE0581 /* NSDictionary+MTLJSONKeyPath.h in Headers */,
-				A7FED6701A1F2AE5E7A87AF9560F7FB2 /* NSDictionary+MTLManipulationAdditions.h in Headers */,
-				0A1970EE3E76D7EDCE6EBA92D82E107E /* NSDictionary+MTLMappingAdditions.h in Headers */,
-				791D27B10554890A4058D27FC9924B59 /* NSError+MTLModelException.h in Headers */,
-				A84E81A15FFB084AF5CC307EDD8CA786 /* NSObject+MTLComparisonAdditions.h in Headers */,
-				6C6B6AB3B0BE9792B629FC8037FA130A /* NSValueTransformer+MTLInversionAdditions.h in Headers */,
-				F1CEA97B6DAEFF15EACADE1E5F36BAB9 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */,
-				598006D2918BF27326D609DE1808E208 /* metamacros.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E547911A2A6A91C38C1262850B048E04 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				479CD17F5072CB9350761558FBF0239D /* EXTKeyPathCoding.h in Headers */,
-				5D7DE53A934A5BC1F2E317FCC411DA61 /* EXTRuntimeExtensions.h in Headers */,
-				25F3197B70BE7C7EE8D4C53D36ABEF09 /* EXTScope.h in Headers */,
-				95341604A248CDF37201F0387F67D4B9 /* MTLJSONAdapter.h in Headers */,
-				EAFD4DE450AC01B293808E7C2CB02F05 /* MTLModel+NSCoding.h in Headers */,
-				26AB5D14882FA4157AEC74642E197369 /* MTLModel.h in Headers */,
-				ED518E90A858D6E8B6EC616CFA474D89 /* MTLReflection.h in Headers */,
-				23E16C02A22F073BFD436AF2E69C817E /* MTLTransformerErrorHandling.h in Headers */,
-				CB46D7DF61E4983EE2E45809DBEA3392 /* MTLValueTransformer.h in Headers */,
-				A6D227CEE9DE978780C9D8A8A28861B9 /* Mantle.h in Headers */,
-				5117F9D9C19A9B851BCE9EF17362E8EC /* NSArray+MTLManipulationAdditions.h in Headers */,
-				800351024955454C0D5BE5CAB7F42FE0 /* NSDictionary+MTLJSONKeyPath.h in Headers */,
-				A553D3865D4C9DB20477B1D0BB0D57CE /* NSDictionary+MTLManipulationAdditions.h in Headers */,
-				70DAF60801D1A5195B9D21BA2E795827 /* NSDictionary+MTLMappingAdditions.h in Headers */,
-				F6E13871FCDCFBE617FDE3A5337A081F /* NSError+MTLModelException.h in Headers */,
-				E84CAE7D4484F1D610A016A75BD7753B /* NSObject+MTLComparisonAdditions.h in Headers */,
-				7C1E21DCFEBA7C0E190CBD93113196C5 /* NSValueTransformer+MTLInversionAdditions.h in Headers */,
-				37FC2C506D7CD25BEE86244904A4B3EA /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */,
-				F8B7828C451D0F80FD345190B46E1D1E /* metamacros.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7403DA54286F2689EE24D50824197D7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D2802644E975E0F4464808FE37C4076 /* TAOverlay.h in Headers */,
+				DB18F4B1FC99C181E26E208AD47A3A83 /* TAOverlay.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		012B52BF090CC2C907F7FB891027AAB1 /* Pods-AireNL WatchKit Extension-Mantle */ = {
+		4A0224F852C0D26ED1D86E7D9F3956BA /* TAOverlay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06D32D8867C5F8AF5D3FC15F196FDDE4 /* Build configuration list for PBXNativeTarget "Pods-AireNL WatchKit Extension-Mantle" */;
+			buildConfigurationList = C58190D19139E4FE8DA4A0DA99CCA5FE /* Build configuration list for PBXNativeTarget "TAOverlay" */;
 			buildPhases = (
-				47036DA0704E1B4EAF675677FADBCD9B /* Sources */,
-				624575AF02E2622A7E62476F99DDB334 /* Frameworks */,
-				D2CDB6A1E67F4CB657EEFD23EBD2EBDE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-AireNL WatchKit Extension-Mantle";
-			productName = "Pods-AireNL WatchKit Extension-Mantle";
-			productReference = 6597D133D6C2C8D62F571229C1C6769E /* libPods-AireNL WatchKit Extension-Mantle.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		10DA020A72542564FB86DBB31B6E3381 /* Pods-AireNL */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC391AE10181C2556CF6967876FE347F /* Build configuration list for PBXNativeTarget "Pods-AireNL" */;
-			buildPhases = (
-				17567BC2E3F8DC53C2087F4ECB505A44 /* Sources */,
-				EFDC4E1A06EFA7C4E16F3CCCD89C5C8C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68DED2476BA38F58B28C021CEB4410D6 /* PBXTargetDependency */,
-				EEC9AF1518D4320F1D467AB2A8F58D0E /* PBXTargetDependency */,
-				F98DB4938A54E6A98EF4055F4C33906A /* PBXTargetDependency */,
-			);
-			name = "Pods-AireNL";
-			productName = "Pods-AireNL";
-			productReference = 747DFBAB8453C742A57D34F2D08C4379 /* libPods-AireNL.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		1512126BD78F6B7D346D1E0DAEECB9DC /* TAOverlay */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E47E6284E9D431778AFD42858CDB9F4 /* Build configuration list for PBXNativeTarget "TAOverlay" */;
-			buildPhases = (
-				D172D83F702281EE42E11FE0D9B15CE0 /* Sources */,
-				BD49CF2F5870DC4C1E87DB877B4FA31C /* Frameworks */,
-				E7403DA54286F2689EE24D50824197D7 /* Headers */,
+				C913F6CE7787EA820474082403AE2361 /* Sources */,
+				ABF894B1FC3A970A92D81F4F5B9017A5 /* Frameworks */,
+				A6164643FE06381B31AA7C4B531D6D89 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -687,67 +295,16 @@
 			);
 			name = TAOverlay;
 			productName = TAOverlay;
-			productReference = 7A904B5323F1BC687117494E36123197 /* libTAOverlay.a */;
+			productReference = BF65447544FD1FB5F1ABD9A3035B7C64 /* libTAOverlay.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		40B70071DFDB43C2F41BB4F8BC0CFF9A /* Pods-AireNL Widget */ = {
+		80349E1C2E18A8D75FD62E88593A9AFD /* CCMPopup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B63CA7DCF81A3B3F292D5081265FEFC /* Build configuration list for PBXNativeTarget "Pods-AireNL Widget" */;
+			buildConfigurationList = ADE7E718B4AD5289BDFDDF98E48D7C49 /* Build configuration list for PBXNativeTarget "CCMPopup" */;
 			buildPhases = (
-				16F4EE92E99C3FB557CA9F6ABF83D4CB /* Sources */,
-				C941F4B306F552F2383303E9F6B01045 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				580961AECC1D96AD1C0CAB3C3BDDA329 /* PBXTargetDependency */,
-			);
-			name = "Pods-AireNL Widget";
-			productName = "Pods-AireNL Widget";
-			productReference = DF22C682791E937DC9BF4CC729935AD1 /* libPods-AireNL Widget.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		47787FE86E844EC1DB0C2BF09378D218 /* Pods-AireNL-Mantle */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBBD03F654DD5745299A025DCC6D4B8D /* Build configuration list for PBXNativeTarget "Pods-AireNL-Mantle" */;
-			buildPhases = (
-				761FB39D798EAFA58005CAB1B5073F71 /* Sources */,
-				BA7568C426F4A40C9A995CA1C01C892B /* Frameworks */,
-				E547911A2A6A91C38C1262850B048E04 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-AireNL-Mantle";
-			productName = "Pods-AireNL-Mantle";
-			productReference = DB0E2F3AA91825D543315E71CBC7D339 /* libPods-AireNL-Mantle.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D167E334B026F8AE3CC72DE04D6E5A9E /* Pods-AireNL WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B4B59F8FE5F2510F44416D9EB4375C07 /* Build configuration list for PBXNativeTarget "Pods-AireNL WatchKit Extension" */;
-			buildPhases = (
-				83B19A2D76C3248B3FB4563B6640F14F /* Sources */,
-				2939BC8598F81DB941C65909FB3F0B75 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3855B94C5C3EF414C9A2A17366FB79AD /* PBXTargetDependency */,
-			);
-			name = "Pods-AireNL WatchKit Extension";
-			productName = "Pods-AireNL WatchKit Extension";
-			productReference = C594CE7569A222DA9F564600495FD51F /* libPods-AireNL WatchKit Extension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		EE005FD26D4147EC9756457F54AFE400 /* CCMPopup */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00244E76A92545452C28338DAC8F4A24 /* Build configuration list for PBXNativeTarget "CCMPopup" */;
-			buildPhases = (
-				0A53387B0A99293284415FB8ED459A9D /* Sources */,
-				C80A901740330DAD75B35D42FBFD11F8 /* Frameworks */,
-				BAEED8B20D9084E5A28419C8C833FC61 /* Headers */,
+				FAB37A89BFC38E81451ABB2939252D4B /* Sources */,
+				E9BB1448C5B3033C8074E4CF1BB75776 /* Frameworks */,
+				54B0A380B77E7B41FEC7B318A047BA5A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -755,7 +312,25 @@
 			);
 			name = CCMPopup;
 			productName = CCMPopup;
-			productReference = C352A1B7D80DBC80AE43719836B5E78C /* libCCMPopup.a */;
+			productReference = B0F381F54F570EBA8EDCCA2301630974 /* libCCMPopup.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D5C84A8C255F2F0A2E191B11ED2E5C0F /* Pods-AireNL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95517827A6290125B89A4BD33F3D43EA /* Build configuration list for PBXNativeTarget "Pods-AireNL" */;
+			buildPhases = (
+				4B735446395E10B1CC5FE837430DF34A /* Sources */,
+				F4FEE5055FD259FF823503A752D57927 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4154A828B3603D2E7EE75D6BBB314336 /* PBXTargetDependency */,
+				255CDAE8CADEDE5E3CFAF0373164CA41 /* PBXTargetDependency */,
+			);
+			name = "Pods-AireNL";
+			productName = "Pods-AireNL";
+			productReference = 1C789D9FBF210576F28B3C3441DD10DF /* libPods-AireNL.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -775,162 +350,91 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 6D002980B94816B8558877F48F38FE1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE005FD26D4147EC9756457F54AFE400 /* CCMPopup */,
-				10DA020A72542564FB86DBB31B6E3381 /* Pods-AireNL */,
-				D167E334B026F8AE3CC72DE04D6E5A9E /* Pods-AireNL WatchKit Extension */,
-				012B52BF090CC2C907F7FB891027AAB1 /* Pods-AireNL WatchKit Extension-Mantle */,
-				40B70071DFDB43C2F41BB4F8BC0CFF9A /* Pods-AireNL Widget */,
-				47787FE86E844EC1DB0C2BF09378D218 /* Pods-AireNL-Mantle */,
-				1512126BD78F6B7D346D1E0DAEECB9DC /* TAOverlay */,
+				80349E1C2E18A8D75FD62E88593A9AFD /* CCMPopup */,
+				D5C84A8C255F2F0A2E191B11ED2E5C0F /* Pods-AireNL */,
+				4A0224F852C0D26ED1D86E7D9F3956BA /* TAOverlay */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A53387B0A99293284415FB8ED459A9D /* Sources */ = {
+		4B735446395E10B1CC5FE837430DF34A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3156C492EB73DD435658449AE5026D3B /* CCMCustomAnimation.m in Sources */,
-				70ED6E9B9082DEC57161B6529D1515F6 /* CCMPopup-dummy.m in Sources */,
-				711C46CC63C64065D985D3969D709343 /* CCMPopupAnimation.m in Sources */,
-				A4EB23930B1609FF4C5137F25E833906 /* CCMPopupSegue.m in Sources */,
-				31B934A236FDEB7F9F1249BD46FE5BFF /* CCMPopupTransitioning.m in Sources */,
-				F8DEC15984A1AD99974A99B2E278C7D3 /* FXBlurView.m in Sources */,
-				4F3FB1D4B735FDAD00475DAFA026B0D3 /* UIImage+ImageEffects.m in Sources */,
-				F63495715FEF6FB3CE08D617600EB7A7 /* UIImage+screenshot.m in Sources */,
-				83F8636612BD451DF9FF1B075C30236F /* UIViewController+CCMPopupAnimation.m in Sources */,
+				C8B5A037E7437072AE8A57DDB9C390FA /* Pods-AireNL-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16F4EE92E99C3FB557CA9F6ABF83D4CB /* Sources */ = {
+		C913F6CE7787EA820474082403AE2361 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408AEEE397874AF52C322C3983688B2C /* Pods-AireNL Widget-dummy.m in Sources */,
+				D8BF9B8BB15DF92324B091A40FE0D47E /* TAOverlay-dummy.m in Sources */,
+				61D93733519326D90036056F2F93578C /* TAOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17567BC2E3F8DC53C2087F4ECB505A44 /* Sources */ = {
+		FAB37A89BFC38E81451ABB2939252D4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F2DC1E20236F13CC80584BCB27E7CDD /* Pods-AireNL-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47036DA0704E1B4EAF675677FADBCD9B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AA35819A827073F15868ED301FEDA76 /* EXTRuntimeExtensions.m in Sources */,
-				EFC6349B6F94C42FCE8BD3EC08DD930B /* EXTScope.m in Sources */,
-				64A8024A6382B7B47B141B205C197208 /* MTLJSONAdapter.m in Sources */,
-				A12319C029F79EA8051F0BB551E63696 /* MTLModel+NSCoding.m in Sources */,
-				F9EBB20A1A54F57823D3E2F1F2701A38 /* MTLModel.m in Sources */,
-				6264C720165B0CEA2739AB2D7CB57011 /* MTLReflection.m in Sources */,
-				70103A8808EDF2FEACD93D3F1F044394 /* MTLTransformerErrorHandling.m in Sources */,
-				B7D21852F18F2E20FF44F0E8DBFED479 /* MTLValueTransformer.m in Sources */,
-				987929DC30BCAA790271169AB76565F2 /* NSArray+MTLManipulationAdditions.m in Sources */,
-				9504FA7458FD5321298CEC67831BD0D5 /* NSDictionary+MTLJSONKeyPath.m in Sources */,
-				5845E6454CDC15F2E1B851884DF6A919 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
-				E9469D9F9FED76C4304588D777408DA9 /* NSDictionary+MTLMappingAdditions.m in Sources */,
-				12D7032C59507FA0FF42C6A23819C72A /* NSError+MTLModelException.m in Sources */,
-				A911D85BD9BF8B80B088DE1F8D1B125D /* NSObject+MTLComparisonAdditions.m in Sources */,
-				EF8A3A99424B4261E8BDD70A460E4EB3 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
-				53E64782191529DB0CBB4E1A7E987114 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
-				136FAF12310FCE93D8C982F7A050359C /* Pods-AireNL WatchKit Extension-Mantle-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		761FB39D798EAFA58005CAB1B5073F71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				535848FE1D08AD3DFD5BE6E6E46800E3 /* EXTRuntimeExtensions.m in Sources */,
-				E0DBEBDC2AAD71649A4DC99486D80FCD /* EXTScope.m in Sources */,
-				5B39B0F892B48164484DAB5051BAC9E3 /* MTLJSONAdapter.m in Sources */,
-				A043361B5CF9D9E536C52ED804CBBB2B /* MTLModel+NSCoding.m in Sources */,
-				FA58AD5110F5603322B91E699478407C /* MTLModel.m in Sources */,
-				15A5FD55956FE8030D26BF48BF7FE2F5 /* MTLReflection.m in Sources */,
-				0DEFEE854C5B7DC72EFC2C8F32543EE7 /* MTLTransformerErrorHandling.m in Sources */,
-				2002561D2EC19ACA84DD6D4907A69EC2 /* MTLValueTransformer.m in Sources */,
-				78DCB5D7EDAE3774B7FA695DBF48E0C2 /* NSArray+MTLManipulationAdditions.m in Sources */,
-				57436CCB7CF2F97BC5B7F7B87808AFE8 /* NSDictionary+MTLJSONKeyPath.m in Sources */,
-				5B1071FC94AFD13E7EEF10DD7ADD726B /* NSDictionary+MTLManipulationAdditions.m in Sources */,
-				BD7917B40E311AF20995F83C27D6B585 /* NSDictionary+MTLMappingAdditions.m in Sources */,
-				C4AE65876BC74B6981815A1AF24912C3 /* NSError+MTLModelException.m in Sources */,
-				958940CD07BB5C9DDB1EE8E652456445 /* NSObject+MTLComparisonAdditions.m in Sources */,
-				4BABA3DD0D1C5F50CA09E91A4857B851 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
-				F200F39FA198D7BCC60631067192AA1B /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
-				2C2D778F5110FD8B97132D8838178805 /* Pods-AireNL-Mantle-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B19A2D76C3248B3FB4563B6640F14F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8590F9A5E9ED8D59EFABBC35C89C5081 /* Pods-AireNL WatchKit Extension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D172D83F702281EE42E11FE0D9B15CE0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6B48B22BAAFA2E8C6846E7F5A4033CFA /* TAOverlay-dummy.m in Sources */,
-				18B097F0A01D6C3217803F4D25BEA8D7 /* TAOverlay.m in Sources */,
+				927BB3E3141D930FE21E42C438BAB951 /* CCMCustomAnimation.m in Sources */,
+				D9AF00E38ADD4DA4C34A9B7BF1765386 /* CCMPopup-dummy.m in Sources */,
+				03D89319368D9E6D8B836FED9E77766B /* CCMPopupAnimation.m in Sources */,
+				5F8F598D45E68313AEFB99F6AF48AB69 /* CCMPopupSegue.m in Sources */,
+				D6D4FB165CA296D76359A215DBA54B4D /* CCMPopupTransitioning.m in Sources */,
+				2DE3EBA81996B1349B216DF5B8FB9132 /* FXBlurView.m in Sources */,
+				D14490FE030F1F4374CD525D9251862E /* UIImage+ImageEffects.m in Sources */,
+				41D4B46EC9DB955B612592F90B126C67 /* UIImage+screenshot.m in Sources */,
+				EFE685A76D6B921849816FB985077BCD /* UIViewController+CCMPopupAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3855B94C5C3EF414C9A2A17366FB79AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AireNL WatchKit Extension-Mantle";
-			target = 012B52BF090CC2C907F7FB891027AAB1 /* Pods-AireNL WatchKit Extension-Mantle */;
-			targetProxy = 02F8108A56D70EA082AA17BCBA305685 /* PBXContainerItemProxy */;
-		};
-		580961AECC1D96AD1C0CAB3C3BDDA329 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AireNL-Mantle";
-			target = 47787FE86E844EC1DB0C2BF09378D218 /* Pods-AireNL-Mantle */;
-			targetProxy = F6A199F42B2D396227ADB51665C10EBB /* PBXContainerItemProxy */;
-		};
-		68DED2476BA38F58B28C021CEB4410D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CCMPopup;
-			target = EE005FD26D4147EC9756457F54AFE400 /* CCMPopup */;
-			targetProxy = 49963F773FF01637080657771EBB4E40 /* PBXContainerItemProxy */;
-		};
-		EEC9AF1518D4320F1D467AB2A8F58D0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AireNL-Mantle";
-			target = 47787FE86E844EC1DB0C2BF09378D218 /* Pods-AireNL-Mantle */;
-			targetProxy = C64D76A6C067A6C7DCB8A7D350C2E9EE /* PBXContainerItemProxy */;
-		};
-		F98DB4938A54E6A98EF4055F4C33906A /* PBXTargetDependency */ = {
+		255CDAE8CADEDE5E3CFAF0373164CA41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TAOverlay;
-			target = 1512126BD78F6B7D346D1E0DAEECB9DC /* TAOverlay */;
-			targetProxy = 0BEA0090C7BE60C4978BCAC0E8DFA509 /* PBXContainerItemProxy */;
+			target = 4A0224F852C0D26ED1D86E7D9F3956BA /* TAOverlay */;
+			targetProxy = D587B6EE1212B47E041D3B0B2935C5E9 /* PBXContainerItemProxy */;
+		};
+		4154A828B3603D2E7EE75D6BBB314336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CCMPopup;
+			target = 80349E1C2E18A8D75FD62E88593A9AFD /* CCMPopup */;
+			targetProxy = E39E3FE0C215254D5F4DE9EB4BACFA66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01475D544E515836F6E4D4E6F675E0C6 /* Debug */ = {
+		66035773FD5B3F5DD729C8DD8981842D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF441EFE66AA0B025C3C50D0687C7595 /* Pods-AireNL-Mantle-Private.xcconfig */;
+			baseConfigurationReference = 232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AireNL-Mantle/Pods-AireNL-Mantle-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		749885AE0FB78ACABC56E9AEB31C4563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -941,79 +445,10 @@
 			};
 			name = Debug;
 		};
-		08B04ECCC25E820EB866DE0E918425D8 /* Release */ = {
+		9F9E7839F66FE0A284ECC299F964ADB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E90A00762DB274F4C996AD49666CB212 /* CCMPopup-Private.xcconfig */;
+			baseConfigurationReference = D46A50567DC922BCBE150EC8774058F9 /* Pods-AireNL.debug.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		08F9B86D688ADEB169325D40E17C07DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B1B19829FCC926C6E8E1E21EDF970CD /* Pods-AireNL Widget.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		0A586B374BB3CB24B75F2792BCCE0065 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		1CBD03E8F434638FA62CFBD523C177F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89227B8312C697AC9AAA9B0B09AEF923 /* Pods-AireNL Widget.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1026,7 +461,7 @@
 			};
 			name = Debug;
 		};
-		327D4CEA9BA5981596302BCF8D279563 /* Debug */ = {
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1062,13 +497,28 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		82C5B49DB65EEE79E09D9957BFFE544B /* Debug */ = {
+		BF029793B712A035F7026F99D1067E79 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E90A00762DB274F4C996AD49666CB212 /* CCMPopup-Private.xcconfig */;
+			baseConfigurationReference = AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D3B142FE69A69AB4A13008F5E815E110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
@@ -1082,72 +532,9 @@
 			};
 			name = Debug;
 		};
-		B9703B75A3531D08868926B2DCCFF985 /* Debug */ = {
+		EC4AF5BA8E6D0B5B5FF406B517A7AE7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 902738A41BE099C19BDA9AD89BFACC08 /* Pods-AireNL.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		C7F9462F477AA8E3583BC743B1D705D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E07C022AED3203D678C52364542B8BE7 /* Pods-AireNL WatchKit Extension-Mantle-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AireNL WatchKit Extension-Mantle/Pods-AireNL WatchKit Extension-Mantle-prefix.pch";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		D58F0E4EA7A05DC9615A579D99E1836D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF441EFE66AA0B025C3C50D0687C7595 /* Pods-AireNL-Mantle-Private.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AireNL-Mantle/Pods-AireNL-Mantle-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		DA3C7014B83754B58397B3D67FD06160 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E07C022AED3203D678C52364542B8BE7 /* Pods-AireNL WatchKit Extension-Mantle-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AireNL WatchKit Extension-Mantle/Pods-AireNL WatchKit Extension-Mantle-prefix.pch";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		DE2A1C74E09B22BF6A01DA7885A55DA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2067EE23A92F57B445612401FB1B808E /* Pods-AireNL.release.xcconfig */;
+			baseConfigurationReference = 2ECD931AC07AAD511409A9B6608DC312 /* Pods-AireNL.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1161,141 +548,75 @@
 			};
 			name = Release;
 		};
-		E0AC712863CE69023379C3EE4DCC93DA /* Debug */ = {
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69AEB7791B82ED6CA48AB9925E0DC3AC /* Pods-AireNL WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		E339B06B684C53B6621599F70B67A3E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 494ADF351246ADC4E2C248C2A3D87B55 /* TAOverlay-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		EF7829548BC2C1DEE118E243176396AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 494ADF351246ADC4E2C248C2A3D87B55 /* TAOverlay-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		F4D4C714A843463716ECDCB8D5788DD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7990FBC490FF40BF9248FA510EF9804 /* Pods-AireNL WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00244E76A92545452C28338DAC8F4A24 /* Build configuration list for PBXNativeTarget "CCMPopup" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				82C5B49DB65EEE79E09D9957BFFE544B /* Debug */,
-				08B04ECCC25E820EB866DE0E918425D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		06D32D8867C5F8AF5D3FC15F196FDDE4 /* Build configuration list for PBXNativeTarget "Pods-AireNL WatchKit Extension-Mantle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA3C7014B83754B58397B3D67FD06160 /* Debug */,
-				C7F9462F477AA8E3583BC743B1D705D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B63CA7DCF81A3B3F292D5081265FEFC /* Build configuration list for PBXNativeTarget "Pods-AireNL Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1CBD03E8F434638FA62CFBD523C177F3 /* Debug */,
-				08F9B86D688ADEB169325D40E17C07DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				327D4CEA9BA5981596302BCF8D279563 /* Debug */,
-				0A586B374BB3CB24B75F2792BCCE0065 /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E47E6284E9D431778AFD42858CDB9F4 /* Build configuration list for PBXNativeTarget "TAOverlay" */ = {
+		95517827A6290125B89A4BD33F3D43EA /* Build configuration list for PBXNativeTarget "Pods-AireNL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E339B06B684C53B6621599F70B67A3E6 /* Debug */,
-				EF7829548BC2C1DEE118E243176396AD /* Release */,
+				9F9E7839F66FE0A284ECC299F964ADB3 /* Debug */,
+				EC4AF5BA8E6D0B5B5FF406B517A7AE7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4B59F8FE5F2510F44416D9EB4375C07 /* Build configuration list for PBXNativeTarget "Pods-AireNL WatchKit Extension" */ = {
+		ADE7E718B4AD5289BDFDDF98E48D7C49 /* Build configuration list for PBXNativeTarget "CCMPopup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0AC712863CE69023379C3EE4DCC93DA /* Debug */,
-				F4D4C714A843463716ECDCB8D5788DD5 /* Release */,
+				D3B142FE69A69AB4A13008F5E815E110 /* Debug */,
+				BF029793B712A035F7026F99D1067E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC391AE10181C2556CF6967876FE347F /* Build configuration list for PBXNativeTarget "Pods-AireNL" */ = {
+		C58190D19139E4FE8DA4A0DA99CCA5FE /* Build configuration list for PBXNativeTarget "TAOverlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9703B75A3531D08868926B2DCCFF985 /* Debug */,
-				DE2A1C74E09B22BF6A01DA7885A55DA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DBBD03F654DD5745299A025DCC6D4B8D /* Build configuration list for PBXNativeTarget "Pods-AireNL-Mantle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01475D544E515836F6E4D4E6F675E0C6 /* Debug */,
-				D58F0E4EA7A05DC9615A579D99E1836D /* Release */,
+				749885AE0FB78ACABC56E9AEB31C4563 /* Debug */,
+				66035773FD5B3F5DD729C8DD8981842D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

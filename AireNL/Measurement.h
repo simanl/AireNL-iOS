@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <Mantle/Mantle.h>
-
 typedef NS_ENUM(NSInteger, AirQualityDescriptor){
     AirQualityDescriptorGood,
     AirQualityDescriptorRegular,
@@ -19,7 +17,9 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
     AirQualityDescriptorExtremelyBad
 };
 
-@interface Measurement : MTLModel <MTLJSONSerializing>
+@interface Measurement : NSObject <NSCoding>
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 // API DATA
 

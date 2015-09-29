@@ -11,9 +11,10 @@
 
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import <Mantle/Mantle.h>
 
-@interface Station : MTLModel <MTLJSONSerializing, MKAnnotation>
+@interface Station : NSObject <NSCoding, MKAnnotation>
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (nonatomic) NSString *stationID;
 

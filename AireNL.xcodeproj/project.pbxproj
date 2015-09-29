@@ -23,6 +23,7 @@
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
+		0662A5951BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; settings = {ASSET_TAGS = (); }; };
 		0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */; };
 		069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */; };
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
@@ -73,9 +74,7 @@
 		06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
 		06FED4A51BB1F61300DFCDAF /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06FED4A81BB1F61300DFCDAF /* AireNL WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
-		B03EDB9CFB10733F57BE1B66 /* libPods-AireNL Widget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBFA071CE5B9223C540D91D /* libPods-AireNL Widget.a */; };
 		C11B3EE383266F2F2E17F274 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */; };
-		F0F7A196A94178912EE1F71E /* libPods-AireNL WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +164,8 @@
 		0657530B1B5EBB3600FF226C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0657530C1B5EBB3600FF226C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0662A5931BB9F98900425AE6 /* NSDictionary+WithoutNSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WithoutNSNull.h"; sourceTree = "<group>"; };
+		0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WithoutNSNull.m"; sourceTree = "<group>"; };
 		0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAnnotationView.h; sourceTree = "<group>"; };
 		0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAnnotationView.m; sourceTree = "<group>"; };
 		0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoContainerViewController.h; sourceTree = "<group>"; };
@@ -285,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F733AE1BB321C300EB73BE /* CoreLocation.framework in Frameworks */,
-				F0F7A196A94178912EE1F71E /* libPods-AireNL WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +295,6 @@
 			files = (
 				06F733AC1BB321B200EB73BE /* CoreLocation.framework in Frameworks */,
 				06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */,
-				B03EDB9CFB10733F57BE1B66 /* libPods-AireNL Widget.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +487,8 @@
 			isa = PBXGroup;
 			children = (
 				06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */,
+				0662A5931BB9F98900425AE6 /* NSDictionary+WithoutNSNull.h */,
+				0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */,
 				06D367D31B54564D009E9D47 /* UIColor+ILColor.h */,
 				06D367D41B54564D009E9D47 /* UIColor+ILColor.m */,
 				0637ECB51B83D3470091032B /* MKMapView+ZoomLevel.h */,
@@ -680,11 +681,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06D8BA8B1B74106B007462A4 /* Build configuration list for PBXNativeTarget "AireNL WatchKit Extension" */;
 			buildPhases = (
-				4E680D9AC47309CC3A916434 /* Check Pods Manifest.lock */,
 				06D8BA611B74106B007462A4 /* Sources */,
 				06D8BA621B74106B007462A4 /* Frameworks */,
 				06D8BA631B74106B007462A4 /* Resources */,
-				62D605BB21818CF645FB8ABA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -716,11 +715,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06FAE38F1B72B9C200B19700 /* Build configuration list for PBXNativeTarget "AireNL Widget" */;
 			buildPhases = (
-				6A41CC3E9B0A5035892DE6A8 /* Check Pods Manifest.lock */,
 				06FAE37D1B72B9C200B19700 /* Sources */,
 				06FAE37E1B72B9C200B19700 /* Frameworks */,
 				06FAE37F1B72B9C200B19700 /* Resources */,
-				57A024BCDEA7108531BCC0EB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -853,66 +850,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL/Pods-AireNL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4E680D9AC47309CC3A916434 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		57A024BCDEA7108531BCC0EB /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62D605BB21818CF645FB8ABA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A41CC3E9B0A5035892DE6A8 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		F4F0F9C71844504945351972 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -938,6 +875,7 @@
 				06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */,
 				0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */,
 				06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */,
+				0662A5951BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m in Sources */,
 				06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */,
 				063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */,
 				06F2C44D1B680E7000BDF043 /* PronosticoTableViewCell.m in Sources */,
@@ -1137,6 +1075,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1175,6 +1114,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -1186,11 +1126,14 @@
 			baseConfigurationReference = 4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8becb652-11e1-42bc-a07a-aec43c967828";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -1199,11 +1142,14 @@
 			baseConfigurationReference = 89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b45aa537-f28b-4a46-b1ff-1cf7aba2c367";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -1245,22 +1191,24 @@
 		};
 		06D8BA861B74106B007462A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA02464CFA27DDA7FD62D67B /* Pods-AireNL WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
+				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.AireNL-WatchKit-App.AireNL-WatchKit-Extension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "7f9faa9a-7691-44c8-8735-4d77e255bdba";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1271,17 +1219,19 @@
 		};
 		06D8BA871B74106B007462A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52D9E41D8AAE8899B2C12F46 /* Pods-AireNL WatchKit Extension.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
+				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.AireNL-WatchKit-App.AireNL-WatchKit-Extension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "d9bac08b-91d9-4c9a-b64b-e2d4558897a0";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1294,8 +1244,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				ENABLE_BITCODE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1303,9 +1254,9 @@
 				IBSC_MODULE = AireNL_WatchKit_Extension;
 				INFOPLIST_FILE = "AireNL WatchKit App/Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.AireNL-WatchKit-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f64cbc3b-cb88-47d1-9990-41ac6b6c5ab2";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1318,13 +1269,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				ENABLE_BITCODE = YES;
 				IBSC_MODULE = AireNL_WatchKit_Extension;
 				INFOPLIST_FILE = "AireNL WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.AireNL-WatchKit-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "54ffad6c-5edc-46f0-ba28-6a7135fc6c3c";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1335,31 +1287,36 @@
 		};
 		06FAE3901B72B9C200B19700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B306F5300924CAE313E9D1FE /* Pods-AireNL Widget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
+				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.AireNL-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6db0db03-663b-4622-919a-cebd4abbe100";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		06FAE3911B72B9C200B19700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30FA26A5B04475243CAA5344 /* Pods-AireNL Widget.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
+				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.AireNL-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "664f0512-ddb6-4d79-8ef5-dfc6ea9c7852";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

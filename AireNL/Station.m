@@ -9,69 +9,60 @@
 #import "Station.h"
 
 #import "Measurement.h"
+#import "NSDictionary+WithoutNSNull.h"
 
 @implementation Station
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionaryValue error:(NSError **)error
+- (id)initWithDictionary:(NSDictionary *)dictionary
 {
-    self = [super initWithDictionary: dictionaryValue error: error];
-    if (self == nil) return nil;
-        
+    self = [super init]; if (!self) return nil;
+    
+    self.stationID = [dictionary dl_objectForKeyWithNil: @"id"];
+    self.lastMeasurementID = [dictionary[@"relationships"][@"last_measurement"][@"data"] dl_objectForKeyWithNil: @"id"];
+    
+    NSDictionary *attributes = [dictionary dl_objectForKeyWithNil: @"attributes"];
+    self.code = [attributes dl_objectForKeyWithNil: @"code"];
+    self.name = [attributes dl_objectForKeyWithNil: @"name"];
+    self.shortName = [attributes dl_objectForKeyWithNil: @"short_name"];
+    self.coordinateString = [attributes dl_objectForKeyWithNil: @"latlon"];
+    
     return self;
 }
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    return @{
-         @"stationID" : @"id",
-         @"code" : @"attributes.code",
-         @"name" : @"attributes.name",
-         @"shortName" : @"attributes.short_name",
-         @"coordinateString" : @"attributes.latlon",
-         @"lastMeasurementID" : @"relationships.last_measurement.data.id"
-    };
+    self = [super init]; if (!self) return nil;
+    
+    self.stationID = [aDecoder decodeObjectForKey: @"stationID"];
+    self.code = [aDecoder decodeObjectForKey: @"code"];
+    self.name = [aDecoder decodeObjectForKey: @"name"];
+    self.shortName = [aDecoder decodeObjectForKey: @"shortName"];
+    self.coordinateString = [aDecoder decodeObjectForKey: @"coordinateString"];
+    self.lastMeasurementID = [aDecoder decodeObjectForKey: @"lastMeasurementID"];
+
+    return self;
 }
 
-//+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
-//{
-//    if ([key isEqualToString: @"stationID"] || [key isEqualToString: @"lastMeasurementID"]) {
-//        
-//        return [MTLValueTransformer transformerUsingForwardBlock: ^id(id value, BOOL *success, NSError *__autoreleasing *error) {
-//            
-//            if ([value isKindOfClass: [NSString class]]) {
-//                NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-//                formatter.numberStyle = NSNumberFormatterDecimalStyle;
-//                return [formatter numberFromString: value];
-//            }else{
-//                return nil;
-//            }
-//            
-//        }];
-//        
-//    }
-//        
-//    return nil;
-//    
-//}
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject: self.stationID forKey: @"stationID"];
+    [aCoder encodeObject: self.code forKey: @"code"];
+    [aCoder encodeObject: self.name forKey: @"name"];
+    [aCoder encodeObject: self.shortName forKey: @"shortName"];
+    [aCoder encodeObject: self.coordinateString forKey: @"coordinateString"];
+    [aCoder encodeObject: self.lastMeasurementID forKey: @"lastMeasurementID"];
+}
 
-//+ (NSValueTransformer *)coordinateJSONTransformer
+//+ (NSDictionary *)JSONKeyPathsByPropertyKey
 //{
-//    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *coordinateString, BOOL *success, NSError *__autoreleasing *error) {
-//
-//        NSArray *separatedString = [coordinateString componentsSeparatedByString: @","];
-//
-//        NSString *latitude = separatedString[0];
-//        NSString *longitude = separatedString[1];
-//
-//        CLLocationDegrees lat = [latitude doubleValue];
-//        CLLocationDegrees lon = [longitude doubleValue];
-//
-//        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
-//        NSValue *value = [NSValue valueWithBytes: &coordinate objCType: @encode(CLLocationCoordinate2D)];
-//
-//        return value;
-//
-//    }];
+//    return @{
+//         @"stationID" : @"id",
+//         @"code" : @"attributes.code",
+//         @"name" : @"attributes.name",
+//         @"shortName" : @"attributes.short_name",
+//         @"coordinateString" : @"attributes.latlon",
+//         @"lastMeasurementID" : @"relationships.last_measurement.data.id"
+//    };
 //}
 
 #pragma mark - Public API

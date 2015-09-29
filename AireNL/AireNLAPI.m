@@ -76,10 +76,10 @@
 
 - (void)getDefaultStationWithCompletion:(ResultCompletionBlock)completion
 {
-    [self getStationWithId: @(1) withCompletion: completion];
+    [self getStationWithId: @"1" withCompletion: completion];
 }
 
-- (void)getStationWithId:(NSNumber *)stationID withCompletion:(ResultCompletionBlock)completion
+- (void)getStationWithId:(NSString *)stationID withCompletion:(ResultCompletionBlock)completion
 {
     NSString *address = [NSString stringWithFormat: @"/stations/%@", stationID];
     NSDictionary *params = @{@"include" : @"last_measurement"};
@@ -191,23 +191,8 @@
     NSArray *included = responseObject[@"included"];
     NSDictionary *measurementDict = [included firstObject];
     
-    NSError *stationError = nil;
-    Station *station = [MTLJSONAdapter modelOfClass: Station.class
-                                 fromJSONDictionary: stationDict
-                                              error: &stationError];
-    if (stationError) {
-        NSLog(@"MANTLE PARSE ERROR : %@", stationError);
-        return nil;
-    }
-    
-    NSError *measurementError = nil;
-    Measurement *measurement = [MTLJSONAdapter modelOfClass: Measurement.class
-                                         fromJSONDictionary: measurementDict
-                                                      error: &measurementError];
-    if (measurementError) {
-        NSLog(@"MANTLE PARSE ERROR : %@", measurementError);
-        return nil;
-    }
+    Station *station = [[Station alloc] initWithDictionary: stationDict];
+    Measurement *measurement = [[Measurement alloc] initWithDictionary: measurementDict];
     
     return [[APIResults alloc] initWithStations: @[station] measurements: @[measurement]];
 
@@ -222,29 +207,15 @@
     NSMutableArray *measurements = [[NSMutableArray alloc] initWithCapacity: [measurementDicts count]];
     
     for (NSDictionary *stationDict in stationDicts) {
-        NSError *error = nil;
-        Station *station = [MTLJSONAdapter modelOfClass: Station.class
-                                     fromJSONDictionary: stationDict
-                                                  error: &error];
-        if (error) {
-            NSLog(@"MANTLE PARSE ERROR : %@", error);
-        }else{
-            [stations addObject: station];
-        }
+        Station *station = [[Station alloc] initWithDictionary: stationDict];
+        [stations addObject: station];
     }
     
     for (NSDictionary *measurementDict in measurementDicts) {
-        NSError *error = nil;
-        Measurement *measurement = [MTLJSONAdapter modelOfClass: Measurement.class
-                                             fromJSONDictionary: measurementDict
-                                                          error: &error];
-        if (error) {
-            NSLog(@"MANTLE PARSE ERROR : %@", error);
-        }else{
-            [measurements addObject: measurement];
-        }
+        Measurement *measurement = [[Measurement alloc] initWithDictionary: measurementDict];
+        [measurements addObject: measurement];
     }
-    
+        
     return [[APIResults alloc] initWithStations: stations measurements: measurements];
 }
 

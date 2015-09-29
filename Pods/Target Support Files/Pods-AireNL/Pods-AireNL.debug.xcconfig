@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CCMPopup" "${PODS_ROOT}/Headers/Public/Mantle" "${PODS_ROOT}/Headers/Public/TAOverlay"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CCMPopup" -isystem "${PODS_ROOT}/Headers/Public/Mantle" -isystem "${PODS_ROOT}/Headers/Public/TAOverlay"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"CCMPopup" -l"Pods-AireNL-Mantle" -l"TAOverlay" -framework "Foundation"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CCMPopup" "${PODS_ROOT}/Headers/Public/TAOverlay"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CCMPopup" -isystem "${PODS_ROOT}/Headers/Public/TAOverlay"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CCMPopup" -l"TAOverlay"
 PODS_ROOT = ${SRCROOT}/Pods

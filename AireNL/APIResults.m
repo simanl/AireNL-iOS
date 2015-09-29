@@ -20,7 +20,7 @@
 - (id)initWithStations:(NSArray *)stations measurements:(NSArray *)measurements
 {
     self = [super init]; if(!self)return nil;
-    
+        
     NSMutableDictionary *tempStations = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *tempMeasurements = [[NSMutableDictionary alloc] init];
     
@@ -33,9 +33,7 @@
     }
     
     __stations = [NSDictionary dictionaryWithDictionary: tempStations];
-    if (tempMeasurements) {
-        __measurements = [NSDictionary dictionaryWithDictionary: tempMeasurements];
-    }
+    __measurements = [NSDictionary dictionaryWithDictionary: tempMeasurements];
     
     return self;
 }
@@ -51,8 +49,8 @@
 }
 
 - (Measurement *)lastMeasurementForStation:(Station *)station
-{
-    NSNumber *measurementID = station.lastMeasurementID;
+{    
+    NSString *measurementID = station.lastMeasurementID;
     return self._measurements[measurementID];
 }
 
