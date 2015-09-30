@@ -731,18 +731,41 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     CGRect frame = self.topView.frame;
     CGFloat size = frame.size.height - 21;
+    
     CGFloat framePercentageHidden = ((20 - frame.origin.y) / (frame.size.height - 1));
+    
     CGFloat scrollOffset = scrollView.contentOffset.y;
     CGFloat scrollDiff = scrollOffset - self.previousScrollViewYOffset;
     CGFloat scrollHeight = scrollView.frame.size.height;
+    
     CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
     
     if (scrollOffset <= -scrollView.contentInset.top) {
+        // BOUNCE PULL BEFORE START
         self.topViewConstraint.constant = 20;
+        
     } else if ((scrollOffset + scrollHeight) >= scrollContentSizeHeight) {
+        // BOUNCE PULL BEYOND END
         self.topViewConstraint.constant = -size;
+    
     } else {
-        self.topViewConstraint.constant = MIN(20, MAX(-size, frame.origin.y - scrollDiff));
+        // REGULAR SCROLL IN BETWEEN
+        
+        CGFloat totalCellHeight;
+        UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+        if (afterOrientation == UIInterfaceOrientationPortrait) {
+            totalCellHeight = [self getCellHeightsTotalWithLimit: 4];
+        }else{
+            totalCellHeight =  [self getCellHeightsTotalWithLimit: 2] - 15.0;
+        }
+        
+        CGFloat topInset = STATUS_BAR_HEIGHT + NAV_BAR_HEIGHT + 15.0 + (self.view.bounds.size.height - totalCellHeight);
+        CGFloat correctedOffset = scrollOffset + scrollView.contentInset.top;
+        
+        if (correctedOffset <= topInset) {
+            self.topViewConstraint.constant = MIN(20, MAX(-size, frame.origin.y - scrollDiff));
+        }
+        
     }
     
     self.topView.alpha = (1 - framePercentageHidden);
