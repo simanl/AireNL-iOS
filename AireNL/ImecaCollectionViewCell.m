@@ -8,6 +8,8 @@
 
 #import "ImecaCollectionViewCell.h"
 
+#import "UIColor+ILColor.h"
+
 @interface ImecaCollectionViewCell ()
 
 @property (nonatomic) NSDateFormatter *dateFormatter;
@@ -23,10 +25,12 @@
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
     NSNumber *imecaPoints = measurement.imecaPoints ?: @(0);
-    
     self.imecaLabel.text = [imecaPoints stringValue];
+    
     self.imecaQualityLabel.text = [measurement stringForAirQuality];
-    self.imecaQualityView.backgroundColor = [measurement colorForAirQuality];
+    
+    UIColor *airQualityColor = [measurement colorForAirQuality] ?: [UIColor il_goodColor];
+    self.imecaQualityView.backgroundColor = airQualityColor;
     
     if (measurement.date) {
         self.measurementDateLabel.text = measurement.date;

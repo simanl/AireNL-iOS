@@ -1136,7 +1136,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "35ea4e4e-e0db-4a46-8486-dacd7ba42c02";
+				PROVISIONING_PROFILE = "cef1385e-f017-4868-885b-0cd07eff5a41";
 				SKIP_INSTALL = NO;
 			};
 			name = Debug;
@@ -1212,7 +1212,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.WatchKit-App.Extension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "e64dd601-46a6-45d2-8e16-850febc61246";
+				PROVISIONING_PROFILE = "75b4c236-34cc-4009-a979-447c879a9059";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1260,7 +1260,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icalialabs.AireNL.WatchKit-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56e1a0c9-f194-432b-9960-d26d1aac566d";
+				PROVISIONING_PROFILE = "f6178560-ccdb-42c1-a336-83eedd24cb07";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1304,7 +1304,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icalialabs.AireNL.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2b6d66dc-0a59-430a-b96e-5fabc1482088";
+				PROVISIONING_PROFILE = "249f0859-9e21-454f-9196-3aa6bd183a53";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;

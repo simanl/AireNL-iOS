@@ -155,6 +155,10 @@
 
 - (UIColor *)colorForAirQuality
 {
+    if (!self.imecaPoints) {
+        return [UIColor il_goodColor];
+    }
+    
     switch ([self airQuality]) {
         case AirQualityDescriptorGood:
             return [UIColor il_goodColor];

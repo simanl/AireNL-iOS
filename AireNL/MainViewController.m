@@ -561,6 +561,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         // FIX INSETS, AND SCROLL (TO FIX IF VC WAS ROTATED WHILE INSIDE MAP)
         [self setupInsetAndScrollCollectionViewWithAnimation: YES];
         self.topView.alpha = 1.0f;
+        
+        [self showFirstGpsUserAlert];
     }];
     
     self.isUsingGPS = NO;
@@ -569,7 +571,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     [self cacheSaveData];
     [self updateScreen];
-    [self showFirstGpsUserAlert];
     
     // FIX COLLECTION VIEW LAYOUT (TO FIX IF VC WAS ROTATED WHILE INSIDE MAP)
     [self reloadCollectionViewLayout];    
