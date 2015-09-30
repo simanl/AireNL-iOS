@@ -120,16 +120,19 @@
 {
     if (!self.selectedStation) return;
     
-    [self dismissViewControllerAnimated: YES completion:^{
-        
-        if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
-            Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
-            NSLog(@"MAP : CALLING DELEGATE W/STATION : %@", self.selectedStation);
-            NSLog(@"MAP : CALLING DELEGATE W/MEASUREMENT : %@", measurement);
-            [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
-        }
-        
-    }];
+    if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
+        Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
+        [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
+    }
+    
+//    [self dismissViewControllerAnimated: YES completion:^{
+//        
+//        if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
+//            Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
+//            [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
+//        }
+//        
+//    }];
     
 }
 

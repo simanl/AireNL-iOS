@@ -77,10 +77,9 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self updateBackgroundImagesFirstTime: YES];
     [self addMotionEffectToBackground];
     [self customizeAppearance];
-//    [self addGestureRecognizers];
     [self registerNibs];
-    
 //    [self loadStation]; // This is handled by the 'AppDidBecomeActive notification'
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,7 +113,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     NSData *stationData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedStationKey];
     NSData *measurementData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedMeasurementKey];
-    
     Station *station = [NSKeyedUnarchiver unarchiveObjectWithData: stationData];
     Measurement *measurement = [NSKeyedUnarchiver unarchiveObjectWithData: measurementData];
     
@@ -241,10 +239,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     if (!error){
         
         NSLog(@"SUCCESS!");
-        
         self.selectedStation = [[results stations] firstObject];
         self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
-        
         NSLog(@"STATION : %@", self.selectedStation);
         NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
         
@@ -288,11 +284,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     self.backgroundImageView.image = self.normalBackground;
     [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
     
-//    self.refreshControl = [[UIRefreshControl alloc] init];
-//    self.refreshControl.tintColor = [UIColor whiteColor];
-//    [self.refreshControl addTarget: self action: @selector(loadStation) forControlEvents: UIControlEventValueChanged];
-//    [self.collectionView addSubview: self.refreshControl];
-    
     [TAOverlay setOverlayLabelFont: [UIFont fontWithName: @"Avenir-Light" size: 13.0f]];
 }
 
@@ -302,7 +293,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     self.stationLabel.text = [self.selectedStation.name uppercaseString];
     
     [self setGpsButtonOpacity];
-    
     [self.collectionView reloadData];
 }
 
@@ -358,14 +348,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self.collectionView registerNib: pronosticosNib forCellWithReuseIdentifier: @"pronosticosCollectionViewCell"];
 }
 
-//- (void)addGestureRecognizers
-//{
-//    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
-//                                                                                          action: @selector(userDidSelectSwitchBackground)];
-//    doubleTapRecognizer.numberOfTapsRequired = 2;
-//    [self.topView addGestureRecognizer: doubleTapRecognizer];
-//}
-
 - (void)addMotionEffectToBackground
 {
     UIInterpolatingMotionEffect *verticalMotionEffect = [[UIInterpolatingMotionEffect alloc]
@@ -419,19 +401,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self loadNearestStation];
 }
 
-//- (void)userDidSelectSwitchBackground
-//{
-//    if (self.selectedBackgroundIndex == [self.backgroundImageNames count] - 1) {
-//        self.selectedBackgroundIndex = 0;
-//    }else{
-//        self.selectedBackgroundIndex ++;
-//    }
-//    
-//    [self setBackgroundImages];
-//    
-//    self.backgroundImageView.image = self.backgroundHasBlur ? self.blurredBackground : self.normalBackground;
-//}
-
 #pragma mark - UIScrollView Delegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -460,14 +429,10 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     // BEFORE ROTATION
     
-    // Handle rotation if info popup is displayed
     [self handleRotationForInfoScreenForSize: size withTransitionCoordinator: coordinator];
+    [self reloadCollectionViewLayout];
     
-    // Reload collection view layout
-    self.cellWidths = nil;
-    [self.collectionView.collectionViewLayout invalidateLayout];
-    
-    // Redraw blur with NEW size BEFORE rotation, since it's going to be bigger
+    // Redraw blur with NEW size BEFORE rotation, since it's going to be bigger (NOT REALLY BLUR, JUST FADE NOW)
     UIInterfaceOrientation beforeOrientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (beforeOrientation == UIInterfaceOrientationPortrait) {
         [self.collectionView setBlurNeedsRedraw: YES withNewSize: size];
@@ -476,18 +441,14 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context){
         // WHILE ROTATING
-        
-        // Reset scrollView offset and scroll to top WHILE animating to prevent jerkiness
-        UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-        if (afterOrientation == UIInterfaceOrientationPortrait) {
-            [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
-        }else{
-            [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 2] - 25.0];
-        }
-        [self scrollCollectionViewToTop];
+        [self setupInsetAndScrollCollectionViewWithAnimation: NO];
         
      }completion:^(id<UIViewControllerTransitionCoordinatorContext> context){
-        // AFTER ROTATION
+         // AFTER ROTATION
+         
+         [UIView animateWithDuration: 0.2 animations:^{
+             self.topView.alpha = 1.0f;
+         }];
          
          // Set blur needs redraw with current size bc it's now smaller, let layoutsubview handle drawing
          UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
@@ -497,6 +458,24 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
          
      }];
 
+}
+
+- (void)reloadCollectionViewLayout
+{
+    self.cellWidths = nil;
+    [self.collectionView.collectionViewLayout invalidateLayout];
+}
+
+- (void)setupInsetAndScrollCollectionViewWithAnimation:(BOOL)animation
+{
+    UIInterfaceOrientation afterOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (afterOrientation == UIInterfaceOrientationPortrait) {
+        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+    }else{
+        [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 2] - 25.0];
+    }
+    
+    [self scrollCollectionViewToTopWithAnimation: animation];
 }
 
 #pragma mark - UICollectionView Data Source
@@ -578,15 +557,22 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement
 {
-    self.isUsingGPS = NO;
+    [self dismissViewControllerAnimated: YES completion:^{
+        // FIX INSETS, AND SCROLL (TO FIX IF VC WAS ROTATED WHILE INSIDE MAP)
+        [self setupInsetAndScrollCollectionViewWithAnimation: YES];
+        self.topView.alpha = 1.0f;
+    }];
     
+    self.isUsingGPS = NO;
     self.selectedStation = station;
     self.selectedMeasurement = measurement;
     
     [self cacheSaveData];
-    
-    [self updateScreen];    
+    [self updateScreen];
     [self showFirstGpsUserAlert];
+    
+    // FIX COLLECTION VIEW LAYOUT (TO FIX IF VC WAS ROTATED WHILE INSIDE MAP)
+    [self reloadCollectionViewLayout];    
 }
 
 #pragma mark - CLLocationManager Delegate
@@ -650,13 +636,11 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (BOOL)isUsingGPS
 {
-//    return [[NSUserDefaults standardUserDefaults] boolForKey: kIsUsingGpsKey];
     return ![[NSUserDefaults standardUserDefaults] boolForKey: kIsGpsDisabledKey];
 }
 
 - (void)setIsUsingGPS:(BOOL)isUsing
 {
-//    [[NSUserDefaults standardUserDefaults] setBool: isUsing forKey: kIsUsingGpsKey];
     [[NSUserDefaults standardUserDefaults] setBool: !isUsing forKey: kIsGpsDisabledKey];
     [self setGpsButtonOpacity];
 }
@@ -713,14 +697,16 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     self.stationLabel.hidden = NO;
 }
 
-- (void)scrollCollectionViewToTop
+- (void)scrollCollectionViewToTopWithAnimation:(BOOL)animation
 {
     CGPoint topPoint = CGPointMake(0, -self.collectionView.contentInset.top);
-    
-    [UIView animateWithDuration: 0.2 animations:^{
+    if (animation) {
+        [UIView animateWithDuration: 0.2 animations:^{
+            self.collectionView.contentOffset = topPoint;
+        }];
+    }else{
         self.collectionView.contentOffset = topPoint;
-    }];
-
+    }
 }
 
 - (CGFloat)getCellHeightsTotalWithLimit:(NSInteger)limit
@@ -864,13 +850,5 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     }
     return _cellIdentifiers;
 }
-
-//- (NSArray *)backgroundImageNames
-//{
-//    if (!_backgroundImageNames) {
-//        _backgroundImageNames = @[@"BackgroundNight", @"BackgroundDay", @"BackgroundSunset"];
-//    }
-//    return _backgroundImageNames;
-//}
 
 @end
