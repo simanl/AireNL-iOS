@@ -24,7 +24,6 @@
 #import "ILRoundedView.h"
 
 #import "AireNLAPI.h"
-#import "PredictionResults.h"
 #import "ResultsCellDelegate.h"
 
 #define STATUS_BAR_HEIGHT 16
@@ -44,8 +43,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 @property (nonatomic) Station *selectedStation;
 @property (nonatomic) Measurement *selectedMeasurement;
 @property (nonatomic) NSArray *currentForecasts;
-
-@property (nonatomic) PredictionResults *predictionResults;
 
 // TABLE, SCROLL VIEW, POPUP
 
@@ -75,7 +72,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [super viewDidLoad];
     
     [self setUpNotifications];
-    [self loadFakeData]; // REMOVE
     [self cacheLoadData];
     
     [self updateBackgroundImagesFirstTime: YES];
@@ -264,31 +260,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     }else{
         NSLog(@"ERROR = %@", error);
     }
-}
-
-- (void)loadFakeData
-{
-    ContaminantResults *periodOneContamintResults = [[ContaminantResults alloc] init];
-    periodOneContamintResults.pm10 = @(4);
-    periodOneContamintResults.pm25 = @(14);
-    periodOneContamintResults.O3 = @(40);
-    
-    ContaminantResults *periodTwoContamintResults = [[ContaminantResults alloc] init];
-    periodTwoContamintResults.pm10 = @(5);
-    periodTwoContamintResults.pm25 = @(15);
-    periodTwoContamintResults.O3 = @(50);
-    
-    ContaminantResults *periodThreeContamintResults = [[ContaminantResults alloc] init];
-    periodThreeContamintResults.pm10 = @(6);
-    periodThreeContamintResults.pm25 = @(16);
-    periodThreeContamintResults.O3 = @(60);
-    
-    PredictionResults *predictionResults = [[PredictionResults alloc] init];
-    predictionResults.periodOne = periodOneContamintResults;
-    predictionResults.periodTwo = periodTwoContamintResults;
-    predictionResults.periodThree = periodThreeContamintResults;
-    
-    self.predictionResults = predictionResults;
 }
 
 #pragma mark - Appearance / Initial Setup
@@ -569,11 +540,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 #pragma mark - ResultsCellDelegate
 
-- (PredictionResults *)getPredictionResults
-{
-    return self.predictionResults;
-}
-
 - (Station *)getSelectedStation
 {
     return self.selectedStation;
@@ -605,7 +571,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 #pragma mark - MapViewController Delegate
 
-- (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement
+- (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement currentForecasts:(NSArray *)forecasts
 {
     [self dismissViewControllerAnimated: YES completion:^{
         // FIX INSETS, AND SCROLL (TO FIX IF VC WAS ROTATED WHILE INSIDE MAP)
@@ -618,6 +584,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     self.isUsingGPS = NO;
     self.selectedStation = station;
     self.selectedMeasurement = measurement;
+    self.currentForecasts = forecasts;
     
     [self cacheSaveData];
     [self updateScreen];

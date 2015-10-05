@@ -13,7 +13,7 @@
 
 #import "BackgroundImageHelper.h"
 
-@interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource, PronosticoCellDelegate, PronosticoHeaderDelegate>
+@interface PronosticosCollectionViewCell () <UITableViewDelegate, UITableViewDataSource, PronosticoHeaderDelegate>
 
 @property (nonatomic) NSArray *contaminantNames;
 
@@ -66,7 +66,7 @@
     PronosticoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"pronosticoTableViewCell" forIndexPath: indexPath];
     cell.typeLabel.text = self.contaminantNames[indexPath.row - 1];
     cell.row = @(indexPath.row - 1);
-    cell.delegate = self;
+//    cell.delegate = self;
     return cell;
 }
 
@@ -87,10 +87,10 @@
 
 #pragma mark - PronosticoCell Delegate
 
-- (PredictionResults *)getPredictionResults
-{
-    return [self.delegate getPredictionResults];
-}
+//- (PredictionResults *)getPredictionResults
+//{
+//    return [self.delegate getPredictionResults];
+//}
 
 #pragma mark - PronosticoHeaderCell Delegate
 

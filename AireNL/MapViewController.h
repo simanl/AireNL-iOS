@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, MapViewControllerNavBarType){
 
 @protocol MapViewControllerDelegate <NSObject>
 
-- (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement;
+- (void)mapDidSelectStation:(Station *)station withMeasurement:(Measurement *)measurement currentForecasts:(NSArray *)forecasts;
 
 @end
 

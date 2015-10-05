@@ -11,13 +11,10 @@
 #import "Station.h"
 #import "Measurement.h"
 
-#import "PredictionResults.h"
-
 @protocol ResultsCellDelegate <NSObject>
 
 - (Station *)getSelectedStation;
 - (Measurement *)getSelectedMeasurement;
-- (PredictionResults *)getPredictionResults;
 
 - (void)didSelectInfoAtCell:(UICollectionViewCell *)cell;
 - (void)actividadesDidSelectInfoWithText:(NSString *)text;

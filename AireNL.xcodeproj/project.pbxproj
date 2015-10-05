@@ -58,7 +58,6 @@
 		06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA7E1B74106B007462A4 /* Interface.storyboard */; };
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
 		06D9CFD01BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9CFCF1BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		06DDB7A11BB0B7AE00BED963 /* ContaminantResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */; settings = {ASSET_TAGS = (); }; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
@@ -78,7 +77,6 @@
 		06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054C1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m */; };
 		06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */; };
 		06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */; };
-		06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */; };
 		06FED4A51BB1F61300DFCDAF /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06FED4A81BB1F61300DFCDAF /* AireNL WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
 		C11B3EE383266F2F2E17F274 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */; };
@@ -231,8 +229,6 @@
 		06D8BA811B74106B007462A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06D9CFCE1BB9AC7C003E171B /* InnerActividadesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerActividadesCollectionViewCell.h; sourceTree = "<group>"; };
 		06D9CFCF1BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnerActividadesCollectionViewCell.m; sourceTree = "<group>"; };
-		06DDB79F1BB0B7AE00BED963 /* ContaminantResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaminantResults.h; sourceTree = "<group>"; };
-		06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaminantResults.m; sourceTree = "<group>"; };
 		06E672D81B70256F0046DD35 /* ILBlurCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILBlurCollectionView.h; sourceTree = "<group>"; };
 		06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILBlurCollectionView.m; sourceTree = "<group>"; };
 		06EA06191B8CC93100FA0B87 /* InfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewController.h; sourceTree = "<group>"; };
@@ -262,8 +258,6 @@
 		06FE054F1B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperaturaCollectionViewCell.m; sourceTree = "<group>"; };
 		06FE05511B715A5800BCFCA3 /* VientoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VientoCollectionViewCell.h; sourceTree = "<group>"; };
 		06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VientoCollectionViewCell.m; sourceTree = "<group>"; };
-		06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictionResults.h; sourceTree = "<group>"; };
-		06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredictionResults.m; sourceTree = "<group>"; };
 		06FE05621B715E4200BCFCA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellDelegate.h; sourceTree = "<group>"; };
 		0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -468,7 +462,6 @@
 				06AA94CB1BA779E900326F16 /* Measurement.m */,
 				0680B68F1BC2E3FB00522D6B /* Forecast.h */,
 				0680B6901BC2E3FB00522D6B /* Forecast.m */,
-				06FE05611B715D4900BCFCA3 /* Prediction Results */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -613,17 +606,6 @@
 				06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */,
 			);
 			name = "Blurs, Gradients";
-			sourceTree = "<group>";
-		};
-		06FE05611B715D4900BCFCA3 /* Prediction Results */ = {
-			isa = PBXGroup;
-			children = (
-				06DDB79F1BB0B7AE00BED963 /* ContaminantResults.h */,
-				06DDB7A01BB0B7AE00BED963 /* ContaminantResults.m */,
-				06FE055D1B715D2E00BCFCA3 /* PredictionResults.h */,
-				06FE055E1B715D2E00BCFCA3 /* PredictionResults.m */,
-			);
-			name = "Prediction Results";
 			sourceTree = "<group>";
 		};
 		7DDB6118893D8D39D7CD7C12 /* Pods */ = {
@@ -907,7 +889,6 @@
 				065142201BA8764300312C09 /* AireNLAPI.m in Sources */,
 				069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */,
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
-				06DDB7A11BB0B7AE00BED963 /* ContaminantResults.m in Sources */,
 				06D9CFD01BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
@@ -920,7 +901,6 @@
 				0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */,
 				06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
-				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
 				0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */,
 				0680B6961BC311D100522D6B /* ForecastHeaderCollectionViewCell.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,

@@ -8,17 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PredictionResults.h"
-
-@protocol PronosticoCellDelegate <NSObject>
-
-- (PredictionResults *)getPredictionResults;
-   
-@end
-
 @interface PronosticoTableViewCell : UITableViewCell
-
-@property (weak, nonatomic) id<PronosticoCellDelegate> delegate;
 
 @property (nonatomic) NSNumber *row;
 

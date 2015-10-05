@@ -120,19 +120,13 @@
 {
     if (!self.selectedStation) return;
     
-    if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
+    if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:currentForecasts:)]) {
+        
         Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
-        [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
+        NSArray *forecasts = [self.stationsAPIResults currentForecastsForStation: self.selectedStation];
+        
+        [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement currentForecasts: forecasts];
     }
-    
-//    [self dismissViewControllerAnimated: YES completion:^{
-//        
-//        if ([self.delegate respondsToSelector: @selector(mapDidSelectStation:withMeasurement:)]) {
-//            Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
-//            [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement];
-//        }
-//        
-//    }];
     
 }
 
