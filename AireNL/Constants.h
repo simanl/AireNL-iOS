@@ -23,6 +23,7 @@ static NSString *const kIsGpsDisabledKey = @"isGpsDisabledKey";
 
 static NSString *const kCachedStationKey = @"cachedStationKey";
 static NSString *const kCachedMeasurementKey = @"cachedMeasurementKey";
+static NSString *const kCachedForecastsKey = @"cachedForecastsKey";
 
 // NSNotifications
 

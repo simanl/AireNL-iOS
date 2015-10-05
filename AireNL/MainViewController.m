@@ -41,6 +41,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 @property (nonatomic) Station *selectedStation;
 @property (nonatomic) Measurement *selectedMeasurement;
+@property (nonatomic) NSArray *currentForecasts;
+
 @property (nonatomic) PredictionResults *predictionResults;
 
 // TABLE, SCROLL VIEW, POPUP
@@ -113,11 +115,15 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     NSData *stationData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedStationKey];
     NSData *measurementData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedMeasurementKey];
+    NSData *forecastsData = [[NSUserDefaults standardUserDefaults] objectForKey: kCachedForecastsKey];
+    
     Station *station = [NSKeyedUnarchiver unarchiveObjectWithData: stationData];
     Measurement *measurement = [NSKeyedUnarchiver unarchiveObjectWithData: measurementData];
+    NSArray *forecasts = [NSKeyedUnarchiver unarchiveObjectWithData: forecastsData];
     
     self.selectedStation = station;
     self.selectedMeasurement = measurement;
+    self.currentForecasts = forecasts;
     
     [self updateScreen];
 }
@@ -128,9 +134,11 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     NSData *stationData = [NSKeyedArchiver archivedDataWithRootObject: self.selectedStation];
     NSData *measurementData = [NSKeyedArchiver archivedDataWithRootObject: self.selectedMeasurement];
+    NSData *forecastsData = [NSKeyedArchiver archivedDataWithRootObject: self.currentForecasts];
     
     [[NSUserDefaults standardUserDefaults] setObject: stationData forKey: kCachedStationKey];
     [[NSUserDefaults standardUserDefaults] setObject: measurementData forKey: kCachedMeasurementKey];
+    [[NSUserDefaults standardUserDefaults] setObject: forecastsData forKey: kCachedForecastsKey];
 }
 
 #pragma mark - Network
@@ -237,12 +245,15 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (void)handleResults:(APIResults *)results withError:(NSError *)error
 {
     if (!error){
-        
         NSLog(@"SUCCESS!");
+        
         self.selectedStation = [[results stations] firstObject];
         self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
+        self.currentForecasts = [results currentForecastsForStation: self.selectedStation];
+        
         NSLog(@"STATION : %@", self.selectedStation);
         NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
+        NSLog(@"FORECASTS : %@", self.currentForecasts);
         
         [self cacheSaveData];
         [self updateScreen];

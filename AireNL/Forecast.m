@@ -29,4 +29,34 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init]; if (!self) return nil;
+    
+    self.forecastID = [aDecoder decodeObjectForKey: @"forecastID"];
+    self.date = [aDecoder decodeObjectForKey: @"date"];
+    self.updatedAt = [aDecoder decodeObjectForKey: @"updatedAt"];
+    self.ozone = [aDecoder decodeObjectForKey: @"ozone"];
+    self.toracicParticles = [aDecoder decodeObjectForKey: @"toracicParticles"];
+    self.respirableParticles = [aDecoder decodeObjectForKey: @"respirableParticles"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject: self.forecastID forKey: @"forecastID"];
+    [aCoder encodeObject: self.date forKey: @"date"];
+    [aCoder encodeObject: self.updatedAt forKey: @"updatedAt"];
+    [aCoder encodeObject: self.ozone forKey: @"ozone"];
+    [aCoder encodeObject: self.toracicParticles forKey: @"toracicParticles"];
+    [aCoder encodeObject: self.respirableParticles forKey: @"respirableParticles"];
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat: @"ID:%@ DATE:%@ UPDATED_AT:%@ OZONE:%@ TORACIC_PARTICLES:%@ RESPIRABLE_PARTICLES:%@",
+            self.forecastID, self.date, self.updatedAt, self.ozone, self.toracicParticles, self.respirableParticles];
+}
+
 @end

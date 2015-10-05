@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Forecast : NSObject
+@interface Forecast : NSObject <NSCoding>
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
