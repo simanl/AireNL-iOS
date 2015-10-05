@@ -35,3 +35,5 @@
 "ACTIVITY_HEART" = "If air quality is bad, people with a history of heart problems should stay indoors or in low risk zones.";
 "ACTIVITY_GAS" = "If air quality is bad, people who use fuel, like cooks, should abstain from doing so until air quality improves.";
 "ACTIVITY_CAR" = "If air quality is bad, vehicle use should be reduces as much as possible.";
+
+"+%lu HOUR" = "+%lu HOUR";

@@ -151,7 +151,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0607DE411B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		0607DE421B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0607DE431B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoHeaderTableViewCell.strings; sourceTree = "<group>"; };
 		0607DE441B8FB7F1006E9A1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PronosticoTableViewCell.strings; sourceTree = "<group>"; };
@@ -180,6 +179,7 @@
 		0680B6981BC311DC00522D6B /* ForecastContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastContentCollectionViewCell.m; sourceTree = "<group>"; };
 		0680B69A1BC326D100522D6B /* FooterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterCollectionReusableView.h; sourceTree = "<group>"; };
 		0680B69B1BC326D100522D6B /* FooterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterCollectionReusableView.m; sourceTree = "<group>"; };
+		0680B69E1BC32AF100522D6B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAnnotationView.h; sourceTree = "<group>"; };
 		0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAnnotationView.m; sourceTree = "<group>"; };
 		0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoContainerViewController.h; sourceTree = "<group>"; };
@@ -1020,7 +1020,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06D367B31B542615009E9D47 /* Base */,
-				0607DE411B8FB7F1006E9A1A /* es */,
+				0680B69E1BC32AF100522D6B /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -498,7 +498,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         NSUInteger totalRows = [self.cellIdentifiers count] + [self.currentForecasts count];
         NSUInteger row = indexPath.row - [self.cellIdentifiers count];
         
-        cell.timeLabel.text = [NSString stringWithFormat: @"+%lu HOURS", (unsigned long)row + 1];
+        cell.timeLabel.text = [NSString stringWithFormat: NSLocalizedString(@"+%lu HOUR", nil), (unsigned long)row + 1];
         cell.forecast = self.currentForecasts[row];
         [cell updateCell];
         

@@ -36,3 +36,5 @@
 "ACTIVITY_HEART" = "Si la calidad del aire es mala, en el caso de personas con antecedentes de infarto, enfermedad pulmonar obstructiva crónica o asma, trasladarlos fuera de las zonas de mayor riesgo, a zonas habitacionales donde el riesgo sea menor.";
 "ACTIVITY_GAS" = "Si la calidad del aire es mala, las personas que por su actividad cotidiana están en contacto directo al uso de combustibles sólidos (cocineras, asadores), se recomienda limitarse hasta en tanto pase la alerta.";
 "ACTIVITY_CAR" = "Si la calidad del aire es mala, reducir en la medida de lo posible el uso de vehículos.";
+
+"+%lu HOUR" = "+%lu HORA";
