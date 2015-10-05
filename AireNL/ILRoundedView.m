@@ -14,11 +14,19 @@
 {
     [super layoutSubviews];
     
+    if (self.type == ILRoundedViewTypeNone) {
+        return;
+    }
+    
     UIRectCorner corners;
     if (self.type == ILRoundedViewTypeLeft) {
         corners = UIRectCornerTopLeft|UIRectCornerBottomLeft;
-    }else{
+    }else if (self.type == ILRoundedViewTypeRight){
         corners = UIRectCornerTopRight|UIRectCornerBottomRight;
+    }else if(self.type == ILRoundedViewTypeTop){
+        corners = UIRectCornerTopLeft|UIRectCornerTopRight;
+    }else if(self.type == ILRoundedViewTypeBottom){
+        corners = UIRectCornerBottomLeft|UIRectCornerBottomRight;
     }
     
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect: self.bounds

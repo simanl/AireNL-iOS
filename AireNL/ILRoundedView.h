@@ -11,8 +11,11 @@
 IB_DESIGNABLE
 
 typedef NS_ENUM(NSInteger, ILRoundedViewType) {
-    ILRoundedViewTypeLeft = 0,
-    ILRoundedViewTypeRight
+    ILRoundedViewTypeNone = 0,
+    ILRoundedViewTypeLeft,
+    ILRoundedViewTypeRight,
+    ILRoundedViewTypeTop,
+    ILRoundedViewTypeBottom
 };
 
 @interface ILRoundedView : UIView

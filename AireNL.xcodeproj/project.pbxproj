@@ -27,6 +27,8 @@
 		0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; settings = {ASSET_TAGS = (); }; };
 		0680B6921BC2ED7600522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
 		0680B6931BC2ED8200522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
+		0680B6961BC311D100522D6B /* ForecastHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6951BC311D100522D6B /* ForecastHeaderCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		0680B6991BC311DC00522D6B /* ForecastContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6981BC311DC00522D6B /* ForecastContentCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */; };
 		069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */; };
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
@@ -173,6 +175,10 @@
 		0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WithoutNSNull.m"; sourceTree = "<group>"; };
 		0680B68F1BC2E3FB00522D6B /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
 		0680B6901BC2E3FB00522D6B /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
+		0680B6941BC311D100522D6B /* ForecastHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		0680B6951BC311D100522D6B /* ForecastHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		0680B6971BC311DC00522D6B /* ForecastContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastContentCollectionViewCell.h; sourceTree = "<group>"; };
+		0680B6981BC311DC00522D6B /* ForecastContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastContentCollectionViewCell.m; sourceTree = "<group>"; };
 		0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAnnotationView.h; sourceTree = "<group>"; };
 		0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAnnotationView.m; sourceTree = "<group>"; };
 		0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoContainerViewController.h; sourceTree = "<group>"; };
@@ -330,6 +336,10 @@
 				06FE05511B715A5800BCFCA3 /* VientoCollectionViewCell.h */,
 				06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */,
 				069B252D1B67F7890032CED2 /* Pronostico UICollectionViewCell */,
+				0680B6941BC311D100522D6B /* ForecastHeaderCollectionViewCell.h */,
+				0680B6951BC311D100522D6B /* ForecastHeaderCollectionViewCell.m */,
+				0680B6971BC311DC00522D6B /* ForecastContentCollectionViewCell.h */,
+				0680B6981BC311DC00522D6B /* ForecastContentCollectionViewCell.m */,
 			);
 			name = "Table & Collection Cells";
 			sourceTree = "<group>";
@@ -903,6 +913,7 @@
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06AA94D21BA8752000326F16 /* APIResults.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
+				0680B6991BC311DC00522D6B /* ForecastContentCollectionViewCell.m in Sources */,
 				06FE054D1B715A3A00BCFCA3 /* ActividadesCollectionViewCell.m in Sources */,
 				06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */,
 				06FE05501B715A4D00BCFCA3 /* TemperaturaCollectionViewCell.m in Sources */,
@@ -911,6 +922,7 @@
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
 				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
 				0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */,
+				0680B6961BC311D100522D6B /* ForecastHeaderCollectionViewCell.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
 				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,
 				06AA94C91BA779DA00326F16 /* Station.m in Sources */,

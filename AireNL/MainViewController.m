@@ -20,6 +20,8 @@
 #import "MapViewController.h"
 #import "InfoContainerViewController.h"
 #import "BackgroundImageHelper.h"
+#import "ForecastContentCollectionViewCell.h"
+#import "ILRoundedView.h"
 
 #import "AireNLAPI.h"
 #import "PredictionResults.h"
@@ -245,6 +247,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (void)handleResults:(APIResults *)results withError:(NSError *)error
 {
     if (!error){
+        
         NSLog(@"SUCCESS!");
         
         self.selectedStation = [[results stations] firstObject];
@@ -498,18 +501,46 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.cellIdentifiers count];
+    return [self.cellIdentifiers count] + [self.currentForecasts count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = self.cellIdentifiers[indexPath.row];
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath];
-
-    ((id<ResultsDelegateSettable>)cell).delegate = self;
-    [((id<ResultsCellUpdateable>)cell) updateCell];
-
-    return cell;
+    if (indexPath.row < [self.cellIdentifiers count]) {
+        // STATIC ROWS
+        
+        NSString *cellIdentifier = self.cellIdentifiers[indexPath.row];
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellIdentifier forIndexPath: indexPath];
+        
+        ((id<ResultsDelegateSettable>)cell).delegate = self;
+        [((id<ResultsCellUpdateable>)cell) updateCell];
+        
+        return cell;
+        
+    }else{
+        // DYNAMIC ROWS (FORECAST CONTENT CELLS)
+        
+        ForecastContentCollectionViewCell *cell =
+        [collectionView dequeueReusableCellWithReuseIdentifier: @"forecastContentCell" forIndexPath: indexPath];
+        
+        NSUInteger totalRows = [self.cellIdentifiers count] + [self.currentForecasts count];
+        NSUInteger row = indexPath.row - [self.cellIdentifiers count];
+        
+        cell.timeLabel.text = [NSString stringWithFormat: @"+%lu HOURS", (unsigned long)row + 1];
+        cell.forecast = self.currentForecasts[row];
+        [cell updateCell];
+        
+        if (indexPath.row == totalRows - 1) {
+            // LAST ROW
+            cell.roundedContentView.type = ILRoundedViewTypeBottom;
+            cell.bottomConstraint.constant = 10.0f;
+        }else{
+            cell.roundedContentView.type = ILRoundedViewTypeNone;
+            cell.bottomConstraint.constant = 0.0f;
+        }
+        return cell;
+    }
+    
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath
@@ -522,10 +553,18 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat height = [((NSNumber *)self.cellHeights[indexPath.row]) floatValue];
-    CGFloat width = [((NSNumber *)self.cellWidths[indexPath.row]) floatValue];
-    
-    return CGSizeMake(width, height);
+    if (indexPath.row < [self.cellIdentifiers count]){
+        // STATIC ROWS
+        CGFloat height = [((NSNumber *)self.cellHeights[indexPath.row]) floatValue];
+        CGFloat width = [((NSNumber *)self.cellWidths[indexPath.row]) floatValue];
+        return CGSizeMake(width, height);
+        
+    }else{
+        // DYNAMIC ROWS (FORECAST CONTENT CELLS)
+        CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
+        return CGSizeMake(collectionWidth, 45);
+        
+    }
 }
 
 #pragma mark - ResultsCellDelegate
@@ -864,9 +903,9 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (NSArray *)cellHeights
 {
     if (!_cellHeights) {
-        _cellHeights = @[@(180), @(128), @(100), @(100), @(100), @(205)];
+        _cellHeights = @[@(180), @(128), @(100), @(100), @(100), @(50), @(45)];
     }
-    return _cellHeights;
+    return _cellHeights; // 205
 }
 
 - (NSArray *)cellWidths
@@ -881,7 +920,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (NSArray *)cellIdentifiers
 {
     if (!_cellIdentifiers) {
-        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"vientoCell", @"temperaturaCell", @"contaminantesCell",  @"pronosticosCollectionViewCell"];
+        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"vientoCell", @"temperaturaCell", @"contaminantesCell", @"forecastHeaderCell"];
     }
     return _cellIdentifiers;
 }
