@@ -124,7 +124,6 @@
         
         Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: self.selectedStation];
         NSArray *forecasts = [self.stationsAPIResults currentForecastsForStation: self.selectedStation];
-        
         [self.delegate mapDidSelectStation: self.selectedStation withMeasurement: measurement currentForecasts: forecasts];
     }
     

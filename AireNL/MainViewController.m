@@ -21,6 +21,7 @@
 #import "InfoContainerViewController.h"
 #import "BackgroundImageHelper.h"
 #import "ForecastContentCollectionViewCell.h"
+#import "FooterCollectionReusableView.h"
 #import "ILRoundedView.h"
 
 #import "AireNLAPI.h"
@@ -514,6 +515,16 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    FooterCollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionFooter
+                                                                                  withReuseIdentifier: @"footerCell"
+                                                                                         forIndexPath: indexPath];
+    footerView.locationLabel.text = [BackgroundImageHelper descriptionForImageForCurrentTime];
+    return footerView;
+}
+
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return NO;
@@ -534,8 +545,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         // DYNAMIC ROWS (FORECAST CONTENT CELLS)
         CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
         return CGSizeMake(collectionWidth, 45);
-        
     }
+    
 }
 
 #pragma mark - ResultsCellDelegate
@@ -558,7 +569,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         // Header Cell
         [self showInfoScreenForAirQuality];
         
-    }else if(indexPath.row == 5){
+    }else if(indexPath.row == 4){
         // Predictions Cell
         [self showInfoScreenForContaminants];
     }

@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *contaminante25Label;
 @property (weak, nonatomic) IBOutlet UILabel *contaminante03Label;
 
+- (IBAction)didSelectInfo:(id)sender;
+
 @end
