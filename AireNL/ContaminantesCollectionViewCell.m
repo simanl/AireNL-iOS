@@ -16,8 +16,8 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    NSNumber *pm10 = measurement.respirableSuspendedParticles ?: @(0);
-    NSNumber *pm25 = measurement.fineParticles ?: @(0);
+    NSNumber *pm10 = measurement.toracicParticles ?: @(0);
+    NSNumber *pm25 = measurement.respirableParticles ?: @(0);
     NSNumber *O3 = measurement.ozone ?: @(0);
     
     self.contaminante10Label.text = [pm10 stringValue];

@@ -53,7 +53,7 @@
 - (void)getStationsWithCompletion:(ResultCompletionBlock)completion
 {
     NSString *address = @"/stations.json";
-    NSDictionary *params = @{@"include" : @"last_measurement"};
+    NSDictionary *params = @{@"include" : @"last_measurement,current_forecasts"};
     
     [self GET: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
         
@@ -82,7 +82,7 @@
 - (void)getStationWithId:(NSString *)stationID withCompletion:(ResultCompletionBlock)completion
 {
     NSString *address = [NSString stringWithFormat: @"/stations/%@", stationID];
-    NSDictionary *params = @{@"include" : @"last_measurement"};
+    NSDictionary *params = @{@"include" : @"last_measurement,current_forecasts"};
 
     [self GET: address withParameters: params withCompletion:^(id responseObject, NSError *error) {
        
@@ -108,7 +108,7 @@
     NSString *address = @"/stations.json";
     
     NSString *coordinateString = [NSString stringWithFormat: @"%f,%f", coordinate.latitude, coordinate.longitude];
-    NSDictionary *params = @{@"include" : @"last_measurement",
+    NSDictionary *params = @{@"include" : @"last_measurement,current_forecasts",
                              @"page[limit]" : @"1",
                              @"nearest_from" : coordinateString};
     
@@ -189,34 +189,59 @@
 {    
     NSDictionary *stationDict = responseObject[@"data"];
     NSArray *included = responseObject[@"included"];
-    NSDictionary *measurementDict = [included firstObject];
+
+    NSMutableArray *measurements = [[NSMutableArray alloc] init];
+    NSMutableArray *forecasts = [[NSMutableArray alloc] init];
     
     Station *station = [[Station alloc] initWithDictionary: stationDict];
-    Measurement *measurement = [[Measurement alloc] initWithDictionary: measurementDict];
     
-    return [[APIResults alloc] initWithStations: @[station] measurements: @[measurement]];
+    for (NSDictionary *includedDict in included) {
+        NSString *type = includedDict[@"type"];
+        
+        if ([type isEqualToString: @"measurements"]) {
+            Measurement *measurement = [[Measurement alloc] initWithDictionary: includedDict];
+            [measurements addObject: measurement];
+            
+        }else if ([type isEqualToString: @"forecasts"]){
+            Forecast *forecast = [[Forecast alloc] initWithDictionary: includedDict];
+            [forecasts addObject: forecast];
+        }
+        
+    }
+    
+    return [[APIResults alloc] initWithStations: @[station] measurements: measurements forecasts: forecasts];
 
 }
 
 - (APIResults *)resultsForResponseObject:(NSDictionary *)responseObject
 {
     NSArray *stationDicts = responseObject[@"data"];
-    NSArray *measurementDicts = responseObject[@"included"];
+    NSArray *included = responseObject[@"included"];
     
     NSMutableArray *stations = [[NSMutableArray alloc] initWithCapacity: [stationDicts count]];
-    NSMutableArray *measurements = [[NSMutableArray alloc] initWithCapacity: [measurementDicts count]];
+    NSMutableArray *measurements = [[NSMutableArray alloc] init];
+    NSMutableArray *forecasts = [[NSMutableArray alloc] init];
     
     for (NSDictionary *stationDict in stationDicts) {
         Station *station = [[Station alloc] initWithDictionary: stationDict];
         [stations addObject: station];
     }
     
-    for (NSDictionary *measurementDict in measurementDicts) {
-        Measurement *measurement = [[Measurement alloc] initWithDictionary: measurementDict];
-        [measurements addObject: measurement];
+    for (NSDictionary *includedDict in included) {
+        NSString *type = includedDict[@"type"];
+        
+        if ([type isEqualToString: @"measurements"]) {
+            Measurement *measurement = [[Measurement alloc] initWithDictionary: includedDict];
+            [measurements addObject: measurement];
+            
+        }else if ([type isEqualToString: @"forecasts"]){
+            Forecast *forecast = [[Forecast alloc] initWithDictionary: includedDict];
+            [forecasts addObject: forecast];
+        }
+        
     }
         
-    return [[APIResults alloc] initWithStations: stations measurements: measurements];
+    return [[APIResults alloc] initWithStations: stations measurements: measurements forecasts: forecasts];
 }
 
 @end

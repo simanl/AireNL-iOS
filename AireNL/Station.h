@@ -29,5 +29,6 @@
 // RELATIONSHIPS
 
 @property (nonatomic) NSString *lastMeasurementID;
+@property (nonatomic) NSArray *currentForecastsIDS;
 
 @end

@@ -34,16 +34,21 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
 
 @property (nonatomic) NSNumber *imecaPoints;
 @property (nonatomic) NSNumber *precipitation;
+
 @property (nonatomic) NSNumber *carbonMonoxide;
 @property (nonatomic) NSNumber *nitricOxide;
 @property (nonatomic) NSNumber *nitrogenDioxide;
-@property (nonatomic) NSNumber *nitrogenOxide;
-@property (nonatomic) NSNumber *ozone;
+@property (nonatomic) NSNumber *nitrogenOxides;
 @property (nonatomic) NSNumber *sulfurDioxide;
 
+@property (nonatomic) NSNumber *ozone;
+@property (nonatomic) NSNumber *toracicParticles;
+@property (nonatomic) NSNumber *respirableParticles;
+
 @property (nonatomic) NSNumber *suspendedParticulateMatter;
-@property (nonatomic) NSNumber *respirableSuspendedParticles;
-@property (nonatomic) NSNumber *fineParticles;
+
+//@property (nonatomic) NSNumber *respirableSuspendedParticles;
+//@property (nonatomic) NSNumber *fineParticles;
 
 // GENERATED VALUES
 

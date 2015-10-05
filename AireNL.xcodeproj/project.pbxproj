@@ -24,6 +24,9 @@
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
 		0662A5951BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; settings = {ASSET_TAGS = (); }; };
+		0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; settings = {ASSET_TAGS = (); }; };
+		0680B6921BC2ED7600522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
+		0680B6931BC2ED8200522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
 		0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */; };
 		069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */; };
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
@@ -168,6 +171,8 @@
 		065753121B5EE7B300FF226C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0662A5931BB9F98900425AE6 /* NSDictionary+WithoutNSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WithoutNSNull.h"; sourceTree = "<group>"; };
 		0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WithoutNSNull.m"; sourceTree = "<group>"; };
+		0680B68F1BC2E3FB00522D6B /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
+		0680B6901BC2E3FB00522D6B /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAnnotationView.h; sourceTree = "<group>"; };
 		0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAnnotationView.m; sourceTree = "<group>"; };
 		0690435E1B8E257D00A2E576 /* InfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoContainerViewController.h; sourceTree = "<group>"; };
@@ -451,6 +456,8 @@
 				06AA94C81BA779DA00326F16 /* Station.m */,
 				06AA94CA1BA779E900326F16 /* Measurement.h */,
 				06AA94CB1BA779E900326F16 /* Measurement.m */,
+				0680B68F1BC2E3FB00522D6B /* Forecast.h */,
+				0680B6901BC2E3FB00522D6B /* Forecast.m */,
 				06FE05611B715D4900BCFCA3 /* Prediction Results */,
 			);
 			name = Models;
@@ -757,6 +764,7 @@
 					};
 					06FAE3801B72B9C200B19700 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = TAGM86AK24;
 					};
 				};
 			};
@@ -902,6 +910,7 @@
 				06FE054A1B715A2700BCFCA3 /* ImecaCollectionViewCell.m in Sources */,
 				06F2C4521B6811D100BDF043 /* PronosticoHeaderTableViewCell.m in Sources */,
 				06FE055F1B715D2E00BCFCA3 /* PredictionResults.m in Sources */,
+				0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */,
 				06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */,
 				06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */,
 				06AA94C91BA779DA00326F16 /* Station.m in Sources */,
@@ -920,6 +929,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0680B6931BC2ED8200522D6B /* Forecast.m in Sources */,
 				06D583401BBA172C0055ABCD /* NSDictionary+WithoutNSNull.m in Sources */,
 				06F733B01BB3231600EB73BE /* AireNLAPI.m in Sources */,
 				0617237C1BB078E600FDA3DC /* APIResults.m in Sources */,
@@ -936,6 +946,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0680B6921BC2ED7600522D6B /* Forecast.m in Sources */,
 				06D5833F1BBA17240055ABCD /* NSDictionary+WithoutNSNull.m in Sources */,
 				06F733AF1BB3230400EB73BE /* AireNLAPI.m in Sources */,
 				061723741BB078C100FDA3DC /* APIResults.m in Sources */,
@@ -1292,7 +1303,7 @@
 		06FAE3901B72B9C200B19700 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1312,7 +1323,7 @@
 		06FAE3911B72B9C200B19700 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
 				INSTALL_PATH = "";

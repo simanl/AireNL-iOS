@@ -30,12 +30,14 @@
     self.carbonMonoxide = [attributes dl_objectForKeyWithNil: @"carbon_monoxide"];
     self.nitricOxide = [attributes dl_objectForKeyWithNil: @"nitric_oxide"];
     self.nitrogenDioxide = [attributes dl_objectForKeyWithNil: @"nitrogen_dioxide"];
-    self.nitrogenOxide = [attributes dl_objectForKeyWithNil: @"nitrogen_oxide"];
-    self.ozone = [attributes dl_objectForKeyWithNil: @"ozone"];
+    self.nitrogenOxides = [attributes dl_objectForKeyWithNil: @"nitrogen_oxides"];
     self.sulfurDioxide = [attributes dl_objectForKeyWithNil: @"sulfur_dioxide"];
+
+    self.ozone = [attributes dl_objectForKeyWithNil: @"ozone"];
+    self.toracicParticles = [attributes dl_objectForKeyWithNil: @"toracic_particles"];
+    self.respirableParticles = [attributes dl_objectForKeyWithNil: @"respirable_particles"];
+    
     self.suspendedParticulateMatter = [attributes dl_objectForKeyWithNil: @"suspended_particulate_matter"];
-    self.respirableSuspendedParticles = [attributes dl_objectForKeyWithNil: @"respirable_suspended_particles"];
-    self.fineParticles = [attributes dl_objectForKeyWithNil: @"fine_particles"];
     
     return self;
 }
@@ -55,12 +57,14 @@
     self.carbonMonoxide = [aDecoder decodeObjectForKey: @"carbonMonoxide"];
     self.nitricOxide = [aDecoder decodeObjectForKey: @"nitricOxide"];
     self.nitrogenDioxide = [aDecoder decodeObjectForKey: @"nitrogenDioxide"];
-    self.nitrogenOxide = [aDecoder decodeObjectForKey: @"nitrogenOxide"];
-    self.ozone = [aDecoder decodeObjectForKey: @"ozone"];
+    self.nitrogenOxides = [aDecoder decodeObjectForKey: @"nitrogenOxides"];
     self.sulfurDioxide = [aDecoder decodeObjectForKey: @"sulfurDioxide"];
+    
+    self.ozone = [aDecoder decodeObjectForKey: @"ozone"];
+    self.toracicParticles = [aDecoder decodeObjectForKey: @"toracicParticles"];
+    self.respirableParticles = [aDecoder decodeObjectForKey: @"respirableParticles"];
+    
     self.suspendedParticulateMatter = [aDecoder decodeObjectForKey: @"suspendedParticulateMatter"];
-    self.respirableSuspendedParticles = [aDecoder decodeObjectForKey: @"respirableSuspendedParticles"];
-    self.fineParticles = [aDecoder decodeObjectForKey: @"fineParticles"];
     
     return self;
 }
@@ -78,36 +82,15 @@
     [aCoder encodeObject: self.carbonMonoxide forKey: @"carbonMonoxide"];
     [aCoder encodeObject: self.nitricOxide forKey: @"nitricOxide"];
     [aCoder encodeObject: self.nitrogenDioxide forKey: @"nitrogenDioxide"];
-    [aCoder encodeObject: self.nitrogenOxide forKey: @"nitrogenOxide"];
-    [aCoder encodeObject: self.ozone forKey: @"ozone"];
+    [aCoder encodeObject: self.nitrogenOxides forKey: @"nitrogenOxides"];
     [aCoder encodeObject: self.sulfurDioxide forKey: @"sulfurDioxide"];
+    
+    [aCoder encodeObject: self.ozone forKey: @"ozone"];
+    [aCoder encodeObject: self.toracicParticles forKey: @"respirableSuspendedParticles"];
+    [aCoder encodeObject: self.respirableParticles forKey: @"fineParticles"];
+    
     [aCoder encodeObject: self.suspendedParticulateMatter forKey: @"suspendedParticulateMatter"];
-    [aCoder encodeObject: self.respirableSuspendedParticles forKey: @"respirableSuspendedParticles"];
-    [aCoder encodeObject: self.fineParticles forKey: @"fineParticles"];
 }
-
-//+ (NSDictionary *)JSONKeyPathsByPropertyKey
-//{
-//    return @{
-//             @"measurementID" : @"id",
-//             @"date" : @"attributes.measured_at",
-//             @"temperature" : @"attributes.temperature",
-//             @"relativeHumidity" : @"attributes.relative_humidity",
-//             @"windDirection" : @"attributes.wind_direction",
-//             @"windSpeed" : @"attributes.wind_speed",
-//             @"imecaPoints" : @"attributes.imeca_points",
-//             @"precipitation" : @"attributes.precipitation",
-//             @"carbonMonoxide" : @"attributes.carbon_monoxide",
-//             @"nitricOxide" : @"attributes.nitric_oxide",
-//             @"nitrogenDioxide" : @"attributes.nitrogen_dioxide",
-//             @"nitrogenOxide" : @"attributes.nitrogen_oxide",
-//             @"ozone" : @"attributes.ozone",
-//             @"sulfurDioxide" : @"attributes.sulfur_dioxide",
-//             @"suspendedParticulateMatter" : @"attributes.suspended_particulate_matter",
-//             @"respirableSuspendedParticles" : @"attributes.respirable_suspended_particles",
-//             @"fineParticles" : @"attributes.fine_particles",
-//             };
-//}
 
 #pragma mark - Public API
 

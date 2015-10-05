@@ -18,13 +18,24 @@
     self = [super init]; if (!self) return nil;
     
     self.stationID = [dictionary dl_objectForKeyWithNil: @"id"];
-    self.lastMeasurementID = [dictionary[@"relationships"][@"last_measurement"][@"data"] dl_objectForKeyWithNil: @"id"];
     
     NSDictionary *attributes = [dictionary dl_objectForKeyWithNil: @"attributes"];
     self.code = [attributes dl_objectForKeyWithNil: @"code"];
     self.name = [attributes dl_objectForKeyWithNil: @"name"];
     self.shortName = [attributes dl_objectForKeyWithNil: @"short_name"];
     self.coordinateString = [attributes dl_objectForKeyWithNil: @"latlon"];
+    
+    NSDictionary *relationships = dictionary[@"relationships"];
+    self.lastMeasurementID = [relationships[@"last_measurement"][@"data"] dl_objectForKeyWithNil: @"id"];
+    
+    NSMutableArray *tempForecastIDS = [[NSMutableArray alloc] init];
+    for (NSDictionary *forecast in relationships[@"current_forecasts"][@"data"]) {
+        NSNumber *forecastID = forecast[@"id"];
+        if (forecastID) {
+            [tempForecastIDS addObject: forecastID];
+        }
+    }
+    self.currentForecastsIDS = [NSArray arrayWithArray: tempForecastIDS];
     
     return self;
 }
