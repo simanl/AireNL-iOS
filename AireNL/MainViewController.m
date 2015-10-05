@@ -651,6 +651,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"LOCATION MANAGER : ERROR : %@", error);
+    self.gettingLocation = NO;
     [self hideLoading];
     [self loadCurrentStation];
 }
