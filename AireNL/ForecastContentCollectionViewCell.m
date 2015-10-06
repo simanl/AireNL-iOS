@@ -13,6 +13,9 @@
 - (void)prepareForReuse
 {
     self.forecast = nil;
+    self.roundedContentView.type = ILRoundedViewTypeNone;
+
+    [super prepareForReuse];
 }
 
 - (void)updateCell

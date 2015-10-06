@@ -14,8 +14,8 @@
 
 @interface ForecastContentCollectionViewCell : UICollectionViewCell <ResultsCellUpdateable>
 
-@property (nonatomic) Forecast *forecast;
 - (void)updateCell;
+@property (nonatomic) Forecast *forecast;
 
 @property (weak, nonatomic) IBOutlet ILRoundedView *roundedContentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;

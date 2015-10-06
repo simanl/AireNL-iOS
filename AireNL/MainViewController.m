@@ -253,7 +253,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         
         NSLog(@"STATION : %@", self.selectedStation);
         NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
-        NSLog(@"FORECASTS : %@", self.currentForecasts);
+        NSLog(@"FORECAST COUNT : %ld", [self.currentForecasts count]);
         
         [self cacheSaveData];
         [self updateScreen];
@@ -503,10 +503,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         if (indexPath.row == totalRows - 1) {
             // LAST ROW
             cell.roundedContentView.type = ILRoundedViewTypeBottom;
-            cell.bottomConstraint.constant = 10.0f;
-        }else{
-            cell.roundedContentView.type = ILRoundedViewTypeNone;
-            cell.bottomConstraint.constant = 0.0f;
         }
         return cell;
     }
@@ -542,7 +538,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     }else{
         // DYNAMIC ROWS (FORECAST CONTENT CELLS)
         CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
-        return CGSizeMake(collectionWidth, 45);
+        return CGSizeMake(collectionWidth, 35);
     }
     
 }
@@ -752,10 +748,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)animateTopViewWithScrollView:(UIScrollView *)scrollView
 {
-//    if (IS_IPAD) {
-//        return;
-//    }
-    
     CGRect frame = self.topView.frame;
     CGFloat size = frame.size.height - 21;
     
@@ -794,7 +786,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         }
         
     }
-        
+    
     self.topView.alpha = (1 - framePercentageHidden);
     self.previousScrollViewYOffset = scrollOffset;
 }

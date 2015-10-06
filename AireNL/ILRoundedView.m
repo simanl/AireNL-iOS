@@ -15,6 +15,7 @@
     [super layoutSubviews];
     
     if (self.type == ILRoundedViewTypeNone) {
+        self.layer.mask = nil;
         return;
     }
     
@@ -43,6 +44,15 @@
 {
     _integerType = integerType;
     _type = integerType;
+    
+    [self setNeedsLayout];
+}
+
+- (void)setType:(ILRoundedViewType)type
+{
+    _type = type;
+    
+    [self setNeedsLayout];
 }
 
 @end
