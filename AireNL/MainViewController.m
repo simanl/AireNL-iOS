@@ -268,7 +268,9 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (void)customizeAppearance
 {
     self.backgroundImageView.image = self.normalBackground;
+    
     [self setupCollectionViewInsetsWithCellsHeight: [self getCellHeightsTotalWithLimit: 4]];
+    [self scrollCollectionViewToTopWithAnimation: NO];
     
     [TAOverlay setOverlayLabelFont: [UIFont fontWithName: @"Avenir-Light" size: 13.0f]];
 }
@@ -394,14 +396,10 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     CGFloat correctedOffset = scrollView.contentInset.top + scrollView.contentOffset.y;
     if (correctedOffset <= 10) {
         [self setBackgroundImageWithBlur: NO];
-        if (IS_IPHONE) {
-            [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
-        }
+        [[UIApplication sharedApplication] setStatusBarHidden: NO withAnimation: UIStatusBarAnimationSlide];
     }else{
         [self setBackgroundImageWithBlur: YES];
-        if (IS_IPHONE) {
-            [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationSlide];
-        }
+        [[UIApplication sharedApplication] setStatusBarHidden: YES withAnimation: UIStatusBarAnimationSlide];
     }
     
     [self animateTopViewWithScrollView: scrollView];
@@ -754,9 +752,9 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)animateTopViewWithScrollView:(UIScrollView *)scrollView
 {
-    if (IS_IPAD) {
-        return;
-    }
+//    if (IS_IPAD) {
+//        return;
+//    }
     
     CGRect frame = self.topView.frame;
     CGFloat size = frame.size.height - 21;
@@ -796,7 +794,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         }
         
     }
-    
+        
     self.topView.alpha = (1 - framePercentageHidden);
     self.previousScrollViewYOffset = scrollOffset;
 }
