@@ -28,7 +28,6 @@
     
     NSString *dateString = [attributes dl_objectForKeyWithNil: @"forecasted_datetime"];
     self.date = [self.dateFormatter dateFromString: dateString];
-    
     NSString *updatedAtDateString = [attributes dl_objectForKeyWithNil: @"updated_at"];
     self.updatedAt = [self.dateFormatter dateFromString: updatedAtDateString];
     
