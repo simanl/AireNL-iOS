@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
 
 @property (nonatomic) NSString *measurementID;
 
-@property (nonatomic) NSString *date;
+@property (nonatomic) NSDate *date;
 
 @property (nonatomic) NSNumber *temperature;
 @property (nonatomic) NSNumber *relativeHumidity;

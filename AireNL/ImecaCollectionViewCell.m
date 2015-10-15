@@ -33,7 +33,7 @@
     self.imecaQualityView.backgroundColor = airQualityColor;
     
     if (measurement.date) {
-        self.measurementDateLabel.text = measurement.date;
+        self.measurementDateLabel.text = [self.dateFormatter stringFromDate: measurement.date];
     }else{
         self.measurementDateLabel.text = [self.dateFormatter stringFromDate: [NSDate date]];
     }
@@ -53,7 +53,8 @@
 {
     if (!_dateFormatter) {
         _dateFormatter = [[NSDateFormatter alloc] init];
-        _dateFormatter.dateFormat = @"HH:mm dd-MM-yyyy";
+        _dateFormatter.timeZone = [NSTimeZone localTimeZone];
+        _dateFormatter.dateFormat = @"HH:mm dd/MM/yyyy";
     }
     return _dateFormatter;
 }

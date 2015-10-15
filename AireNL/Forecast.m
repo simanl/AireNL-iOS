@@ -10,6 +10,12 @@
 
 #import "NSDictionary+WithoutNSNull.h"
 
+@interface Forecast ()
+
+@property (nonatomic) NSDateFormatter *dateFormatter;
+
+@end
+
 @implementation Forecast
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
@@ -19,8 +25,12 @@
     self.forecastID = [dictionary dl_objectForKeyWithNil: @"id"];
     
     NSDictionary *attributes = [dictionary dl_objectForKeyWithNil: @"attributes"];
-    self.date = [attributes dl_objectForKeyWithNil: @"forecasted_datetime"];
-    self.updatedAt = [attributes dl_objectForKeyWithNil: @"updated_at"];
+    
+    NSString *dateString = [attributes dl_objectForKeyWithNil: @"forecasted_datetime"];
+    self.date = [self.dateFormatter dateFromString: dateString];
+    
+    NSString *updatedAtDateString = [attributes dl_objectForKeyWithNil: @"updated_at"];
+    self.updatedAt = [self.dateFormatter dateFromString: updatedAtDateString];
     
     self.ozone = [attributes dl_objectForKeyWithNil: @"ozone"];
     self.toracicParticles = [attributes dl_objectForKeyWithNil: @"toracic_particles"];
@@ -57,6 +67,19 @@
 {
     return [NSString stringWithFormat: @"ID:%@ DATE:%@ UPDATED_AT:%@ OZONE:%@ TORACIC_PARTICLES:%@ RESPIRABLE_PARTICLES:%@",
             self.forecastID, self.date, self.updatedAt, self.ozone, self.toracicParticles, self.respirableParticles];
+}
+
+#pragma mark - Set/Get
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+        [_dateFormatter setLocale:enUSPOSIXLocale];
+        [_dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    }
+    return _dateFormatter;
 }
 
 @end

@@ -16,8 +16,8 @@
 
 @property (nonatomic) NSString *forecastID;
 
-@property (nonatomic) NSString *date;
-@property (nonatomic) NSString *updatedAt;
+@property (nonatomic) NSDate *date;
+@property (nonatomic) NSDate *updatedAt;
 
 @property (nonatomic) NSNumber *ozone;
 @property (nonatomic) NSNumber *toracicParticles;

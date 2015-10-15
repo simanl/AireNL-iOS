@@ -11,6 +11,12 @@
 #import "UIColor+ILColor.h"
 #import "NSDictionary+WithoutNSNull.h"
 
+@interface Measurement ()
+
+@property (nonatomic) NSDateFormatter *dateFormatter;
+
+@end
+
 @implementation Measurement
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
@@ -20,7 +26,10 @@
     self.measurementID = [dictionary dl_objectForKeyWithNil: @"id"];
     
     NSDictionary *attributes = [dictionary dl_objectForKeyWithNil: @"attributes"];
-    self.date = [attributes dl_objectForKeyWithNil: @"measured_at"];
+
+    NSString *dateString = [attributes dl_objectForKeyWithNil: @"measured_at"];
+    self.date = [self.dateFormatter dateFromString: dateString];
+    
     self.temperature = [attributes dl_objectForKeyWithNil: @"temperature"];
     self.relativeHumidity = [attributes dl_objectForKeyWithNil: @"relative_humidity"];
     self.windDirection = [attributes dl_objectForKeyWithNil: @"wind_direction"];
@@ -198,6 +207,19 @@
             return nil;
             break;
     }
+}
+
+#pragma mark - Set/Get
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+        [_dateFormatter setLocale:enUSPOSIXLocale];
+        [_dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    }
+    return _dateFormatter;
 }
 
 @end
