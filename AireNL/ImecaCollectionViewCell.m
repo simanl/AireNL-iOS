@@ -35,7 +35,7 @@
     if (measurement.date) {
         self.measurementDateLabel.text = [self.dateFormatter stringFromDate: measurement.date];
     }else{
-        self.measurementDateLabel.text = [self.dateFormatter stringFromDate: [NSDate date]];
+//        self.measurementDateLabel.text = [self.dateFormatter stringFromDate: [NSDate date]];
     }
     
 }

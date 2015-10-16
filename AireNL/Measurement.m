@@ -29,6 +29,7 @@
 
     NSString *dateString = [attributes dl_objectForKeyWithNil: @"measured_at"];
     self.date = [self.dateFormatter dateFromString: dateString];
+    
     self.temperature = [attributes dl_objectForKeyWithNil: @"temperature"];
     self.relativeHumidity = [attributes dl_objectForKeyWithNil: @"relative_humidity"];
     self.windDirection = [attributes dl_objectForKeyWithNil: @"wind_direction"];
@@ -215,7 +216,7 @@
     if (!_dateFormatter) {
         _dateFormatter = [[NSDateFormatter alloc] init];
         [_dateFormatter setLocale: [NSLocale localeWithLocaleIdentifier: @"en_US_POSIX"]];
-        [_dateFormatter setDateFormat: @"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+        [_dateFormatter setDateFormat: @"YYYY-MM-dd'T'HH:mm:ss.SSSZ"];
     }
     return _dateFormatter;
 }

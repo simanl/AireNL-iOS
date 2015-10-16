@@ -16,11 +16,11 @@
 
 @property (nonatomic) NSString *forecastID;
 
-@property (nonatomic) NSDate *date;
-@property (nonatomic) NSDate *updatedAt;
+@property (nonatomic) NSDate *startsAt;
+@property (nonatomic) NSDate *endsAt;
 
-@property (nonatomic) NSNumber *ozone;
-@property (nonatomic) NSNumber *toracicParticles;
-@property (nonatomic) NSNumber *respirableParticles;
+@property (nonatomic) NSString *ozone;
+@property (nonatomic) NSString *toracicParticles;
+@property (nonatomic) NSString *respirableParticles;
 
 @end

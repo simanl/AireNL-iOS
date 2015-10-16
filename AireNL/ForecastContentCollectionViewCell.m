@@ -20,9 +20,9 @@
 
 - (void)updateCell
 {
-    self.pm10Label.text = [self.forecast.toracicParticles stringValue];
-    self.pm25Label.text = [self.forecast.respirableParticles stringValue];
-    self.O3Label.text = [self.forecast.ozone stringValue];
+    self.pm10Label.text = self.forecast.toracicParticles;
+    self.pm25Label.text = self.forecast.respirableParticles;
+    self.O3Label.text = self.forecast.ozone;
 }
 
 @end

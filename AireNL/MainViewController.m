@@ -498,15 +498,16 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         NSUInteger totalRows = [self.cellIdentifiers count] + [self.currentForecasts count];
         NSUInteger row = indexPath.row - [self.cellIdentifiers count];
         
-        NSDate *fromDate = nil;
-        NSDate *toDate = nil;
+        Forecast *forecast = self.currentForecasts[row];
+                
+        NSDate *startDate = forecast.startsAt;
+        NSDate *endDate = forecast.endsAt;
         NSString *dateRangeString = [NSString stringWithFormat: @"%@-%@",
-                                     [self.dateFormatter stringFromDate: fromDate],
-                                     [self.dateFormatter stringFromDate: toDate]];
-        
+                                     [self.dateFormatter stringFromDate: startDate],
+                                     [self.dateFormatter stringFromDate: endDate]];
         cell.timeLabel.text = dateRangeString;
-//        cell.timeLabel.text = [NSString stringWithFormat: NSLocalizedString(@"+%lu HOUR", nil), (unsigned long)row + 1];
-        cell.forecast = self.currentForecasts[row];
+        
+        cell.forecast = forecast;
         [cell updateCell];
         
         if (indexPath.row == totalRows - 1) {
