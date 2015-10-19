@@ -249,7 +249,11 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         
         self.selectedStation = [[results stations] firstObject];
         self.selectedMeasurement = [results lastMeasurementForStation: self.selectedStation];
-        self.currentForecasts = [results currentForecastsForStation: self.selectedStation];
+        
+        NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey: @"startsAt" ascending: YES];
+        NSArray *forecasts = [results currentForecastsForStation: self.selectedStation];
+        NSArray *sortedForecasts = [forecasts sortedArrayUsingDescriptors: @[dateDescriptor]];
+        self.currentForecasts = sortedForecasts;
         
         NSLog(@"STATION : %@", self.selectedStation);
         NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
