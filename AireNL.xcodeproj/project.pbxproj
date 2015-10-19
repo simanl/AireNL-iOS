@@ -1301,7 +1301,7 @@
 		06FAE3901B72B9C200B19700 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1321,7 +1321,7 @@
 		06FAE3911B72B9C200B19700 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
 				INSTALL_PATH = "";

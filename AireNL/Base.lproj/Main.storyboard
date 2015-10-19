@@ -947,14 +947,14 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2p-Wc-kx3">
-                                                                    <rect key="frame" x="37" y="15" width="60" height="36"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="U2p-Wc-kx3">
+                                                                    <rect key="frame" x="30" y="15" width="67" height="36"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="9BH-UK-cPq"/>
                                                                         <constraint firstAttribute="width" constant="60" id="AdW-W4-Krk"/>
                                                                         <constraint firstAttribute="height" constant="36" id="ONl-ma-qkX"/>
-                                                                        <constraint firstAttribute="width" constant="60" id="SVU-5X-gkv"/>
+                                                                        <constraint firstAttribute="width" constant="67" id="SVU-5X-gkv"/>
                                                                         <constraint firstAttribute="width" constant="60" id="nSR-1H-AY4"/>
                                                                         <constraint firstAttribute="height" constant="36" id="tGn-sh-Kba"/>
                                                                     </constraints>
@@ -978,7 +978,7 @@
                                                                 <constraint firstAttribute="centerX" secondItem="R8Y-Af-67u" secondAttribute="centerX" id="8fh-WB-n0P"/>
                                                                 <constraint firstAttribute="trailing" secondItem="U2p-Wc-kx3" secondAttribute="trailing" constant="3" id="MbD-HB-glO"/>
                                                                 <constraint firstItem="R8Y-Af-67u" firstAttribute="top" secondItem="U2p-Wc-kx3" secondAttribute="bottom" constant="7" id="Xxi-z6-Nle"/>
-                                                                <constraint firstItem="U2p-Wc-kx3" firstAttribute="leading" secondItem="poF-us-V2A" secondAttribute="trailing" constant="10" id="dGH-0T-lIl"/>
+                                                                <constraint firstItem="U2p-Wc-kx3" firstAttribute="leading" secondItem="poF-us-V2A" secondAttribute="trailing" constant="3" id="dGH-0T-lIl"/>
                                                                 <constraint firstAttribute="centerY" secondItem="U2p-Wc-kx3" secondAttribute="centerY" constant="12" id="eCQ-uv-rC8"/>
                                                                 <constraint firstItem="U2p-Wc-kx3" firstAttribute="top" secondItem="poF-us-V2A" secondAttribute="bottom" constant="-33" id="ktW-1j-zWu"/>
                                                                 <constraint firstAttribute="width" constant="100" id="uhJ-mE-LGM"/>

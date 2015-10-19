@@ -37,3 +37,7 @@
 "ACTIVITY_CAR" = "If air quality is bad, vehicle use should be reduces as much as possible.";
 
 "+%lu HOUR" = "+%lu HOUR";
+
+"good" = "good";
+"regular" = "regular";
+"bad" = "bad";

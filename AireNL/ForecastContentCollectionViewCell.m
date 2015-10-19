@@ -8,6 +8,12 @@
 
 #import "ForecastContentCollectionViewCell.h"
 
+@interface ForecastContentCollectionViewCell ()
+
+@property (nonatomic) NSDateFormatter *dateFormatter;
+
+@end
+
 @implementation ForecastContentCollectionViewCell
 
 - (void)prepareForReuse
@@ -20,9 +26,28 @@
 
 - (void)updateCell
 {
-    self.pm10Label.text = self.forecast.toracicParticles;
-    self.pm25Label.text = self.forecast.respirableParticles;
-    self.O3Label.text = self.forecast.ozone;
+    NSDate *startDate = self.forecast.startsAt;
+    NSDate *endDate = self.forecast.endsAt;
+    NSString *dateRangeString = [NSString stringWithFormat: @"%@-%@",
+                                 [self.dateFormatter stringFromDate: startDate],
+                                 [self.dateFormatter stringFromDate: endDate]];
+    self.timeLabel.text = dateRangeString;
+    
+    self.pm10Label.text = self.forecast.toracicParticles ? NSLocalizedString(self.forecast.toracicParticles, nil) : @"";
+    self.pm25Label.text = self.forecast.respirableParticles ? NSLocalizedString(self.forecast.respirableParticles, nil) : @"";
+    self.O3Label.text = self.forecast.ozone ? NSLocalizedString(self.forecast.ozone, nil) : @"";
+}
+
+#pragma mark - Set/Get
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        _dateFormatter.timeZone = [NSTimeZone localTimeZone];
+        _dateFormatter.dateFormat = @"HH:mm";
+    }
+    return _dateFormatter;
 }
 
 @end

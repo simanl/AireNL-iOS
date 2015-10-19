@@ -38,3 +38,7 @@
 "ACTIVITY_CAR" = "Si la calidad del aire es mala, reducir en la medida de lo posible el uso de vehículos.";
 
 "+%lu HOUR" = "+%lu HORA";
+
+"good" = "bueno";
+"regular" = "regular";
+"bad" = "malo";

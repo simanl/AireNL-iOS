@@ -45,8 +45,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 @property (nonatomic) Measurement *selectedMeasurement;
 @property (nonatomic) NSArray *currentForecasts;
 
-@property (nonatomic) NSDateFormatter *dateFormatter;
-
 // TABLE, SCROLL VIEW, POPUP
 
 @property (nonatomic) UIRefreshControl *refreshControl;
@@ -498,16 +496,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         NSUInteger totalRows = [self.cellIdentifiers count] + [self.currentForecasts count];
         NSUInteger row = indexPath.row - [self.cellIdentifiers count];
         
-        Forecast *forecast = self.currentForecasts[row];
-                
-        NSDate *startDate = forecast.startsAt;
-        NSDate *endDate = forecast.endsAt;
-        NSString *dateRangeString = [NSString stringWithFormat: @"%@-%@",
-                                     [self.dateFormatter stringFromDate: startDate],
-                                     [self.dateFormatter stringFromDate: endDate]];
-        cell.timeLabel.text = dateRangeString;
-        
-        cell.forecast = forecast;
+        cell.forecast = self.currentForecasts[row];
         [cell updateCell];
         
         if (indexPath.row == totalRows - 1) {
@@ -877,16 +866,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     }
     return _locationManager;
-}
-
-- (NSDateFormatter *)dateFormatter
-{
-    if (!_dateFormatter) {
-        _dateFormatter = [[NSDateFormatter alloc] init];
-        _dateFormatter.timeZone = [NSTimeZone localTimeZone];
-        _dateFormatter.dateFormat = @"HH:mm";
-    }
-    return _dateFormatter;
 }
 
 - (NSArray *)cellHeights
