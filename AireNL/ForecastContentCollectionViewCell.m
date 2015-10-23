@@ -25,7 +25,7 @@
 }
 
 - (void)updateCell
-{
+{    
     NSDate *startDate = self.forecast.startsAt;
     NSDate *endDate = self.forecast.endsAt;
     NSString *dateRangeString = [NSString stringWithFormat: @"%@-%@",

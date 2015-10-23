@@ -29,7 +29,7 @@
             break;
         }
     }
-    
+
     return description;
 }
 
@@ -52,7 +52,7 @@
             break;
         }
     }
-    
+
     return [UIImage imageNamed: imageName];
 }
 

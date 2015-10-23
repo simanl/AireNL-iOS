@@ -24,8 +24,8 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    NSNumber *imecaPoints = measurement.imecaPoints ?: @(0);
-    self.imecaLabel.text = [imecaPoints stringValue];
+    NSNumber *imecaPoints = measurement.imecaPoints;
+    self.imecaLabel.text = imecaPoints? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil);
     
     self.imecaQualityLabel.text = [measurement stringForAirQuality];
     
@@ -35,7 +35,7 @@
     if (measurement.date) {
         self.measurementDateLabel.text = [self.dateFormatter stringFromDate: measurement.date];
     }else{
-//        self.measurementDateLabel.text = [self.dateFormatter stringFromDate: [NSDate date]];
+        self.measurementDateLabel.text = [self.dateFormatter stringFromDate: [NSDate date]];
     }
     
 }

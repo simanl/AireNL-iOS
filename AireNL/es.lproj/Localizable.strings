@@ -42,3 +42,5 @@
 "good" = "bueno";
 "regular" = "regular";
 "bad" = "malo";
+
+"n/a" = "n/d";

@@ -141,8 +141,9 @@
     [self.locationTitleLabel setText: @"Monterrey"];
     [self.locationSubtitleLabel setText: self.selectedStation.name];
 
-    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints ?: @(0);
-    [self.imecaAmountLabel setText: [imecaPoints stringValue]];
+    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints;
+    [self.imecaAmountLabel setText: imecaPoints? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil)];
+    
     [self.imecaQualityLabel setText: [self.selectedMeasurement stringForAirQuality]];
 }
 

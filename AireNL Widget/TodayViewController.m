@@ -155,8 +155,8 @@
     self.locationTitleLabel.text = [@"Monterrey" uppercaseString];
     self.locationSubtitleLabel.text = [self.selectedStation.name uppercaseString];
  
-    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints ?: @(0);
-    self.imecaLabel.text = [imecaPoints stringValue];
+    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints;
+    self.imecaLabel.text = imecaPoints? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil);
     
     NSString *localizedQualityText = NSLocalizedString(@"Air Quality", nil);
     self.imecaQualityLabel.text = [NSString stringWithFormat: @"%@: %@", localizedQualityText, [self.selectedMeasurement stringForAirQuality]];

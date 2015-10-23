@@ -19,26 +19,26 @@
 		061723801BB078E600FDA3DC /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
 		063366861B60544000C32FF6 /* ILSpacedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 063366851B60544000C32FF6 /* ILSpacedLabel.m */; };
 		0637ECB71B83D3470091032B /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637ECB61B83D3470091032B /* MKMapView+ZoomLevel.m */; };
-		065142201BA8764300312C09 /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; settings = {ASSET_TAGS = (); }; };
+		065142201BA8764300312C09 /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
 		0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065753091B5EBB2C00FF226C /* MapViewController.m */; };
 		0657530D1B5EBB3600FF226C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0657530C1B5EBB3600FF226C /* MainViewController.m */; };
 		065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065753121B5EE7B300FF226C /* MapKit.framework */; };
-		0662A5951BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; settings = {ASSET_TAGS = (); }; };
-		0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; settings = {ASSET_TAGS = (); }; };
+		0662A5951BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; };
+		0680B6911BC2E3FB00522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
 		0680B6921BC2ED7600522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
 		0680B6931BC2ED8200522D6B /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6901BC2E3FB00522D6B /* Forecast.m */; };
-		0680B6961BC311D100522D6B /* ForecastHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6951BC311D100522D6B /* ForecastHeaderCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		0680B6991BC311DC00522D6B /* ForecastContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6981BC311DC00522D6B /* ForecastContentCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		0680B69C1BC326D100522D6B /* FooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B69B1BC326D100522D6B /* FooterCollectionReusableView.m */; settings = {ASSET_TAGS = (); }; };
+		0680B6961BC311D100522D6B /* ForecastHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6951BC311D100522D6B /* ForecastHeaderCollectionViewCell.m */; };
+		0680B6991BC311DC00522D6B /* ForecastContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B6981BC311DC00522D6B /* ForecastContentCollectionViewCell.m */; };
+		0680B69C1BC326D100522D6B /* FooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0680B69B1BC326D100522D6B /* FooterCollectionReusableView.m */; };
 		0690435D1B8E1F9C00A2E576 /* ILAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */; };
 		069043601B8E257D00A2E576 /* InfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0690435F1B8E257D00A2E576 /* InfoContainerViewController.m */; };
 		06A89EBF1B71161700FB67A4 /* ILLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A89EBE1B71161700FB67A4 /* ILLinearGradientView.m */; };
 		06A8C6601B6FCDE600E42EE1 /* ILRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C65F1B6FCDE600E42EE1 /* ILRadialGradientLayer.m */; };
 		06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A8C6621B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m */; };
-		06A97B461BB4659C0047A419 /* BackgroundImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A97B451BB4659C0047A419 /* BackgroundImageHelper.m */; settings = {ASSET_TAGS = (); }; };
-		06AA94C91BA779DA00326F16 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; settings = {ASSET_TAGS = (); }; };
-		06AA94CC1BA779E900326F16 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; settings = {ASSET_TAGS = (); }; };
-		06AA94D21BA8752000326F16 /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; settings = {ASSET_TAGS = (); }; };
+		06A97B461BB4659C0047A419 /* BackgroundImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A97B451BB4659C0047A419 /* BackgroundImageHelper.m */; };
+		06AA94C91BA779DA00326F16 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94C81BA779DA00326F16 /* Station.m */; };
+		06AA94CC1BA779E900326F16 /* Measurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94CB1BA779E900326F16 /* Measurement.m */; };
+		06AA94D21BA8752000326F16 /* APIResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AA94D11BA8752000326F16 /* APIResults.m */; };
 		06B01CB71B7947A10094861C /* AirQualityInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B01CB61B7947A10094861C /* AirQualityInterfaceController.m */; };
 		06B01CBA1B7947C30094861C /* TempWindInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B01CB91B7947C30094861C /* TempWindInterfaceController.m */; };
 		06C5E2901B83A8540017B15A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C5E2921B83A8540017B15A /* MainInterface.storyboard */; };
@@ -58,7 +58,7 @@
 		06D8BA741B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA731B74106B007462A4 /* Images.xcassets */; };
 		06D8BA801B74106B007462A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA7E1B74106B007462A4 /* Interface.storyboard */; };
 		06D8BA821B74106B007462A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D8BA811B74106B007462A4 /* Images.xcassets */; };
-		06D9CFD01BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9CFCF1BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		06D9CFD01BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9CFCF1BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m */; };
 		06E672DA1B70256F0046DD35 /* ILBlurCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E672D91B70256F0046DD35 /* ILBlurCollectionView.m */; };
 		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
 		06F2C4431B680D4100BDF043 /* PronosticosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F2C4411B680D4100BDF043 /* PronosticosCollectionViewCell.m */; };
@@ -1139,7 +1139,7 @@
 			baseConfigurationReference = 4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1155,7 +1155,7 @@
 			baseConfigurationReference = 89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AireNL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1205,7 +1205,7 @@
 		06D8BA861B74106B007462A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1233,7 +1233,7 @@
 		06D8BA871B74106B007462A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "AireNL WatchKit Extension/Info.plist";
@@ -1257,7 +1257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
 				ENABLE_BITCODE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1282,7 +1282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
 				ENABLE_BITCODE = YES;
 				IBSC_MODULE = AireNL_WatchKit_Extension;
@@ -1301,7 +1301,7 @@
 		06FAE3901B72B9C200B19700 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1321,7 +1321,7 @@
 		06FAE3911B72B9C200B19700 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Naoui Software Labs S. de R.L. de C.V. (TAGM86AK24)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AireNL Widget/Info.plist";
 				INSTALL_PATH = "";

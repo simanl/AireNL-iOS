@@ -257,7 +257,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         
         NSLog(@"STATION : %@", self.selectedStation);
         NSLog(@"MEASUREMENT : %@", self.selectedMeasurement);
-        NSLog(@"FORECAST COUNT : %ld", [self.currentForecasts count]);
+        NSLog(@"FORECAST COUNT : %ld", ((unsigned long)[self.currentForecasts count]));
         
         [self cacheSaveData];
         [self updateScreen];

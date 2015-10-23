@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -930,8 +930,8 @@
                                                                         <constraint firstAttribute="width" constant="13" id="8YH-mH-Wsg"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPERATURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Y-Af-67u">
-                                                                    <rect key="frame" x="3" y="58" width="94" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPERATURE C°" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="R8Y-Af-67u">
+                                                                    <rect key="frame" x="3.5" y="58" width="94" height="17"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="BcY-GH-Ww6"/>
@@ -1151,20 +1151,40 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monterrey, NL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIb-Ff-ZJU">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="30"/>
+                                            <rect key="frame" x="15" y="0.0" width="544" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-mZ-vFm">
+                                            <rect key="frame" x="564" y="6" width="21" height="16"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="8xa-UB-qLB"/>
+                                                <constraint firstAttribute="width" constant="21" id="fN2-QU-ji5"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="sIb-Ff-ZJU" secondAttribute="trailing" constant="15" id="2z5-ri-v5c"/>
                                         <constraint firstItem="sIb-Ff-ZJU" firstAttribute="leading" secondItem="TIb-Rc-H6h" secondAttribute="leading" constant="15" id="6qB-w9-5Lu"/>
+                                        <constraint firstItem="gHa-mZ-vFm" firstAttribute="centerY" secondItem="TIb-Rc-H6h" secondAttribute="centerY" constant="-1" id="9rZ-Cv-LbE"/>
                                         <constraint firstAttribute="bottom" secondItem="sIb-Ff-ZJU" secondAttribute="bottom" id="Rms-wP-9jN"/>
+                                        <constraint firstItem="gHa-mZ-vFm" firstAttribute="centerY" secondItem="TIb-Rc-H6h" secondAttribute="centerY" id="d7u-0q-Z0a"/>
+                                        <constraint firstItem="gHa-mZ-vFm" firstAttribute="baseline" secondItem="sIb-Ff-ZJU" secondAttribute="baseline" id="d8z-DM-xOg"/>
+                                        <constraint firstItem="gHa-mZ-vFm" firstAttribute="leading" secondItem="sIb-Ff-ZJU" secondAttribute="trailing" constant="5" id="ogP-wT-dv5"/>
                                         <constraint firstItem="sIb-Ff-ZJU" firstAttribute="top" secondItem="TIb-Rc-H6h" secondAttribute="top" id="osM-FZ-yYs"/>
+                                        <constraint firstAttribute="trailing" secondItem="gHa-mZ-vFm" secondAttribute="trailing" constant="15" id="qLA-8t-MW6"/>
+                                        <constraint firstItem="gHa-mZ-vFm" firstAttribute="leading" secondItem="TIb-Rc-H6h" secondAttribute="leadingMargin" constant="7" id="qVf-b4-evy"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="d7u-0q-Z0a"/>
+                                            <exclude reference="d8z-DM-xOg"/>
+                                            <exclude reference="qVf-b4-evy"/>
+                                        </mask>
+                                    </variation>
                                     <connections>
                                         <outlet property="locationLabel" destination="sIb-Ff-ZJU" id="A7q-LC-zmB"/>
                                     </connections>
@@ -2489,6 +2509,7 @@
     </scenes>
     <resources>
         <image name="BackgroundNight" width="666" height="444"/>
+        <image name="CameraIcon" width="21" height="16"/>
         <image name="CloseIcon" width="14" height="12"/>
         <image name="GPSIcon" width="22" height="23"/>
         <image name="InfoIcon" width="14" height="14"/>

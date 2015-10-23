@@ -158,8 +158,8 @@
 {
     [self setTitle: self.selectedStation.name];
     
-    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints ?: @(0);
-    [self.imecaAmountLabel setText: [imecaPoints stringValue]];
+    NSNumber *imecaPoints = self.selectedMeasurement.imecaPoints;
+    [self.imecaAmountLabel setText: imecaPoints? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil)];
 }
 
 #pragma mark - CLLocationManager Delegate

@@ -44,7 +44,7 @@
 "PoA-1I-j4f.text" = "Personas extremadamente sensibles a la contaminación: consideren limitar los esfuerzos prolongados al aire libre.";
 
 /* Class = "UILabel"; text = "TEMPERATURE"; ObjectID = "R8Y-Af-67u"; */
-"R8Y-Af-67u.text" = "TEMPERATURA";
+"R8Y-Af-67u.text" = "TEMPERATURA C°";
 
 /* Class = "UILabel"; text = "28"; ObjectID = "U2p-Wc-kx3"; */
 "U2p-Wc-kx3.text" = "28";
