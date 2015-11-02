@@ -8,6 +8,7 @@
 
 #import "ActividadesCollectionViewCell.h"
 
+#import "UIColor+ILColor.h"
 #import "InnerActividadesCollectionViewCell.h"
 
 @interface ActividadesCollectionViewCell () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -29,6 +30,16 @@
 
 - (void)updateCell
 {
+    Measurement *measurement = [self.delegate getSelectedMeasurement];
+    
+    UIColor *color;
+    if ([measurement.imecaPoints integerValue] > 140) {
+        color = [UIColor il_veryBadColor];
+    }else{
+        color = [UIColor il_goodColor];
+    }
+    self.statusView.backgroundColor = color;
+    
     [self.innerCollectionView reloadData];
 }
 
@@ -65,7 +76,13 @@
 - (NSArray *)activityIcons
 {
     if (!_activityIcons) {
-        _activityIcons = @[@"OutdoorsActivityIcon", @"WindowActivityIcon", @"ExerciseActivityIcon", @"AllergyActivityIcon", @"CigarretteActivityIcon", @"HeartActivityIcon", @"GasActivityIcon", @"CarActivityIcon"];
+        _activityIcons = @[@"OutdoorsActivityIcon",
+                           @"WindowActivityIcon",
+                           @"ExerciseActivityIcon",
+                           @"AllergyActivityIcon",
+                           @"HeartActivityIcon",
+                           @"GasActivityIcon",
+                           @"CarActivityIcon"];
     }
     return _activityIcons;
 }
@@ -77,7 +94,6 @@
                               NSLocalizedString(@"ACTIVITY_WINDOWS", nil),
                               NSLocalizedString(@"ACTIVITY_EXERCISE", nil),
                               NSLocalizedString(@"ACTIVITY_ALLERGIES", nil),
-                              NSLocalizedString(@"ACTIVITY_TOBACCO", nil),
                               NSLocalizedString(@"ACTIVITY_HEART", nil),
                               NSLocalizedString(@"ACTIVITY_GAS", nil),
                               NSLocalizedString(@"ACTIVITY_CAR", nil)];

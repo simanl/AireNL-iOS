@@ -80,7 +80,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     [self customizeAppearance];
     [self registerNibs];
 //    [self loadStation]; // This is handled by the 'AppDidBecomeActive notification'
-    
+
 }
 
 - (void)didReceiveMemoryWarning
