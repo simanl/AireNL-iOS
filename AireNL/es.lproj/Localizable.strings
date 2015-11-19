@@ -28,14 +28,23 @@
 "AIR QUALITY" = "CALIDAD DEL AIRE";
 "Air Quality" = "Calidad del Aire";
 
-"ACTIVITY_OUTDOORS" = "Si la calidad del aire es mala, evitar tiempos prolongados de permanencia a la intemperie.";
-"ACTIVITY_WINDOWS" = "Si la calidad del aire es mala, mantener cerradas puertas y ventanas.";
-"ACTIVITY_EXERCISE" = "Si la calidad del aire es mala, no practicar actividades de ejercitación o recreación al aire libre.";
-"ACTIVITY_ALLERGIES" = "Si la calidad del aire es mala, los pacientes con antecedentes de alergias, principalmente asma bronquial, deberán mantenerse en el interior de sus domicilios y abastecerse de los medicamentos que normalmente les receta su médico y utilizan ante la presencia de crisis asmáticas o de broncoespasmo. Estas recomendaciones también aplican en pacientes con enfermedad pulmonar obstructiva crónica o enfisema, o antecedentes de enfermedad cardiaca (infarto o angina).";
-"ACTIVITY_TOBACCO" = "Si la calidad del aire es mala, las personas con el hábito de tabaquismo, deberán abstenerse del consumo de productos de tabaco (cigarrillos, tabaco para pipa, etc.) y otras formas combustibles del tabaco.";
-"ACTIVITY_HEART" = "Si la calidad del aire es mala, en el caso de personas con antecedentes de infarto, enfermedad pulmonar obstructiva crónica o asma, trasladarlos fuera de las zonas de mayor riesgo, a zonas habitacionales donde el riesgo sea menor.";
-"ACTIVITY_GAS" = "Si la calidad del aire es mala, las personas que por su actividad cotidiana están en contacto directo al uso de combustibles sólidos (cocineras, asadores), se recomienda limitarse hasta en tanto pase la alerta.";
-"ACTIVITY_CAR" = "Si la calidad del aire es mala, reducir en la medida de lo posible el uso de vehículos.";
+
+"ACTIVITY_OUTDOORS" = "Durante episodios de mala calidad del aire, adultos y niños con afecciones pulmonares, y adultos con problemas cardiacos deben considerar reducir sus actividades a la intemperie.";
+
+"ACTIVITY_WINDOWS" = "En condiciones de mala calidad del aire mantener dentro de lo posible puertas y ventanas cerradas.";
+
+"ACTIVITY_ALLERGIES" = "En episodios de mala calidad del aire, personas con asma bronquial, enfermedades pulmonares obstructivas crónicas o enfisema pulmonar deben considerar reducir sus actividades al aire libre.";
+
+"ACTIVITY_EXERCISE" = "Durante episodios de mala calidad del aire, evitar la práctica de actividades recreativas y deportivas a la intemperie.";
+
+"ACTIVITY_CAR" = "En episodios de mala calidad del aire, reducir en lo posible el uso de automotores.";
+
+//"ACTIVITY_TOBACCO" = "Si la calidad del aire es mala, las personas con el hábito de tabaquismo, deberán abstenerse del consumo de productos de tabaco (cigarrillos, tabaco para pipa, etc.) y otras formas combustibles del tabaco.";
+
+//"ACTIVITY_HEART" = "Si la calidad del aire es mala, en el caso de personas con antecedentes de infarto, enfermedad pulmonar obstructiva crónica o asma, trasladarlos fuera de las zonas de mayor riesgo, a zonas habitacionales donde el riesgo sea menor.";
+
+//"ACTIVITY_GAS" = "Si la calidad del aire es mala, las personas que por su actividad cotidiana están en contacto directo al uso de combustibles sólidos (cocineras, asadores), se recomienda limitarse hasta en tanto pase la alerta.";
+
 
 "+%lu HOUR" = "+%lu HORA";
 

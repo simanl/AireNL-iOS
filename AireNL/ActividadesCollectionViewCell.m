@@ -78,10 +78,8 @@
     if (!_activityIcons) {
         _activityIcons = @[@"OutdoorsActivityIcon",
                            @"WindowActivityIcon",
-                           @"ExerciseActivityIcon",
                            @"AllergyActivityIcon",
-                           @"HeartActivityIcon",
-                           @"GasActivityIcon",
+                           @"ExerciseActivityIcon",
                            @"CarActivityIcon"];
     }
     return _activityIcons;
@@ -92,10 +90,8 @@
     if (!_iconExplanations) {
         _iconExplanations = @[NSLocalizedString(@"ACTIVITY_OUTDOORS", nil),
                               NSLocalizedString(@"ACTIVITY_WINDOWS", nil),
-                              NSLocalizedString(@"ACTIVITY_EXERCISE", nil),
                               NSLocalizedString(@"ACTIVITY_ALLERGIES", nil),
-                              NSLocalizedString(@"ACTIVITY_HEART", nil),
-                              NSLocalizedString(@"ACTIVITY_GAS", nil),
+                              NSLocalizedString(@"ACTIVITY_EXERCISE", nil),
                               NSLocalizedString(@"ACTIVITY_CAR", nil)];
     }
     return _iconExplanations;

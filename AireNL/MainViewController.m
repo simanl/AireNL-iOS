@@ -762,6 +762,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
     
+    
+    
     if (scrollOffset <= -scrollView.contentInset.top) {
         // BOUNCE PULL BEFORE START
         self.topViewConstraint.constant = 20;
