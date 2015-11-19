@@ -62,7 +62,7 @@
 "gDs-L4-amw.text" = "63";
 
 /* Class = "UILabel"; text = "Fine particulate matter. It is an air pollutant that is a concern for people health when levels are high."; ObjectID = "gIS-c5-YCu"; */
-"gIS-c5-YCu.text" = "Son partículas en suspensión con un diámetro aerodinámico de hasta 2.5 µm, denominadas partículas finas o fracción fina.";
+"gIS-c5-YCu.text" = "Partículas suspendidas con diámetro aerodinámico igual o menor de 2.5 µm, producidas durante los procesos de combustión de vehículos, plantas generadoras de energía, quema de biomasa, incendios forestales y algunos procesos industriales.";
 
 /* Class = "UILabel"; text = "49"; ObjectID = "h09-8l-Jvm"; */
 "h09-8l-Jvm.text" = "49";
@@ -83,7 +83,7 @@
 "lcv-Md-V74.text" = "87";
 
 /* Class = "UILabel"; text = "Particulate matter up to 10 micrometers in size. These particules cause less severe health effects."; ObjectID = "lwW-lo-MGw"; */
-"lwW-lo-MGw.text" = "Son partículas en suspensión con un diámetro aerodinámico de hasta 10 µm, es decir, comprende las fracciones fina y gruesa.";
+"lwW-lo-MGw.text" = "Partículas suspendidas con diámetro aerodinámico igual o menor de 10 µm, producidas principalmente durante actividades de triturado y molienda. En calles y carreteras, los automóviles en movimiento resuspenden las partículas sedimentadas. \n \nLa exposición constante a elevados niveles de PM10 está relacionada con irritación de los ojos, nariz y garganta, tos frecuente y dificultad para respirar. Además de ataques de asma, al corazón y afectaciones a las funciones pulmonares.";
 
 /* Class = "UILabel"; text = "Regular"; ObjectID = "o8r-Tc-pzF"; */
 "o8r-Tc-pzF.text" = "Regular";
@@ -107,4 +107,4 @@
 "zTw-3e-IPu.text" = "PM 2.5";
 
 /* Class = "UILabel"; text = "Natural gas composed of three atoms of oxygen."; ObjectID = "zd7-rD-Tha"; */
-"zd7-rD-Tha.text" = "Gas natural compuesto de tres atomos de oxygeno.";
+"zd7-rD-Tha.text" = "El ozono es un contaminante secundario formado durante reacciones fotoquímicas entre óxidos de nitrógeno y compuestos orgánicos volátiles. \n \nEl ozono puede causar problemas de salud incluyendo tos, dificultad para respirar y afecciones pulmonares. Exposiciones prolongadas a altos niveles de ozono pueden hacer los pulmones más susceptibles a infecciones, agravar problemas en estos, incrementar la frecuencia de ataques de asma e incrementar el riesgo de muerte prematura derivada de problemas del corazón y pulmonares.";

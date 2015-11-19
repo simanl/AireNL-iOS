@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -1982,12 +1982,15 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coarse dust particles are 2.5 to 10 micrometers in diameter. Sources include crushing or grinding operations and dust." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwW-lo-MGw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwW-lo-MGw">
                                                     <rect key="frame" x="20" y="33" width="260" height="84"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="0yb-9r-ogV"/>
                                                     </constraints>
+                                                    <string key="text">Suspended particles with aerodynamic diameter equal or less than 10 µm, produced during crushing or grinding operations and dust stirred up by vehicles on roads.
+
+Constant exposure to high levels of PM10 is related with heart or lung diseases, eyes, nose and throat irritation, coughing and shortness of breath, reduced lung function and asthma and heart attacks.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -2041,12 +2044,15 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fine particules are 2.5 micrometers in diameter or smaller. They are produced from all types of combustion." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIS-c5-YCu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIS-c5-YCu">
                                                     <rect key="frame" x="20" y="33" width="260" height="79"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="sv2-m3-dFi"/>
                                                     </constraints>
+                                                    <string key="text">Suspended particles with aerodynamic diameter equal or less than 2.5 µm, produced during combustion processes including motor vehicles, power plants, residential wood burning, forest fires and some industrial processes.
+
+Frequent exposure to high levels of PM2.5 is associated with heart or lung diseases, eyes, nose and throat irritation, chest tightness and shortness of breath, reduced lung function, and asthma and heart attacks.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -2100,12 +2106,15 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Natural gas composed of three atoms of oxygen." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-rD-Tha">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-rD-Tha">
                                                     <rect key="frame" x="20" y="33" width="260" height="48"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="6Iz-25-ser"/>
                                                     </constraints>
+                                                    <string key="text">Ozone is a secondary pollutant formed by photochemical reactions between nitrogen oxides and volatile organic compounds.
+
+Ozone can cause health problems, including coughing, breathing difficulty, and lung damage. Prolonged exposure to high levels of ozone can make the lungs more susceptible to infection, aggravate lung diseases, increase the frequency of asthma attacks, and increase the risk of early death from heart or lung disease.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
