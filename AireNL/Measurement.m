@@ -35,6 +35,7 @@
     self.windDirection = [attributes dl_objectForKeyWithNil: @"wind_direction"];
     self.windSpeed = [attributes dl_objectForKeyWithNil: @"wind_speed"];
     self.imecaPoints = [attributes dl_objectForKeyWithNil: @"imeca_points"];
+    self.imecaCategory = [attributes dl_objectForKeyWithNil: @"imeca_category"];
     self.precipitation = [attributes dl_objectForKeyWithNil: @"precipitation"];
     self.carbonMonoxide = [attributes dl_objectForKeyWithNil: @"carbon_monoxide"];
     self.nitricOxide = [attributes dl_objectForKeyWithNil: @"nitric_oxide"];
@@ -62,6 +63,7 @@
     self.windDirection = [aDecoder decodeObjectForKey: @"windDirection"];
     self.windSpeed = [aDecoder decodeObjectForKey: @"windSpeed"];
     self.imecaPoints = [aDecoder decodeObjectForKey: @"imecaPoints"];
+    self.imecaCategory = [aDecoder decodeObjectForKey: @"imecaCategory"];
     self.precipitation = [aDecoder decodeObjectForKey: @"precipitation"];
     self.carbonMonoxide = [aDecoder decodeObjectForKey: @"carbonMonoxide"];
     self.nitricOxide = [aDecoder decodeObjectForKey: @"nitricOxide"];
@@ -87,6 +89,7 @@
     [aCoder encodeObject: self.windDirection forKey: @"windDirection"];
     [aCoder encodeObject: self.windSpeed forKey: @"windSpeed"];
     [aCoder encodeObject: self.imecaPoints forKey: @"imecaPoints"];
+    [aCoder encodeObject: self.imecaCategory forKey: @"imecaCategory"];
     [aCoder encodeObject: self.precipitation forKey: @"precipitation"];
     [aCoder encodeObject: self.carbonMonoxide forKey: @"carbonMonoxide"];
     [aCoder encodeObject: self.nitricOxide forKey: @"nitricOxide"];
@@ -105,19 +108,35 @@
 
 - (AirQualityDescriptor)airQuality
 {
-    NSInteger imecaPoints = [self.imecaPoints integerValue];
-    
-    if (imecaPoints <= 130) {
+    if ([self.imecaCategory isEqualToString: @"good"]) {
         return AirQualityDescriptorGood;
-    }else if (imecaPoints > 130 && imecaPoints <= 140) {
+        
+    }else if ([self.imecaCategory isEqualToString: @"regular"]) {
         return AirQualityDescriptorRegular;
-    }else if (imecaPoints > 140 && imecaPoints <= 165) {
+        
+    }else if ([self.imecaCategory isEqualToString: @"bad"]) {
         return AirQualityDescriptorBad;
-    }else if (imecaPoints > 165 && imecaPoints <= 185) {
+        
+    }else if ([self.imecaCategory isEqualToString: @"very_bad"]){
         return AirQualityDescriptorVeryBad;
+        
     }else{
         return AirQualityDescriptorExtremelyBad;
     }
+        
+//    NSInteger imecaPoints = [self.imecaPoints integerValue];
+//    
+//    if (imecaPoints <= 130) {
+//        return AirQualityDescriptorGood;
+//    }else if (imecaPoints > 130 && imecaPoints <= 140) {
+//        return AirQualityDescriptorRegular;
+//    }else if (imecaPoints > 140 && imecaPoints <= 165) {
+//        return AirQualityDescriptorBad;
+//    }else if (imecaPoints > 165 && imecaPoints <= 185) {
+//        return AirQualityDescriptorVeryBad;
+//    }else{
+//        return AirQualityDescriptorExtremelyBad;
+//    }
     
 }
 

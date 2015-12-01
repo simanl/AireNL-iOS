@@ -31,14 +31,7 @@
 - (void)updateCell
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
-    
-    UIColor *color;
-    if ([measurement.imecaPoints integerValue] > 140) {
-        color = [UIColor il_veryBadColor];
-    }else{
-        color = [UIColor il_goodColor];
-    }
-    self.statusView.backgroundColor = color;
+    self.statusView.backgroundColor = [measurement colorForAirQuality];
     
     [self.innerCollectionView reloadData];
 }
