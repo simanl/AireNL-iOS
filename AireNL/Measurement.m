@@ -120,24 +120,12 @@
     }else if ([self.imecaCategory isEqualToString: @"very_bad"]){
         return AirQualityDescriptorVeryBad;
         
-    }else{
+    }else if ([self.imecaCategory isEqualToString: @"extremely_bad"]){
         return AirQualityDescriptorExtremelyBad;
-    }
         
-//    NSInteger imecaPoints = [self.imecaPoints integerValue];
-//    
-//    if (imecaPoints <= 130) {
-//        return AirQualityDescriptorGood;
-//    }else if (imecaPoints > 130 && imecaPoints <= 140) {
-//        return AirQualityDescriptorRegular;
-//    }else if (imecaPoints > 140 && imecaPoints <= 165) {
-//        return AirQualityDescriptorBad;
-//    }else if (imecaPoints > 165 && imecaPoints <= 185) {
-//        return AirQualityDescriptorVeryBad;
-//    }else{
-//        return AirQualityDescriptorExtremelyBad;
-//    }
-    
+    }else{
+        return AirQualityDescriptorNotAvailable;
+    }
 }
 
 - (NSString *)stringForAirQuality
@@ -159,17 +147,13 @@
             return NSLocalizedString(@"Extremely Bad", nil);
             break;
         default:
-            return nil;
+            return NSLocalizedString(@"Not Available", nil);
             break;
     }
 }
 
 - (UIColor *)colorForAirQuality
 {
-    if (!self.imecaPoints) {
-        return [UIColor il_goodColor];
-    }
-    
     switch ([self airQuality]) {
         case AirQualityDescriptorGood:
             return [UIColor il_goodColor];
@@ -187,7 +171,7 @@
             return [UIColor il_extremelyBadColor];
             break;
         default:
-            return nil;
+            return [UIColor il_goodColor];
             break;
     }
 }
@@ -223,7 +207,7 @@
             break;
         }
         default:
-            return nil;
+            return [UIImage imageNamed: @"WaypointIconGood"];
             break;
     }
 }

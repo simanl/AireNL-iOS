@@ -14,7 +14,8 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
     AirQualityDescriptorRegular,
     AirQualityDescriptorBad,
     AirQualityDescriptorVeryBad,
-    AirQualityDescriptorExtremelyBad
+    AirQualityDescriptorExtremelyBad,
+    AirQualityDescriptorNotAvailable
 };
 
 @interface Measurement : NSObject <NSCoding>
@@ -47,9 +48,6 @@ typedef NS_ENUM(NSInteger, AirQualityDescriptor){
 @property (nonatomic) NSNumber *respirableParticles;
 
 @property (nonatomic) NSNumber *suspendedParticulateMatter;
-
-//@property (nonatomic) NSNumber *respirableSuspendedParticles;
-//@property (nonatomic) NSNumber *fineParticles;
 
 // GENERATED VALUES
 

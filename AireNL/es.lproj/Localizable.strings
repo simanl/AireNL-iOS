@@ -23,27 +23,46 @@
 "Bad" = "Mala";
 "Very Bad" = "Muy Mala";
 "Extremely Bad" = "Extremadamente Mala";
+"Not Available" = "No Disponible";
 
 "Measurement Stations" = "Estaciones de Medicion";
 "AIR QUALITY" = "CALIDAD DEL AIRE";
 "Air Quality" = "Calidad del Aire";
 
 
-"ACTIVITY_OUTDOORS" = "Durante episodios de mala calidad del aire, adultos y niños con afecciones pulmonares, y adultos con problemas cardiacos deben considerar reducir sus actividades a la intemperie.";
 
-"ACTIVITY_WINDOWS" = "En condiciones de mala calidad del aire mantener dentro de lo posible puertas y ventanas cerradas.";
+"ACTIVITY_OUTDOORS" = "Puedes realizar actividades al aire libre";
 
-"ACTIVITY_ALLERGIES" = "En episodios de mala calidad del aire, personas con asma bronquial, enfermedades pulmonares obstructivas crónicas o enfisema pulmonar deben considerar reducir sus actividades al aire libre.";
+"ACTIVITY_LIMIT_OUTDOORS" = "Limita las actividades al aire libre";
 
-"ACTIVITY_EXERCISE" = "Durante episodios de mala calidad del aire, evitar la práctica de actividades recreativas y deportivas a la intemperie.";
+"ACTIVITY_NO_OUTDOORS" = "Evita las actividades al aire libre";
 
-"ACTIVITY_CAR" = "En episodios de mala calidad del aire, reducir en lo posible el uso de automotores.";
 
-//"ACTIVITY_TOBACCO" = "Si la calidad del aire es mala, las personas con el hábito de tabaquismo, deberán abstenerse del consumo de productos de tabaco (cigarrillos, tabaco para pipa, etc.) y otras formas combustibles del tabaco.";
+"ACTIVITY_EXERCISE" = "Puedes ejercitarte al aire libre";
 
-//"ACTIVITY_HEART" = "Si la calidad del aire es mala, en el caso de personas con antecedentes de infarto, enfermedad pulmonar obstructiva crónica o asma, trasladarlos fuera de las zonas de mayor riesgo, a zonas habitacionales donde el riesgo sea menor.";
+"ACTIVITY_LIMIT_EXERCISE" = "Limita el tiempo para ejercitarte al aire libre";
 
-//"ACTIVITY_GAS" = "Si la calidad del aire es mala, las personas que por su actividad cotidiana están en contacto directo al uso de combustibles sólidos (cocineras, asadores), se recomienda limitarse hasta en tanto pase la alerta.";
+"ACTIVITY_NO_EXERCISE" = "Evita ejercitarte al aire libre";
+
+
+"ACTIVITY_SENSIBLE" = "Sin riesgo para grupos sensibles";
+
+"ACTIVITY_LIMIT_SENSIBLE" = "Personas extremadamente sensibles limitar actividades al aire libre";
+
+"ACTIVITY_NO_SENSIBLE" = "Grupos sensibles permanecer en interiores";
+
+
+"ACTIVITY_LIMIT_CAR" = "Limita el uso de vehículos automotores";
+
+"ACTIVITY_NO_CAR" = "No uses vehículos automotores a menos que sea necesario";
+
+
+"ACTIVITY_WINDOW" = "Mantén cerradas puertas y ventanas";
+
+"ACTIVITY_HEART" = "Acude al médico si presentas síntomas de enfermedades respiratorias o cardiovasculares";
+
+"ACTIVITY_NO_FUEL" = "Evita hacer fogatas y el uso de combustibles sólidos (carbón y leña)";
+
 
 
 "+%lu HOUR" = "+%lu HORA";

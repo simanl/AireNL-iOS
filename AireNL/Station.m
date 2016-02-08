@@ -64,18 +64,6 @@
     [aCoder encodeObject: self.lastMeasurementID forKey: @"lastMeasurementID"];
 }
 
-//+ (NSDictionary *)JSONKeyPathsByPropertyKey
-//{
-//    return @{
-//         @"stationID" : @"id",
-//         @"code" : @"attributes.code",
-//         @"name" : @"attributes.name",
-//         @"shortName" : @"attributes.short_name",
-//         @"coordinateString" : @"attributes.latlon",
-//         @"lastMeasurementID" : @"relationships.last_measurement.data.id"
-//    };
-//}
-
 #pragma mark - Public API
 
 - (CLLocationCoordinate2D)coordinateFromString

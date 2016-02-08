@@ -28,19 +28,39 @@
 "AIR QUALITY" = "AIR QUALITY";
 
 
-"ACTIVITY_OUTDOORS" = "During bad air quality episodes, adults and children with lung problems, and adults with heart problems should consider reducing outdoors activities.";
 
-"ACTIVITY_WINDOWS" = "During bad air quality episodes keep windows and doors closed if possible.";
+"ACTIVITY_OUTDOORS" = "Puedes realizar actividades al aire libre";
 
-"ACTIVITY_ALLERGIES" = "Adults and children experience asthma and lung diseases should consider reducing outdoors activities.";
+"ACTIVITY_LIMIT_OUTDOORS" = "Limita las actividades al aire libre";
 
-"ACTIVITY_EXERCISE" = "Adults and children should avoid physical activities during bad air quality conditions.";
+"ACTIVITY_NO_OUTDOORS" = "Evita las actividades al aire libre";
 
-"ACTIVITY_CAR" = "During bad air quality episodes, people should consider reducing the automobiles use.";
 
-//"ACTIVITY_TOBACCO" = "If air quality is bad, people who smoke any kind of tobacco should abstain from doing so.";
-//"ACTIVITY_HEART" = "If air quality is bad, people with a history of heart problems should stay indoors or in low risk zones.";
-//"ACTIVITY_GAS" = "If air quality is bad, people who use fuel, like cooks, should abstain from doing so until air quality improves.";
+"ACTIVITY_EXERCISE" = "Puedes ejercitarte al aire libre";
+
+"ACTIVITY_LIMIT_EXERCISE" = "Limita el tiempo para ejercitarte al aire libre";
+
+"ACTIVITY_NO_EXERCISE" = "Evita ejercitarte al aire libre";
+
+
+"ACTIVITY_SENSIBLE" = "Sin riesgo para grupos sensibles";
+
+"ACTIVITY_LIMIT_SENSIBLE" = "Personas extremadamente sensibles limitar actividades al aire libre";
+
+"ACTIVITY_NO_SENSIBLE" = "Grupos sensibles permanecer en interiores";
+
+
+"ACTIVITY_LIMIT_CAR" = "Limita el uso de vehículos automotores";
+
+"ACTIVITY_NO_CAR" = "No uses vehículos automotores a menos que sea necesario";
+
+
+"ACTIVITY_WINDOW" = "Mantén cerradas puertas y ventanas";
+
+"ACTIVITY_HEART" = "Acude al médico si presentas síntomas de enfermedades respiratorias o cardiovasculares";
+
+"ACTIVITY_NO_FUEL" = "Evita hacer fogatas y el uso de combustibles sólidos (carbón y leña)";
+
 
 
 "+%lu HOUR" = "+%lu HOUR";
