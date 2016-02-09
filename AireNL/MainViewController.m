@@ -808,7 +808,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)showInfoScreenForActivityWithText:(NSString *)text
 {
-    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 150.0f infoText: text];
+    [self showInfoScreenForControllerWithName: @"actividadesInfoViewController" height: 120.0f infoText: text];
 }
 
 - (void)showInfoScreenForControllerWithName:(NSString *)name height:(CGFloat)height infoText:(NSString *)infoText

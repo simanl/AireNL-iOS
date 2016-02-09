@@ -33,7 +33,7 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    self.activities = [ActivityFactory activitiesForAirqualityDescriptor: [measurement airQuality]];
+    self.activities = [ActivityFactory activitiesForAirqualityDescriptor: [measurement airQuality]]; //AirQualityDescriptorExtremelyBad
 
     [self.innerCollectionView reloadData];
 }
