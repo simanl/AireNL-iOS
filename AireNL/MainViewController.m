@@ -452,6 +452,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 {
     self.cellWidths = nil;
     [self.collectionView.collectionViewLayout invalidateLayout];
+    [self.collectionView reloadData];
 }
 
 - (void)setupInsetAndScrollCollectionViewWithAnimation:(BOOL)animation
