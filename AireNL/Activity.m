@@ -99,13 +99,13 @@
             return [UIImage imageNamed: @"ExerciseNoIcon"];
             break;
         case ActivityTypeSensible:
-            return [UIImage imageNamed: @""];
+            return [UIImage imageNamed: @"SensibleIcon"];
             break;
         case ActivityTypeLimitSensible:
-            return [UIImage imageNamed: @""];
+            return [UIImage imageNamed: @"SensibleLimitIcon"];
             break;
         case ActivityTypeNoSensible:
-            return [UIImage imageNamed: @""];
+            return [UIImage imageNamed: @"SensibleNoIcon"];
             break;
         case ActivityTypeLimitCar:
             return [UIImage imageNamed: @"CarLimitIcon"];
@@ -117,7 +117,7 @@
             return [UIImage imageNamed: @"WindowIcon"];
             break;
         case ActivityTypeHeart:
-            return [UIImage imageNamed: @"HeartIcon"];
+            return [UIImage imageNamed: @"HeartLimitIcon"];
             break;
         case ActivityTypeNoFuel:
             return [UIImage imageNamed: @"FuelNoIcon"];

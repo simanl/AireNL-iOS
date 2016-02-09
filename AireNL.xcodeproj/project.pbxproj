@@ -50,6 +50,7 @@
 		06D367C51B542615009E9D47 /* AireNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367C41B542615009E9D47 /* AireNLTests.m */; };
 		06D367D51B54564D009E9D47 /* UIColor+ILColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D367D41B54564D009E9D47 /* UIColor+ILColor.m */; };
 		06D4BFD41C69505200095BF5 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D4BFD31C69505200095BF5 /* Activity.m */; };
+		06D4BFD71C6A5C6D00095BF5 /* ActivityFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D4BFD61C6A5C6D00095BF5 /* ActivityFactory.m */; };
 		06D5833F1BBA17240055ABCD /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; };
 		06D583401BBA172C0055ABCD /* NSDictionary+WithoutNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 0662A5941BB9F98900425AE6 /* NSDictionary+WithoutNSNull.m */; };
 		06D8BA6C1B74106B007462A4 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D8BA6B1B74106B007462A4 /* InterfaceController.m */; };
@@ -211,6 +212,8 @@
 		06D367D41B54564D009E9D47 /* UIColor+ILColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ILColor.m"; sourceTree = "<group>"; };
 		06D4BFD21C69505200095BF5 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
 		06D4BFD31C69505200095BF5 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		06D4BFD51C6A5C6D00095BF5 /* ActivityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityFactory.h; sourceTree = "<group>"; };
+		06D4BFD61C6A5C6D00095BF5 /* ActivityFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityFactory.m; sourceTree = "<group>"; };
 		06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AireNL WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D8BA681B74106B007462A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D8BA691B74106B007462A4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -436,8 +439,7 @@
 				06AA94CB1BA779E900326F16 /* Measurement.m */,
 				0680B68F1BC2E3FB00522D6B /* Forecast.h */,
 				0680B6901BC2E3FB00522D6B /* Forecast.m */,
-				06D4BFD21C69505200095BF5 /* Activity.h */,
-				06D4BFD31C69505200095BF5 /* Activity.m */,
+				06D4BFD81C6A5C7400095BF5 /* Activities */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -494,6 +496,17 @@
 				0607DE561B8FBDE6006E9A1A /* Localizable.strings */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		06D4BFD81C6A5C7400095BF5 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				06D4BFD21C69505200095BF5 /* Activity.h */,
+				06D4BFD31C69505200095BF5 /* Activity.m */,
+				06D4BFD51C6A5C6D00095BF5 /* ActivityFactory.h */,
+				06D4BFD61C6A5C6D00095BF5 /* ActivityFactory.m */,
+			);
+			name = Activities;
 			sourceTree = "<group>";
 		};
 		06D8BA661B74106B007462A4 /* AireNL WatchKit Extension */ = {
@@ -864,6 +877,7 @@
 				06A8C6631B6FD45D00E42EE1 /* ContaminantesCollectionViewCell.m in Sources */,
 				06D9CFD01BB9AC7C003E171B /* InnerActividadesCollectionViewCell.m in Sources */,
 				0657530A1B5EBB2C00FF226C /* MapViewController.m in Sources */,
+				06D4BFD71C6A5C6D00095BF5 /* ActivityFactory.m in Sources */,
 				06D367AE1B542615009E9D47 /* AppDelegate.m in Sources */,
 				06AA94D21BA8752000326F16 /* APIResults.m in Sources */,
 				06D367AB1B542615009E9D47 /* main.m in Sources */,
