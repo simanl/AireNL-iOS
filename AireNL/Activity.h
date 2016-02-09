@@ -25,6 +25,9 @@ typedef NS_ENUM(NSInteger, ActivityType)
     
     ActivityTypeLimitCar,
     ActivityTypeNoCar,
+    
+    ActivityTypeLimitSmoking,
+    ActivityTypeNoSmoking,
 
     ActivityTypeWindow,
     ActivityTypeHeart,

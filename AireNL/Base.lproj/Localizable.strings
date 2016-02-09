@@ -55,6 +55,11 @@
 "ACTIVITY_NO_CAR" = "No uses vehículos automotores a menos que sea necesario";
 
 
+"ACTIVITY_LIMIT_SMOKING" = "Si eres fumador, limita el consumo del tabaco";
+
+"ACTIVITY_NO_SMOKING" = "No fumar";
+
+
 "ACTIVITY_WINDOW" = "Mantén cerradas puertas y ventanas";
 
 "ACTIVITY_HEART" = "Acude al médico si presentas síntomas de enfermedades respiratorias o cardiovasculares";

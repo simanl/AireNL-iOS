@@ -13,7 +13,7 @@
 
 #import "ActivityFactory.h"
 
-@interface ActividadesCollectionViewCell () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ActividadesCollectionViewCell () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic) NSArray *activities;
 
@@ -33,8 +33,7 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    self.statusView.backgroundColor = [measurement colorForAirQuality];
-    self.activities = [ActivityFactory activitiesForAirqualityDescriptor: AirQualityDescriptorExtremelyBad];
+    self.activities = [ActivityFactory activitiesForAirqualityDescriptor: [measurement airQuality]];
 
     [self.innerCollectionView reloadData];
 }
@@ -70,6 +69,28 @@
         Activity *activity = self.activities[indexPath.row];
         [self.delegate actividadesDidSelectInfoWithText: [activity description]];
     }
+}
+
+#pragma mark - UICollectionView Delegate Flow Layout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger items = self.activities.count;
+    NSInteger itemWidth = 49;
+    CGFloat totalItemsWidth = itemWidth * items;
+
+    NSInteger margin = 10;
+    CGFloat totalMarginsWidth = margin * (items + 1);
+    
+    CGFloat collectionWidth = CGRectGetWidth(collectionView.bounds);
+    
+    if (totalItemsWidth < collectionWidth) {
+        CGFloat newWidth = (collectionWidth - totalMarginsWidth) / items;
+        return CGSizeMake(newWidth, 58);
+    }else{
+        return CGSizeMake(49, 58);
+    }
+    
 }
 
 @end

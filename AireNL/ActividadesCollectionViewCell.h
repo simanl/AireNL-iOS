@@ -13,6 +13,5 @@
 @interface ActividadesCollectionViewCell : UICollectionViewCell <ResultsDelegateSettable, ResultsCellUpdateable>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *innerCollectionView;
-@property (weak, nonatomic) IBOutlet UIView *statusView;
 
 @end

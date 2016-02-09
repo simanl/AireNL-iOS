@@ -63,6 +63,12 @@
         case ActivityTypeNoCar:
             return NSLocalizedString(@"ACTIVITY_NO_CAR", nil);
             break;
+        case ActivityTypeLimitSmoking:
+            return NSLocalizedString(@"ACTIVITY_LIMIT_SMOKING", nil);
+            break;
+        case ActivityTypeNoSmoking:
+            return NSLocalizedString(@"ACTIVITY_NO_SMOKING", nil);
+            break;
         case ActivityTypeWindow:
             return NSLocalizedString(@"ACTIVITY_WINDOW", nil);
             break;
@@ -109,6 +115,12 @@
             break;
         case ActivityTypeLimitCar:
             return [UIImage imageNamed: @"CarLimitIcon"];
+            break;
+        case ActivityTypeLimitSmoking:
+            return [UIImage imageNamed: @"SmokingLimitIcon"];
+            break;
+        case ActivityTypeNoSmoking:
+            return [UIImage imageNamed: @"SmokingNoIcon"];
             break;
         case ActivityTypeNoCar:
             return [UIImage imageNamed: @"CarNoIcon"];

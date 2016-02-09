@@ -72,8 +72,9 @@
     Activity *heart = [[Activity alloc] initWithActivityType: ActivityTypeHeart];
     Activity *limitCar = [[Activity alloc] initWithActivityType: ActivityTypeLimitCar];
     Activity *noFuel = [[Activity alloc] initWithActivityType: ActivityTypeNoFuel];
+    Activity *limitSmoking = [[Activity alloc] initWithActivityType: ActivityTypeLimitSmoking];
     
-    return @[noExercise, noOutdoors, window, noSensible, heart, limitCar, noFuel];
+    return @[noExercise, noOutdoors, window, noSensible, heart, limitCar, noFuel, limitSmoking];
 }
 
 + (NSArray<Activity *> *)extremelyBadActivities
@@ -85,8 +86,9 @@
     Activity *heart = [[Activity alloc] initWithActivityType: ActivityTypeHeart];
     Activity *limitCar = [[Activity alloc] initWithActivityType: ActivityTypeLimitCar];
     Activity *noFuel = [[Activity alloc] initWithActivityType: ActivityTypeNoFuel];
+    Activity *noSmoking = [[Activity alloc] initWithActivityType: ActivityTypeNoSmoking];
     
-    return  @[noExercise, noOutdoors, window, noSensible, heart, limitCar, noFuel];
+    return  @[noExercise, noOutdoors, window, noSensible, heart, limitCar, noFuel, noSmoking];
 }
 
 @end

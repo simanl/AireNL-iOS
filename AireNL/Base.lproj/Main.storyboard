@@ -205,6 +205,15 @@
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vDW-Yz-CP0">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="58"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="58" id="O8C-MQ-SgF"/>
+                                                                                    <constraint firstAttribute="width" constant="49" id="iut-9G-YGx"/>
+                                                                                </constraints>
+                                                                                <variation key="default">
+                                                                                    <mask key="constraints">
+                                                                                        <exclude reference="O8C-MQ-SgF"/>
+                                                                                    </mask>
+                                                                                </variation>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -212,38 +221,31 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="trailing" secondItem="vDW-Yz-CP0" secondAttribute="trailing" id="6cE-OW-LNi"/>
                                                                         <constraint firstItem="vDW-Yz-CP0" firstAttribute="top" secondItem="tJQ-7Q-XHV" secondAttribute="top" id="GQa-WB-QFn"/>
+                                                                        <constraint firstItem="vDW-Yz-CP0" firstAttribute="leading" secondItem="tJQ-7Q-XHV" secondAttribute="leading" id="JaL-tN-obb"/>
                                                                         <constraint firstItem="vDW-Yz-CP0" firstAttribute="leading" secondItem="tJQ-7Q-XHV" secondAttribute="leading" id="Xkp-xe-DjN"/>
+                                                                        <constraint firstItem="vDW-Yz-CP0" firstAttribute="centerX" secondItem="tJQ-7Q-XHV" secondAttribute="centerX" id="jGA-G2-V0y"/>
                                                                         <constraint firstAttribute="bottom" secondItem="vDW-Yz-CP0" secondAttribute="bottom" id="qCF-3w-6jc"/>
                                                                     </constraints>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="6cE-OW-LNi"/>
+                                                                            <exclude reference="JaL-tN-obb"/>
+                                                                            <exclude reference="Xkp-xe-DjN"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                     <connections>
                                                                         <outlet property="activityImageView" destination="vDW-Yz-CP0" id="obO-48-Nhk"/>
                                                                     </connections>
                                                                 </collectionViewCell>
                                                             </cells>
                                                         </collectionView>
-                                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCf-ew-BhI">
-                                                            <rect key="frame" x="275" y="8" width="16" height="16"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.792156862745098" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="16" id="5p0-uN-vYc"/>
-                                                                <constraint firstAttribute="height" constant="16" id="82B-Lp-ay8"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="8"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="58i-w9-WNT" firstAttribute="top" secondItem="ktJ-B3-cu6" secondAttribute="bottom" constant="8" id="16Y-AW-SqH"/>
-                                                        <constraint firstItem="YCf-ew-BhI" firstAttribute="centerY" secondItem="ktJ-B3-cu6" secondAttribute="centerY" id="VCz-k8-Wcs"/>
                                                         <constraint firstItem="ktJ-B3-cu6" firstAttribute="top" secondItem="C0S-uv-dma" secondAttribute="top" constant="8" id="Wcy-xL-Pyz"/>
                                                         <constraint firstAttribute="trailing" secondItem="ktJ-B3-cu6" secondAttribute="trailing" priority="999" constant="30" id="Yv8-Ot-AmL"/>
-                                                        <constraint firstItem="YCf-ew-BhI" firstAttribute="centerY" secondItem="C0S-uv-dma" secondAttribute="centerY" id="bQA-nw-zp4"/>
                                                         <constraint firstItem="ktJ-B3-cu6" firstAttribute="leading" secondItem="C0S-uv-dma" secondAttribute="leading" constant="30" id="eYl-yq-uam"/>
-                                                        <constraint firstAttribute="trailing" secondItem="YCf-ew-BhI" secondAttribute="trailing" constant="8" id="iPX-Lh-pfR"/>
                                                         <constraint firstAttribute="trailing" secondItem="58i-w9-WNT" secondAttribute="trailing" id="iqx-gX-D0v"/>
                                                         <constraint firstItem="58i-w9-WNT" firstAttribute="leading" secondItem="C0S-uv-dma" secondAttribute="leading" id="oWe-zv-nar"/>
                                                         <constraint firstAttribute="centerX" secondItem="ktJ-B3-cu6" secondAttribute="centerX" id="sC3-2V-FaX"/>
@@ -257,7 +259,6 @@
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="sC3-2V-FaX"/>
-                                                            <exclude reference="bQA-nw-zp4"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -273,7 +274,6 @@
                                         <size key="customSize" width="329" height="128"/>
                                         <connections>
                                             <outlet property="innerCollectionView" destination="58i-w9-WNT" id="0Er-w0-hXs"/>
-                                            <outlet property="statusView" destination="YCf-ew-BhI" id="zDN-Ka-X9e"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contaminantesCell" id="Ntm-T9-0kl" customClass="ContaminantesCollectionViewCell">
