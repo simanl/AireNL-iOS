@@ -20,10 +20,10 @@
 "8tE-TH-mHA.text" = "VIENTO KM/H";
 
 /* Class = "UILabel"; text = "You can perform any outdoor activities."; ObjectID = "8vb-hs-pHd"; */
-"8vb-hs-pHd.text" = "Se puede realizar cualquier actividad al aire libre.";
+"8vb-hs-pHd.text" = "Ningun riesgo a la salud.";
 
 /* Class = "UILabel"; text = "General population: abstain from any outdoor efforts."; ObjectID = "GAs-Gb-iLX"; */
-"GAs-Gb-iLX.text" = "Población en general: suspender esfuerzos al aire libre.";
+"GAs-Gb-iLX.text" = "Efectos graves a la salud de la población en general. Se pueden presentar complicaciones en niños, adultos mayores y personas con enfermedades cardiovasculares o respiratorias.";
 
 /* Class = "UILabel"; text = "120"; ObjectID = "H86-2S-tQw"; */
 "H86-2S-tQw.text" = "120";
@@ -32,7 +32,7 @@
 "M4P-2I-82b.text" = "Buena";
 
 /* Class = "UILabel"; text = "Kids, older adults, people who are doing intense physical activities or who have breathing or heart problems: limit prolonged outdoor efforts."; ObjectID = "MXs-Ef-mzH"; */
-"MXs-Ef-mzH.text" = "Niños, adultos mayores, quienes realicen actividad física intensa o con enfermedades respiratorias y cardiovasculares: limitar esfuerzos prolongados al aire libre.";
+"MXs-Ef-mzH.text" = "Posibles efectos adversos a la salud, en particular niños, adultos mayores y personas con enfermedades cardiovasculares o respiratorias.";
 
 /* Class = "UILabel"; text = "Bad"; ObjectID = "O7s-a7-26B"; */
 "O7s-a7-26B.text" = "Mala";
@@ -41,7 +41,7 @@
 "OPX-69-ENw.text" = "Muy Mala";
 
 /* Class = "UILabel"; text = "For people who are sensitive to contamination: consider limiting prolonged outdoor efforts."; ObjectID = "PoA-1I-j4f"; */
-"PoA-1I-j4f.text" = "Personas extremadamente sensibles a la contaminación: consideren limitar los esfuerzos prolongados al aire libre.";
+"PoA-1I-j4f.text" = "Posibles molestias en niños, adultos mayores y personas con enfermedades respiratorias o cardiovasculares.";
 
 /* Class = "UILabel"; text = "TEMPERATURE"; ObjectID = "R8Y-Af-67u"; */
 "R8Y-Af-67u.text" = "TEMPERATURA C°";
@@ -71,7 +71,7 @@
 "ij7-oY-aRX.text" = "O3";
 
 /* Class = "UILabel"; text = "Kids, older adults, people who are doing intense physical activities or who have breathing or heart problems: avoid prolonged outdoor efforts."; ObjectID = "jTe-TN-RMY"; */
-"jTe-TN-RMY.text" = "Niños, adultos mayores, quienes realicen actividad física intensa o con enfermedades respiratorias y cardiovasculares: evitar el esfuerzo prolongado al aire libre.";
+"jTe-TN-RMY.text" = "Efectos adversos a la salud de la población en general. Se agravan los síntomas en niños, adultos mayores y personas con enfermedades cardiovasculares o respiratorias.";
 
 /* Class = "UILabel"; text = "MORE INFORMATION"; ObjectID = "kqo-dA-oWL"; */
 "kqo-dA-oWL.text" = "MÁS INFORMACIÓN";
