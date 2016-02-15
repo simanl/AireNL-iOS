@@ -29,42 +29,42 @@
 
 
 
-"ACTIVITY_OUTDOORS" = "Puedes realizar actividades al aire libre";
+"ACTIVITY_OUTDOORS" = "You may perform any outdoor activities";
 
-"ACTIVITY_LIMIT_OUTDOORS" = "Limita las actividades al aire libre";
+"ACTIVITY_LIMIT_OUTDOORS" = "Limit outdoor activities";
 
-"ACTIVITY_NO_OUTDOORS" = "Evita las actividades al aire libre";
-
-
-"ACTIVITY_EXERCISE" = "Puedes ejercitarte al aire libre";
-
-"ACTIVITY_LIMIT_EXERCISE" = "Limita el tiempo para ejercitarte al aire libre";
-
-"ACTIVITY_NO_EXERCISE" = "Evita ejercitarte al aire libre";
+"ACTIVITY_NO_OUTDOORS" = "Avoid outdoor activities";
 
 
-"ACTIVITY_SENSIBLE" = "Sin riesgo para grupos sensibles";
+"ACTIVITY_EXERCISE" = "You may exercise outdoors";
 
-"ACTIVITY_LIMIT_SENSIBLE" = "Personas extremadamente sensibles limitar actividades al aire libre";
+"ACTIVITY_LIMIT_EXERCISE" = "Limit your outdoor exercise time";
 
-"ACTIVITY_NO_SENSIBLE" = "Grupos sensibles permanecer en interiores";
-
-
-"ACTIVITY_LIMIT_CAR" = "Limita el uso de vehículos automotores";
-
-"ACTIVITY_NO_CAR" = "No uses vehículos automotores a menos que sea necesario";
+"ACTIVITY_NO_EXERCISE" = "Avoid outdoor exercise";
 
 
-"ACTIVITY_LIMIT_SMOKING" = "Si eres fumador, limita el consumo del tabaco";
+"ACTIVITY_SENSIBLE" = "No risk for sensible groups";
 
-"ACTIVITY_NO_SMOKING" = "No fumar";
+"ACTIVITY_LIMIT_SENSIBLE" = "Extremely sensible people should limit outdoor activities";
+
+"ACTIVITY_NO_SENSIBLE" = "Sensible people should remain indoors";
 
 
-"ACTIVITY_WINDOW" = "Mantén cerradas puertas y ventanas";
+"ACTIVITY_LIMIT_CAR" = "Limit vehicle use";
 
-"ACTIVITY_HEART" = "Acude al médico si presentas síntomas de enfermedades respiratorias o cardiovasculares";
+"ACTIVITY_NO_CAR" = "Do not use vehicles, unless it is absolutely necessary";
 
-"ACTIVITY_NO_FUEL" = "Evita hacer fogatas y el uso de combustibles sólidos (carbón y leña)";
+
+"ACTIVITY_LIMIT_SMOKING" = "Limit tobacco smoking";
+
+"ACTIVITY_NO_SMOKING" = "Do not smoke tobacco products";
+
+
+"ACTIVITY_WINDOW" = "Keep doors and windows closed";
+
+"ACTIVITY_HEART" = "See your doctor if you present respiratory or cardiovascular problems";
+
+"ACTIVITY_NO_FUEL" = "Avoid bonfires and fuel use";
 
 
 

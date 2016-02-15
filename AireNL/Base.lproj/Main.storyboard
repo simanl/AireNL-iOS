@@ -1341,7 +1341,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can perform any outdoor activities." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vb-hs-pHd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No health risk." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vb-hs-pHd">
                                                     <rect key="frame" x="54" y="33" width="226" height="38.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="VQA-1X-8Md"/>
@@ -1435,11 +1435,12 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For people who are sensitive to contamination: consider limiting prolonged outdoor efforts." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoA-1I-j4f">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoA-1I-j4f">
                                                     <rect key="frame" x="54" y="33" width="226" height="79"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="Ehd-z0-Sei"/>
                                                     </constraints>
+                                                    <string key="text">Adults and children with lung  problems, and adults with  heart problems, who  experience symptoms, should  consider reducing strenuous  physical activity, particularly  outdoors.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1509,7 +1510,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="ggt-eT-xhc"/>
                                                     </constraints>
-                                                    <string key="text">Kids, older adults, people who are doing intense physical activities or who have breathing or heart problems: limit prolonged outdoor efforts.</string>
+                                                    <mutableString key="text">Adults and children with lung problems, and adults with heart problems, should reduce strenuous physical exertion, particularly outdoors, and  particularly if they experience symptoms. People with asthma  may find they need to use their reliever inhaler more often. Older people should also reduce physical exertion.</mutableString>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1629,7 +1630,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="n17-wU-m1G"/>
                                                     </constraints>
-                                                    <string key="text">Kids, older adults, people who are doing intense physical activities or who have breathing or heart problems: avoid prolonged outdoor efforts.</string>
+                                                    <string key="text">Adults and children with lung problems, adults with heart problems, and older people, should avoid strenuous physical  activity. People with asthma may find they need to use their reliever inhaler more often.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1719,11 +1720,12 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General population: abstain from any outdoor efforts." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-Gb-iLX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-Gb-iLX">
                                                     <rect key="frame" x="54" y="33" width="226" height="39.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="gVV-Zo-Qi2"/>
                                                     </constraints>
+                                                    <string key="text">Adults and children with lung problems, adults with heart problems, and older people, should avoid strenuous physical  activity. People with asthma may find they need to use their reliever inhaler more often.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>

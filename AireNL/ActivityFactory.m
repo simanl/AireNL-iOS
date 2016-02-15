@@ -84,7 +84,7 @@
     Activity *window = [[Activity alloc] initWithActivityType: ActivityTypeWindow];
     Activity *noSensible = [[Activity alloc] initWithActivityType: ActivityTypeNoSensible];
     Activity *heart = [[Activity alloc] initWithActivityType: ActivityTypeHeart];
-    Activity *limitCar = [[Activity alloc] initWithActivityType: ActivityTypeLimitCar];
+    Activity *limitCar = [[Activity alloc] initWithActivityType: ActivityTypeNoCar];
     Activity *noFuel = [[Activity alloc] initWithActivityType: ActivityTypeNoFuel];
     Activity *noSmoking = [[Activity alloc] initWithActivityType: ActivityTypeNoSmoking];
     
