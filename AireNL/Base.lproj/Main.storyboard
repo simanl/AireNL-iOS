@@ -1440,7 +1440,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="Ehd-z0-Sei"/>
                                                     </constraints>
-                                                    <string key="text">Adults and children with lung  problems, and adults with  heart problems, who  experience symptoms, should  consider reducing strenuous  physical activity, particularly  outdoors.</string>
+                                                    <string key="text">Adults and children with lung  problems, and adults with  heart problems, who  experience symptoms, should  consider reducing strenuous physical activity, particularly outdoors.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1510,7 +1510,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="ggt-eT-xhc"/>
                                                     </constraints>
-                                                    <mutableString key="text">Adults and children with lung problems, and adults with heart problems, should reduce strenuous physical exertion, particularly outdoors, and  particularly if they experience symptoms. People with asthma  may find they need to use their reliever inhaler more often. Older people should also reduce physical exertion.</mutableString>
+                                                    <mutableString key="text">Adults and children with lung problems, and adults with heart problems, should reduce strenuous physical exertion, particularly outdoors, and  particularly if they experience symptoms. 
+
+People with asthma may find they need to use their reliever inhaler more often. Older people should also reduce physical exertion.</mutableString>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1630,7 +1632,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="n17-wU-m1G"/>
                                                     </constraints>
-                                                    <string key="text">Adults and children with lung problems, adults with heart problems, and older people, should avoid strenuous physical  activity. People with asthma may find they need to use their reliever inhaler more often.</string>
+                                                    <string key="text">Adults and children with lung problems, adults with heart problems, and older people, should avoid strenuous physical  activity. 
+
+People with asthma may find they need to use their reliever inhaler more often.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1725,7 +1729,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="gVV-Zo-Qi2"/>
                                                     </constraints>
-                                                    <string key="text">Adults and children with lung problems, adults with heart problems, and older people, should avoid strenuous physical  activity. People with asthma may find they need to use their reliever inhaler more often.</string>
+                                                    <string key="text">Adults and children with lung problems, adults with heart problems, and older people, should avoid strenuous physical activity.  People with asthma may find they need to use their reliever inhaler more often.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1876,7 +1880,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="0yb-9r-ogV"/>
                                                     </constraints>
-                                                    <string key="text">Suspended solid or liquid particles in the air with aerodynamic diameter of 10 µm or less.  They can be emitted from a variety of stationary and mobile sources such as diesel trucks, wood stoves, power plants, etc. \n Constant exposure to high levels of PM10 has been related with heart or lung diseases, eyes, nose and throat irritation, coughing and shortness of breath, reduced lung function and, asthma and heart attacks.</string>
+                                                    <string key="text">Suspended solid or liquid particles in the air with aerodynamic diameter of 10 µm or less.  They can be emitted from a variety of stationary and mobile sources such as diesel trucks, wood stoves, power plants, etc.
+
+Constant exposure to high levels of PM10 has been related with heart or lung diseases, eyes, nose and throat irritation, coughing and shortness of breath, reduced lung function and, asthma and heart attacks.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1932,7 +1938,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="sv2-m3-dFi"/>
                                                     </constraints>
-                                                    <string key="text">Suspended fine particles in the air with aerodynamic diameter of 2.5 µm or less. PM2.5 primary sources include road transport, industrial, commercial and domestic burn of fuel, and dust emissions from construction sites. \n Long-term exposure to high levels of PM2.5 cause respiratory and cardiovascular illness and even death.</string>
+                                                    <string key="text">Suspended fine particles in the air with aerodynamic diameter of 2.5 µm or less. PM2.5 primary sources include road transport, industrial, commercial and domestic burn of fuel, and dust emissions from construction sites.
+
+Long-term exposure to high levels of PM2.5 cause respiratory and cardiovascular illness and even death.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1988,7 +1996,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38.5" id="6Iz-25-ser"/>
                                                     </constraints>
-                                                    <string key="text">Secondary pollutant created by photochemical reactions between nitrogen oxides and volatile organic compounds. Major sources of precursors are industrial and electrical facilities, automobile exhaust, petrol vapours, and chemical solvents. \n Exposure to O3 can irritate and inflame the lungs, and also irritate the eyes, nose and throat, which can lead to cough and chest discomfort. Inflammation and narrowing of the airways leads to increased sensitivity to cold air and exercise.</string>
+                                                    <string key="text">Secondary pollutant created by photochemical reactions between nitrogen oxides and volatile organic compounds. Major sources of precursors are industrial and electrical facilities, automobile exhaust, petrol vapours, and chemical solvents.
+
+Exposure to O3 can irritate and inflame the lungs, and also irritate the eyes, nose and throat, which can lead to cough and chest discomfort. Inflammation and narrowing of the airways leads to increased sensitivity to cold air and exercise.</string>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
