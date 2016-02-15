@@ -43,7 +43,7 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"Measurement Stations", nil);
+    self.title = NSLocalizedString(@"Monitoring Sites", nil);
     self.navigationItem.leftBarButtonItem = self.doneButton;
 
     self.mapView.showsUserLocation = YES;
