@@ -18,7 +18,7 @@
     
     NSNumber *temperature = measurement.temperature ?: @(0);
     
-    self.temperatureLabel.text = [temperature stringValue];
+    self.temperatureLabel.text = [NSString stringWithFormat: @"%.0f", [temperature floatValue]];
 }
 
 @end
