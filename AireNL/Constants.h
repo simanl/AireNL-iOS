@@ -11,7 +11,7 @@
 
 // BACKEND API
 
-static NSString *const kBaseURL = @"http://198.199.108.152:3000";
+static NSString *const kBaseURL = @"http://200.23.43.141";
 
 // NSUserDefaults
 
