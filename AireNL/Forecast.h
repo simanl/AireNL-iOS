@@ -19,8 +19,16 @@
 @property (nonatomic) NSDate *startsAt;
 @property (nonatomic) NSDate *endsAt;
 
-@property (nonatomic) NSString *ozone;
-@property (nonatomic) NSString *toracicParticles;
-@property (nonatomic) NSString *respirableParticles;
+//@property (nonatomic) NSString *ozone;
+//@property (nonatomic) NSString *toracicParticles;
+//@property (nonatomic) NSString *respirableParticles;
+
+@property (nonatomic) NSNumber *ozoneIndex;
+@property (nonatomic) NSNumber *toracicParticlesIndex;
+@property (nonatomic) NSNumber *respirableParticlesIndex;
+
+@property (nonatomic) NSString *ozoneCategory;
+@property (nonatomic) NSString *toracicParticlesCategory;
+@property (nonatomic) NSString *respirableParticlesCategory;
 
 @end
