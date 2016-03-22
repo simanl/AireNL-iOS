@@ -33,9 +33,18 @@
                                  [self.dateFormatter stringFromDate: endDate]];
     self.timeLabel.text = dateRangeString;
     
-    self.pm10Label.text = self.forecast.toracicParticles ? NSLocalizedString(self.forecast.toracicParticles, nil) : @"";
-    self.pm25Label.text = self.forecast.respirableParticles ? NSLocalizedString(self.forecast.respirableParticles, nil) : @"";
-    self.O3Label.text = self.forecast.ozone ? NSLocalizedString(self.forecast.ozone, nil) : @"";
+//    self.pm10Label.text = self.forecast.toracitocParticles ? NSLocalizedString(self.forecast.toracicParticles, nil) : @"";
+//    self.pm25Label.text = self.forecast.respirableParticles ? NSLocalizedString(self.forecast.respirableParticles, nil) : @"";
+//    self.O3Label.text = self.forecast.ozone ? NSLocalizedString(self.forecast.ozone, nil) : @"";
+    
+    self.pm10Label.text = self.forecast.toracicParticlesIndex ? [self.forecast.toracicParticlesIndex stringValue] : @"";
+    self.pm25Label.text = self.forecast.respirableParticlesIndex ? [self.forecast.respirableParticlesIndex stringValue] : @"";
+    self.O3Label.text = self.forecast.ozoneIndex ? [self.forecast.ozoneIndex stringValue] : @"";
+    
+    self.pm10Label.backgroundColor = [self.forecast toracicParticlesColor];
+    self.pm25Label.backgroundColor = [self.forecast respirableParticlesColor];
+    self.O3Label.backgroundColor = [self.forecast ozoneColor];
+
 }
 
 #pragma mark - Set/Get

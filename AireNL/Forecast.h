@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Forecast : NSObject <NSCoding>
 
@@ -30,5 +31,9 @@
 @property (nonatomic) NSString *ozoneCategory;
 @property (nonatomic) NSString *toracicParticlesCategory;
 @property (nonatomic) NSString *respirableParticlesCategory;
+
+- (UIColor *)ozoneColor;
+- (UIColor *)toracicParticlesColor;
+- (UIColor *)respirableParticlesColor;
 
 @end

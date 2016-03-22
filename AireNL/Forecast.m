@@ -9,6 +9,7 @@
 #import "Forecast.h"
 
 #import "NSDictionary+WithoutNSNull.h"
+#import "UIColor+ILColor.h"
 
 @interface Forecast ()
 
@@ -93,6 +94,42 @@
 {
     return [NSString stringWithFormat: @"ID:%@ STARTS_AT:%@ ENDS_AT:%@ OZONE:%@ TORACIC_PARTICLES:%@ RESPIRABLE_PARTICLES:%@",
             self.forecastID, self.startsAt, self.endsAt, self.ozoneIndex, self.toracicParticlesIndex, self.respirableParticlesIndex];
+}
+
+- (UIColor *)ozoneColor
+{
+    return [self colorForCategory: self.ozoneCategory];
+}
+
+- (UIColor *)toracicParticlesColor
+{
+    return [self colorForCategory: self.toracicParticlesCategory];
+}
+
+- (UIColor *)respirableParticlesColor
+{
+    return [self colorForCategory: self.respirableParticlesCategory];
+}
+
+#pragma mark - Private Methods
+
+- (UIColor *)colorForCategory:(NSString *)category
+{
+    if ([category isEqualToString: @"buena"]){
+        return [UIColor il_goodColor];
+        
+    }else if ([category isEqualToString: @"regular"]){
+        return [UIColor il_regularColor];
+        
+    }else if ([category isEqualToString: @"mala"]){
+        return [UIColor il_badColor];
+        
+    }else if ([category isEqualToString: @"muy_mala"]){
+        return [UIColor il_veryBadColor];
+        
+    }else{
+        return [UIColor il_veryBadColor];
+    }
 }
 
 #pragma mark - Set/Get
