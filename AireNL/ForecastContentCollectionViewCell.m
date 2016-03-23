@@ -16,6 +16,8 @@
 
 @implementation ForecastContentCollectionViewCell
 
+@synthesize delegate;
+
 - (void)prepareForReuse
 {
     self.forecast = nil;
@@ -45,6 +47,16 @@
     self.pm25Label.backgroundColor = [self.forecast respirableParticlesColor];
     self.O3Label.backgroundColor = [self.forecast ozoneColor];
 
+}
+
+#pragma mark - IBAction's
+
+- (IBAction)didSelectOverlay:(id)sender
+{
+    if ([self.delegate respondsToSelector: @selector(didSelectInfoWithText:)]){
+        NSString *text = [NSString stringWithFormat: NSLocalizedString(@"Maximum expected (%@)", nil), self.timeLabel.text];
+        [self.delegate didSelectInfoWithText: text];
+    }
 }
 
 #pragma mark - Set/Get

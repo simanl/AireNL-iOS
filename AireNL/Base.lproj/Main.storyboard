@@ -797,6 +797,12 @@
                                                             <rect key="frame" x="287" y="0.0" width="12" height="35"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqg-se-gHb" userLabel="OverlayButton">
+                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="35"/>
+                                                            <connections>
+                                                                <action selector="didSelectOverlay:" destination="sdT-6U-BZ4" eventType="touchUpInside" id="ocO-He-A2F"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -806,6 +812,7 @@
                                                         <constraint firstItem="nhL-Yw-zMy" firstAttribute="width" secondItem="SlD-FV-tP8" secondAttribute="width" id="5ck-zj-3Mz"/>
                                                         <constraint firstItem="hfD-bY-Qd6" firstAttribute="centerY" secondItem="rcz-wm-WFF" secondAttribute="centerY" id="9AJ-YK-vIQ"/>
                                                         <constraint firstItem="NKZ-6j-eN5" firstAttribute="top" secondItem="rcz-wm-WFF" secondAttribute="top" id="BCd-Ag-Eyr"/>
+                                                        <constraint firstItem="nqg-se-gHb" firstAttribute="leading" secondItem="rcz-wm-WFF" secondAttribute="leading" id="Bmi-HA-EZz"/>
                                                         <constraint firstItem="nhL-Yw-zMy" firstAttribute="top" secondItem="rcz-wm-WFF" secondAttribute="top" id="DFx-dq-Thf"/>
                                                         <constraint firstAttribute="bottom" secondItem="nhL-Yw-zMy" secondAttribute="bottom" id="GeS-gB-cuV"/>
                                                         <constraint firstAttribute="trailing" secondItem="qFj-IG-QSt" secondAttribute="trailing" id="Nyf-cy-1zD"/>
@@ -819,6 +826,7 @@
                                                         <constraint firstItem="AcJ-1G-Lxj" firstAttribute="leading" secondItem="eUw-Dx-0dj" secondAttribute="trailing" id="hmB-bQ-JRX"/>
                                                         <constraint firstItem="nhL-Yw-zMy" firstAttribute="leading" secondItem="GY6-QP-RQf" secondAttribute="trailing" id="jSu-iz-EKD"/>
                                                         <constraint firstAttribute="bottom" secondItem="NKZ-6j-eN5" secondAttribute="bottom" id="mlV-nq-3qJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="nqg-se-gHb" secondAttribute="trailing" id="mpJ-RS-Ohm"/>
                                                         <constraint firstItem="qFj-IG-QSt" firstAttribute="top" secondItem="rcz-wm-WFF" secondAttribute="top" id="nET-IZ-C2E"/>
                                                         <constraint firstItem="eUw-Dx-0dj" firstAttribute="width" secondItem="SlD-FV-tP8" secondAttribute="width" id="oc8-ed-fS8"/>
                                                         <constraint firstAttribute="bottom" secondItem="qFj-IG-QSt" secondAttribute="bottom" id="oyf-oW-84s"/>
@@ -827,6 +835,8 @@
                                                         <constraint firstItem="eUw-Dx-0dj" firstAttribute="leading" secondItem="hfD-bY-Qd6" secondAttribute="trailing" id="rtA-7r-jRj"/>
                                                         <constraint firstItem="NKZ-6j-eN5" firstAttribute="leading" secondItem="AcJ-1G-Lxj" secondAttribute="trailing" id="skg-sG-KRd"/>
                                                         <constraint firstItem="SlD-FV-tP8" firstAttribute="top" secondItem="rcz-wm-WFF" secondAttribute="top" id="tEf-WE-lfW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nqg-se-gHb" secondAttribute="bottom" id="u8N-rD-pm0"/>
+                                                        <constraint firstItem="nqg-se-gHb" firstAttribute="top" secondItem="rcz-wm-WFF" secondAttribute="top" id="uwJ-1K-nEL"/>
                                                         <constraint firstAttribute="bottom" secondItem="SlD-FV-tP8" secondAttribute="bottom" id="z26-pf-Nya"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -863,6 +873,7 @@
                                         <connections>
                                             <outlet property="O3Label" destination="tQ6-AQ-a1u" id="xsf-Sy-iRx"/>
                                             <outlet property="bottomConstraint" destination="jsN-dM-p67" id="dy8-Xk-M5W"/>
+                                            <outlet property="overlayView" destination="nqg-se-gHb" id="j62-RD-7yn"/>
                                             <outlet property="pm10Label" destination="AcJ-1G-Lxj" id="UPB-PM-ZPa"/>
                                             <outlet property="pm25Label" destination="GY6-QP-RQf" id="mFr-JY-CEw"/>
                                             <outlet property="roundedContentView" destination="rcz-wm-WFF" id="meT-CU-IcH"/>

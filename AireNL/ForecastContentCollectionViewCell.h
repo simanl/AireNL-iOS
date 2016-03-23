@@ -12,9 +12,10 @@
 #import "ResultsCellDelegate.h"
 #import "ILRoundedView.h"
 
-@interface ForecastContentCollectionViewCell : UICollectionViewCell <ResultsCellUpdateable>
+@interface ForecastContentCollectionViewCell : UICollectionViewCell <ResultsCellUpdateable, ResultsDelegateSettable>
 
 - (void)updateCell;
+
 @property (nonatomic) Forecast *forecast;
 
 @property (weak, nonatomic) IBOutlet ILRoundedView *roundedContentView;
@@ -26,5 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *pm25Label;
 @property (weak, nonatomic) IBOutlet UILabel *O3Label;
 
+@property (weak, nonatomic) IBOutlet UIButton *overlayView;
+- (IBAction)didSelectOverlay:(id)sender;
 
 @end

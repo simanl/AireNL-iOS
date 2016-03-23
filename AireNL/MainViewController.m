@@ -571,9 +571,10 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         // Predictions Cell
         [self showInfoScreenForContaminants];
     }
+    
 }
 
-- (void)actividadesDidSelectInfoWithText:(NSString *)text
+- (void)didSelectInfoWithText:(NSString *)text
 {
     [self showInfoScreenForActivityWithText: text];
 }

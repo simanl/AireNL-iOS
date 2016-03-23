@@ -65,9 +65,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.delegate respondsToSelector: @selector(actividadesDidSelectInfoWithText:)]){
+    if ([self.delegate respondsToSelector: @selector(didSelectInfoWithText:)]){
         Activity *activity = self.activities[indexPath.row];
-        [self.delegate actividadesDidSelectInfoWithText: [activity description]];
+        [self.delegate didSelectInfoWithText: [activity description]];
     }
 }
 

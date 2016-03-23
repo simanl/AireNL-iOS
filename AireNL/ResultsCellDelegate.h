@@ -17,7 +17,7 @@
 - (Measurement *)getSelectedMeasurement;
 
 - (void)didSelectInfoAtCell:(UICollectionViewCell *)cell;
-- (void)actividadesDidSelectInfoWithText:(NSString *)text;
+- (void)didSelectInfoWithText:(NSString *)text;
 
 @end
 
