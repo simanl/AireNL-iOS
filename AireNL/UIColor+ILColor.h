@@ -16,4 +16,10 @@
 + (UIColor *)il_veryBadColor;
 + (UIColor *)il_extremelyBadColor;
 
++ (UIColor *)il_goodColorWithAlpha:(CGFloat)alpha;
++ (UIColor *)il_regularColorWithAlpha:(CGFloat)alpha;
++ (UIColor *)il_badColorWithAlpha:(CGFloat)alpha;
++ (UIColor *)il_veryBadColorWithAlpha:(CGFloat)alpha;
++ (UIColor *)il_extremelyBadColorWithAlpha:(CGFloat)alpha;
+
 @end

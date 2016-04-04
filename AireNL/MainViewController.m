@@ -482,6 +482,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row < [self.cellIdentifiers count]) {
+        
         // STATIC ROWS
         
         NSString *cellIdentifier = self.cellIdentifiers[indexPath.row];
@@ -493,6 +494,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         return cell;
         
     }else{
+        
         // DYNAMIC ROWS (FORECAST CONTENT CELLS)
         
         ForecastContentCollectionViewCell *cell =
@@ -508,6 +510,8 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
             // LAST ROW
             cell.roundedContentView.type = ILRoundedViewTypeBottom;
         }
+        
+        cell.delegate = self;
         return cell;
     }
     

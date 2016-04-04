@@ -92,8 +92,8 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat: @"ID:%@ STARTS_AT:%@ ENDS_AT:%@ OZONE:%@ TORACIC_PARTICLES:%@ RESPIRABLE_PARTICLES:%@",
-            self.forecastID, self.startsAt, self.endsAt, self.ozoneIndex, self.toracicParticlesIndex, self.respirableParticlesIndex];
+    return [NSString stringWithFormat: @"ID:%@ STARTS_AT:%@ ENDS_AT:%@ OZONE:%@;%@ TORACIC_PARTICLES:%@;%@ RESPIRABLE_PARTICLES:%@;%@",
+            self.forecastID, self.startsAt, self.endsAt, self.ozoneIndex, self.ozoneCategory, self.toracicParticlesIndex, self.toracicParticlesCategory, self.respirableParticlesIndex, self.respirableParticlesCategory];
 }
 
 - (UIColor *)ozoneColor
@@ -115,20 +115,23 @@
 
 - (UIColor *)colorForCategory:(NSString *)category
 {
-    if ([category isEqualToString: @"buena"]){
-        return [UIColor il_goodColor];
+    if ([category isEqualToString: @"good"]){
+        return [UIColor il_goodColorWithAlpha: 1];
         
     }else if ([category isEqualToString: @"regular"]){
-        return [UIColor il_regularColor];
+        return [UIColor il_regularColorWithAlpha: 1];
         
-    }else if ([category isEqualToString: @"mala"]){
-        return [UIColor il_badColor];
+    }else if ([category isEqualToString: @"bad"]){
+        return [UIColor il_badColorWithAlpha: 1];
         
-    }else if ([category isEqualToString: @"muy_mala"]){
-        return [UIColor il_veryBadColor];
+    }else if ([category isEqualToString: @"very_bad"]){
+        return [UIColor il_veryBadColorWithAlpha: 1];
         
-    }else{
-        return [UIColor il_veryBadColor];
+    }else  if ([category isEqualToString: @"extremely_bad"]){
+        return [UIColor il_extremelyBadColorWithAlpha: 1];
+        
+    }else {
+        return [UIColor clearColor];
     }
 }
 

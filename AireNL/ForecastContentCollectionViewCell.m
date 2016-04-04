@@ -27,7 +27,7 @@
 }
 
 - (void)updateCell
-{    
+{
     NSDate *startDate = self.forecast.startsAt;
     NSDate *endDate = self.forecast.endsAt;
     NSString *dateRangeString = [NSString stringWithFormat: @"%@-%@",
@@ -35,13 +35,9 @@
                                  [self.dateFormatter stringFromDate: endDate]];
     self.timeLabel.text = dateRangeString;
     
-//    self.pm10Label.text = self.forecast.toracitocParticles ? NSLocalizedString(self.forecast.toracicParticles, nil) : @"";
-//    self.pm25Label.text = self.forecast.respirableParticles ? NSLocalizedString(self.forecast.respirableParticles, nil) : @"";
-//    self.O3Label.text = self.forecast.ozone ? NSLocalizedString(self.forecast.ozone, nil) : @"";
-    
-    self.pm10Label.text = self.forecast.toracicParticlesIndex ? [self.forecast.toracicParticlesIndex stringValue] : @"";
-    self.pm25Label.text = self.forecast.respirableParticlesIndex ? [self.forecast.respirableParticlesIndex stringValue] : @"";
-    self.O3Label.text = self.forecast.ozoneIndex ? [self.forecast.ozoneIndex stringValue] : @"";
+    self.pm10Label.text = self.forecast.toracicParticlesIndex ? [self.forecast.toracicParticlesIndex stringValue] :     NSLocalizedString(@"n/a", nil);
+    self.pm25Label.text = self.forecast.respirableParticlesIndex ? [self.forecast.respirableParticlesIndex stringValue] :     NSLocalizedString(@"n/a", nil);
+    self.O3Label.text = self.forecast.ozoneIndex ? [self.forecast.ozoneIndex stringValue] : NSLocalizedString(@"n/a", nil);
     
     self.pm10Label.backgroundColor = [self.forecast toracicParticlesColor];
     self.pm25Label.backgroundColor = [self.forecast respirableParticlesColor];
@@ -54,7 +50,7 @@
 - (IBAction)didSelectOverlay:(id)sender
 {
     if ([self.delegate respondsToSelector: @selector(didSelectInfoWithText:)]){
-        NSString *text = [NSString stringWithFormat: NSLocalizedString(@"Maximum expected (%@)", nil), self.timeLabel.text];
+        NSString *text = [NSString stringWithFormat: NSLocalizedString(@"Maximum expected value (%@)", nil), self.timeLabel.text];
         [self.delegate didSelectInfoWithText: text];
     }
 }
