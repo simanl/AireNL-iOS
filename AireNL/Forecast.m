@@ -32,10 +32,6 @@
     NSString *endsAtDateString = [attributes dl_objectForKeyWithNil: @"ends_at"];
     self.endsAt = [self.dateFormatter dateFromString: endsAtDateString];
     
-//    self.ozone = [attributes dl_objectForKeyWithNil: @"ozone"];
-//    self.toracicParticles = [attributes dl_objectForKeyWithNil: @"toracic_particles"];
-//    self.respirableParticles = [attributes dl_objectForKeyWithNil: @"respirable_particles"];
-    
     self.ozoneIndex = [attributes dl_objectForKeyWithNil: @"ozone_index"];
     self.toracicParticlesIndex = [attributes dl_objectForKeyWithNil: @"toracic_particles_index"];
     self.respirableParticlesIndex = [attributes dl_objectForKeyWithNil: @"respirable_particles_index"];
@@ -55,10 +51,6 @@
     self.startsAt = [aDecoder decodeObjectForKey: @"starts_at"];
     self.endsAt = [aDecoder decodeObjectForKey: @"ends_at"];
     
-//    self.ozone = [aDecoder decodeObjectForKey: @"ozone"];
-//    self.toracicParticles = [aDecoder decodeObjectForKey: @"toracicParticles"];
-//    self.respirableParticles = [aDecoder decodeObjectForKey: @"respirableParticles"];
-    
     self.ozoneIndex = [aDecoder decodeObjectForKey: @"ozoneIndex"];
     self.toracicParticlesIndex = [aDecoder decodeObjectForKey: @"toracicParticlesIndex"];
     self.respirableParticlesIndex = [aDecoder decodeObjectForKey: @"respirableParticlesIndex"];
@@ -75,11 +67,7 @@
     [aCoder encodeObject: self.forecastID forKey: @"forecastID"];
     [aCoder encodeObject: self.startsAt forKey: @"starts_at"];
     [aCoder encodeObject: self.endsAt forKey: @"ends_at"];
-    
-//    [aCoder encodeObject: self.ozone forKey: @"ozone"];
-//    [aCoder encodeObject: self.toracicParticles forKey: @"toracicParticles"];
-//    [aCoder encodeObject: self.respirableParticles forKey: @"respirableParticles"];
-    
+        
     [aCoder encodeObject: self.ozoneIndex forKey: @"ozoneIndex"];
     [aCoder encodeObject: self.toracicParticlesIndex forKey: @"toracicParticlesIndex"];
     [aCoder encodeObject: self.respirableParticlesIndex forKey: @"respirableParticlesIndex"];

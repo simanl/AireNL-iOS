@@ -737,15 +737,15 @@
 					};
 					06D8BA641B74106B007462A4 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = TAGM86AK24;
+						DevelopmentTeam = 5V5FYVQWPY;
 					};
 					06D8BA761B74106B007462A4 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = TAGM86AK24;
+						DevelopmentTeam = 5V5FYVQWPY;
 					};
 					06FAE3801B72B9C200B19700 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = TAGM86AK24;
+						DevelopmentTeam = 5V5FYVQWPY;
 					};
 				};
 			};
@@ -1025,7 +1025,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Lozano (K45QRVF7LT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1073,6 +1073,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
