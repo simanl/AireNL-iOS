@@ -160,7 +160,7 @@
     
     NSString *localizedQualityText = NSLocalizedString(@"Air Quality", nil);
     self.imecaQualityLabel.text = [NSString stringWithFormat: @"%@: %@", localizedQualityText, [self.selectedMeasurement stringForAirQuality]];
-        
+    
     self.windLabel.text = [self stringForWindValue: self.selectedMeasurement.windSpeed];
     self.tempLabel.text = [self stringForTempValue: self.selectedMeasurement.temperature];
 }
@@ -248,7 +248,8 @@
 
 - (NSString *)stringForTempValue:(NSNumber *)value
 {
-    return [NSString stringWithFormat: @"%@ \u00B0 C", value?: @(0)];
+    float floatValue = value ? [value floatValue] : 0.0;
+    return [NSString stringWithFormat: @"%.0f \u00B0 C", floatValue];
 }
 
 #pragma mark - Set/Get

@@ -309,7 +309,7 @@
 			name = "AireNL API";
 			sourceTree = "<group>";
 		};
-		063366781B60064C00C32FF6 /* Table & Collection Cells */ = {
+		063366781B60064C00C32FF6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				06D9CFCD1BB9AC61003E171B /* Actividades */,
@@ -328,7 +328,7 @@
 				0680B69A1BC326D100522D6B /* FooterCollectionReusableView.h */,
 				0680B69B1BC326D100522D6B /* FooterCollectionReusableView.m */,
 			);
-			name = "Table & Collection Cells";
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		065753071B5EBA3B00FF226C /* Network */ = {
@@ -359,6 +359,19 @@
 				06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */,
 			);
 			name = "Info Controllers";
+			sourceTree = "<group>";
+		};
+		069CFC8E1D359013008C948B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				06F4C9571B7BFD1000876961 /* ILRoundedView.h */,
+				06F4C9581B7BFD1000876961 /* ILRoundedView.m */,
+				0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */,
+				0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */,
+				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
+				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 		06D3679C1B542615009E9D47 = {
@@ -449,14 +462,9 @@
 			children = (
 				06D367B21B542615009E9D47 /* Main.storyboard */,
 				06D367B71B542615009E9D47 /* LaunchScreen.xib */,
-				063366781B60064C00C32FF6 /* Table & Collection Cells */,
+				063366781B60064C00C32FF6 /* Cells */,
 				06FE05471B7159AA00BCFCA3 /* Blurs, Gradients */,
-				06F4C9571B7BFD1000876961 /* ILRoundedView.h */,
-				06F4C9581B7BFD1000876961 /* ILRoundedView.m */,
-				0690435B1B8E1F9C00A2E576 /* ILAnnotationView.h */,
-				0690435C1B8E1F9C00A2E576 /* ILAnnotationView.m */,
-				063366841B60544000C32FF6 /* ILSpacedLabel.h */,
-				063366851B60544000C32FF6 /* ILSpacedLabel.m */,
+				069CFC8E1D359013008C948B /* Custom Views */,
 			);
 			name = Views;
 			sourceTree = "<group>";
