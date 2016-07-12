@@ -238,7 +238,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         [self hideLoading];
         self.loadingStation = NO;
     }];
-    
 }
 
 - (void)handleResults:(APIResults *)results withError:(NSError *)error
@@ -476,7 +475,11 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.cellIdentifiers count] + [self.currentForecasts count];
+    NSUInteger forecastsCount = self.currentForecasts.count;
+    if (forecastsCount != 0) {
+        forecastsCount += 1; // Add a row for the forecasts header
+    }
+    return [self.cellIdentifiers count] + forecastsCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -497,22 +500,27 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         
         // DYNAMIC ROWS (FORECAST CONTENT CELLS)
         
-        ForecastContentCollectionViewCell *cell =
-        [collectionView dequeueReusableCellWithReuseIdentifier: @"forecastContentCell" forIndexPath: indexPath];
-        
-        NSUInteger totalRows = [self.cellIdentifiers count] + [self.currentForecasts count];
+        NSUInteger totalRows = [self.cellIdentifiers count] + ([self.currentForecasts count] + 1);
         NSUInteger row = indexPath.row - [self.cellIdentifiers count];
         
-        cell.forecast = self.currentForecasts[row];
-        [cell updateCell];
-        
-        if (indexPath.row == totalRows - 1) {
-            // LAST ROW
-            cell.roundedContentView.type = ILRoundedViewTypeBottom;
+        if (row == 0){
+            ForecastContentCollectionViewCell *headerCell = [collectionView dequeueReusableCellWithReuseIdentifier: @"forecastHeaderCell" forIndexPath: indexPath];
+            return headerCell;
+        }else{
+            ForecastContentCollectionViewCell *cell =
+            [collectionView dequeueReusableCellWithReuseIdentifier: @"forecastContentCell" forIndexPath: indexPath];
+            
+            cell.forecast = self.currentForecasts[row - 1];
+            [cell updateCell];
+            
+            if (indexPath.row == totalRows - 1) {
+                // LAST ROW
+                cell.roundedContentView.type = ILRoundedViewTypeBottom;
+            }
+            
+            cell.delegate = self;
+            return cell;
         }
-        
-        cell.delegate = self;
-        return cell;
     }
     
 }
@@ -545,8 +553,14 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
         
     }else{
         // DYNAMIC ROWS (FORECAST CONTENT CELLS)
+        CGFloat height;
+        if (indexPath.row == [self.cellIdentifiers count]){
+            height = 45;
+        }else{
+            height = 35;
+        }
         CGFloat collectionWidth = CGRectGetWidth(self.collectionView.bounds);
-        return CGSizeMake(collectionWidth, 35);
+        return CGSizeMake(collectionWidth, height);
     }
     
 }
@@ -768,8 +782,6 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
     
     CGFloat scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom;
     
-    
-    
     if (scrollOffset <= -scrollView.contentInset.top) {
         // BOUNCE PULL BEFORE START
         self.topViewConstraint.constant = 20;
@@ -900,7 +912,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 - (NSArray *)cellIdentifiers
 {
     if (!_cellIdentifiers) {
-        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"vientoCell", @"temperaturaCell", @"contaminantesCell", @"forecastHeaderCell"];
+        _cellIdentifiers = @[@"imecaCell", @"actividadesCell", @"vientoCell", @"temperaturaCell", @"contaminantesCell"];
     }
     return _cellIdentifiers;
 }
