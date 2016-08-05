@@ -7,166 +7,205 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03D89319368D9E6D8B836FED9E77766B /* CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BEF149FF5FB6A17D7DB983921B9B /* CCMPopupAnimation.m */; };
-		0FD4454E9E6E90079D9BC50CCCF56459 /* CCMPopupTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E381A16F1F8031F38F40B5D12CAE811 /* CCMPopupTransitioning.h */; };
-		1024A244B2F39AC728349749A5E40DD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */; };
-		18EF5F8AE928250B8FC2803870278352 /* UIImage+screenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = BB68EB49FB102A3D344A480A8CF10B4D /* UIImage+screenshot.h */; };
-		2DE3EBA81996B1349B216DF5B8FB9132 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8DE82ECAB4176B98B77EB33B586798 /* FXBlurView.m */; };
-		383E2519B22211AF178503EE2D342AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */; };
-		41D4B46EC9DB955B612592F90B126C67 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D7CC400D48A4462837761B6F53349 /* UIImage+screenshot.m */; };
-		5F8F598D45E68313AEFB99F6AF48AB69 /* CCMPopupSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3755D4910CE70279FD9B8DECD783D /* CCMPopupSegue.m */; };
-		61D93733519326D90036056F2F93578C /* TAOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE90FC30F4764163A6964A8CCC9B0D /* TAOverlay.m */; };
-		6AA5580697545ACF25D9E741B00457AC /* UIViewController+CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA6ADDABF18FA2BD7EA29ECBB4100CF /* UIViewController+CCMPopupAnimation.h */; };
-		6BC8FEFA34BC53A330C502F154103F44 /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA526626DEFEA006FE6E260DED0954E4 /* FXBlurView.h */; };
-		8942C99D49AB9F2B800B9248680B423E /* CCMPopupSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F261CE378CF317C972312C7EEF65E49 /* CCMPopupSegue.h */; };
-		927BB3E3141D930FE21E42C438BAB951 /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EC75C006F1D0D9DE524BAC306B84 /* CCMCustomAnimation.m */; };
-		98EEC665C9387944C7DC2CE3E596A8B1 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 166B18EEFD004BCFA7B38A41929AD66B /* UIImage+ImageEffects.h */; };
-		C8B5A037E7437072AE8A57DDB9C390FA /* Pods-AireNL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2812306DF3F87C950DA7178245D16734 /* Pods-AireNL-dummy.m */; };
-		D14490FE030F1F4374CD525D9251862E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9A2EEF4AD5C7567116403FA14DFDA /* UIImage+ImageEffects.m */; };
-		D6D4FB165CA296D76359A215DBA54B4D /* CCMPopupTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CC204247CE477903C228F47E8026A5 /* CCMPopupTransitioning.m */; };
-		D8BF9B8BB15DF92324B091A40FE0D47E /* TAOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 253BD84789D956D6185B74D1C890443D /* TAOverlay-dummy.m */; };
-		D9AF00E38ADD4DA4C34A9B7BF1765386 /* CCMPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0A896D9518FAC2AF946E78DD089C0 /* CCMPopup-dummy.m */; };
-		DB18F4B1FC99C181E26E208AD47A3A83 /* TAOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 5798BCCE8244E2C10E2495C4273D8DB1 /* TAOverlay.h */; };
-		DBABA00D4F59AA6235747D6DB9757DB7 /* CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6E08D1E28702C5B8369BB6B6B890780 /* CCMPopupAnimation.h */; };
-		EFE685A76D6B921849816FB985077BCD /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B53BD04A58F24193BABF2A4BB6CC4 /* UIViewController+CCMPopupAnimation.m */; };
-		F71EA5D35898CDA61101B99D82A81964 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */; };
-		F7E19A882B23ABD0C422F9468B54042B /* CCMCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 66245E3E3EBAC3561FBB7C595FFCD2F2 /* CCMCustomAnimation.h */; };
+		14AF5A1778712AA7C287C75D6F4E692A /* TAOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DA73F7AE16A612034924F7842A0B7 /* TAOverlay-dummy.m */; };
+		18B81CB7DECF9422B547936E8793C31C /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62320B8A8ADB834501E118E28BE5A8A5 /* UIImage+screenshot.m */; };
+		372626CCA664C2B38538098023B4E7E4 /* CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 803AA7D3FD9E27A5588030868C501878 /* CCMPopupAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50DA81EF7E19FADB282BED6E1A498387 /* UIViewController+CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D772C607CD49178254C20D6C3D581 /* UIViewController+CCMPopupAnimation.m */; };
+		563D1515239D831B4936902C2BC0C11B /* CCMCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51340EE371440DD80AED91B8D4B4F31 /* CCMCustomAnimation.m */; };
+		5D60BD0B38E33C4870231ABB0594A40E /* CCMPopupTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B703F688AD0BC5B1836F8F6A569B37 /* CCMPopupTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8065958E4885F33E137343B2EF035D13 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 000AE6F7A9F2A1A58A2EA2AF3AB01506 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6E089C3AF5185A03852D81F8DF3BF5 /* CCMCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB199357459B193D4747E5063C3375CC /* CCMCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91F0A7C50EB727472F63AF804B8733B2 /* CCMPopupTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0285C24BAB24474218112DA4CAEA2A /* CCMPopupTransitioning.m */; };
+		92857B24EA7D824823505AFF923742C8 /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5042BBE27264BA838D50CE1DF1B57014 /* FXBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95DED59C9074D62F4ECDD1E955F3AF2A /* CCMPopupSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0E8D8B7B0DF7BE07AE382ACE03C1E /* CCMPopupSegue.m */; };
+		A5D4F7F155DC0B8960F861558362BCA0 /* CCMPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC91AF47CB8993CD003B74A5CF09A65 /* CCMPopup-dummy.m */; };
+		A93C1EBACDB00BD7A60B69E6A8F5FEDF /* CCMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A4BC8015560ED762AF207D564F9337 /* CCMPopupAnimation.m */; };
+		B05009BAF3349AD64F1B74BFFA0047CA /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B9FB6091B51ACDA711C7A40FBB11 /* FXBlurView.m */; };
+		B062A0C3B90F6AC0336B638D3BAF447E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B278B7C621C0E09924786C4437067191 /* TAOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = B77DC8DAE3FB3BB195FDBAF123541FF1 /* TAOverlay.m */; };
+		B2C56DBDAB0FE6F4EC68BAF40162A82D /* CCMPopupSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 08ACA9BE9EAB4F03B99F51C2214396DF /* CCMPopupSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB83913B03C8D795FFB9DB791F2B0192 /* UIViewController+CCMPopupAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = A69DD62A1F2215A38C1B694B3FBFAE1E /* UIViewController+CCMPopupAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD0C79B21710B8831795B63683016C1F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AED5D49869929C64738CDA90EF27C30F /* UIImage+ImageEffects.m */; };
+		D211515BFB8E5A5CD5DB83D07B9BEF23 /* Pods-AireNL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0464D5020028D81754DFDDAF1428309 /* Pods-AireNL-dummy.m */; };
+		D256EFABC778D43380799ED546E047DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		EB9E35668A74B2946E8DC3592EEE4DE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		ED1C143A5D6FFFF7FD91F3F2382D5E0D /* TAOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EBD55D6E07B1C04AA114B4BC42DBDA7 /* TAOverlay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEF33F5E3FA09DB3527FF9729CFBC008 /* UIImage+screenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C6743CBDCDB0FCBF70B1898D58C2CAE /* UIImage+screenshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D587B6EE1212B47E041D3B0B2935C5E9 /* PBXContainerItemProxy */ = {
+		3FE89FE2ED54E6F5F314D2F58E518F12 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4A0224F852C0D26ED1D86E7D9F3956BA;
-			remoteInfo = TAOverlay;
-		};
-		E39E3FE0C215254D5F4DE9EB4BACFA66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 80349E1C2E18A8D75FD62E88593A9AFD;
+			remoteGlobalIDString = BB5F8984A372414832A6E4878E57C98E;
 			remoteInfo = CCMPopup;
+		};
+		56A79825527D673F52DFA3398009BDB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F740282D0274C330A9F73E5DBDE1C09;
+			remoteInfo = TAOverlay;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DF84A2DBFE9FDA1A8EC31766B7559BA /* CCMPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCMPopup-prefix.pch"; sourceTree = "<group>"; };
-		0F261CE378CF317C972312C7EEF65E49 /* CCMPopupSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupSegue.h; path = CCMPopup/CCMPopupSegue.h; sourceTree = "<group>"; };
-		166B18EEFD004BCFA7B38A41929AD66B /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		000AE6F7A9F2A1A58A2EA2AF3AB01506 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		08ACA9BE9EAB4F03B99F51C2214396DF /* CCMPopupSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupSegue.h; path = CCMPopup/CCMPopupSegue.h; sourceTree = "<group>"; };
+		0FBA57C64170C6B815E2AF92D37E7846 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		1ADFFEA0EC45A515A225E7798059839B /* Pods-AireNL-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AireNL-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1C789D9FBF210576F28B3C3441DD10DF /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TAOverlay.xcconfig; sourceTree = "<group>"; };
-		253BD84789D956D6185B74D1C890443D /* TAOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TAOverlay-dummy.m"; sourceTree = "<group>"; };
 		27FB2A100C1821A3951B074DA3B5A217 /* Pods-AireNL-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AireNL-acknowledgements.plist"; sourceTree = "<group>"; };
-		2812306DF3F87C950DA7178245D16734 /* Pods-AireNL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL-dummy.m"; sourceTree = "<group>"; };
-		28CC204247CE477903C228F47E8026A5 /* CCMPopupTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupTransitioning.m; path = CCMPopup/CCMPopupTransitioning.m; sourceTree = "<group>"; };
-		2ECD931AC07AAD511409A9B6608DC312 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
-		2EF9A2EEF4AD5C7567116403FA14DFDA /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		330D7CC400D48A4462837761B6F53349 /* UIImage+screenshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+screenshot.m"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.m"; sourceTree = "<group>"; };
-		3BC2EC75C006F1D0D9DE524BAC306B84 /* CCMCustomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMCustomAnimation.m; path = CCMPopup/CCMCustomAnimation.m; sourceTree = "<group>"; };
-		3CE3755D4910CE70279FD9B8DECD783D /* CCMPopupSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupSegue.m; path = CCMPopup/CCMPopupSegue.m; sourceTree = "<group>"; };
-		3CF8F2FF023448B8B844BD3FA870D41C /* TAOverlay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TAOverlay.bundle; path = TAOverlay/TAOverlay.bundle; sourceTree = "<group>"; };
-		3FBE90FC30F4764163A6964A8CCC9B0D /* TAOverlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAOverlay.m; path = TAOverlay/TAOverlay.m; sourceTree = "<group>"; };
-		5798BCCE8244E2C10E2495C4273D8DB1 /* TAOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAOverlay.h; path = TAOverlay/TAOverlay.h; sourceTree = "<group>"; };
-		66245E3E3EBAC3561FBB7C595FFCD2F2 /* CCMCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMCustomAnimation.h; path = CCMPopup/CCMCustomAnimation.h; sourceTree = "<group>"; };
+		2E49D89B56962A865351CD06C6AB94C5 /* libTAOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTAOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		35C618E38EA2803BC89B255FD1B9BA3D /* TAOverlay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TAOverlay.xcconfig; sourceTree = "<group>"; };
+		3B0DA73F7AE16A612034924F7842A0B7 /* TAOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TAOverlay-dummy.m"; sourceTree = "<group>"; };
+		434164E020C15FB4252BF21B8288E36F /* libCCMPopup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCMPopup.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		484FC67DB91470E8814AA838B0B5E79A /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBD55D6E07B1C04AA114B4BC42DBDA7 /* TAOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAOverlay.h; path = TAOverlay/TAOverlay.h; sourceTree = "<group>"; };
+		5042BBE27264BA838D50CE1DF1B57014 /* FXBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = CCMPopup/FXBlurView/FXBlurView.h; sourceTree = "<group>"; };
+		55A23FF3FB075B071F9B4DBC6FA48611 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		5A38B9FB6091B51ACDA711C7A40FBB11 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = CCMPopup/FXBlurView/FXBlurView.m; sourceTree = "<group>"; };
+		62320B8A8ADB834501E118E28BE5A8A5 /* UIImage+screenshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+screenshot.m"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.m"; sourceTree = "<group>"; };
+		65B703F688AD0BC5B1836F8F6A569B37 /* CCMPopupTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupTransitioning.h; path = CCMPopup/CCMPopupTransitioning.h; sourceTree = "<group>"; };
 		6BB3A2DE025D47A42CF909DB17F53349 /* Pods-AireNL-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL-frameworks.sh"; sourceTree = "<group>"; };
-		7D664691C405A926879412476769EA82 /* TAOverlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TAOverlay-prefix.pch"; sourceTree = "<group>"; };
-		7FF0A896D9518FAC2AF946E78DD089C0 /* CCMPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCMPopup-dummy.m"; sourceTree = "<group>"; };
-		7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		80A8BEF149FF5FB6A17D7DB983921B9B /* CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupAnimation.m; path = CCMPopup/CCMPopupAnimation.m; sourceTree = "<group>"; };
-		8E381A16F1F8031F38F40B5D12CAE811 /* CCMPopupTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupTransitioning.h; path = CCMPopup/CCMPopupTransitioning.h; sourceTree = "<group>"; };
-		9C0B53BD04A58F24193BABF2A4BB6CC4 /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CCMPopupAnimation.m"; path = "CCMPopup/UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
-		AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCMPopup.xcconfig; sourceTree = "<group>"; };
-		B0F381F54F570EBA8EDCCA2301630974 /* libCCMPopup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCMPopup.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB68EB49FB102A3D344A480A8CF10B4D /* UIImage+screenshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+screenshot.h"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.h"; sourceTree = "<group>"; };
-		BF65447544FD1FB5F1ABD9A3035B7C64 /* libTAOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTAOverlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C6743CBDCDB0FCBF70B1898D58C2CAE /* UIImage+screenshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+screenshot.h"; path = "CCMPopup/UIImage+screenshot/UIImage+screenshot.h"; sourceTree = "<group>"; };
+		6E0285C24BAB24474218112DA4CAEA2A /* CCMPopupTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupTransitioning.m; path = CCMPopup/CCMPopupTransitioning.m; sourceTree = "<group>"; };
+		781B6C15D9E95402DA22B097A808CECC /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		803AA7D3FD9E27A5588030868C501878 /* CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupAnimation.h; path = CCMPopup/CCMPopupAnimation.h; sourceTree = "<group>"; };
+		86FD9094819A1AB485D70178985E9F34 /* CCMPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCMPopup.xcconfig; sourceTree = "<group>"; };
+		8E0DFF739C04DBA6079F06C92DC47F40 /* TAOverlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TAOverlay-prefix.pch"; sourceTree = "<group>"; };
+		8FFBBF52CE07F953710A26E6256E4053 /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99A4BC8015560ED762AF207D564F9337 /* CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupAnimation.m; path = CCMPopup/CCMPopupAnimation.m; sourceTree = "<group>"; };
+		9D52241919312E929559541897028999 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		A69DD62A1F2215A38C1B694B3FBFAE1E /* UIViewController+CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CCMPopupAnimation.h"; path = "CCMPopup/UIViewController+CCMPopupAnimation.h"; sourceTree = "<group>"; };
+		AA22D26D280097296C64DA657201A76B /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		AD77C8B0F314E25D284916517F465301 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		AED5D49869929C64738CDA90EF27C30F /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "CCMPopup/UIImage+ImageEffects/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		B77DC8DAE3FB3BB195FDBAF123541FF1 /* TAOverlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAOverlay.m; path = TAOverlay/TAOverlay.m; sourceTree = "<group>"; };
+		BAD3DFC6B8B0F382DE978892EEE7F2D2 /* TAOverlay.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TAOverlay.bundle; path = TAOverlay/TAOverlay.bundle; sourceTree = "<group>"; };
+		BFA9D0A764CE97D5ABAB5DBF811EC96F /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
 		CBAFF3386F14BDD8669E817CE3C5992F /* Pods-AireNL-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AireNL-resources.sh"; sourceTree = "<group>"; };
-		D46A50567DC922BCBE150EC8774058F9 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
-		EA8DE82ECAB4176B98B77EB33B586798 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = CCMPopup/FXBlurView/FXBlurView.m; sourceTree = "<group>"; };
-		F6E08D1E28702C5B8369BB6B6B890780 /* CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMPopupAnimation.h; path = CCMPopup/CCMPopupAnimation.h; sourceTree = "<group>"; };
-		FA526626DEFEA006FE6E260DED0954E4 /* FXBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = CCMPopup/FXBlurView/FXBlurView.h; sourceTree = "<group>"; };
-		FBA6ADDABF18FA2BD7EA29ECBB4100CF /* UIViewController+CCMPopupAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CCMPopupAnimation.h"; path = "CCMPopup/UIViewController+CCMPopupAnimation.h"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D44E307880E4F052BCFB55C79132ACBA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		DB199357459B193D4747E5063C3375CC /* CCMCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCMCustomAnimation.h; path = CCMPopup/CCMCustomAnimation.h; sourceTree = "<group>"; };
+		DE97C726A863AB8C698BB4A05C7543CD /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
+		EFC0E8D8B7B0DF7BE07AE382ACE03C1E /* CCMPopupSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMPopupSegue.m; path = CCMPopup/CCMPopupSegue.m; sourceTree = "<group>"; };
+		EFC91AF47CB8993CD003B74A5CF09A65 /* CCMPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCMPopup-dummy.m"; sourceTree = "<group>"; };
+		F0464D5020028D81754DFDDAF1428309 /* Pods-AireNL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AireNL-dummy.m"; sourceTree = "<group>"; };
+		F129AC7B510BADF3E3B6D9F97644628A /* CCMPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCMPopup-prefix.pch"; sourceTree = "<group>"; };
+		F51340EE371440DD80AED91B8D4B4F31 /* CCMCustomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCMCustomAnimation.m; path = CCMPopup/CCMCustomAnimation.m; sourceTree = "<group>"; };
+		FB7D772C607CD49178254C20D6C3D581 /* UIViewController+CCMPopupAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CCMPopupAnimation.m"; path = "CCMPopup/UIViewController+CCMPopupAnimation.m"; sourceTree = "<group>"; };
+		FE52D181A11B5D511D156D0060B269D1 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ABF894B1FC3A970A92D81F4F5B9017A5 /* Frameworks */ = {
+		18F7ECC3B818BAF0456460874E664696 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1024A244B2F39AC728349749A5E40DD7 /* Foundation.framework in Frameworks */,
+				B062A0C3B90F6AC0336B638D3BAF447E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9BB1448C5B3033C8074E4CF1BB75776 /* Frameworks */ = {
+		AE71BA047690C4C3A5DA1F3C763830C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383E2519B22211AF178503EE2D342AA2 /* Foundation.framework in Frameworks */,
+				D256EFABC778D43380799ED546E047DF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4FEE5055FD259FF823503A752D57927 /* Frameworks */ = {
+		FBBE1870C997448CA7F6F41539FD04BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71EA5D35898CDA61101B99D82A81964 /* Foundation.framework in Frameworks */,
+				EB9E35668A74B2946E8DC3592EEE4DE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CE76EB491C7277B4AC3DDEA061EC274 /* TAOverlay */ = {
+		05725AC3721AD693CFD8CC42A52A37D2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5798BCCE8244E2C10E2495C4273D8DB1 /* TAOverlay.h */,
-				3FBE90FC30F4764163A6964A8CCC9B0D /* TAOverlay.m */,
-				A5CC5BCCE333C57F93410D91579FF44E /* Resources */,
-				72662AEA277948A4288349E5EB3F55D6 /* Support Files */,
+				86FD9094819A1AB485D70178985E9F34 /* CCMPopup.xcconfig */,
+				EFC91AF47CB8993CD003B74A5CF09A65 /* CCMPopup-dummy.m */,
+				F129AC7B510BADF3E3B6D9F97644628A /* CCMPopup-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CCMPopup";
+			sourceTree = "<group>";
+		};
+		1ADA4C0071E1F23A88A61DF74F0C1B33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FBA57C64170C6B815E2AF92D37E7846 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		41A10E54F302A0993EC2431E960769CD /* TAOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				4EBD55D6E07B1C04AA114B4BC42DBDA7 /* TAOverlay.h */,
+				B77DC8DAE3FB3BB195FDBAF123541FF1 /* TAOverlay.m */,
+				B95E399F585B7FD1E2E750C4E95B9FD1 /* Resources */,
+				C944941DF581C75CDA9A608D971BFC85 /* Support Files */,
 			);
 			path = TAOverlay;
 			sourceTree = "<group>";
 		};
-		27F5F3867CE1850FEB8F3376B50DE9A4 /* CCMPopup */ = {
+		46DE952DF2D98CB89804744DF80C1A00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66245E3E3EBAC3561FBB7C595FFCD2F2 /* CCMCustomAnimation.h */,
-				3BC2EC75C006F1D0D9DE524BAC306B84 /* CCMCustomAnimation.m */,
-				F6E08D1E28702C5B8369BB6B6B890780 /* CCMPopupAnimation.h */,
-				80A8BEF149FF5FB6A17D7DB983921B9B /* CCMPopupAnimation.m */,
-				0F261CE378CF317C972312C7EEF65E49 /* CCMPopupSegue.h */,
-				3CE3755D4910CE70279FD9B8DECD783D /* CCMPopupSegue.m */,
-				8E381A16F1F8031F38F40B5D12CAE811 /* CCMPopupTransitioning.h */,
-				28CC204247CE477903C228F47E8026A5 /* CCMPopupTransitioning.m */,
-				FA526626DEFEA006FE6E260DED0954E4 /* FXBlurView.h */,
-				EA8DE82ECAB4176B98B77EB33B586798 /* FXBlurView.m */,
-				166B18EEFD004BCFA7B38A41929AD66B /* UIImage+ImageEffects.h */,
-				2EF9A2EEF4AD5C7567116403FA14DFDA /* UIImage+ImageEffects.m */,
-				BB68EB49FB102A3D344A480A8CF10B4D /* UIImage+screenshot.h */,
-				330D7CC400D48A4462837761B6F53349 /* UIImage+screenshot.m */,
-				FBA6ADDABF18FA2BD7EA29ECBB4100CF /* UIViewController+CCMPopupAnimation.h */,
-				9C0B53BD04A58F24193BABF2A4BB6CC4 /* UIViewController+CCMPopupAnimation.m */,
-				A1293E500FB1A4BB5ED0EEC2AB06C186 /* Support Files */,
+				4B532A270FF64F344C0D68EAF6DBD3CE /* CCMPopup */,
+				EE68BCA1D101F7ACD49C5BC1A45F4CA0 /* Crashlytics */,
+				8FBDE2A3FA30B36850E956C9D1D4B508 /* Fabric */,
+				41A10E54F302A0993EC2431E960769CD /* TAOverlay */,
 			);
-			path = CCMPopup;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		4B532A270FF64F344C0D68EAF6DBD3CE /* CCMPopup */ = {
 			isa = PBXGroup;
 			children = (
-				7FFEB1C3769D3F1D32E9C7ACEC2C4919 /* Foundation.framework */,
+				DB199357459B193D4747E5063C3375CC /* CCMCustomAnimation.h */,
+				F51340EE371440DD80AED91B8D4B4F31 /* CCMCustomAnimation.m */,
+				803AA7D3FD9E27A5588030868C501878 /* CCMPopupAnimation.h */,
+				99A4BC8015560ED762AF207D564F9337 /* CCMPopupAnimation.m */,
+				08ACA9BE9EAB4F03B99F51C2214396DF /* CCMPopupSegue.h */,
+				EFC0E8D8B7B0DF7BE07AE382ACE03C1E /* CCMPopupSegue.m */,
+				65B703F688AD0BC5B1836F8F6A569B37 /* CCMPopupTransitioning.h */,
+				6E0285C24BAB24474218112DA4CAEA2A /* CCMPopupTransitioning.m */,
+				5042BBE27264BA838D50CE1DF1B57014 /* FXBlurView.h */,
+				5A38B9FB6091B51ACDA711C7A40FBB11 /* FXBlurView.m */,
+				000AE6F7A9F2A1A58A2EA2AF3AB01506 /* UIImage+ImageEffects.h */,
+				AED5D49869929C64738CDA90EF27C30F /* UIImage+ImageEffects.m */,
+				6C6743CBDCDB0FCBF70B1898D58C2CAE /* UIImage+screenshot.h */,
+				62320B8A8ADB834501E118E28BE5A8A5 /* UIImage+screenshot.m */,
+				A69DD62A1F2215A38C1B694B3FBFAE1E /* UIViewController+CCMPopupAnimation.h */,
+				FB7D772C607CD49178254C20D6C3D581 /* UIViewController+CCMPopupAnimation.m */,
+				05725AC3721AD693CFD8CC42A52A37D2 /* Support Files */,
 			);
-			name = iOS;
+			path = CCMPopup;
 			sourceTree = "<group>";
 		};
 		6D002980B94816B8558877F48F38FE1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B0F381F54F570EBA8EDCCA2301630974 /* libCCMPopup.a */,
-				1C789D9FBF210576F28B3C3441DD10DF /* libPods-AireNL.a */,
-				BF65447544FD1FB5F1ABD9A3035B7C64 /* libTAOverlay.a */,
+				434164E020C15FB4252BF21B8288E36F /* libCCMPopup.a */,
+				8FFBBF52CE07F953710A26E6256E4053 /* libPods-AireNL.a */,
+				2E49D89B56962A865351CD06C6AB94C5 /* libTAOverlay.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,37 +218,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		72662AEA277948A4288349E5EB3F55D6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */,
-				253BD84789D956D6185B74D1C890443D /* TAOverlay-dummy.m */,
-				7D664691C405A926879412476769EA82 /* TAOverlay-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TAOverlay";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F451B33E6A2EB5C0F701146E64A3F7C6 /* Pods */,
+				46DE952DF2D98CB89804744DF80C1A00 /* Pods */,
 				6D002980B94816B8558877F48F38FE1F /* Products */,
 				724AAC910BC000625A54DB78C45771A1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A1293E500FB1A4BB5ED0EEC2AB06C186 /* Support Files */ = {
+		8FBDE2A3FA30B36850E956C9D1D4B508 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */,
-				7FF0A896D9518FAC2AF946E78DD089C0 /* CCMPopup-dummy.m */,
-				0DF84A2DBFE9FDA1A8EC31766B7559BA /* CCMPopup-prefix.pch */,
+				1ADA4C0071E1F23A88A61DF74F0C1B33 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CCMPopup";
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		A28D56FF45BAEA74B0CD2D67C6507F49 /* Pods-AireNL */ = {
@@ -217,20 +242,20 @@
 			children = (
 				1ADFFEA0EC45A515A225E7798059839B /* Pods-AireNL-acknowledgements.markdown */,
 				27FB2A100C1821A3951B074DA3B5A217 /* Pods-AireNL-acknowledgements.plist */,
-				2812306DF3F87C950DA7178245D16734 /* Pods-AireNL-dummy.m */,
+				F0464D5020028D81754DFDDAF1428309 /* Pods-AireNL-dummy.m */,
 				6BB3A2DE025D47A42CF909DB17F53349 /* Pods-AireNL-frameworks.sh */,
 				CBAFF3386F14BDD8669E817CE3C5992F /* Pods-AireNL-resources.sh */,
-				D46A50567DC922BCBE150EC8774058F9 /* Pods-AireNL.debug.xcconfig */,
-				2ECD931AC07AAD511409A9B6608DC312 /* Pods-AireNL.release.xcconfig */,
+				484FC67DB91470E8814AA838B0B5E79A /* Pods-AireNL.debug.xcconfig */,
+				DE97C726A863AB8C698BB4A05C7543CD /* Pods-AireNL.release.xcconfig */,
 			);
 			name = "Pods-AireNL";
 			path = "Target Support Files/Pods-AireNL";
 			sourceTree = "<group>";
 		};
-		A5CC5BCCE333C57F93410D91579FF44E /* Resources */ = {
+		B95E399F585B7FD1E2E750C4E95B9FD1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3CF8F2FF023448B8B844BD3FA870D41C /* TAOverlay.bundle */,
+				BAD3DFC6B8B0F382DE978892EEE7F2D2 /* TAOverlay.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -238,56 +263,81 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F451B33E6A2EB5C0F701146E64A3F7C6 /* Pods */ = {
+		C944941DF581C75CDA9A608D971BFC85 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				27F5F3867CE1850FEB8F3376B50DE9A4 /* CCMPopup */,
-				0CE76EB491C7277B4AC3DDEA061EC274 /* TAOverlay */,
+				35C618E38EA2803BC89B255FD1B9BA3D /* TAOverlay.xcconfig */,
+				3B0DA73F7AE16A612034924F7842A0B7 /* TAOverlay-dummy.m */,
+				8E0DFF739C04DBA6079F06C92DC47F40 /* TAOverlay-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/TAOverlay";
+			sourceTree = "<group>";
+		};
+		E02822E310937BA57E4B47905CE47BBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D44E307880E4F052BCFB55C79132ACBA /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE68BCA1D101F7ACD49C5BC1A45F4CA0 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				AD77C8B0F314E25D284916517F465301 /* ANSCompatibility.h */,
+				AA22D26D280097296C64DA657201A76B /* Answers.h */,
+				9D52241919312E929559541897028999 /* CLSAttributes.h */,
+				55A23FF3FB075B071F9B4DBC6FA48611 /* CLSLogging.h */,
+				FE52D181A11B5D511D156D0060B269D1 /* CLSReport.h */,
+				BFA9D0A764CE97D5ABAB5DBF811EC96F /* CLSStackFrame.h */,
+				781B6C15D9E95402DA22B097A808CECC /* Crashlytics.h */,
+				E02822E310937BA57E4B47905CE47BBD /* Frameworks */,
+			);
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		54B0A380B77E7B41FEC7B318A047BA5A /* Headers */ = {
+		6FC60CEED4B0E31C3329C7FFCCE1D459 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E19A882B23ABD0C422F9468B54042B /* CCMCustomAnimation.h in Headers */,
-				DBABA00D4F59AA6235747D6DB9757DB7 /* CCMPopupAnimation.h in Headers */,
-				8942C99D49AB9F2B800B9248680B423E /* CCMPopupSegue.h in Headers */,
-				0FD4454E9E6E90079D9BC50CCCF56459 /* CCMPopupTransitioning.h in Headers */,
-				6BC8FEFA34BC53A330C502F154103F44 /* FXBlurView.h in Headers */,
-				98EEC665C9387944C7DC2CE3E596A8B1 /* UIImage+ImageEffects.h in Headers */,
-				18EF5F8AE928250B8FC2803870278352 /* UIImage+screenshot.h in Headers */,
-				6AA5580697545ACF25D9E741B00457AC /* UIViewController+CCMPopupAnimation.h in Headers */,
+				8E6E089C3AF5185A03852D81F8DF3BF5 /* CCMCustomAnimation.h in Headers */,
+				372626CCA664C2B38538098023B4E7E4 /* CCMPopupAnimation.h in Headers */,
+				B2C56DBDAB0FE6F4EC68BAF40162A82D /* CCMPopupSegue.h in Headers */,
+				5D60BD0B38E33C4870231ABB0594A40E /* CCMPopupTransitioning.h in Headers */,
+				92857B24EA7D824823505AFF923742C8 /* FXBlurView.h in Headers */,
+				8065958E4885F33E137343B2EF035D13 /* UIImage+ImageEffects.h in Headers */,
+				FEF33F5E3FA09DB3527FF9729CFBC008 /* UIImage+screenshot.h in Headers */,
+				BB83913B03C8D795FFB9DB791F2B0192 /* UIViewController+CCMPopupAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6164643FE06381B31AA7C4B531D6D89 /* Headers */ = {
+		7A41AC769523F378F928F66EF1B96A05 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB18F4B1FC99C181E26E208AD47A3A83 /* TAOverlay.h in Headers */,
+				ED1C143A5D6FFFF7FD91F3F2382D5E0D /* TAOverlay.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A0224F852C0D26ED1D86E7D9F3956BA /* TAOverlay */ = {
+		0F740282D0274C330A9F73E5DBDE1C09 /* TAOverlay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C58190D19139E4FE8DA4A0DA99CCA5FE /* Build configuration list for PBXNativeTarget "TAOverlay" */;
+			buildConfigurationList = ED134822708507D6B663CAD51AA3B5B7 /* Build configuration list for PBXNativeTarget "TAOverlay" */;
 			buildPhases = (
-				C913F6CE7787EA820474082403AE2361 /* Sources */,
-				ABF894B1FC3A970A92D81F4F5B9017A5 /* Frameworks */,
-				A6164643FE06381B31AA7C4B531D6D89 /* Headers */,
+				5CF7D8B27725D0E5021ADA18890F2D9A /* Sources */,
+				AE71BA047690C4C3A5DA1F3C763830C1 /* Frameworks */,
+				7A41AC769523F378F928F66EF1B96A05 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -295,16 +345,34 @@
 			);
 			name = TAOverlay;
 			productName = TAOverlay;
-			productReference = BF65447544FD1FB5F1ABD9A3035B7C64 /* libTAOverlay.a */;
+			productReference = 2E49D89B56962A865351CD06C6AB94C5 /* libTAOverlay.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		80349E1C2E18A8D75FD62E88593A9AFD /* CCMPopup */ = {
+		50B31D521224D9B167DD70D6FC53F40C /* Pods-AireNL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADE7E718B4AD5289BDFDDF98E48D7C49 /* Build configuration list for PBXNativeTarget "CCMPopup" */;
+			buildConfigurationList = 5F27B1D8197D66A8498E86C1A797C041 /* Build configuration list for PBXNativeTarget "Pods-AireNL" */;
 			buildPhases = (
-				FAB37A89BFC38E81451ABB2939252D4B /* Sources */,
-				E9BB1448C5B3033C8074E4CF1BB75776 /* Frameworks */,
-				54B0A380B77E7B41FEC7B318A047BA5A /* Headers */,
+				E77DA106AE5E4E47B4C27D2C812DA5FA /* Sources */,
+				18F7ECC3B818BAF0456460874E664696 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A0A2E53955DF3937331E7758DFB1D15 /* PBXTargetDependency */,
+				C9E8BBB68ABC8FF4CF12B6F3177C5D53 /* PBXTargetDependency */,
+			);
+			name = "Pods-AireNL";
+			productName = "Pods-AireNL";
+			productReference = 8FFBBF52CE07F953710A26E6256E4053 /* libPods-AireNL.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BB5F8984A372414832A6E4878E57C98E /* CCMPopup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB24CD19B17E79D1EA41250C7450E62F /* Build configuration list for PBXNativeTarget "CCMPopup" */;
+			buildPhases = (
+				3D77638BC96FE460C6A7BF7382C7084E /* Sources */,
+				FBBE1870C997448CA7F6F41539FD04BE /* Frameworks */,
+				6FC60CEED4B0E31C3329C7FFCCE1D459 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -312,25 +380,7 @@
 			);
 			name = CCMPopup;
 			productName = CCMPopup;
-			productReference = B0F381F54F570EBA8EDCCA2301630974 /* libCCMPopup.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D5C84A8C255F2F0A2E191B11ED2E5C0F /* Pods-AireNL */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95517827A6290125B89A4BD33F3D43EA /* Build configuration list for PBXNativeTarget "Pods-AireNL" */;
-			buildPhases = (
-				4B735446395E10B1CC5FE837430DF34A /* Sources */,
-				F4FEE5055FD259FF823503A752D57927 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4154A828B3603D2E7EE75D6BBB314336 /* PBXTargetDependency */,
-				255CDAE8CADEDE5E3CFAF0373164CA41 /* PBXTargetDependency */,
-			);
-			name = "Pods-AireNL";
-			productName = "Pods-AireNL";
-			productReference = 1C789D9FBF210576F28B3C3441DD10DF /* libPods-AireNL.a */;
+			productReference = 434164E020C15FB4252BF21B8288E36F /* libCCMPopup.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +389,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -354,117 +404,70 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80349E1C2E18A8D75FD62E88593A9AFD /* CCMPopup */,
-				D5C84A8C255F2F0A2E191B11ED2E5C0F /* Pods-AireNL */,
-				4A0224F852C0D26ED1D86E7D9F3956BA /* TAOverlay */,
+				BB5F8984A372414832A6E4878E57C98E /* CCMPopup */,
+				50B31D521224D9B167DD70D6FC53F40C /* Pods-AireNL */,
+				0F740282D0274C330A9F73E5DBDE1C09 /* TAOverlay */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B735446395E10B1CC5FE837430DF34A /* Sources */ = {
+		3D77638BC96FE460C6A7BF7382C7084E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8B5A037E7437072AE8A57DDB9C390FA /* Pods-AireNL-dummy.m in Sources */,
+				563D1515239D831B4936902C2BC0C11B /* CCMCustomAnimation.m in Sources */,
+				A5D4F7F155DC0B8960F861558362BCA0 /* CCMPopup-dummy.m in Sources */,
+				A93C1EBACDB00BD7A60B69E6A8F5FEDF /* CCMPopupAnimation.m in Sources */,
+				95DED59C9074D62F4ECDD1E955F3AF2A /* CCMPopupSegue.m in Sources */,
+				91F0A7C50EB727472F63AF804B8733B2 /* CCMPopupTransitioning.m in Sources */,
+				B05009BAF3349AD64F1B74BFFA0047CA /* FXBlurView.m in Sources */,
+				BD0C79B21710B8831795B63683016C1F /* UIImage+ImageEffects.m in Sources */,
+				18B81CB7DECF9422B547936E8793C31C /* UIImage+screenshot.m in Sources */,
+				50DA81EF7E19FADB282BED6E1A498387 /* UIViewController+CCMPopupAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C913F6CE7787EA820474082403AE2361 /* Sources */ = {
+		5CF7D8B27725D0E5021ADA18890F2D9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8BF9B8BB15DF92324B091A40FE0D47E /* TAOverlay-dummy.m in Sources */,
-				61D93733519326D90036056F2F93578C /* TAOverlay.m in Sources */,
+				14AF5A1778712AA7C287C75D6F4E692A /* TAOverlay-dummy.m in Sources */,
+				B278B7C621C0E09924786C4437067191 /* TAOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAB37A89BFC38E81451ABB2939252D4B /* Sources */ = {
+		E77DA106AE5E4E47B4C27D2C812DA5FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927BB3E3141D930FE21E42C438BAB951 /* CCMCustomAnimation.m in Sources */,
-				D9AF00E38ADD4DA4C34A9B7BF1765386 /* CCMPopup-dummy.m in Sources */,
-				03D89319368D9E6D8B836FED9E77766B /* CCMPopupAnimation.m in Sources */,
-				5F8F598D45E68313AEFB99F6AF48AB69 /* CCMPopupSegue.m in Sources */,
-				D6D4FB165CA296D76359A215DBA54B4D /* CCMPopupTransitioning.m in Sources */,
-				2DE3EBA81996B1349B216DF5B8FB9132 /* FXBlurView.m in Sources */,
-				D14490FE030F1F4374CD525D9251862E /* UIImage+ImageEffects.m in Sources */,
-				41D4B46EC9DB955B612592F90B126C67 /* UIImage+screenshot.m in Sources */,
-				EFE685A76D6B921849816FB985077BCD /* UIViewController+CCMPopupAnimation.m in Sources */,
+				D211515BFB8E5A5CD5DB83D07B9BEF23 /* Pods-AireNL-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		255CDAE8CADEDE5E3CFAF0373164CA41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TAOverlay;
-			target = 4A0224F852C0D26ED1D86E7D9F3956BA /* TAOverlay */;
-			targetProxy = D587B6EE1212B47E041D3B0B2935C5E9 /* PBXContainerItemProxy */;
-		};
-		4154A828B3603D2E7EE75D6BBB314336 /* PBXTargetDependency */ = {
+		6A0A2E53955DF3937331E7758DFB1D15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CCMPopup;
-			target = 80349E1C2E18A8D75FD62E88593A9AFD /* CCMPopup */;
-			targetProxy = E39E3FE0C215254D5F4DE9EB4BACFA66 /* PBXContainerItemProxy */;
+			target = BB5F8984A372414832A6E4878E57C98E /* CCMPopup */;
+			targetProxy = 3FE89FE2ED54E6F5F314D2F58E518F12 /* PBXContainerItemProxy */;
+		};
+		C9E8BBB68ABC8FF4CF12B6F3177C5D53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TAOverlay;
+			target = 0F740282D0274C330A9F73E5DBDE1C09 /* TAOverlay */;
+			targetProxy = 56A79825527D673F52DFA3398009BDB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		66035773FD5B3F5DD729C8DD8981842D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		749885AE0FB78ACABC56E9AEB31C4563 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 232B0FFB8F777D087FAFBE0920FA69F3 /* TAOverlay.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9F9E7839F66FE0A284ECC299F964ADB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D46A50567DC922BCBE150EC8774058F9 /* Pods-AireNL.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -479,10 +482,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -500,58 +505,74 @@
 			};
 			name = Debug;
 		};
-		BF029793B712A035F7026F99D1067E79 /* Release */ = {
+		83692CDDC91D9DF975E4030B7BB6A3C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */;
+			baseConfigurationReference = 35C618E38EA2803BC89B255FD1B9BA3D /* TAOverlay.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D3B142FE69A69AB4A13008F5E815E110 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB21AB2013B3495530D4ED6358D271D2 /* CCMPopup.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		EC4AF5BA8E6D0B5B5FF406B517A7AE7B /* Release */ = {
+		8E2522E3DCB9BC900EEC0F365E95C6D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ECD931AC07AAD511409A9B6608DC312 /* Pods-AireNL.release.xcconfig */;
+			baseConfigurationReference = 35C618E38EA2803BC89B255FD1B9BA3D /* TAOverlay.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TAOverlay/TAOverlay-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+		A3C7E75AE44E5F2C6DDBBB4A5B2A9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86FD9094819A1AB485D70178985E9F34 /* CCMPopup.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -568,7 +589,10 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -582,41 +606,104 @@
 			};
 			name = Release;
 		};
+		BCEAA33B602871D6E33C1E8A64161297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484FC67DB91470E8814AA838B0B5E79A /* Pods-AireNL.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CDE629220B9B348690412B4F7886D474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE97C726A863AB8C698BB4A05C7543CD /* Pods-AireNL.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E7B81810C05E8FFEF685817F86220293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86FD9094819A1AB485D70178985E9F34 /* CCMPopup.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CCMPopup/CCMPopup-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
-				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95517827A6290125B89A4BD33F3D43EA /* Build configuration list for PBXNativeTarget "Pods-AireNL" */ = {
+		5F27B1D8197D66A8498E86C1A797C041 /* Build configuration list for PBXNativeTarget "Pods-AireNL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F9E7839F66FE0A284ECC299F964ADB3 /* Debug */,
-				EC4AF5BA8E6D0B5B5FF406B517A7AE7B /* Release */,
+				BCEAA33B602871D6E33C1E8A64161297 /* Debug */,
+				CDE629220B9B348690412B4F7886D474 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADE7E718B4AD5289BDFDDF98E48D7C49 /* Build configuration list for PBXNativeTarget "CCMPopup" */ = {
+		AB24CD19B17E79D1EA41250C7450E62F /* Build configuration list for PBXNativeTarget "CCMPopup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3B142FE69A69AB4A13008F5E815E110 /* Debug */,
-				BF029793B712A035F7026F99D1067E79 /* Release */,
+				E7B81810C05E8FFEF685817F86220293 /* Debug */,
+				A3C7E75AE44E5F2C6DDBBB4A5B2A9B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C58190D19139E4FE8DA4A0DA99CCA5FE /* Build configuration list for PBXNativeTarget "TAOverlay" */ = {
+		ED134822708507D6B663CAD51AA3B5B7 /* Build configuration list for PBXNativeTarget "TAOverlay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				749885AE0FB78ACABC56E9AEB31C4563 /* Debug */,
-				66035773FD5B3F5DD729C8DD8981842D /* Release */,
+				83692CDDC91D9DF975E4030B7BB6A3C9 /* Debug */,
+				8E2522E3DCB9BC900EEC0F365E95C6D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

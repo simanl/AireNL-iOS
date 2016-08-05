@@ -76,7 +76,7 @@
 		06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */; };
 		06FED4A51BB1F61300DFCDAF /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06FED4A81BB1F61300DFCDAF /* AireNL WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
-		C11B3EE383266F2F2E17F274 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */; };
+		2528BDBB6B6416484758FC44 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D38754988C20B81362B452F /* libPods-AireNL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,15 +252,9 @@
 		06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VientoCollectionViewCell.m; sourceTree = "<group>"; };
 		06FE05621B715E4200BCFCA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellDelegate.h; sourceTree = "<group>"; };
-		0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30FA26A5B04475243CAA5344 /* Pods-AireNL Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget.release.xcconfig"; sourceTree = "<group>"; };
-		4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
-		52D9E41D8AAE8899B2C12F46 /* Pods-AireNL WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
-		AA02464CFA27DDA7FD62D67B /* Pods-AireNL WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL WatchKit Extension/Pods-AireNL WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		B306F5300924CAE313E9D1FE /* Pods-AireNL Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL Widget/Pods-AireNL Widget.debug.xcconfig"; sourceTree = "<group>"; };
-		CDBFA071CE5B9223C540D91D /* libPods-AireNL Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D38754988C20B81362B452F /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6F6F5C5CFDAD9217115EE2 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
+		F14A852873535341315C5577 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */,
-				C11B3EE383266F2F2E17F274 /* libPods-AireNL.a in Frameworks */,
+				2528BDBB6B6416484758FC44 /* libPods-AireNL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +288,13 @@
 			files = (
 				06F733AC1BB321B200EB73BE /* CoreLocation.framework in Frameworks */,
 				06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		226EB8F5093C56970EC5645A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,8 +384,8 @@
 				06D8BA661B74106B007462A4 /* AireNL WatchKit Extension */,
 				06D8BA7B1B74106B007462A4 /* AireNL WatchKit App */,
 				06D367A61B542615009E9D47 /* Products */,
-				7DDB6118893D8D39D7CD7C12 /* Pods */,
 				B8522DD162297A694322873C /* Frameworks */,
+				CA6D68850188DA7CD7A4FA27 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -605,30 +606,24 @@
 			name = "Blurs, Gradients";
 			sourceTree = "<group>";
 		};
-		7DDB6118893D8D39D7CD7C12 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */,
-				89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */,
-				AA02464CFA27DDA7FD62D67B /* Pods-AireNL WatchKit Extension.debug.xcconfig */,
-				52D9E41D8AAE8899B2C12F46 /* Pods-AireNL WatchKit Extension.release.xcconfig */,
-				B306F5300924CAE313E9D1FE /* Pods-AireNL Widget.debug.xcconfig */,
-				30FA26A5B04475243CAA5344 /* Pods-AireNL Widget.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B8522DD162297A694322873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				06F733AD1BB321C300EB73BE /* CoreLocation.framework */,
 				06F733AB1BB321B200EB73BE /* CoreLocation.framework */,
 				06FAE3821B72B9C200B19700 /* NotificationCenter.framework */,
-				0D2C23A83B915DE7ADBB1D40 /* libPods-AireNL.a */,
-				254BFC32B48335C59689E9C4 /* libPods-AireNL WatchKit Extension.a */,
-				CDBFA071CE5B9223C540D91D /* libPods-AireNL Widget.a */,
+				2D38754988C20B81362B452F /* libPods-AireNL.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA6D68850188DA7CD7A4FA27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F14A852873535341315C5577 /* Pods-AireNL.debug.xcconfig */,
+				9B6F6F5C5CFDAD9217115EE2 /* Pods-AireNL.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,13 +633,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06D367C81B542615009E9D47 /* Build configuration list for PBXNativeTarget "AireNL" */;
 			buildPhases = (
-				F4F0F9C71844504945351972 /* Check Pods Manifest.lock */,
+				39475A217E63D366B5A3B78E /* 📦 Check Pods Manifest.lock */,
 				06D367A11B542615009E9D47 /* Sources */,
 				06D367A21B542615009E9D47 /* Frameworks */,
 				06D367A31B542615009E9D47 /* Resources */,
-				1661E4839A3A757B79DA8EC6 /* Copy Pods Resources */,
 				06FAE3921B72B9C200B19700 /* Embed App Extensions */,
 				06FED4AA1BB1F61300DFCDAF /* Embed Watch Content */,
+				33DD8F575509CD708392D4CC /* 📦 Embed Pods Frameworks */,
+				2BBA903F36E8E4CBC4D96ACD /* 📦 Copy Pods Resources */,
+				067B20551D550A71004D50FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -698,6 +695,7 @@
 			buildPhases = (
 				06D8BA751B74106B007462A4 /* Resources */,
 				06FED4A91BB1F61300DFCDAF /* Embed App Extensions */,
+				226EB8F5093C56970EC5645A /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -831,14 +829,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1661E4839A3A757B79DA8EC6 /* Copy Pods Resources */ = {
+		067B20551D550A71004D50FC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" e064c91a3c450398bf46c65dfa28ebad0dc84628 7f4348c0a4f0d36093e55123ffbdac67d0fb17fde3fd9736f20d83abdfc07700";
+		};
+		2BBA903F36E8E4CBC4D96ACD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -846,14 +857,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL/Pods-AireNL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4F0F9C71844504945351972 /* Check Pods Manifest.lock */ = {
+		33DD8F575509CD708392D4CC /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL/Pods-AireNL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39475A217E63D366B5A3B78E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1107,7 +1133,7 @@
 		};
 		06D367C91B542615009E9D47 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4287FD6362385618F804A5B1 /* Pods-AireNL.debug.xcconfig */;
+			baseConfigurationReference = F14A852873535341315C5577 /* Pods-AireNL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1125,7 +1151,7 @@
 		};
 		06D367CA1B542615009E9D47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89084870B84E379639396A29 /* Pods-AireNL.release.xcconfig */;
+			baseConfigurationReference = 9B6F6F5C5CFDAD9217115EE2 /* Pods-AireNL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

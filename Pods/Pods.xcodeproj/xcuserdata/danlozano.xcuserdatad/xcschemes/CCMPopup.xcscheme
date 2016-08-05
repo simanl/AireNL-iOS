@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '977A0B6616410908680090FE'
+               BlueprintIdentifier = 'BB5F8984A372414832A6E4878E57C98E'
                BlueprintName = 'CCMPopup'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libCCMPopup.a'>
