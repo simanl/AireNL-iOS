@@ -63,7 +63,6 @@
 		06EA061B1B8CC93100FA0B87 /* InfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EA061A1B8CC93100FA0B87 /* InfoTableViewController.m */; };
 		06F4C9591B7BFD1000876961 /* ILRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4C9581B7BFD1000876961 /* ILRoundedView.m */; };
 		06F733AC1BB321B200EB73BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F733AB1BB321B200EB73BE /* CoreLocation.framework */; };
-		06F733AE1BB321C300EB73BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F733AD1BB321C300EB73BE /* CoreLocation.framework */; };
 		06F733AF1BB3230400EB73BE /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
 		06F733B01BB3231600EB73BE /* AireNLAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0651421F1BA8764300312C09 /* AireNLAPI.m */; };
 		06FAE3831B72B9C200B19700 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FAE3821B72B9C200B19700 /* NotificationCenter.framework */; };
@@ -76,7 +75,7 @@
 		06FE05531B715A5800BCFCA3 /* VientoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */; };
 		06FED4A51BB1F61300DFCDAF /* AireNL WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06D8BA651B74106B007462A4 /* AireNL WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06FED4A81BB1F61300DFCDAF /* AireNL WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 06D8BA771B74106B007462A4 /* AireNL WatchKit App.app */; };
-		2528BDBB6B6416484758FC44 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D38754988C20B81362B452F /* libPods-AireNL.a */; };
+		0A422B4325066C0CFDFA1720 /* libPods-AireNL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743A4841C1B10ED60AF8C9D /* libPods-AireNL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,7 +234,6 @@
 		06F4C9571B7BFD1000876961 /* ILRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILRoundedView.h; sourceTree = "<group>"; };
 		06F4C9581B7BFD1000876961 /* ILRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILRoundedView.m; sourceTree = "<group>"; };
 		06F733AB1BB321B200EB73BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		06F733AD1BB321C300EB73BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		06FAE3811B72B9C200B19700 /* AireNL Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AireNL Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FAE3821B72B9C200B19700 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		06FAE3861B72B9C200B19700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,8 +250,8 @@
 		06FE05521B715A5800BCFCA3 /* VientoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VientoCollectionViewCell.m; sourceTree = "<group>"; };
 		06FE05621B715E4200BCFCA3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		06FE05631B71614B00BCFCA3 /* ResultsCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellDelegate.h; sourceTree = "<group>"; };
-		2D38754988C20B81362B452F /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6F6F5C5CFDAD9217115EE2 /* Pods-AireNL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.release.xcconfig"; sourceTree = "<group>"; };
+		C743A4841C1B10ED60AF8C9D /* libPods-AireNL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AireNL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14A852873535341315C5577 /* Pods-AireNL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AireNL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AireNL/Pods-AireNL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				065753131B5EE7B300FF226C /* MapKit.framework in Frameworks */,
-				2528BDBB6B6416484758FC44 /* libPods-AireNL.a in Frameworks */,
+				0A422B4325066C0CFDFA1720 /* libPods-AireNL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +276,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F733AE1BB321C300EB73BE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,10 +606,9 @@
 		B8522DD162297A694322873C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06F733AD1BB321C300EB73BE /* CoreLocation.framework */,
 				06F733AB1BB321B200EB73BE /* CoreLocation.framework */,
 				06FAE3821B72B9C200B19700 /* NotificationCenter.framework */,
-				2D38754988C20B81362B452F /* libPods-AireNL.a */,
+				C743A4841C1B10ED60AF8C9D /* libPods-AireNL.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -633,15 +629,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06D367C81B542615009E9D47 /* Build configuration list for PBXNativeTarget "AireNL" */;
 			buildPhases = (
-				39475A217E63D366B5A3B78E /* 📦 Check Pods Manifest.lock */,
+				39475A217E63D366B5A3B78E /* [CP] Check Pods Manifest.lock */,
 				06D367A11B542615009E9D47 /* Sources */,
 				06D367A21B542615009E9D47 /* Frameworks */,
 				06D367A31B542615009E9D47 /* Resources */,
 				06FAE3921B72B9C200B19700 /* Embed App Extensions */,
 				06FED4AA1BB1F61300DFCDAF /* Embed Watch Content */,
-				33DD8F575509CD708392D4CC /* 📦 Embed Pods Frameworks */,
-				2BBA903F36E8E4CBC4D96ACD /* 📦 Copy Pods Resources */,
-				067B20551D550A71004D50FC /* ShellScript */,
+				33DD8F575509CD708392D4CC /* [CP] Embed Pods Frameworks */,
+				2BBA903F36E8E4CBC4D96ACD /* [CP] Copy Pods Resources */,
+				067B20551D550A71004D50FC /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -829,27 +825,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		067B20551D550A71004D50FC /* ShellScript */ = {
+		067B20551D550A71004D50FC /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Fabric;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" e064c91a3c450398bf46c65dfa28ebad0dc84628 7f4348c0a4f0d36093e55123ffbdac67d0fb17fde3fd9736f20d83abdfc07700";
 		};
-		2BBA903F36E8E4CBC4D96ACD /* 📦 Copy Pods Resources */ = {
+		2BBA903F36E8E4CBC4D96ACD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -857,14 +854,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL/Pods-AireNL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		33DD8F575509CD708392D4CC /* 📦 Embed Pods Frameworks */ = {
+		33DD8F575509CD708392D4CC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -872,14 +869,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AireNL/Pods-AireNL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		39475A217E63D366B5A3B78E /* 📦 Check Pods Manifest.lock */ = {
+		39475A217E63D366B5A3B78E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1086,6 +1083,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -1123,10 +1121,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -1135,6 +1135,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F14A852873535341315C5577 /* Pods-AireNL.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1142,10 +1143,12 @@
 				INFOPLIST_FILE = AireNL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simanl.AireNL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1153,6 +1156,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B6F6F5C5CFDAD9217115EE2 /* Pods-AireNL.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1164,6 +1168,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
