@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1895,8 +1895,8 @@ People with asthma may find they need to use their reliever inhaler more often.<
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxj-x4-zO7">
-                                                    <rect key="frame" x="20" y="8" width="47.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 10 (μg x m³)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxj-x4-zO7">
+                                                    <rect key="frame" x="20" y="8" width="118" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="paV-Jk-c8G"/>
                                                     </constraints>
@@ -1953,8 +1953,8 @@ Constant exposure to high levels of PM10 has been related with heart or lung dis
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 2.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-S2-mLl">
-                                                    <rect key="frame" x="20" y="8" width="51.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 2.5 (μg x m³)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-S2-mLl">
+                                                    <rect key="frame" x="20" y="8" width="121.5" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="zo9-v4-DhJ"/>
                                                     </constraints>
@@ -2011,8 +2011,8 @@ Long-term exposure to high levels of PM2.5 cause respiratory and cardiovascular 
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-qG-Zb1">
-                                                    <rect key="frame" x="20" y="8" width="23.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O3 (Parts Per Billion)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-qG-Zb1">
+                                                    <rect key="frame" x="20" y="8" width="150" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="ZfQ-5U-uT7"/>
                                                     </constraints>
