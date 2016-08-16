@@ -11,7 +11,7 @@
 "4FS-Vu-gVY.text" = "BUENA";
 
 /* Class = "UILabel"; text = "O3"; ObjectID = "5qL-qG-Zb1"; */
-"5qL-qG-Zb1.text" = "O3 (Partes Por Billon)";
+"5qL-qG-Zb1.text" = "O3 (expresado en ppb)";
 
 /* Class = "UILabel"; text = "DOWNTOWN OBISPADO STATION"; ObjectID = "8Gg-SX-8k8"; */
 "8Gg-SX-8k8.text" = "ESTACION CENTRO OBISPADO";
@@ -92,13 +92,13 @@
 "rgR-Fr-HU9.text" = "LA CALIDAD DEL AIRE ES";
 
 /* Class = "UILabel"; text = "PM 2.5"; ObjectID = "xjL-S2-mLl"; */
-"xjL-S2-mLl.text" = "PM 2.5 (μg x m³)";
+"xjL-S2-mLl.text" = "PM 2.5 (expresado en μg/m³)";
 
 /* Class = "UILabel"; text = "MORE INFORMATION"; ObjectID = "xjz-8T-t3d"; */
 "xjz-8T-t3d.text" = "MÁS INFORMACIÓN";
 
 /* Class = "UILabel"; text = "PM 10"; ObjectID = "xxj-x4-zO7"; */
-"xxj-x4-zO7.text" = "PM 10 (μg x m³)";
+"xxj-x4-zO7.text" = "PM 10 (expresado en μg/m³)";
 
 /* Class = "UILabel"; text = "IMECA"; ObjectID = "zML-3N-I8u"; */
 "zML-3N-I8u.text" = "IMECA";

@@ -1895,8 +1895,8 @@ People with asthma may find they need to use their reliever inhaler more often.<
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 10 (μg x m³)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxj-x4-zO7">
-                                                    <rect key="frame" x="20" y="8" width="118" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 10 (expressed in μg/m³)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxj-x4-zO7">
+                                                    <rect key="frame" x="20" y="8" width="204.5" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="paV-Jk-c8G"/>
                                                     </constraints>
@@ -1953,8 +1953,8 @@ Constant exposure to high levels of PM10 has been related with heart or lung dis
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 2.5 (μg x m³)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-S2-mLl">
-                                                    <rect key="frame" x="20" y="8" width="121.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM 2.5 (expressed in μg/m³)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-S2-mLl">
+                                                    <rect key="frame" x="20" y="8" width="208.5" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="zo9-v4-DhJ"/>
                                                     </constraints>
@@ -2011,8 +2011,8 @@ Long-term exposure to high levels of PM2.5 cause respiratory and cardiovascular 
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O3 (Parts Per Billion)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-qG-Zb1">
-                                                    <rect key="frame" x="20" y="8" width="150" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O3 (expressed in ppb)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-qG-Zb1">
+                                                    <rect key="frame" x="20" y="8" width="165" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="ZfQ-5U-uT7"/>
                                                     </constraints>
