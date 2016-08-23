@@ -18,7 +18,9 @@
     
     NSString *tempString;
     
-    if (measurement.temperature){
+    if (measurement.temperature &&
+        measurement.temperature.integerValue >= -10 &&
+        measurement.temperature.integerValue <= 60){
         tempString = [NSString stringWithFormat: @"%.0f", [measurement.temperature floatValue]];
     }else{
         tempString = NSLocalizedString(@"n/a", nil);
