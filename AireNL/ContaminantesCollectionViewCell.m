@@ -16,14 +16,15 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    NSNumber *pm10 = measurement.toracicParticles ?: @(0);
-    NSNumber *pm25 = measurement.respirableParticles ?: @(0);
-    NSNumber *O3 = measurement.ozone ?: @(0);
+    NSString *na = NSLocalizedString(@"n/a", nil);
     
-    self.contaminante10Label.text = [pm10 stringValue];
-    self.contaminante25Label.text = [pm25 stringValue];
-    self.contaminante03Label.text = [O3 stringValue];
-
+    NSString *pm10 = measurement.toracicParticles ? measurement.toracicParticles.stringValue : na;
+    NSString *pm25 = measurement.respirableParticles ? measurement.respirableParticles.stringValue : na;
+    NSString *O3 = measurement.ozone ? measurement.ozone.stringValue : na;
+    
+    self.contaminante10Label.text = pm10;
+    self.contaminante25Label.text = pm25;
+    self.contaminante03Label.text = O3;
 }
 
 - (IBAction)didSelectInfo:(id)sender

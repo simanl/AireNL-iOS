@@ -16,9 +16,10 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    NSNumber *windSpeed = measurement.windSpeed ?: @(0);
+    NSString *na = NSLocalizedString(@"n/a", nil);
+    NSString *windString = measurement.windSpeed ? measurement.windSpeed.stringValue : na;
     
-    self.windLabel.text = [windSpeed stringValue];
+    self.windLabel.text = windString;
 }
 
 @end

@@ -16,9 +16,15 @@
 {
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
-    NSNumber *temperature = measurement.temperature ?: @(0);
+    NSString *tempString;
     
-    self.temperatureLabel.text = [NSString stringWithFormat: @"%.0f", [temperature floatValue]];
+    if (measurement.temperature){
+        tempString = [NSString stringWithFormat: @"%.0f", [measurement.temperature floatValue]];
+    }else{
+        tempString = NSLocalizedString(@"n/a", nil);
+    }
+    
+    self.temperatureLabel.text = tempString;
 }
 
 @end
