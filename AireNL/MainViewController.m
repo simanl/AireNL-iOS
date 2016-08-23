@@ -280,7 +280,7 @@ UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFl
 
 - (void)updateScreen
 {
-    self.titleLabel.text = @"MONTERREY";
+    //self.titleLabel.text = @"MONTERREY";
     self.stationLabel.text = [self.selectedStation.name uppercaseString];
     
     [self setGpsButtonOpacity];
