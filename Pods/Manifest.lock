@@ -1,6 +1,6 @@
 PODS:
   - CCMPopup (1.1.0)
-  - Crashlytics (3.7.3):
+  - Crashlytics (3.8.2):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
   - TAOverlay (2.0.1)
@@ -13,10 +13,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CCMPopup: e41fad5b8a0823c9cddea8eab6d431670c9dabe5
-  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
+  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   TAOverlay: 940e37fdb45fbc9acfc73bf1089668367e3b1be6
 
 PODFILE CHECKSUM: bf13f953181164568b126689a61ed5b6f9a599b1
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2
