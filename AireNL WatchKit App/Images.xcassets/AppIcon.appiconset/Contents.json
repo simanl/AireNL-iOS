@@ -3,62 +3,62 @@
     {
       "size" : "24x24",
       "idiom" : "watch",
+      "filename" : "38mm@2x.png",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-4.png",
       "role" : "notificationCenter",
       "subtype" : "38mm"
     },
     {
       "size" : "27.5x27.5",
       "idiom" : "watch",
+      "filename" : "Notification Center 42mm.png",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@1x.png",
       "role" : "notificationCenter",
       "subtype" : "42mm"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-3.png",
+      "filename" : "Apple Watch Compannion Settings @2x.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@3x.png",
+      "filename" : "Apple Watch Companion Settings @3x.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "watch",
+      "filename" : "Apple Watch Home Screen.png",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-2.png",
       "role" : "appLauncher",
       "subtype" : "38mm"
     },
     {
       "size" : "44x44",
       "idiom" : "watch",
+      "filename" : "Apple Watch Long Look.png",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x-1.png",
       "role" : "longLook",
       "subtype" : "42mm"
     },
     {
       "size" : "86x86",
       "idiom" : "watch",
+      "filename" : "Apple Watch Short Look 38mm.png",
       "scale" : "2x",
-      "filename" : "86.png",
       "role" : "quickLook",
       "subtype" : "38mm"
     },
     {
       "size" : "98x98",
       "idiom" : "watch",
+      "filename" : "Apple Watch Short Look 42mm.png",
       "scale" : "2x",
-      "filename" : "Rectangle 1 + Imported Layers + Imported Layers@2x.png",
       "role" : "quickLook",
       "subtype" : "42mm"
     }
