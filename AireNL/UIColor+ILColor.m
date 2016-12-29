@@ -35,6 +35,11 @@
     return [UIColor il_extremelyBadColorWithAlpha: 1];
 }
 
++ (UIColor *)il_notAvailableColor
+{
+    return [UIColor il_notAvailableColorWithAlpha: 1];
+}
+
 + (UIColor *)il_goodColorWithAlpha:(CGFloat)alpha
 {
     return [UIColor colorWithRed: 81.0/255.0 green: 205.0/255.0 blue: 84.0/255.0 alpha: alpha];
@@ -58,6 +63,11 @@
 + (UIColor *)il_extremelyBadColorWithAlpha:(CGFloat)alpha
 {
     return [UIColor colorWithRed: 115.0/255.0 green: 52.0/255.0 blue: 135.0/255.0 alpha: alpha];
+}
+
++ (UIColor *)il_notAvailableColorWithAlpha:(CGFloat)alpha
+{
+    return [UIColor colorWithRed: 170.0/255.0 green: 170.0/255.0 blue: 170.0/255.0 alpha: alpha];
 }
 
 @end

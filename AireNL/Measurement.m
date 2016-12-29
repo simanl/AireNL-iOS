@@ -171,7 +171,7 @@
             return [UIColor il_extremelyBadColor];
             break;
         default:
-            return [UIColor il_goodColor];
+            return [UIColor il_notAvailableColor];
             break;
     }
 }
@@ -207,7 +207,7 @@
             break;
         }
         default:
-            return [UIImage imageNamed: @"WaypointIconGood"];
+            return [UIImage imageNamed: @"WaypointIconNotAvailable"];
             break;
     }
 }

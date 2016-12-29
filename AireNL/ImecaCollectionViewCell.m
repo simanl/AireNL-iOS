@@ -25,7 +25,10 @@
     Measurement *measurement = [self.delegate getSelectedMeasurement];
     
     NSNumber *imecaPoints = measurement.imecaPoints;
-    self.imecaLabel.text = imecaPoints? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil);
+    if (imecaPoints.intValue <= 0) {
+        imecaPoints = nil;
+    }
+    self.imecaLabel.text = imecaPoints ? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil);
     
     self.imecaQualityLabel.text = [measurement stringForAirQuality];
     

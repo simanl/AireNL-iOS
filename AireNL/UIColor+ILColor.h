@@ -15,11 +15,13 @@
 + (UIColor *)il_badColor;
 + (UIColor *)il_veryBadColor;
 + (UIColor *)il_extremelyBadColor;
++ (UIColor *)il_notAvailableColor;
 
 + (UIColor *)il_goodColorWithAlpha:(CGFloat)alpha;
 + (UIColor *)il_regularColorWithAlpha:(CGFloat)alpha;
 + (UIColor *)il_badColorWithAlpha:(CGFloat)alpha;
 + (UIColor *)il_veryBadColorWithAlpha:(CGFloat)alpha;
 + (UIColor *)il_extremelyBadColorWithAlpha:(CGFloat)alpha;
++ (UIColor *)il_notAvailableColorWithAlpha:(CGFloat)alpha;
 
 @end
