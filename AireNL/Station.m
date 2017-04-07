@@ -26,8 +26,10 @@
     self.coordinateString = [attributes dl_objectForKeyWithNil: @"latlon"];
     
     NSDictionary *relationships = dictionary[@"relationships"];
-    self.lastMeasurementID = [relationships[@"last_measurement"][@"data"] dl_objectForKeyWithNil: @"id"];
-    
+    NSDictionary *lastMeasurement = [relationships dl_objectForKeyWithNil: @"last_measurement"];
+    NSDictionary *lastMeasurementData = [lastMeasurement dl_objectForKeyWithNil: @"data"];
+    self.lastMeasurementID = [lastMeasurementData dl_objectForKeyWithNil: @"id"];
+
     NSMutableArray *tempForecastIDS = [[NSMutableArray alloc] init];
     for (NSDictionary *forecast in relationships[@"current_forecasts"][@"data"]) {
         NSNumber *forecastID = forecast[@"id"];
