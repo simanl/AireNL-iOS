@@ -30,9 +30,9 @@
     }
     self.imecaLabel.text = imecaPoints ? [imecaPoints stringValue] : NSLocalizedString(@"n/a", nil);
     
-    self.imecaQualityLabel.text = [measurement stringForAirQuality];
+    self.imecaQualityLabel.text = [measurement stringForAirQuality] ?: NSLocalizedString(@"n/a", nil);
     
-    UIColor *airQualityColor = [measurement colorForAirQuality] ?: [UIColor il_goodColor];
+    UIColor *airQualityColor = [measurement colorForAirQuality] ?: [UIColor il_notAvailableColor];
     self.imecaQualityView.backgroundColor = airQualityColor;
     
     if (measurement.date) {

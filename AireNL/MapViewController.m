@@ -241,8 +241,9 @@
             
             Station *station = (Station *)annotation;
             Measurement *measurement = [self.stationsAPIResults lastMeasurementForStation: station];
-            
-            annotationView.image = [measurement mapAnnotationImageForAirQuality];
+
+            UIImage *stationImage = [measurement mapAnnotationImageForAirQuality] ?: [UIImage imageNamed: @"WaypointIconNotAvailable"];
+            annotationView.image = stationImage;
             annotationView.canShowCallout = NO;
             
             return annotationView;
@@ -334,12 +335,12 @@
     
     UIView *airQualityView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 260, 40)];
     airQualityView.center = CGPointMake(140, 80);
-    airQualityView.backgroundColor = [selectedMeasurement colorForAirQuality];
+    airQualityView.backgroundColor = [selectedMeasurement colorForAirQuality] ?: [UIColor il_notAvailableColor];
     airQualityView.layer.cornerRadius = 20.0f;
     
     UILabel *airQualityLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 240, 20)];
     airQualityLabel.center = CGPointMake(130, 20);
-    airQualityLabel.text = [[selectedMeasurement stringForAirQuality] uppercaseString];
+    airQualityLabel.text = [[selectedMeasurement stringForAirQuality] uppercaseString] ?: NSLocalizedString(@"n/a", nil);
     airQualityLabel.textColor = [UIColor whiteColor];
     airQualityLabel.textAlignment = NSTextAlignmentCenter;
     airQualityLabel.font = [UIFont fontWithName: @"Avenir-Light" size: 16.0f];
